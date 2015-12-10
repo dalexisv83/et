@@ -1,0 +1,15 @@
+<div ng-repeat="premium in data.premiums | filter:{name: prem.params.premName}">
+    <nav>
+        <a ng-repeat-start="sub in premium.subs" href="#/{{premium.name | lowercase | spcToHyphen}}/{{sub | getById:data.subtabs | lowercase | spcToHyphen}}">{{sub | getById:data.subtabs}}</a><span ng-if="!$last" ng-repeat-end> | </span>
+    </nav>
+    <h1>{{premium.name}}</h1>
+    {{premium.logo}}
+    <ul>
+      <li>${{premium.price}}
+      <li>{{premium.channels.length}} Channels
+      <li>{{HD = (premium.channels | filter:{HD: true, SD: false}).length}} HD Only
+      <li>{{SD = (premium.channels | filter:{HD: false, SD: true}).length}} SD Only
+      <li>{{SDHD = (premium.channels | filter:{HD: true, SD: true}).length}} SD/HD
+      <li>{{premium.name}} DIRECTV On Demand Channel: {{premium.ODchan}}
+    </ul>
+</div>

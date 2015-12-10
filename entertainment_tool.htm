@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" xmlns:ng="http://angularjs.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+    <title>Entertainment Tool</title>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.11/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.11/angular-route.js"></script>
+    <script src="script.js"></script>
+    <script src="data.js"></script>
+    <script type="text/javascript">
+      angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));
+    </script>
+</head>
+
+<body ng-app="entertainment">
+    <div ng-controller="MainCtrl as main">
+        <nav>
+          <a ng-repeat-start="premium in data.premiums" href="#/{{premium.name | lowercase}}/{{premium.subs[0] | getById:data.subtabs | lowercase | spcToHyphen}}">{{premium.name}}</a><span ng-if="!$last" ng-repeat-end> | </span>
+        <nav>
+        <div>
+            <div ng-view></div>
+        </div>
+    </div>
+</body>
+
+</html>
