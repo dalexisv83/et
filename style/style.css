@@ -13,6 +13,15 @@ body {
     line-height: 1.55;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 h1, h2 {
     margin: 0;
 }
@@ -33,13 +42,12 @@ li ul {
 }
 
 #top a {
-    color: #eee;
+    color: #ddd;
     text-transform: uppercase;
 }
 
 #top a:hover {
     color: white;
-    text-decoration: underline;
 }
 
 #sub {
@@ -52,14 +60,12 @@ li ul {
 
 #sub a:hover {
     color: #333;
-    text-decoration: underline;
 }
 
 .nav a {
     display: inline-block;
     text-align: center;
     padding: 7px 10px;
-    text-decoration: none;
     font-weight: bold;
 }
 
