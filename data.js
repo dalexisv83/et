@@ -63,6 +63,16 @@ var data = {
             "point": "Beatrice Prior must confront her inner demons and continue her fight against a powerful alliance which threatens to tear her society apart with the help from others on her side (Adventure, Sci-Fi, Thriller) (12/12)",
             "evergreen": false,
             "title": "The Divergent Series: Insurgent"
+        }, {
+            "subtab": 3,
+            "point": "HBO films attracts top talent that you can't see anywhere else, and is the leader in documentaries and cutting-edge news magazines",
+            "evergreen": true,
+            "title": null
+        }, {
+            "subtab": 3,
+            "point": "Follow the daily lives of overworked nurses and doctors as they struggle with the darkly comic realities of tending to their aging charges in an extended-care wing, of a hospital. Sundays at 10 PM. (Comedy Series)",
+            "evergreen": false,
+            "title": "Getting On"
         }],
         "objections": [{
             "category": "Price/Value",
@@ -79,7 +89,7 @@ var data = {
                 "Over 20 currently running original shows, plus former hits like Flight of the Conchords air throughout the month, so there are few repeats",
                 ]
         }],
-        "subs": [1, 2, 3, 4, 5, 6]
+        "subs": [1, 2, 3, 6]
     }, {
         "id": 2,
         "name": "Showtime",
@@ -122,13 +132,47 @@ var data = {
         }],
         "sellingPoints": [{
             "subtab": 1,
-            "point": "Showtime is cool"
+            "point": "Thirteen commercial-free channels with award winning original series, uncut hit movies, year round sports, documentaries and comedy specials",
+            "evergreen": true,
+            "title": null
+        }, {
+            "subtab": 1,
+            "point": "Premium network with the most HD channels",
+            "evergreen": true,
+            "title": null
+        }, {
+            "subtab": 2,
+            "point": "A variety of movies with The Movie Channel, FLIX and Sundance",
+            "evergreen": true,
+            "title": null
+        }, {
+            "subtab": 2,
+            "point": "Catch the famous 50th anniversary tour with the legendary rock band. (12/4)",
+            "evergreen": false,
+            "title": "The Who Live in Hyde Park"
+        }, {
+            "subtab": 3,
+            "point": "Home to critically-acclaimed original series like Homeland, The Affair, Shameless and Ray Donovan",
+            "evergreen": true,
+            "title": null
+        }, {
+            "subtab": 3,
+            "point": " CIA officer Carrie Mathison (Claire Danes) is volatile and unpredictable, but with the help of her mentor, Saul Berenson (Mandy Patinkin), she fearlessly risks everything, including her sanity, at every turn. Sundays at 9 PM",
+            "evergreen": false,
+            "title": "Homeland"
         }],
-        "subs": [5, 4, 3, 2, 1, 6, 8]
-    }, {
-        "id": 2,
-        "name": "Starz",
-        "subs": [1, 2, 3, 7]
+        "objections": [{
+            "category": "Price/Value",
+            "responses": [
+                "The same amount of titles would cost over $700 a month with Red Box",
+                ]
+        }, {
+            "category": "Too Many Repeats",
+            "responses": [
+                "Sho2 provides double the viewing options with no same-day repeats of movies and series airing on Showtime (East/West) or Showcase",
+                ]
+        }],
+        "subs": [1, 2, 3, 6]
     }],
     "subtabs": [{
         "id": 1,
