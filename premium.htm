@@ -7,12 +7,14 @@
     <h1>{{premium.name}}</h1> {{premium.logo}}
     <div class="info">
         <div class="price">${{premium.price}}</div>
-        <ul>
-            <li>{{premium.channels.length}} Channels</li>
-            <li>{{HD = (premium.channels | filter:{HD: true, SD: false}).length}} HD Only</li>
-            <li>{{SD = (premium.channels | filter:{HD: false, SD: true}).length}} SD Only</li>
-            <li>{{SDHD = (premium.channels | filter:{HD: true, SD: true}).length}} SD/HD</li>
-        </ul>
+        <a href="#/{{prem.params.premName}}/channels">
+          <ul>
+              <li>{{premium.channels.length}} Channels</li>
+              <li>{{HD = (premium.channels | filter:{HD: true, SD: false}).length}} HD Only</li>
+              <li>{{SD = (premium.channels | filter:{HD: false, SD: true}).length}} SD Only</li>
+              <li>{{SDHD = (premium.channels | filter:{HD: true, SD: true}).length}} SD/HD</li>
+          </ul>
+        </a>
     </div>
     <div class="info ondemand">
         {{premium.name}} DIRECTV On&nbsp;Demand Ch:&nbsp;{{premium.ODchan}}
