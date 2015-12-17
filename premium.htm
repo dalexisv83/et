@@ -1,15 +1,25 @@
 <div ng-repeat="premium in data.premiums | filter:{name: prem.params.premName}">
-    <nav>
-        <a ng-repeat-start="sub in premium.subs" href="#/{{premium.name | lowercase | spcToHyphen}}/{{sub | getById:data.subtabs | lowercase | spcToHyphen}}">{{sub | getById:data.subtabs}}</a><span ng-if="!$last" ng-repeat-end> | </span>
-    </nav>
-    <h1>{{premium.name}}</h1>
-    {{premium.logo}}
-    <ul>
-      <li>${{premium.price}}
-      <li>{{premium.channels.length}} Channels
-      <li>{{HD = (premium.channels | filter:{HD: true, SD: false}).length}} HD Only
-      <li>{{SD = (premium.channels | filter:{HD: false, SD: true}).length}} SD Only
-      <li>{{SDHD = (premium.channels | filter:{HD: true, SD: true}).length}} SD/HD
-      <li>{{premium.name}} DIRECTV On Demand Channel: {{premium.ODchan}}
-    </ul>
-</div>
+    <div class="nav" id="sub">
+        <a ng-repeat="sub in premium.subs" href="#/{{premium.name | lowercase | spcToHyphen}}/{{sub | getById:data.subtabs | lowercase | spcToHyphen}}">{{sub | getById:data.subtabs}}</a>
+    </div><!-- 
+     --><div class="grid__item one-eighth" id="playing"></div><!-- 
+     --><div class="grid__item one-eighth">
+    <h1>{{premium.name}}</h1> {{premium.logo}}
+    <div class="info">
+        <div class="price">${{premium.price}}</div>
+        <ul>
+            <li>{{premium.channels.length}} Channels</li>
+            <li>{{HD = (premium.channels | filter:{HD: true, SD: false}).length}} HD Only</li>
+            <li>{{SD = (premium.channels | filter:{HD: false, SD: true}).length}} SD Only</li>
+            <li>{{SDHD = (premium.channels | filter:{HD: true, SD: true}).length}} SD/HD</li>
+        </ul>
+    </div>
+    <div class="info ondemand">
+        {{premium.name}} DIRECTV On&nbsp;Demand Ch:&nbsp;{{premium.ODchan}}
+    </div>
+    </div><!-- 
+     --><div ng-if="prem.params.subName !== 'channels'" ng-include="'selling.htm'" id="selling" class="grid__item three-eighths"></div><!-- 
+     --><div ng-if="prem.params.subName === 'overview'" ng-include="'objections.htm'" id="objections" class="grid__item three-eighths accordion"></div><!-- 
+     --><div ng-if="(prem.params.subName === 'movies') || (prem.params.subName === 'original-programming')" ng-include="'movieorig.htm'" id="movieorig" class="grid__item three-eighths accordion"></div><!-- 
+     --><div ng-if="prem.params.subName === 'channels'" ng-include="'channels.htm'" class="grid__item three-eighths"></div><!-- 
+ --></div>

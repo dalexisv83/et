@@ -1,0 +1,21 @@
+<h2>Objections</h2>
+<label ng-repeat-start="objection in premium.objections" for="{{objection.category}}" checker>{{objection.category}}</label><input type="radio" name="accordion" id="{{objection.category}}">
+<div ng-repeat-end>
+  <ul>
+    <hr ng-repeat-start="response in objection.responses" ng-if="!$first" />
+    <li ng-repeat-end>{{response}}</li>
+  </ul>
+</div>
+
+<label for="disclosures" checker>Disclosures</label><input type="radio" name="accordion" id="disclosures">
+<div>
+  <ul>
+    <hr ng-repeat-start="disclosure in data.disclosures" ng-if="!$first" />
+    <li ng-repeat-end>
+        {{disclosure.lvl1}}
+        <ul>
+            <li ng-repeat="lvl2 in disclosure.lvl2">{{lvl2}}</li>
+        </ul>
+    </li>
+  </ul>
+</div>

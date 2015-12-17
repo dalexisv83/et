@@ -24,6 +24,14 @@
                 this.$location = $location;
                 this.$routeParams = $routeParams;
                 $scope.data = data;
+
+                $scope.init = function() {
+                    if ($location.path() == '') {
+                        $location.path('/hbo/overview');
+                    }
+                }
+
+                $scope.init();
             }
         ])
         .controller('PremCtrl', ['$routeParams', function($routeParams) {
@@ -41,11 +49,46 @@
                 return match;
             }
         })
-        .filter('spcToHyphen', function() {
-        return function(input) {
-            if (input) {
-                return input.replace(/\s+/g, '-').replace("(", '').replace(")", '').replace("/", '-');
+        .filter('getIdByURL', function() {
+            return function(input, obj) {
+                var match = null;
+                angular.forEach(obj, function(value, key) {
+                    if (value.url === input) {
+                        match = value.id;
+                    }
+                });
+                return match;
             }
-        }
-    });
+        })
+        .filter('getByName', function() {
+            return function(name, obj) {
+                var match = null;
+                angular.forEach(obj, function(value, key) {
+                    var normal = value.name.replace(/\s+/g, '-').replace("(", '').replace(")", '').replace("/", '-');
+                    if (normal == name) {
+                        match = value.id;
+                    }
+                });
+                return match;
+            }
+        })
+        .directive("checker", function() {
+            'use strict';
+            /*jslint unparam: true*/
+            return function(scope, element, attrs) {
+                element.bind('click', function(e) {
+                    jQuery('.checked').removeClass();
+                    element.next().next().toggleClass("checked");
+                    //element.leClass("checked");
+                    angular.element(document.body).addClass('ieFix').removeClass('ieFix');
+                });
+            };
+        })
+        .filter('spcToHyphen', function() {
+            return function(input) {
+                if (input) {
+                    return input.replace(/\s+/g, '-').replace("(", '').replace(")", '').replace("/", '-');
+                }
+            }
+        });
 })(window.angular);

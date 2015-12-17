@@ -1,0 +1,7 @@
+<h2>{{prem.params.subName | getIdByURL:data.subtabs | getById:data.subtabs}}</h2>
+<label ng-repeat-start="point in premium.sellingPoints | filter:{evergreen: false} | filter:{subtab: (prem.params.subName | getIdByURL:data.subtabs)}" for="{{point.title}}" checker>{{point.title}}</label><input type="radio" name="accordion" id="{{point.title}}">
+<div ng-repeat-end>
+  <ul>
+    <li>{{point.point}}</li>
+  </ul>
+</div>
