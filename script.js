@@ -124,6 +124,33 @@
                 }
             }
         })
+        .filter('progType', function() {
+            return function(items, predicate) {
+                    switch(predicate) {
+                        case 'movies':
+                            var movies = [];
+                            angular.forEach(items, function(item) {
+                                if (item.dayWeek === null) {
+                                    movies.push(item);
+                                }
+                            });
+                            return movies;
+                            break;
+                        case 'series':
+                            var series = [];
+                            angular.forEach(items, function(item) {
+                                if (item.dayWeek !== null) {
+                                    series.push(item);
+                                }
+                            });
+                            return series;
+                            break;
+                         default:
+                            return items;
+                            break;
+                    }
+            }
+        })
         .filter('unique', function() {
 
             return function(items, filterOn) {
