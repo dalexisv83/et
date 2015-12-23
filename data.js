@@ -3,35 +3,39 @@ var data = {
         "id": 1,
         "name": "HBO",
         "logo": "hbo_logo.png",
-        "aacURL": "agentanswercenter.directv.com",
-        "dotcomURL": "directv.com/hbo",
-        "premURL": "hbo.com",
+        "aacURL": "http://agentanswercenter.directv.com/en-us/res/programming/hbo.html",
+        "dotcomURL": "http://www.directv.com/premiums/hbo",
+        "premURL": "http://www.hbo.com/",
         "price": "17.99",
-        "ODchan": "1001",
+        "ODchan": "1501",
         "channels": [{
             "name": "HBO",
             "logo": "hbo_logo.png",
             "description": "HBO has Game of Thrones",
             "HD": true,
-            "SD": true
+            "SD": true,
+            "number": ""
         }, {
             "name": "HBO Family",
             "logo": "hbo-family_logo.png",
             "description": "HBO Family has Honey I Shrunk the Kids",
             "HD": true,
-            "SD": false
+            "SD": false,
+            "number": ""
         }, {
             "name": "HBO Comedy",
             "logo": "hbo-comedy_logo.png",
             "description": "HBO Comedy is funnier than HBO Family",
             "HD": false,
-            "SD": true
+            "SD": true,
+            "number": ""
         }, {
             "name": "HBO West",
             "logo": "hbo-west_logo.png",
             "description": "HBO West is three hours behind",
             "HD": true,
-            "SD": false
+            "SD": false,
+            "number": ""
         }],
         "sellingPoints": [{
             "subtab": 1,
@@ -98,37 +102,42 @@ var data = {
         "dotcomURL": "directv.com/sho",
         "premURL": "sho.com",
         "price": "13.99",
-        "ODchan": "1021",
+        "ODchan": "1545",
         "channels": [{
             "name": "Showtime East",
             "logo": "showtime_logo.png",
             "description": "Showtime East has Homeland",
             "HD": true,
-            "SD": true
+            "SD": true,
+            "number": ""
         },{
             "name": "Showtime Next",
             "logo": "showtime-next_logo.png",
             "description": "Showtime Next has ???",
             "HD": true,
-            "SD": true
+            "SD": true,
+            "number": ""
         }, {
             "name": "Showtime Beyond",
             "logo": "showtime-beyond_logo.png",
             "description": "Showtime Beyond has Buzz Lightyear",
             "HD": true,
-            "SD": false
+            "SD": false,
+            "number": ""
         }, {
             "name": "Showtime Extreme",
             "logo": "showtime-extreme_logo.png",
             "description": "Showtime Extreme has Tony Hawk",
             "HD": false,
-            "SD": true
+            "SD": true,
+            "number": ""
         }, {
             "name": "Showtime West",
             "logo": "showtime_logo.png",
             "description": "Showtime East has Homeland three hours later",
             "HD": true,
-            "SD": false
+            "SD": false,
+            "number": ""
         }],
         "sellingPoints": [{
             "subtab": 1,
@@ -215,5 +224,74 @@ var data = {
             "Keeping service may be less than paying fee",
             "You will continue to receive programming, rather than just paying fee"
         ]
+    }],
+    "calendars": [{
+        "program": "Shameless",
+        "premium": 2,
+        "chanName": "Showtime East",
+        "chanNum": "545",
+        "premDate": "2016-01-10",
+        "dayWeek": "Sundays",
+        "finDate": "04/03/16",
+        "repDates": null,
+        "startOD": "01/11/16",
+        "keyDemos": ["18-25", "25-35", "35-45", "45-55"],
+        "genres": ["Comedy"],
+        "starActrs": ["William H. Macy", "Emmy Rossum"],
+        "starDrctrs": null,
+        "starPrdcrs": null,
+        "description": "The Gallagher's are finally getting their act together and striking out on their own, but growing up could also mean growing apart.",
+        "image": "shameless.jpg"
+    }, {
+        "program": "Mad Max: Fury Road",
+        "premium": 1,
+        "chanName": "HBO East",
+        "chanNum": "501",
+        "premDate": "2016-01-09",
+        "dayWeek": null,
+        "finDate": null,
+        "repDates": null,
+        "startOD": "01/09/16",
+        "keyDemos": ["18-25", "25-35", "35-45", "45-55"],
+        "genres": ["Action", "Adventure", "Sci-Fi"],
+        "starActrs": ["Tom Hardy", "Charlize Theron", "Nicholas Hoult"],
+        "starDrctrs": [],
+        "starPrdcrs": [],
+        "description": "A woman rebels against a tyrannical ruler in post apocalyptic Australia in search for her homeland with the help of a group of female prisoners, a psychotic worshiper, and a drifter named Max.",
+        "image": "madmaxfuryroad.jpg"
+    }, {
+        "program": "Meet Joe Black",
+        "premium": 2,
+        "chanName": "FLIX",
+        "chanNum": "556",
+        "premDate": "2016-01-03",
+        "dayWeek": null,
+        "finDate": null,
+        "repDates": null,
+        "startOD": "01/04/16",
+        "keyDemos": ["18-25", "25-35", "35-45", "45-55"],
+        "genres": ["Drama"],
+        "starActrs": ["Brad Pitt"],
+        "starDrctrs": [],
+        "starPrdcrs": [],
+        "description": "Death, who takes the form of a young man, asks a media mogul to act as a guide to teach him about life on Earth and in the process he falls in love with his guide's daughter",
+        "image": "meetjoeblack.jpg"
+    }, {
+        "program": "Real Time with Bill Maher",
+        "premium": 1,
+        "chanName": "HBO East",
+        "chanNum": "501",
+        "premDate": "2016-01-16",
+        "dayWeek": 'Fridays',
+        "finDate": null,
+        "repDates": null,
+        "startOD": "01/04/16",
+        "keyDemos": ["18-25", "25-35", "35-45", "45-55"],
+        "genres": ["Comedy", "Political", "Talk Show"],
+        "starActrs": ["Bill Maher"],
+        "starDrctrs": [],
+        "starPrdcrs": [],
+        "description": "Comedian and political satirist Bill Maher discusses topical events with guests from various backgrounds.",
+        "image": "billmaher.jpg"
     }]
 }
