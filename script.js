@@ -8,7 +8,6 @@
                         templateUrl: 'calendar.htm',
                         controller: 'CalCtrl',
                         controllerAs: 'cal',
-                        //reloadOnSearch: false
                     })
                     .when('/:premName', {
                         templateUrl: 'premium.htm',
@@ -31,20 +30,23 @@
                 this.$routeParams = $routeParams;
                 $scope.data = data;
                 $scope.genres = getGenres($scope.data.calendars);
-
                 $scope.init = function() {
                     if ($location.path() == '') {
                         $location.path('/hbo/overview');
+                    } else if ($routeParams.subName === undefined) {
+                        $location.path($routeParams.premName + '/overview');
                     }
                 }
-
                 $scope.init();
             }
         ])
-        .controller('PremCtrl', ['$routeParams', function($routeParams) {
-            this.name = "PremCtrl";
-            this.params = $routeParams;
-        }])
+        .controller('PremCtrl', ['$scope','$routeParams',
+            function($scope, $routeParams) {
+                this.name = "PremCtrl";
+                this.params = $routeParams;
+                $scope.init();
+            }
+        ])
         .controller('CalCtrl', ['$scope', '$routeParams', '$location', '$filter',
             function($scope, $routeParams, $location, $filter) {
                 this.name = "CalCtrl";
@@ -126,29 +128,29 @@
         })
         .filter('progType', function() {
             return function(items, predicate) {
-                    switch(predicate) {
-                        case 'movies':
-                            var movies = [];
-                            angular.forEach(items, function(item) {
-                                if (item.dayWeek === null) {
-                                    movies.push(item);
-                                }
-                            });
-                            return movies;
-                            break;
-                        case 'series':
-                            var series = [];
-                            angular.forEach(items, function(item) {
-                                if (item.dayWeek !== null) {
-                                    series.push(item);
-                                }
-                            });
-                            return series;
-                            break;
-                         default:
-                            return items;
-                            break;
-                    }
+                switch (predicate) {
+                    case 'movies':
+                        var movies = [];
+                        angular.forEach(items, function(item) {
+                            if (item.dayWeek === null) {
+                                movies.push(item);
+                            }
+                        });
+                        return movies;
+                        break;
+                    case 'series':
+                        var series = [];
+                        angular.forEach(items, function(item) {
+                            if (item.dayWeek !== null) {
+                                series.push(item);
+                            }
+                        });
+                        return series;
+                        break;
+                    default:
+                        return items;
+                        break;
+                }
             }
         })
         .filter('unique', function() {
@@ -190,34 +192,34 @@
                 return items;
             };
         })
-    .filter('dateRange', function() {
-        return function(items, startDate, endDate) {
-            if (!endDate) {
-                if (!startDate) {
-                    return items;
+        .filter('dateRange', function() {
+            return function(items, startDate, endDate) {
+                if (!endDate) {
+                    if (!startDate) {
+                        return items;
+                    }
+                    var matches = [];
+                    angular.forEach(items, function(value, key) {
+                        var itemDate = Date.parse(value.premDate);
+                        var s = Date.parse(startDate);
+                        if ((itemDate >= s) && (itemDate <= s + 86399999)) {
+                            matches.push(value);
+                        }
+                    });
+                    return matches;
                 }
                 var matches = [];
                 angular.forEach(items, function(value, key) {
                     var itemDate = Date.parse(value.premDate);
                     var s = Date.parse(startDate);
-                    if ((itemDate >= s) && (itemDate <= s + 86399999)) {
+                    var e = Date.parse(endDate) + 86399999;
+                    if (itemDate >= s && itemDate <= e) {
                         matches.push(value);
                     }
                 });
                 return matches;
             }
-            var matches = [];
-            angular.forEach(items, function(value, key) {
-                var itemDate = Date.parse(value.premDate);
-                var s = Date.parse(startDate);
-                var e = Date.parse(endDate) + 86399999;
-                if (itemDate >= s && itemDate <= e) {
-                    matches.push(value);
-                }
-            });
-            return matches;
-        }
-    });
+        });
 })(window.angular);
 
 var getGenres = function(source) {
