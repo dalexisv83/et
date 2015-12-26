@@ -33,7 +33,7 @@
                 $scope.init = function() {
                     if ($location.path() == '') {
                         $location.path('/hbo/overview');
-                    } else if ($routeParams.subName === undefined) {
+                    } else if (($routeParams.premName !== undefined) && ($routeParams.subName === undefined)) {
                         $location.path($routeParams.premName + '/overview');
                     }
                 }
