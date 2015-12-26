@@ -15,7 +15,7 @@
     <div class="nav">
         <input ng-model="search.$" /><br />
         <input type="date" ng-model="rangeStart" />
-        <input ng-hide="!rangeStart" type="date" ng-model="rangeEnd" />
+        <input type="date" ng-hide="!rangeStart" ng-model="rangeEnd" min="{{rangeStart | date:'yyyy-MM-dd'}}" />
         <span ng-if="premSel">{{premSel | getById:data.premiums}} <a href ng-click="aParam('premium', null)">(x)</a></span>
         <span ng-if="genSel">{{genSel}} <a href ng-click="aParam('genre', null)">(x)</a></span>
     </div>
