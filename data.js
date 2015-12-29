@@ -2,6 +2,7 @@ var data = {
     "premiums": [{
         "id": 1,
         "name": "HBO",
+        "url": "hbo",
         "logo": "hbo_logo.png",
         "aacURL": "http://agentanswercenter.directv.com/en-us/res/programming/hbo.html",
         "dotcomURL": "http://www.directv.com/premiums/hbo",
@@ -77,6 +78,16 @@ var data = {
             "point": "Follow the daily lives of overworked nurses and doctors as they struggle with the darkly comic realities of tending to their aging charges in an extended-care wing, of a hospital. Sundays at 10 PM. (Comedy Series)",
             "evergreen": false,
             "title": "Getting On"
+        }, {
+            "subtab": 4,
+            "point": "Watch the movies and shows you want – whenever you want – with DIRECTV Everywhere. Or, use your DIRECTV.com login to access HBO's library at HBO GO",
+            "evergreen": true,
+            "title": null
+        }, {
+            "subtab": 4,
+            "point": "Access to HBO On Demand library. Content must be searched by program (titles are not available through traditional channel guide)",
+            "evergreen": false,
+            "title": null
         }],
         "objections": [{
             "category": "Price/Value",
@@ -93,10 +104,11 @@ var data = {
                 "Over 20 currently running original shows, plus former hits like Flight of the Conchords air throughout the month, so there are few repeats",
                 ]
         }],
-        "subs": [1, 2, 3, 6]
+        "subs": [1, 2, 3, 4, 6]
     }, {
         "id": 2,
         "name": "Showtime",
+        "url": "showtime",
         "logo": "sho_logo.png",
         "aacURL": "agentanswercenter.directv.com",
         "dotcomURL": "directv.com/sho",
@@ -166,9 +178,19 @@ var data = {
             "title": null
         }, {
             "subtab": 3,
-            "point": " CIA officer Carrie Mathison (Claire Danes) is volatile and unpredictable, but with the help of her mentor, Saul Berenson (Mandy Patinkin), she fearlessly risks everything, including her sanity, at every turn. Sundays at 9 PM",
+            "point": "CIA officer Carrie Mathison (Claire Danes) is volatile and unpredictable, but with the help of her mentor, Saul Berenson (Mandy Patinkin), she fearlessly risks everything, including her sanity, at every turn. Sundays at 9 PM",
             "evergreen": false,
             "title": "Homeland"
+        }, {
+            "subtab": 4,
+            "point": "Watch the movies and shows you want – whenever you want – with DIRECTV Everywhere. Or, use your DIRECTV.com login to access Showtime's library at Showtime Anytime",
+            "evergreen": true,
+            "title": null
+        }, {
+            "subtab": 4,
+            "point": "Customers who sign up via PlayStation are limited to accessing Showtime OTT on PlayStation only.",
+            "evergreen": false,
+            "title": null
         }],
         "objections": [{
             "category": "Price/Value",
@@ -181,7 +203,7 @@ var data = {
                 "Sho2 provides double the viewing options with no same-day repeats of movies and series airing on Showtime (East/West) or Showcase",
                 ]
         }],
-        "subs": [1, 2, 3, 6]
+        "subs": [1, 2, 3, 4, 6]
     }],
     "subtabs": [{
         "id": 1,
@@ -197,7 +219,8 @@ var data = {
         "url": "original-programming"
     }, {
         "id": 4,
-        "name": "Streaming"
+        "name": "Streaming",
+        "url": "streaming"
     }, {
         "id": 5,
         "name": "DIRECTV On Demand"
