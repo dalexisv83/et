@@ -8,28 +8,34 @@
         </select>
         <select ng-model="typeSel">
             <option value="">All Programming</option>
-            <option value="movies">Movies</option>
-            <option value="series">Series</option>
+            <option value="Movies">Movies</option>
+            <option value="Series">Series</option>
+        </select>
+        <select ng-model="chanSel" ng-options="calendar.chanNum as (calendar.chanName + ' &ndash; ' + calendar.chanNum) group by (calendar.premium | getById:data.premiums) for calendar in data.calendars | unique: 'chanNum' | orderBy: 'chanNum'">
+            <option value="">All Channels</option>
         </select>
     </div>
     <div class="nav">
-        <input ng-model="search.$" /><br />
-        <input type="date" ng-model="rangeStart" />
-        <input type="date" ng-hide="!rangeStart" ng-model="rangeEnd" min="{{rangeStart | date:'yyyy-MM-dd'}}" />
+        <input ng-model="search.$" /><a href ng-show="search.$" ng-click="search = null">(x)</a><br />
+        <input type="date" ng-model="rangeStart" datepicker />
+        <input type="date" ng-model="rangeEnd" min="{{rangeStart | date:'yyyy-MM-dd'}}" datepicker />{{rangeStart}}
         <span ng-if="premSel">{{premSel | getById:data.premiums}} <a href ng-click="aParam('premium', null)">(x)</a></span>
         <span ng-if="genSel">{{genSel}} <a href ng-click="aParam('genre', null)">(x)</a></span>
+        <span ng-if="typeSel">{{typeSel}} <a href ng-click="aParam('type', null)">(x)</a></span>
+        <span ng-if="chanSel">{{chanSel}} <a href ng-click="aParam('channel', null)">(x)</a></span>
     </div>
     <div class="program" ng-repeat="calendar in data.calendars |
     filter:search |
     filter:{premium: premSel || undefined} |
     filter:{genres: genSel || undefined} |
+    filter:{chanNum: chanSel || undefined} |
     progType:typeSel |
     dateRange:rangeStart:rangeEnd |
     orderBy: 'premDate'">
         <img ng-src="//placeholdit.imgix.net/~text?txtsize=25&txt={{calendar.program}}&w=160&h=90&txttrack=2" width="160" height="90" />
         <br />{{calendar.program}}
         <br /><a href ng-click="aParam('premium', calendar.premium, 'getById', data.premiums)" ng-bind="calendar.premium | getById:data.premiums"></a>
-        <br />{{calendar.chanName}} &ndash; {{calendar.chanNum}}
+        <br /><a href ng-click="aParam('channel', calendar.chanNum)">{{calendar.chanName}} &ndash; {{calendar.chanNum}}</a>
         <br />{{calendar.premDate | date:'mediumDate'}}
         <br /><a href ng-repeat-start="genre in calendar.genres" ng-click="aParam('genre', genre)" ng-bind="genre"></a><span ng-if="!$last" ng-repeat-end>, </span>
     </div>
