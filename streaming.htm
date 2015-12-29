@@ -1,0 +1,13 @@
+<div>
+    <img src="streaming.jpg" alt="">
+</div>
+<div class="grid__item five-eighths">
+    <h2 class="grad-blue">DIRECTV Everywhere</h2>
+    <ul>
+        <li ng-repeat="point in premium.sellingPoints | filter:{evergreen: true} | filter:{subtab: (prem.params.subName | getIdByURL:data.subtabs)}">{{point.point}}</li>
+    </ul>
+    <h2 class="grad-blue">Third-party Streaming</h2>
+    <ul>
+        <li ng-repeat="point in premium.sellingPoints | filter:{evergreen: false} | filter:{subtab: (prem.params.subName | getIdByURL:data.subtabs)}">{{point.point}}</li>
+    </ul>
+</div>
