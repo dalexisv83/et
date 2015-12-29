@@ -1,8 +1,5 @@
-<table>
-  <thead>
-    <tr><td>Channel</td><td>Description</td></tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="channel in premium.channels"><td>{{channel.name}}</td><td>{{channel.description}}</td></tr>
-  </tbody>
-</table>
+<div class="grid__item two-eighths" ng-repeat="channel in premium.channels">
+<img src="//placeholdit.imgix.net/~text?txtsize=25&txt={{channel.name}}&w=160&h=90&txttrack=2" width="160" height="90" />
+<br />{{channel.name}}
+<br />{{channel.description}}
+</div>
