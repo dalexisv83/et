@@ -13,6 +13,11 @@ body {
     line-height: 1.55;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -27,7 +32,7 @@ label:hover {
     cursor: pointer;
 }
 
-h1, h2 {
+h1, h2, h3 {
     margin: 0;
 }
 
@@ -40,6 +45,15 @@ li ul {
     list-style-type: disc;
     padding: 10px 30px;
     font-size: .9em;
+}
+
+.grad-blue {
+    background-color: #0072ae;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJiYWFlMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDcyYWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #2baae1 0%, #0072ae 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #2baae1 0%,#0072ae 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #2baae1 0%,#0072ae 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2baae1', endColorstr='#0072ae',GradientType=0 ); /* IE6-8 */
 }
 
 #top {
@@ -56,7 +70,9 @@ li ul {
 }
 
 #sub {
+    position: relative;
     background-color: #eaeaea;
+    box-shadow: 3px 3px 3px #838383;
 }
 
 #sub a {
@@ -75,8 +91,50 @@ li ul {
 }
 
 #playing {
-    background-color: #333;
-    height: 420px;
+    background-color: #e6e7e8;
+    line-height: 1.2;
+}
+
+#photos {
+    margin-bottom: 10px;
+}
+
+#photos div div {
+    width: 33%;
+    background-color: #808284;
+}
+
+#playing h2 {
+    font-size: .9em;
+    color: #838383;
+    margin: 5px 0;
+}
+
+#playing h3 {
+    font-size: 1em;
+}
+
+#playing div + div {
+    margin-top: 10px;
+}
+
+#playing a {
+    color: #454545;
+}
+
+#streaming h2 {
+    color: white;
+    padding: 5px 10px;
+    margin: 0;
+}
+
+#streaming ul {
+    margin: 0;
+}
+
+#streaming li {
+    border: solid 2px #0072ae;
+    padding: 10px;
 }
 
 .info {
@@ -124,15 +182,14 @@ label[for=disclosures] {
 }
 
 #movieorig.accordion label {
-    background-color: #0072ae;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJiYWFlMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDcyYWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-    background: -moz-linear-gradient(top, #2baae1 0%, #0072ae 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #2baae1 0%,#0072ae 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #2baae1 0%,#0072ae 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2baae1', endColorstr='#0072ae',GradientType=0 ); /* IE6-8 */
     padding: 7px 10px 5px;
     color: white;
     box-shadow: 1px 1px 5px #838383;
+}
+
+.accordion {
+    font-size: .9em;
+    line-height: 1.2;
 }
 
 .accordion div {
@@ -162,14 +219,59 @@ label[for=disclosures] {
     display: inline-block;
     vertical-align: top;
     padding: 10px;
+    width: 100%;
+}
+
+.grid__item .grid__item {
+    padding: 0;
+}
+
+.grid__item .grid__item + .grid__item {
+    padding-left: 10px;
+}
+
+.grid__item .grid__item .grid__item {
+    padding: 10px;
+}
+
+.one-seventh {
+    width: 14.28571428571429%
+}
+
+.three-sevenths {
+    width: 42.85714285714286%
+}
+
+.six-sevenths {
+    width: 85.71428571428571%
 }
 
 .one-eighth {
     width: 12.5%;
 }
 
+.two-eighths {
+    width: 25%;
+}
+
 .three-eighths {
     width: 37.5%;
+}
+
+.four-eighths {
+    width: 50%;
+}
+
+.five-eighths {
+    width: 62.5%;
+}
+
+.six-eighths {
+    width: 75%;
+}
+
+.seven-eighths {
+    width: 87.5%;
 }
 
 #calendar {
