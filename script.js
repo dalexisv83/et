@@ -162,9 +162,17 @@
                 }
             }
         })
+        .filter('encode', function() {
+            return function(input) {
+                if (input) {
+                    return encodeURIComponent(input);
+                }
+            }
+        })
         .filter('progType', function() {
             return function(items, predicate) {
                 switch (predicate) {
+                    case 'Movies':
                     case 'movies':
                         var movies = [];
                         angular.forEach(items, function(item) {
@@ -174,6 +182,8 @@
                         });
                         return movies;
                         break;
+                    case 'original-programming':
+                    case 'Series':
                     case 'series':
                         var series = [];
                         angular.forEach(items, function(item) {
