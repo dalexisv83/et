@@ -51,12 +51,20 @@
             function($scope, $routeParams, $location, $filter) {
                 this.name = "CalCtrl";
                 this.params = $routeParams;
+                $scope.aParam = function(param, value, filter, filterparam) {
+                    if (filter) {
+                        value = $filter(filter)(value, filterparam);
+                    }
+                    $location.search(param, value);
+                }
                 $scope.$watch(function() {
                     return $location.search()
                 }, function(params) {
                     $scope.genSel = params.genre;
                     var filteredModel = $filter('getByName')(params.premium, $scope.data.premiums);
                     $scope.premSel = filteredModel;
+                    $scope.typeSel = params.type;
+                    $scope.chanSel = params.channel;
                 });
                 $scope.$watch('genSel', function() {
                     $location.search('genre', $scope.genSel);
@@ -65,12 +73,12 @@
                     var filteredModel = $filter('getById')($scope.premSel, $scope.data.premiums);
                     $location.search('premium', filteredModel);
                 });
-                $scope.aParam = function(param, value, filter, filterparam) {
-                    if (filter) {
-                        value = $filter(filter)(value, filterparam);
-                    }
-                    $location.search(param, value);
-                }
+                $scope.$watch('typeSel', function() {
+                    $location.search('type', $scope.typeSel);
+                });
+                $scope.$watch('chanSel', function() {
+                    $location.search('channel', $scope.chanSel);
+                });
             }
         ])
         .filter('getById', function() {
@@ -117,6 +125,34 @@
                     //element.leClass("checked");
                     angular.element(document.body).addClass('ieFix').removeClass('ieFix');
                 });
+            };
+        })
+        .directive("datepicker", function() {
+            'use strict';
+            /*jslint unparam: true*/
+            return function(scope, element, attrs) {
+                if ((jQuery.fn.datetimepicker) && (!Modernizr.inputtypes.date)) {
+                    angular.element(element).on('click focus', function(e) {
+                        if ((attrs.min) && (scope.rangeStart != undefined) && (scope.rangeStart != '')) {
+                            console.log('YES');
+                            var userStart = moment(scope.rangeStart, 'YYYY-MM-DD').format('YYYY/MM/DD');
+                            angular.element(element).datetimepicker({
+                                lazyInit: true,
+                                timepicker: false,
+                                format: 'Y-m-d',
+                                minDate: userStart,
+                                startDate: userStart
+                            })[0];
+                        } else {
+                            console.log('nodate');
+                            angular.element(element).datetimepicker({
+                                lazyInit: true,
+                                timepicker: false,
+                                format: 'Y-m-d'
+                            })[0];
+                        }
+                    })[0].click();
+                }
             };
         })
         .filter('spcToHyphen', function() {
@@ -194,25 +230,14 @@
         })
         .filter('dateRange', function() {
             return function(items, startDate, endDate) {
-                if (!endDate) {
-                    if (!startDate) {
-                        return items;
-                    }
-                    var matches = [];
-                    angular.forEach(items, function(value, key) {
-                        var itemDate = Date.parse(value.premDate);
-                        var s = Date.parse(startDate);
-                        if ((itemDate >= s) && (itemDate <= s + 86399999)) {
-                            matches.push(value);
-                        }
-                    });
-                    return matches;
+                if ((!endDate) || (startDate == '') || (startDate == undefined)) {
+                    return items;
                 }
                 var matches = [];
                 angular.forEach(items, function(value, key) {
-                    var itemDate = Date.parse(value.premDate);
-                    var s = Date.parse(startDate);
-                    var e = Date.parse(endDate) + 86399999;
+                    var itemDate = moment(value.premDate,'YYYY-MM-DD');
+                    var s = moment(startDate,'YYYY-MM-DD');
+                    var e = moment(endDate,'YYYY-MM-DD'); + 86399999;
                     if (itemDate >= s && itemDate <= e) {
                         matches.push(value);
                     }
@@ -226,7 +251,9 @@ var getGenres = function(source) {
     var genres = [];
     for (var i in source) {
         for (var n in source[i].genres) {
-            genres.push(source[i].genres[n]);
+            if (typeof source[i].genres[n] === 'string') { // cause IE
+                genres.push(source[i].genres[n]);
+            }
         }
     }
     return genres;
