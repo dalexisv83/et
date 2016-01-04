@@ -139,6 +139,14 @@
                     setTimeout(function(){
                         element.cycle();
                     }, 250);
+                    element.hover(
+                        function() {
+                            $(this).cycle('pause');
+                        },
+                        function() {
+                            $(this).cycle('resume');
+                        }
+                    );
                 }
             };
         })
