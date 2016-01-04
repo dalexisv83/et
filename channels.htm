@@ -1,5 +1,9 @@
-<div class="grid__item two-eighths" ng-repeat="channel in premium.channels">
-<img src="//placeholdit.imgix.net/~text?txtsize=25&txt={{channel.name}}&w=160&h=90&txttrack=2" width="160" height="90" />
-<br />{{channel.name}}
-<br />{{channel.description}}
+<div>
+    <input ng-model="search.$" />
+</div>
+<div class="grid__item two-eighths" ng-repeat="channel in premium.channels | filter: search">
+    <img ng-src="img/{{(channel.logo) || (channel.name | lowercase | spcToHyphen)}}-logo.png" />
+    <br />{{channel.name}} &ndash; {{channel.number}}
+    <br /><span ng-if="channel.HD">HD</span><span ng-if="(channel.HD) && (channel.SD)"> | </span><span ng-if="channel.SD">SD</span>
+    <br />{{channel.description}}
 </div>
