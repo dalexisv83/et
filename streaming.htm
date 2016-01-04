@@ -6,8 +6,8 @@
     <ul>
         <li ng-repeat="point in premium.sellingPoints | filter:{evergreen: true} | filter:{subtab: (prem.params.subName | getIdByURL:data.subtabs)}">{{point.point}}</li>
     </ul>
-    <h2 class="grad-blue">Third-party Streaming</h2>
-    <ul>
-        <li ng-repeat="point in premium.sellingPoints | filter:{evergreen: false} | filter:{subtab: (prem.params.subName | getIdByURL:data.subtabs)}">{{point.point}}</li>
+    <h2 class="grad-blue" ng-repeat="point in premium.sellingPoints | filter:{evergreen: false} | filter:{subtab: (prem.params.subName | getIdByURL:data.subtabs)} | limitTo: 1" | limitTo: 1>{{point.title}}</h2>
+    <ul ng-repeat="point in premium.sellingPoints | filter:{evergreen: false} | filter:{subtab: (prem.params.subName | getIdByURL:data.subtabs)}" >
+        <li>{{point.point}}</li>
     </ul>
 </div>
