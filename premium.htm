@@ -12,7 +12,7 @@
      --></div>
     </div><!--
    --><div class="grid__item one-seventh" id="aside">
-          <h1>{{premium.name}}</h1> {{premium.logo}}
+          <img ng-src="img/{{premium.name | lowercase | spcToHyphen}}-logo.png" />
           <div class="info">
               <div class="price">${{premium.price}}</div>
               <a href="#/{{prem.params.premName}}/channels">
