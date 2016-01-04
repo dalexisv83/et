@@ -65,6 +65,7 @@
                     $scope.premSel = filteredModel;
                     $scope.typeSel = params.type;
                     $scope.chanSel = params.channel;
+                    $scope.progSel = params.program;
                 });
                 $scope.$watch('genSel', function() {
                     $location.search('genre', $scope.genSel);
@@ -78,6 +79,9 @@
                 });
                 $scope.$watch('chanSel', function() {
                     $location.search('channel', $scope.chanSel);
+                });
+                $scope.$watch('progSel', function() {
+                    $location.search('program', $scope.progSel);
                 });
             }
         ])
@@ -125,6 +129,17 @@
                     //element.leClass("checked");
                     angular.element(document.body).addClass('ieFix').removeClass('ieFix');
                 });
+            };
+        })
+        .directive("cycleSlideshow", function() {
+            'use strict';
+            /*jslint unparam: true*/
+            return function(scope, element, attrs) {
+                if (jQuery.fn.cycle) {
+                    setTimeout(function(){
+                        element.cycle();
+                    }, 250);
+                }
             };
         })
         .directive("datepicker", function() {
@@ -176,7 +191,7 @@
                     case 'movies':
                         var movies = [];
                         angular.forEach(items, function(item) {
-                            if (item.dayWeek === null) {
+                            if (item.repDates !== null) {
                                 movies.push(item);
                             }
                         });
@@ -187,7 +202,7 @@
                     case 'series':
                         var series = [];
                         angular.forEach(items, function(item) {
-                            if (item.dayWeek !== null) {
+                            if (item.repDates === null) {
                                 series.push(item);
                             }
                         });
