@@ -23,28 +23,37 @@
                 $locationProvider.html5Mode(false);
             }
         ])
-        .controller('MainCtrl', ['$scope', '$route', '$routeParams', '$location',
-            function($scope, $route, $routeParams, $location) {
+        .controller('MainCtrl', ['$scope', '$route', '$routeParams', '$location', '$filter',
+            function($scope, $route, $routeParams, $location, $filter) {
                 this.$route = $route;
                 this.$location = $location;
                 this.$routeParams = $routeParams;
                 $scope.data = data;
                 $scope.genres = getGenres($scope.data.calendars);
-                $scope.init = function() {
+                this.init = function() {
                     if ($location.path() == '') {
                         $location.path('/hbo/overview');
-                    } else if (($routeParams.premName !== undefined) && ($routeParams.subName === undefined)) {
-                        $location.path($routeParams.premName + '/overview');
                     }
                 }
-                $scope.init();
+                this.init();
             }
         ])
-        .controller('PremCtrl', ['$scope','$routeParams',
-            function($scope, $routeParams) {
+        .controller('PremCtrl', ['$routeParams', '$location', '$scope', '$filter',
+            function($routeParams, $location, $scope, $filter) {
                 this.name = "PremCtrl";
                 this.params = $routeParams;
-                $scope.init();
+                var premNameFiltered = $filter('getIdByURL')($routeParams.premName, $scope.data.premiums);
+                var subNameFiltered = $filter('getIdByURL')($routeParams.subName, $scope.data.subtabs);
+                this.init = function() {
+                    if (($routeParams.premName !== undefined) && ($routeParams.subName === undefined)) {
+                        $location.path($routeParams.premName + '/overview');
+                    }
+                    if (!checkSubs($scope.data, premNameFiltered, subNameFiltered)) {
+                        $location.path($routeParams.premName + '/overview');
+                    }
+                    console.log(checkSubs($scope.data, premNameFiltered, subNameFiltered));
+                }
+                this.init();
             }
         ])
         .controller('CalCtrl', ['$scope', '$routeParams', '$location', '$filter',
@@ -290,4 +299,18 @@ var getGenres = function(source) {
         }
     }
     return genres;
+}
+
+var checkSubs = function(obj,premium,sub) {
+    if ((obj) && (premium) && (sub)) {
+        for (var i in obj.premiums) {
+            if (obj.premiums[i].id == premium) {
+                for (var n in obj.premiums[i].subs) {
+                    if (obj.premiums[i].subs[n] == sub) {
+                        return true;
+                    }
+                }
+            }
+        }
+    }
 }
