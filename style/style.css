@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    font-size: 93%;
+    font-size: 95%;
     font-family: 'Franklin Gothic', sans-serif;
     color: #333;
     line-height: 1.55;
@@ -44,7 +44,8 @@ ul {
 li ul {
     list-style-type: disc;
     padding: 10px 30px;
-    font-size: .9em;
+    font-size: .95em;
+    line-height: 1.45;
 }
 
 .grad-blue {
@@ -102,6 +103,10 @@ li ul {
 #photos div div {
     width: 33%;
     background-color: #808284;
+}
+
+#playing {
+    font-size: .95em;
 }
 
 #playing h2 {
