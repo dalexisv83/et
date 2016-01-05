@@ -1,5 +1,5 @@
 <div>
-    <input ng-model="search.$" />
+    <input ng-model="search.$" placeholder="Search" /><a href ng-show="search.$" ng-click="search = null">(x)</a>
 </div>
 <div class="grid__item two-eighths" ng-repeat="channel in premium.channels | filter: search">
     <img ng-src="img/{{(channel.logo) || (channel.name | lowercase | spcToHyphen)}}-logo.png" />
