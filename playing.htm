@@ -4,7 +4,7 @@
     <div ng-repeat="calendar in data.calendars |
 filter:{premium: (prem.params.premName | getIdByURL:data.premiums)} |
 progType:prem.params.subName">
-        <img style="width:160px;height:90px;" ng-src="//placeholdit.imgix.net/~text?txtsize=25&txt={{calendar.program}}&w=160&h=90&txttrack=2" width="160" height="90" />
+        <img ng-src="img/{{calendar.program | lowercase | spcToHyphen}}.jpg" />
         <h3>{{calendar.program}}</h3>
         <span>{{calendar.premDate | date:'MMM d'}}</span> &ndash; <span>{{calendar.premTime}}</span>
         <br />{{calendar.chanNum}}

@@ -32,7 +32,7 @@
     progType:typeSel |
     dateRange:rangeStart:rangeEnd |
     orderBy: 'premDate'">
-        <a href ng-click="aParam('program', calendar.program)"><img ng-src="//placeholdit.imgix.net/~text?txtsize=25&txt={{calendar.program}}&w=160&h=90&txttrack=2" /></a>
+        <a href ng-click="aParam('program', calendar.program)"><img ng-src="img/{{calendar.program | lowercase | spcToHyphen}}.jpg" /></a>
         <br /><a href ng-click="aParam('program', calendar.program)" ng-bind="calendar.program"></a>
         <br /><a href ng-click="aParam('premium', calendar.premium, 'getById', data.premiums)" ng-bind="calendar.premium | getById:data.premiums"></a>
         <br /><a href ng-click="aParam('channel', calendar.chanNum)">{{calendar.chanName}} &ndash; {{calendar.chanNum}}</a>
@@ -46,7 +46,7 @@
     filter:{program: progSel}">
         <a href ng-click="aParam('program', null)">(x)</a><br />
         <div class="grid__item four-eighths">
-            <img ng-src="//placeholdit.imgix.net/~text?txtsize=25&txt={{calendar.program}}&w=480&h=270&txttrack=2" />
+            <img ng-src="img/{{calendar.program | lowercase | spcToHyphen}}.jpg" />
             <br />{{calendar.program}}
             <br><a href ng-click="aParam('premium', calendar.premium, 'getById', data.premiums)" ng-bind="calendar.premium | getById:data.premiums"></a>
             <br>{{calendar.premDate | date:'MMM d'}} &ndash; {{calendar.premTime}}

@@ -5,11 +5,9 @@
     <div ng-include="'playing.htm'" class="grid__item one-eighth" id="playing"></div><!--
  --><div class="grid__item seven-eighths">
       <div ng-if="prem.params.subName === 'overview'" class="grid__item" id="photos">
-        <div><!--
-       --><div class="grid__item"><img src="hbo1.jpg" alt="" /></div><!--
-       --><div class="grid__item"><img src="hbo2.jpg" alt="" /></div><!--
-       --><div class="grid__item"><img src="hbo3.jpg" alt="" /></div><!--
-     --></div>
+        <div><div ng-repeat="calendar in data.calendars |
+filter:{premium: (prem.params.premName | getIdByURL:data.premiums)} |
+progType:prem.params.subName | limitTo: 3" class="grid__item"><img ng-src="img/{{calendar.program | lowercase | spcToHyphen}}.jpg" alt="" /></div></div>
     </div><!--
    --><div class="grid__item one-seventh" id="aside">
           <img ng-src="img/{{premium.name | lowercase | spcToHyphen}}-logo.png" />
