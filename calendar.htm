@@ -1,5 +1,5 @@
 <div id="calendar">
-    <div class="nav">
+    <div class="nav" id="sub">
         <select ng-model="premSel" ng-options="calendar.premium as (calendar.premium | getById:data.premiums) for calendar in data.calendars | unique: 'premium' | orderBy: 'premium'">
             <option value="">All Premiums</option>
         </select>
@@ -14,9 +14,9 @@
         <select ng-model="chanSel" ng-options="calendar.chanNum as (calendar.chanName + ' &ndash; ' + calendar.chanNum) group by (calendar.premium | getById:data.premiums) for calendar in data.calendars | unique: 'chanNum' | orderBy: 'chanNum'">
             <option value="">All Channels</option>
         </select>
-    </div>
-    <div class="nav">
-        <input ng-model="search.$" /><a href ng-show="search.$" ng-click="search = null">(x)</a><br />
+        <br />
+        <input ng-model="search.$" placeholder="Search" /><a href ng-show="search.$" ng-click="search = null">(x)</a>
+        <label>Filter By Date:</label>
         <input type="date" ng-model="rangeStart" datepicker />
         <input type="date" ng-model="rangeEnd" min="{{rangeStart | date:'yyyy-MM-dd'}}" datepicker />{{rangeStart}}
         <span ng-if="premSel">{{premSel | getById:data.premiums}} <a href ng-click="aParam('premium', null)">(x)</a></span>
@@ -32,7 +32,7 @@
     progType:typeSel |
     dateRange:rangeStart:rangeEnd |
     orderBy: 'premDate'">
-        <a href ng-click="aParam('program', calendar.program)"><img ng-src="//placeholdit.imgix.net/~text?txtsize=25&txt={{calendar.program}}&w=160&h=90&txttrack=2" width="160" height="90" /></a>
+        <a href ng-click="aParam('program', calendar.program)"><img ng-src="//placeholdit.imgix.net/~text?txtsize=25&txt={{calendar.program}}&w=160&h=90&txttrack=2" /></a>
         <br /><a href ng-click="aParam('program', calendar.program)" ng-bind="calendar.program"></a>
         <br /><a href ng-click="aParam('premium', calendar.premium, 'getById', data.premiums)" ng-bind="calendar.premium | getById:data.premiums"></a>
         <br /><a href ng-click="aParam('channel', calendar.chanNum)">{{calendar.chanName}} &ndash; {{calendar.chanNum}}</a>
@@ -40,12 +40,22 @@
         <br /><a href ng-repeat-start="genre in calendar.genres" ng-click="aParam('genre', genre)" ng-bind="genre"></a><span ng-if="!$last" ng-repeat-end>, </span>
     </div>
 </div>
+<div class="overlay" ng-if="progSel" ng-click="aParam('program', null)">
+</div>
 <div class="modal" ng-if="progSel" ng-repeat="calendar in data.calendars |
     filter:{program: progSel}">
-    <a href ng-click="aParam('program', null)">(x)</a>
-    <br />{{calendar.program}}
-    <br><a href ng-click="aParam('premium', calendar.premium, 'getById', data.premiums)" ng-bind="calendar.premium | getById:data.premiums"></a>
-    <br>{{calendar.premDate | date:'MMM d'}} &ndash; {{calendar.premTime}}
-    <br><a href ng-click="aParam('channel', calendar.chanNum); aParam('program', null)">{{calendar.chanName}} &ndash; {{calendar.chanNum}}</a>
-    <br><a href ng-repeat-start="genre in calendar.genres" ng-click="aParam('genre', genre)" ng-bind="genre"></a><span ng-if="!$last" ng-repeat-end>, </span>
+        <a href ng-click="aParam('program', null)">(x)</a><br />
+        <div class="grid__item four-eighths">
+            <img ng-src="//placeholdit.imgix.net/~text?txtsize=25&txt={{calendar.program}}&w=480&h=270&txttrack=2" />
+            <br />{{calendar.program}}
+            <br><a href ng-click="aParam('premium', calendar.premium, 'getById', data.premiums)" ng-bind="calendar.premium | getById:data.premiums"></a>
+            <br>{{calendar.premDate | date:'MMM d'}} &ndash; {{calendar.premTime}}
+            <br><a href ng-click="aParam('channel', calendar.chanNum); aParam('program', null)">{{calendar.chanName}} &ndash; {{calendar.chanNum}}</a>
+            <br><a href ng-repeat-start="genre in calendar.genres" ng-click="aParam('genre', genre)" ng-bind="genre"></a><span ng-if="!$last" ng-repeat-end>, </span>
+        </div><!-- 
+         --><div class="grid__item four-eighths">
+            {{calendar.description}}
+            <span ng-if="calendar.starActrs"><br />Star Actors: <span ng-repeat-start="actor in calendar.starActrs">{{actor}}</span><span ng-repeat-end ng-if="!$last">, </span></span>
+            <span ng-if="calendar.starDrctrs"><br />Star Directors: <span ng-repeat-start="director in calendar.starDrctrs">{{director}}</span><span ng-repeat-end ng-if="!$last">, </span></span>
+        </div>
 </div>
