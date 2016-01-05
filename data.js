@@ -79,13 +79,6 @@ var data = {
             "HD": true,
             "SD": true,
             "logo": null
-        }, {
-            "name": "HBO On Demand",
-            "description": "Access to over 100 hours of HBO series, movies, sports, specials and children's programming. New titles are added weekly.",
-            "number": "1501",
-            "HD": true,
-            "SD": true,
-            "logo": null
         }],
         "sellingPoints": [{
             "subtab": 1,
@@ -1702,7 +1695,7 @@ var data = {
         "description": "As the Best Exotic Marigold Hotel has only a single remaining vacancy - posing a rooming predicament for two fresh arrivals - Sonny pursues his expansionist dream of opening a second hotel.",
         "image": "The Second Best Exotic Marigold Hotel.jpg"
     }, {
-        "program": "J. Cole Forest Hills Drive: Homecoming (HBO Special) Special premieres Saturday January 9th at 10PM EST",
+        "program": "J. Cole Forest Hills Drive: Homecoming",
         "premium": 1,
         "chanName": "HBO East",
         "chanNum": "501",
