@@ -190,7 +190,7 @@
         .filter('spcToHyphen', function() {
             return function(input) {
                 if (input) {
-                    return input.replace(/\s+/g, '-').replace("(", '').replace(")", '').replace("/", '-');
+                    return input.replace(/\s+/g, '-').replace("(", '').replace(")", '').replace(":", '').replace(".", '').replace("'", '').replace('"', '').replace("/", '-');
                 }
             }
         })
