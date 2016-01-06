@@ -11,7 +11,7 @@ var data = {
         "logo": null,
         "channels": [{
             "name": "HBO East",
-            "description": "Groundbreaking original series, big hit movies, sports, documentaries, comedy specials and more--that you wonâ€™t find anywhere else",
+            "description": "Groundbreaking original series, big hit movies, sports, documentaries, comedy specials and more--that you won\u2019t find anywhere else",
             "number": "501",
             "HD": true,
             "SD": true,
@@ -53,7 +53,7 @@ var data = {
             "logo": null
         }, {
             "name": "HBO Family East",
-            "description": "Original family series and Hollywoodâ€™s best kid-friendly entertainment 24/7",
+            "description": "Original family series and Hollywood\u2019s best kid-friendly entertainment 24\/7",
             "number": "507",
             "HD": true,
             "SD": true,
@@ -79,8 +79,30 @@ var data = {
             "HD": true,
             "SD": true,
             "logo": null
+        }, {
+            "name": "HBO On Demand",
+            "description": "Access to over 100 hours of HBO series, movies, sports, specials and children's programming. New titles are added weekly.",
+            "number": "1501",
+            "HD": true,
+            "SD": true,
+            "logo": null
         }],
         "sellingPoints": [{
+            "subtab": 4,
+            "title": "DIRECTV and AT&T Everywhere",
+            "point": "Watch the movies and shows you want \u2013 whenever you want \u2013 with DIRECTV Everywhere. Or, use your DIRECTV.com login to access HBO's library at HBO GO.",
+            "evergreen": true
+        }, {
+            "subtab": 2,
+            "title": "Entourage: The Movie",
+            "point": "Jan 23: (Comedy, Drama) Vince, E, Drama and Turtle make a splash in this raucous big-screen adaptation of the hit HBO series. When Vince tackles directing and starring in Ari's first picture, the boys have no idea what they are in for - especially when the film goes wildly over budget and threatens to implode. ",
+            "evergreen": false
+        }, {
+            "subtab": 2,
+            "title": "Mad Max: Fury Road",
+            "point": "Jan 9: (Action, Adventure, Sci-Fi) The fourth installment of the post-apocalyptic saga fiends Max captured by a violent band of warriors, only to land in an escape plot against their deranged leader.",
+            "evergreen": false
+        }, {
             "subtab": 1,
             "title": null,
             "point": "HBO has the most award-winning programming on TV, so you're guaranteed variety and quality programming.",
@@ -107,34 +129,14 @@ var data = {
             "evergreen": true
         }, {
             "subtab": 3,
-            "title": "The Leftovers",
-            "point": "Sundays: (Drama Series) After a Rapture-like event, a group of people who didn't quite make the cut muddle through life in a suburban town. Based on the book by Tom Perrotta and starring Justin Theroux, Michael Gaston and Liv Tyler.",
-            "evergreen": false
-        }, {
-            "subtab": 3,
-            "title": "Real Time with Bill Maher",
-            "point": "(Comedy Talk Series) Comedian and political satirist Bill Maher discusses topical events with guests from various backgrounds",
-            "evergreen": false
-        }, {
-            "subtab": 3,
             "title": null,
-            "point": "Emmy-winning sports series and live events: Real Sports w/Bryan Gumble, 24/7, Hard Knocks and World Championship boxing.",
-            "evergreen": false
+            "point": "Emmy-winning sports series and live events: Real Sports w\/Bryan Gumble, 24\/7, Hard Knocks and World Championship boxing.",
+            "evergreen": true
         }, {
             "subtab": 3,
             "title": null,
             "point": "World Championship Boxing: Watch the best boxers, the best match-ups live, as well as the HBO PPV replays.",
-            "evergreen": false
-        }, {
-            "subtab": 3,
-            "title": "The Fight Game with Jim Lampley",
-            "point": "(Sports Talk Series) A provocative, engaging and informative experience that delves into intriguing storylines, newsmakers and issues that are top-of-mind in boxing.",
-            "evergreen": false
-        }, {
-            "subtab": 3,
-            "title": "Real Sports With Bryant Gumbel",
-            "point": "(Sports Series) Dedicated to bringing viewers the most informative, provocative and controversial sports stories of our generation, this series celebrates its 20th year with an all-new edition of the award-winning sports magazine series.",
-            "evergreen": false
+            "evergreen": true
         }, {
             "subtab": 2,
             "title": null,
@@ -146,25 +148,30 @@ var data = {
             "point": "HBO has variety with over 80 movie titles a month so there's something for everyone in the family. Guaranteed a new movie premiere every Saturday at 8 PM (ET).",
             "evergreen": true
         }, {
+            "subtab": 3,
+            "title": "Real Sports With Bryant Gumbel",
+            "point": "(Sports Series) Dedicated to bringing viewers the most informative, provocative and controversial sports stories of our generation, this series celebrates its 20th year with an all-new edition of the award-winning sports magazine series.",
+            "evergreen": false
+        }, {
+            "subtab": 3,
+            "title": "Real Time with Bill Maher",
+            "point": " (Comedy Talk Series) Comedian and political satirist Bill Maher discusses topical events with guests from various backgrounds",
+            "evergreen": false
+        }, {
+            "subtab": 3,
+            "title": "The Fight Game with Jim Lampley",
+            "point": " (Sports Talk Series) A provocative, engaging and informative experience that delves into intriguing storylines, newsmakers and issues that are top-of-mind in boxing.",
+            "evergreen": false
+        }, {
+            "subtab": 3,
+            "title": "The Leftovers",
+            "point": "Sundays: (Drama Series) After a Rapture-like event, a group of people who didn't quite make the cut muddle through life in a suburban town. Based on the book by Tom Perrotta and starring Justin Theroux, Michael Gaston and Liv Tyler.",
+            "evergreen": false
+        }, {
             "subtab": 2,
             "title": "The Second Best Exotic Marigold Hotel",
-            "point": "Jan 2: (Comedy, Drama) In this warm and witty sequel to the 2011 hit, resort owner Sonny has to juggle plans to open a second property while making arrangements for his upcoming wedding.",
+            "point": "Jan 2: (Comedy, Drama) In this warm and witty sequel to the 2011 hit, resort owner Sonny has to juggle plans to open a second property while making arrangements for his upcoming wedding. ",
             "evergreen": false
-        }, {
-            "subtab": 2,
-            "title": "Mad Max: Fury Road",
-            "point": "Jan 9: (Action, Adventure, Sci-Fi) The fourth installment of the post-apocalyptic saga fiends Max captured by a violent band of warriors, only to land in an escape plot against their deranged leader.",
-            "evergreen": false
-        }, {
-            "subtab": 2,
-            "title": "Entourage: The Movie",
-            "point": "Jan 23: (Comedy, Drama) Vince, E, Drama and Turtle make a splash in this raucous big-screen adaptation of the hit HBO series. When Vince tackles directing and starring in Ari's first picture, the boys have no idea what they are in for - especially when the film goes wildly over budget and threatens to implode.",
-            "evergreen": false
-        }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Watch the movies and shows you want â€“ whenever you want â€“ with DIRECTV Everywhere. Or, use your DIRECTV.com login to access HBO's library at HBO GO.",
-            "evergreen": true
         }, {
             "subtab": 4,
             "title": "DIRECTV and AT&T Everywhere",
@@ -178,7 +185,7 @@ var data = {
         }, {
             "subtab": 4,
             "title": "DIRECTV and AT&T Everywhere",
-            "point": "Get episodes in order by season â€“ even if you recorded them to your receiver out of order.",
+            "point": "Get episodes in order by season \u2013 even if you recorded them to your receiver out of order.",
             "evergreen": true
         }, {
             "subtab": 4,
@@ -198,7 +205,7 @@ var data = {
         }, {
             "subtab": 4,
             "title": "HBO Now",
-            "point": "Available on computer and Roku, AppleTV, iPad, iPhone and iPod Touch (currently on exclusive contract with Apple).",
+            "point": "Available on computer and Roku, AppleTV, iPad, iPhone and iPod Touch (currently on exclusive contract with Apple). ",
             "evergreen": false
         }, {
             "subtab": 4,
@@ -213,7 +220,7 @@ var data = {
         }, {
             "subtab": 4,
             "title": "HBO Now",
-            "point": "$14.99/month",
+            "point": "$14.99\/month",
             "evergreen": false
         }],
         "objections": [{
@@ -224,7 +231,7 @@ var data = {
             "responses": ["If you missed it on HBO East, it can be seen later on another HBO network", "New movies debut frequently, with a guaranteed blockbuster premiere every Saturday", "All HBO channels air a variety of shows at different times to reduce repeats", "Over 20 currently running original shows, plus former hits like Flight of the Conchords air throughout the month, so there are few repeats"]
         }],
         "subs": [1, 2, 3, 4, 6],
-        "disclosures": [1, 2, 3]
+        "disclosures": [1, 2]
     }, {
         "id": 2,
         "name": "Showtime",
@@ -251,7 +258,7 @@ var data = {
             "logo": null
         }, {
             "name": "Sho 2",
-            "description": "If you missed it on SHOWTIME, youâ€™ll find it on SHOWTIME 2 HD: hit movies, series and more.",
+            "description": "If you missed it on SHOWTIME, you\u2019ll find it on SHOWTIME 2 HD: hit movies, series and more.",
             "number": "547",
             "HD": true,
             "SD": true,
@@ -314,7 +321,7 @@ var data = {
             "logo": null
         }, {
             "name": "Flix",
-            "description": "First-rate feature films as they were meant to be seen â€“ uncut and uninterrupted",
+            "description": "First-rate feature films as they were meant to be seen \u2013 uncut and uninterrupted",
             "number": "556",
             "HD": false,
             "SD": true,
@@ -356,6 +363,61 @@ var data = {
             "logo": null
         }],
         "sellingPoints": [{
+            "subtab": 3,
+            "title": "60 Minutes Sports",
+            "point": "Jan 5: The award-winning team behind 60 Minutes turns its investigative eye toward the world of sports. From in-depth reporting to the most compelling interviews. ",
+            "evergreen": false
+        }, {
+            "subtab": 3,
+            "title": "Billions",
+            "point": "Jan 1: (Drama Series) A complex drama about power politics in the world of New York's high finance. U.S. Attorney Chuck Rhoades and hedge fund king Bobby \"Axe\" Axelrod are on a collision course, with each using his considerable smarts to outmaneuver the other. Paul Giamatti and Damian Lewis star. Series Premiere",
+            "evergreen": false
+        }, {
+            "subtab": 3,
+            "title": "Dark Net",
+            "point": "Jan 21: (Documentary Series) Explore unique themes of the lesser-known side of the web and uncover different tales of real people who have been affected by them. Series Premiere",
+            "evergreen": false
+        }, {
+            "subtab": 4,
+            "title": "DIRECTV and AT&T Everywhere",
+            "point": "Watch the movies and shows you want \u2013 whenever you want \u2013 with DIRECTV Everywhere. Or, use your DIRECTV.com login to access Showtime's library at Showtime Anytime.",
+            "evergreen": true
+        }, {
+            "subtab": 4,
+            "title": "DIRECTV and AT&T Everywhere",
+            "point": "Instant Access to the hottest entertainment.",
+            "evergreen": true
+        }, {
+            "subtab": 4,
+            "title": "DIRECTV and AT&T Everywhere",
+            "point": "Watch an episode of your favorite Showtime original series and DIRECTV automatically puts the next episode in your playlist.",
+            "evergreen": true
+        }, {
+            "subtab": 4,
+            "title": "DIRECTV and AT&T Everywhere",
+            "point": "Get episodes in order by season \u2013 even if you recorded them to your receiver out of order.",
+            "evergreen": true
+        }, {
+            "subtab": 4,
+            "title": "DIRECTV and AT&T Everywhere",
+            "point": "Streaming available for both Showtime On Demand and Showtime live broadcasts.",
+            "evergreen": true
+        }, {
+            "subtab": 4,
+            "title": "DIRECTV and AT&T Everywhere",
+            "point": "Included with your subscription at no extra cost and is supported on TV, Apple and Android devices, Kindle, Chromecast, Playstation and Xbox, Roku, Smart TV and computer.",
+            "evergreen": true
+        }, {
+            "subtab": 2,
+            "title": "Drunk Stoned Brilliant Dead: The Story of The National Lampoon",
+            "point": "Jan 22: (Documentary) Catch the story of America's first adult humor magazine in this riveting documentary.",
+            "evergreen": false
+        }, {
+            "subtab": 3,
+            "title": "Inside the NFL",
+            "point": "Tuesdays: Emmy-winning weekly show with the most experienced, articulate and connected analysts in the business. Get expert insight, exclusive commentary and special on- and off-the-field features.",
+            "evergreen": false
+        }, {
             "subtab": 1,
             "title": null,
             "point": "13 commercial-free channels with award winning original series, uncut hit movies, year round sports, documentaries and comedy specials.",
@@ -378,73 +440,8 @@ var data = {
         }, {
             "subtab": 1,
             "title": null,
-            "point": "Watch the best of past and present seasons of your favorite Showtime original series, movies, sports, documentaries and comedy specials â€“ whenever you want â€“ with Showtime On Demand or online with DIRECTV Everywhere.",
+            "point": "Watch the best of past and present seasons of your favorite Showtime original series, movies, sports, documentaries and comedy specials \u2013 whenever you want \u2013 with Showtime On Demand or online with DIRECTV Everywhere.",
             "evergreen": true
-        }, {
-            "subtab": 2,
-            "title": "The Imitation Game",
-            "point": "Jan 15: (Drama, Thriller) Don't miss Benedict Cumberbatch in this Academy Award-nominated film.",
-            "evergreen": false
-        }, {
-            "subtab": 2,
-            "title": "The Hundred-Foot Journey",
-            "point": "Jan 18: (Drama) Tune in and catch Helen Mirren in the feel-good culinary movie.",
-            "evergreen": false
-        }, {
-            "subtab": 2,
-            "title": "Drunk Stoned Brilliant Dead: The Story of The National Lampoon",
-            "point": "Jan 22: (Documentary) Catch the story of America's first adult humor magazine in this riveting documentary.",
-            "evergreen": false
-        }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Watch the movies and shows you want â€“ whenever you want â€“ with DIRECTV Everywhere. Or, use your DIRECTV.com login to access Showtime's library at Showtime Anytime.",
-            "evergreen": true
-        }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Instant Access to the hottest entertainment.",
-            "evergreen": true
-        }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Watch an episode of your favorite Showtime original series and DIRECTV automatically puts the next episode in your playlist.",
-            "evergreen": true
-        }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Get episodes in order by season â€“ even if you recorded them to your receiver out of order.",
-            "evergreen": true
-        }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Streaming available for both Showtime On Demand and Showtime live broadcasts.",
-            "evergreen": true
-        }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Included with your subscription at no extra cost and is supported on TV, Apple and Android devices, Kindle, Chromecast, Playstation and Xbox, Roku, Smart TV and computer.",
-            "evergreen": true
-        }, {
-            "subtab": 4,
-            "title": "Showtime Standalone (OTT)",
-            "point": "Customers who sign up via PlayStation are limited to accessing Showtime OTT on PlayStation only.",
-            "evergreen": false
-        }, {
-            "subtab": 4,
-            "title": "Showtime Standalone (OTT)",
-            "point": "Standalone subscription is $10.99/month.",
-            "evergreen": false
-        }, {
-            "subtab": 4,
-            "title": "Showtime Standalone (OTT)",
-            "point": "Customers who stream through Hulu and Amazon Prime must pay subscription costs for both the Showtime OTT and their Hulu/Amazon Prime monthly service.",
-            "evergreen": false
-        }, {
-            "subtab": 4,
-            "title": "Showtime Standalone (OTT)",
-            "point": "Streaming available for both Showtime On Demand and Showtime East/West coast live feeds.",
-            "evergreen": false
         }, {
             "subtab": 3,
             "title": null,
@@ -454,17 +451,7 @@ var data = {
             "subtab": 3,
             "title": null,
             "point": "See the best in commercial-free sports coverage and boxing matches with Showtime Championship Boxing, Inside the NFL, Jim Rome, 60 Minutes Sports and more.",
-            "evergreen": null
-        }, {
-            "subtab": 3,
-            "title": "Billions",
-            "point": "Jan 1: (Drama Series) A complex drama about power politics in the world of New York's high finance. U.S. Attorney Chuck Rhoades and hedge fund king Bobby \"Axe\" Axelrod are on a collision course, with each using his considerable smarts to outmaneuver the other. Paul Giamatti and Damian Lewis star. Series Premiere",
-            "evergreen": false
-        }, {
-            "subtab": 3,
-            "title": "60 Minutes Sports",
-            "point": "Jan 5: The award-winning team behind 60 Minutes turns its investigative eye toward the world of sports. From in-depth reporting to the most compelling interviews.",
-            "evergreen": false
+            "evergreen": true
         }, {
             "subtab": 3,
             "title": "Shameless",
@@ -476,19 +463,39 @@ var data = {
             "point": "Jan 16: Undefeated WBC Heavyweight World Champion Deontay Wilder will make the third defense of his title against brawling Polish contender Artur Szpilka.",
             "evergreen": false
         }, {
-            "subtab": 3,
-            "title": "Dark Net",
-            "point": "Jan 21: (Documentary Series) Explore unique themes of the lesser-known side of the web and uncover different tales of real people who have been affected by them. Series Premiere",
+            "subtab": 4,
+            "title": "Showtime Standalone (OTT)",
+            "point": "Customers who sign up via PlayStation are limited to accessing Showtime OTT on PlayStation only.",
             "evergreen": false
         }, {
-            "subtab": 3,
-            "title": "Inside the NFL",
-            "point": "Tuesdays: Emmy-winning weekly show with the most experienced, articulate and connected analysts in the business. Get expert insight, exclusive commentary and special on- and off-the-field features.",
+            "subtab": 4,
+            "title": "Showtime Standalone (OTT)",
+            "point": "Standalone subscription is $10.99\/month. ",
+            "evergreen": false
+        }, {
+            "subtab": 4,
+            "title": "Showtime Standalone (OTT)",
+            "point": "Customers who stream through Hulu and Amazon Prime must pay subscription costs for both the Showtime OTT and their Hulu\/Amazon Prime monthly service.",
+            "evergreen": false
+        }, {
+            "subtab": 4,
+            "title": "Showtime Standalone (OTT)",
+            "point": "Streaming available for both Showtime On Demand and Showtime East\/West coast live feeds.",
             "evergreen": false
         }, {
             "subtab": 3,
             "title": "The Circus: Inside the Greatest Political Show on Earth",
             "point": "Premiering January: This groundbreaking documentary series pulls back the curtain on the 2016 U.S. presidential race, providing behind-the-scenes access to the human drama involved in the pursuit of the Oval Office.",
+            "evergreen": false
+        }, {
+            "subtab": 2,
+            "title": "The Hundred-Foot Journey",
+            "point": "Jan 18: (Drama) Tune in and catch Helen Mirren in the feel-good culinary movie.",
+            "evergreen": false
+        }, {
+            "subtab": 2,
+            "title": "The Imitation Game",
+            "point": "Jan 15: (Drama, Thriller) Don't miss Benedict Cumberbatch in this Academy Award-nominated film. ",
             "evergreen": false
         }],
         "objections": [{
@@ -496,7 +503,7 @@ var data = {
             "responses": ["Specialized channels offer targeted programming: sci-fi; independent films; action-adventure; suspense; women-focused; movies from the 70's, 80's and 90's; Hollywood hits."]
         }],
         "subs": [1, 2, 3, 4, 6],
-        "disclosures": [1, 2, 3]
+        "disclosures": [1, 2]
     }, {
         "id": 3,
         "name": "Starz",
@@ -628,6 +635,26 @@ var data = {
             "logo": null
         }],
         "sellingPoints": [{
+            "subtab": 3,
+            "title": "Ash vs. Evil Dead (Action\/Comedy\/Horror) ",
+            "point": "Sundays: Bruce Campbell returns as the chainsaw-handed, monster hunter who has spent 30 years avoiding responsibility. With the thread of a Deadite plague, Ash is forced to become mankind's only hope.",
+            "evergreen": false
+        }, {
+            "subtab": 2,
+            "title": "Avengers: Age of Ultron",
+            "point": "Jan 22: Marvel's super heroes return to battle Ultron, a government created force that proves to be their most dangerous foe yet.",
+            "evergreen": false
+        }, {
+            "subtab": 2,
+            "title": "Cinderella",
+            "point": "Jan 8: In this live-action retelling of Disney's animated classic, a fairy godmother's magic helps young Ella escapes a life of hardship and meet the prince of her dreams.",
+            "evergreen": false
+        }, {
+            "subtab": 4,
+            "title": "DIRECTV and AT&T Everywhere",
+            "point": "Watch the movies and shows you want \u2013 whenever you want \u2013 with DIRECTV Everywhere. Or, use your DIRECTV.com login to access both Starz and Encore libraries at Starz Play and Encore Play.",
+            "evergreen": true
+        }, {
             "subtab": 1,
             "title": null,
             "point": "The best entertainment value, with up to 15 channels of Starz and Encore, plus 9 Channels in HD. Over 200 HD movies per month.",
@@ -653,29 +680,9 @@ var data = {
             "point": "Starz channels specialize in new releases, entertainment suitable for the whole family and original programming.",
             "evergreen": true
         }, {
-            "subtab": 2,
-            "title": "Cinderella",
-            "point": "Jan 8: In this live-action retelling of Disney's animated classic, a fairy godmother's magic helps young Ella escapes a life of hardship and meet the prince of her dreams.",
-            "evergreen": false
-        }, {
-            "subtab": 2,
-            "title": "Avengers: Age of Ultron",
-            "point": "Jan 22: Marvel's super heroes return to battle Ultron, a government created force that proves to be their most dangerous foe yet.",
-            "evergreen": false
-        }, {
             "subtab": 3,
             "title": null,
             "point": "Starz has compelling Original Series you can't see anywhere else.",
-            "evergreen": null
-        }, {
-            "subtab": 3,
-            "title": "Ash vs. Evil Dead (Action/Comedy/Horror)",
-            "point": "Sundays: Bruce Campbell returns as the chainsaw-handed, monster hunter who has spent 30 years avoiding responsibility. With the thread of a Deadite plague, Ash is forced to become mankind's only hope.",
-            "evergreen": false
-        }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Watch the movies and shows you want â€“ whenever you want â€“ with DIRECTV Everywhere. Or, use your DIRECTV.com login to access both Starz and Encore libraries at Starz Play and Encore Play.",
             "evergreen": true
         }],
         "objections": [{
@@ -683,7 +690,7 @@ var data = {
             "responses": ["Starz channels specialize in new releases, entertainment suitable for the whole family and original programming."]
         }],
         "subs": [1, 2, 3, 4, 6, 7],
-        "disclosures": [1, 2, 3]
+        "disclosures": [1, 2]
     }, {
         "id": 4,
         "name": "Cinemax",
@@ -744,7 +751,7 @@ var data = {
             "SD": false,
             "logo": null
         }, {
-            "name": "CinemÃ¡x",
+            "name": "Cinem\u00e1x",
             "description": "The biggest variety of hit movies with top box office releases, buzzworthy original series and more, all in Spanish.",
             "number": "523",
             "HD": true,
@@ -759,39 +766,9 @@ var data = {
             "logo": null
         }],
         "sellingPoints": [{
-            "subtab": 1,
-            "title": null,
-            "point": "Cinemax is the first and only 100% True HD premium service.",
-            "evergreen": true
-        }, {
-            "subtab": 1,
-            "title": null,
-            "point": "For movie lovers. It's fully loaded with the most block buster movies (and fewest repeats) than any premium service.",
-            "evergreen": true
-        }, {
-            "subtab": 1,
-            "title": null,
-            "point": "Offers a top notch movie every night at 10PM",
-            "evergreen": true
-        }, {
-            "subtab": 1,
-            "title": null,
-            "point": "Guaranteed a new Saturday night movie premiere at 10 PM",
-            "evergreen": true
-        }, {
-            "subtab": 1,
-            "title": null,
-            "point": "Extensive library of recent hits and older films, as well as exclusive behind the scenes features.",
-            "evergreen": true
-        }, {
             "subtab": 2,
             "title": "Child 44 (Drama, Thriller)",
             "point": "Jan 2: A disgraced member of the military police investigates a series of nasty child murders during the Stalin-era Soviet Union.",
-            "evergreen": false
-        }, {
-            "subtab": 2,
-            "title": "X-Men: Days of Future Past: Rogue Cut (Action, Adventure, Sci-Fi)",
-            "point": "Jan 9: The X-Men send Wolverine to the past in a desperate effort to change history and prevent an event that results in doom for both humans and mutants.",
             "evergreen": false
         }, {
             "subtab": 2,
@@ -801,7 +778,7 @@ var data = {
         }, {
             "subtab": 4,
             "title": "DIRECTV and AT&T Everywhere",
-            "point": "With MAX GO, customers get instant access to over 400 of the biggest Hollywood hit movies, indie favorites, and Max After Dark Series.",
+            "point": "With MAX GO, customers get instant access to over 400 of the biggest Hollywood hit movies, indie favorites, and Max After Dark Series. ",
             "evergreen": true
         }, {
             "subtab": 4,
@@ -813,13 +790,43 @@ var data = {
             "title": "DIRECTV and AT&T Everywhere",
             "point": "Customers can browse tags for a fun way to access movies, as well as create a personal watchlist to save shows and movies easily.",
             "evergreen": true
+        }, {
+            "subtab": 1,
+            "title": null,
+            "point": "Cinemax is the first and only 100% True HD premium service.",
+            "evergreen": true
+        }, {
+            "subtab": 1,
+            "title": null,
+            "point": "For movie lovers. It's fully loaded with the most block buster movies (and fewest repeats) than any premium service. ",
+            "evergreen": true
+        }, {
+            "subtab": 1,
+            "title": null,
+            "point": "Offers a top notch movie every night at 10PM",
+            "evergreen": true
+        }, {
+            "subtab": 1,
+            "title": null,
+            "point": "Guaranteed a new Saturday night movie premiere at 10 PM ",
+            "evergreen": true
+        }, {
+            "subtab": 1,
+            "title": null,
+            "point": "Extensive library of recent hits and older films, as well as exclusive behind the scenes features. ",
+            "evergreen": true
+        }, {
+            "subtab": 2,
+            "title": "X-Men: Days of Future Past: Rogue Cut (Action, Adventure, Sci-Fi)",
+            "point": "Jan 9: The X-Men send Wolverine to the past in a desperate effort to change history and prevent an event that results in doom for both humans and mutants.",
+            "evergreen": false
         }],
         "objections": [{
             "category": "Content Quality",
             "responses": ["Parental controls are available to prevent younger viewers from seeing mature programming."]
         }],
         "subs": [1, 2, 3, 4, 6],
-        "disclosures": [1, 2, 3]
+        "disclosures": [1, 2]
     }, {
         "id": 5,
         "name": "Sports Pack",
@@ -909,14 +916,14 @@ var data = {
             "logo": null
         }, {
             "name": "FS Florida",
-            "description": "Miami Marlins and Tampa Bay Rays, NHL Florida Panthers, ACC athletics including extensive men's basketball coverage, and original series/specials",
+            "description": "Miami Marlins and Tampa Bay Rays, NHL Florida Panthers, ACC athletics including extensive men's basketball coverage, and original series\/specials",
             "number": "654",
             "HD": true,
             "SD": true,
             "logo": null
         }, {
             "name": "FS Midwest",
-            "description": "More than 2,000 hours of local programming each year, including St. Louis Cardinals, Kansas City Royals, Indiana Pacers, St. Louis Blues, Big 12 football, Big 12 women's basketball, local high school sports,",
+            "description": "More than 2,000 hours of local programming each year, including St. Louis Cardinals, Kansas City Royals, Indiana Pacers, St. Louis Blues, Big 12 football, Big 12 women's basketball, local high school sports, ",
             "number": "671",
             "HD": true,
             "SD": true,
@@ -1021,7 +1028,7 @@ var data = {
             "logo": null
         }, {
             "name": "Prime Ticket",
-            "description": "Los Angeles Clippers, Anaheim Ducks, AVP, Club Deportivo Chivas USA, Los Angeles Sparks, USC Trojans, UCLA Bruins, local high school sports and Big West, WCC, ACC and Pac-12",
+            "description": "Los Angeles Clippers, Anaheim Ducks, AVP, Club Deportivo Chivas USA, Los Angeles Sparks, USC Trojans, UCLA Bruins, local high school sports and Big West, WCC, ACC and Pac-12 ",
             "number": "693",
             "HD": true,
             "SD": true,
@@ -1063,14 +1070,14 @@ var data = {
             "logo": null
         }, {
             "name": "SportsTime Ohio",
-            "description": "Cleveland Browns and Ohio State Buckeyes",
+            "description": "Cleveland Browns and Ohio State Buckeyes ",
             "number": "662",
             "HD": true,
             "SD": true,
             "logo": null
         }, {
             "name": "TWC SportsNet",
-            "description": "Los Angeles Lakers, LA Galaxy, Los Angeles Sparks and the California Interscholastic Federation (CIF),",
+            "description": "Los Angeles Lakers, LA Galaxy, Los Angeles Sparks and the California Interscholastic Federation (CIF), ",
             "number": "691",
             "HD": true,
             "SD": true,
@@ -1084,14 +1091,14 @@ var data = {
             "logo": null
         }, {
             "name": "YES",
-            "description": "New York Yankees and Brooklyn Nets",
+            "description": "New York Yankees and Brooklyn Nets ",
             "number": "631",
             "HD": true,
             "SD": true,
             "logo": null
         }, {
             "name": "Univision Deportes",
-            "description": "Liga Mexicana de FÃºtbol, Major League Soccer, CONCACAF Champions League, U.S. National Team, Mexican National Team, World Cup qualifiers, NFL, NBA and MLB",
+            "description": "Liga Mexicana de F\u00fatbol, Major League Soccer, CONCACAF Champions League, U.S. National Team, Mexican National Team, World Cup qualifiers, NFL, NBA and MLB",
             "number": "464",
             "HD": true,
             "SD": true,
@@ -1128,7 +1135,7 @@ var data = {
         "sellingPoints": [{
             "subtab": 6,
             "title": "Alternate Channels",
-            "point": "Alternate channels are not included in the Channel Lineup tool because they are not 24/7 sports networks and cannot be subscribed to",
+            "point": "Alternate channels are not included in the Channel Lineup tool because they are not 24\/7 sports networks and cannot be subscribed to",
             "evergreen": false
         }, {
             "subtab": 6,
@@ -1138,7 +1145,7 @@ var data = {
         }, {
             "subtab": 6,
             "title": "Alternate Channels",
-            "point": "Customers cannot subscribe to these channels. Alternate channels are only viewable while the game is in progress.",
+            "point": "Customers cannot subscribe to these channels. Alternate channels are only viewable while the game is in progress. ",
             "evergreen": false
         }, {
             "subtab": 6,
@@ -1151,30 +1158,25 @@ var data = {
             "point": "Usually located in the same channel neighborhood as the customer's local RSN, or near ESPN or ESPN2",
             "evergreen": false
         }, {
-            "subtab": 9,
-            "title": null,
-            "point": "ESPN CE brings hundreds of ESPN3 exclusive live college sports events to the TV.",
+            "subtab": 4,
+            "title": "DIRECTV and AT&T Everywhere",
+            "point": "Watch Comcast SportsNet coverage of local RSN action on the web and compatible mobile devices.",
+            "evergreen": true
+        }, {
+            "subtab": 4,
+            "title": "DIRECTV and AT&T Everywhere",
+            "point": "View Time Warner Cable SportsNet content on the web, iPhone, iPad and Android through a high-speed internet connection",
             "evergreen": true
         }, {
             "subtab": 9,
-            "title": null,
-            "point": "Great college sports coverage, including over 30 regional sports networks and the ESPN college sports channels",
-            "evergreen": true
+            "title": "ESPN Bases Loaded",
+            "point": "Your ultimate viewing experience for the NCAA Softball and Baseball Championship Regionals, taking the viewer to the best action across sites from around the country.",
+            "evergreen": false
         }, {
             "subtab": 9,
-            "title": null,
-            "point": "Offers an extensive portfolio of college sports events year-round including football, basketball, baseball, softball and more.",
-            "evergreen": true
-        }, {
-            "subtab": 9,
-            "title": null,
-            "point": "Local news and highlights of favorite professional teams, no matter where a customer lives.",
-            "evergreen": true
-        }, {
-            "subtab": 9,
-            "title": null,
-            "point": "Live events delivered to fans on up to 8 channels, including college basketball and football games from SEC, ACC, WAC, Big East, Big 12, MAC and Sun Belt conferences.",
-            "evergreen": true
+            "title": "ESPN Bases Loaded",
+            "point": "The channel is available 24\/7 throughout the Regional rounds.",
+            "evergreen": false
         }, {
             "subtab": 9,
             "title": "ESPN Buzzer Beater",
@@ -1202,18 +1204,33 @@ var data = {
             "evergreen": false
         }, {
             "subtab": 9,
-            "title": "ESPN Bases Loaded",
-            "point": "Your ultimate viewing experience for the NCAA Softball and Baseball Championship Regionals, taking the viewer to the best action across sites from around the country.",
-            "evergreen": false
+            "title": null,
+            "point": "ESPN CE brings hundreds of ESPN3 exclusive live college sports events to the TV.",
+            "evergreen": true
         }, {
             "subtab": 9,
-            "title": "ESPN Bases Loaded",
-            "point": "The channel is available 24/7 throughout the Regional rounds.",
-            "evergreen": false
+            "title": null,
+            "point": "Great college sports coverage, including over 30 regional sports networks and the ESPN college sports channels",
+            "evergreen": true
+        }, {
+            "subtab": 9,
+            "title": null,
+            "point": "Offers an extensive portfolio of college sports events year-round including football, basketball, baseball, softball and more.",
+            "evergreen": true
+        }, {
+            "subtab": 9,
+            "title": null,
+            "point": "Local news and highlights of favorite professional teams, no matter where a customer lives.",
+            "evergreen": true
+        }, {
+            "subtab": 9,
+            "title": null,
+            "point": "Live events delivered to fans on up to 8 channels, including college basketball and football games from SEC, ACC, WAC, Big East, Big 12, MAC and Sun Belt conferences.",
+            "evergreen": true
         }, {
             "subtab": 1,
             "title": null,
-            "point": "Access to RSNs that air local games and special programs that would not typically be available in the customer's area.",
+            "point": "Access to RSNs that air local games and special programs that would not typically be available in the customer's area. ",
             "evergreen": true
         }, {
             "subtab": 1,
@@ -1227,16 +1244,6 @@ var data = {
             "evergreen": true
         }, {
             "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Watch Comcast SportsNet coverage of local RSN action on the web and compatible mobile devices.",
-            "evergreen": true
-        }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "View Time Warner Cable SportsNet content on the web, iPhone, iPad and Android through a high-speed internet connection",
-            "evergreen": true
-        }, {
-            "subtab": 4,
             "title": "Third-party Streaming",
             "point": "Live, local sports coverage not available through services like Netflix and Hulu.",
             "evergreen": false
@@ -1246,7 +1253,7 @@ var data = {
             "responses": ["RSNs require limited distribution of certain programs, including games and press conferences that may not be available everywhere.", "Out-of-market games are sold separately via professional sports subscription packages (NBA League Pass, NFL Sunday Ticket, etc.).", "Sports blackouts are controlled by the leagues, sports associations, and program carriers. In some areas, we may no longer have rights to broadcast the customer's games."]
         }],
         "subs": [1, 4, 6, 9],
-        "disclosures": [1, 2, 3, 4, 5]
+        "disclosures": [1, 2, 3]
     }, {
         "id": 6,
         "name": "Streaming",
@@ -1265,6 +1272,153 @@ var data = {
         }],
         "subs": [],
         "disclosures": []
+    }, {
+        "id": 7,
+        "name": "DIRECTV Cinema",
+        "url": "directv-cinema",
+        "aacURL": "ppv_dtv_cinema_info.html",
+        "dotcomURL": "technology/directv_cinema",
+        "premURL": "http://www.directv.com/technology/directv_cinema",
+        "price": "Varies",
+        "ODchan": "1100",
+        "logo": null,
+        "channels": [{
+            "name": "3D PPV",
+            "description": "Hollywood hits and visually stunning movies available in 3D. (3D equipment and MPEG-4 receiver required.)",
+            "number": "104",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "The Screening Room",
+            "description": "Access to trailers, behind-the-scenes footage and back stories of new movies available on DIRECTV Cinema.",
+            "number": "125",
+            "HD": true,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": null,
+            "description": "HD linear PPV channels.",
+            "number": "127 - 172",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": null,
+            "description": "Standard-definition linear PPV channels.",
+            "number": "173 - 199",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "The Screening Room",
+            "description": "Standard-definition mirrored broadcast of Ch. 125.",
+            "number": "200",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "The Screening Room",
+            "description": "Standard-definition mirrored broadcast of Ch. 125.",
+            "number": "201",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "DIRECTV On Demand",
+            "description": "Instant access to thousands of the hottest movies, including the latest Hollywood releases, classic hits and independent films.",
+            "number": "1000",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "4K PPV",
+            "description": "Watch UHD movies instantly with your internet-connected Genie HD-DVR.",
+            "number": "1102",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }],
+        "sellingPoints": [{
+            "subtab": 8,
+            "title": "CSR",
+            "point": "No internet\/phone-line connection required. Programming is mirrored to all receivers in the house. ($5 Phone Transaction Fee)",
+            "evergreen": false
+        }, {
+            "subtab": 8,
+            "title": "DIRECTV.com",
+            "point": "No internet\/phone-line connection required. Programming is mirrored to all receivers in the house. (Free to order) ",
+            "evergreen": false
+        }, {
+            "subtab": 10,
+            "title": "Exclusive Premieres",
+            "point": "Titles available exclusively on DIRECTV a month before they are released in theaters.",
+            "evergreen": false
+        }, {
+            "subtab": 10,
+            "title": "Library Titles",
+            "point": " Older titles that have been out of theaters for at least a year. These titles may be free or chargeable and available through On Demand on cable network or premium channels.",
+            "evergreen": false
+        }, {
+            "subtab": 1,
+            "title": null,
+            "point": "DIRECTV CINEMA brings customers the hottest new releases from the comfort of their homes. ",
+            "evergreen": true
+        }, {
+            "subtab": 1,
+            "title": null,
+            "point": "Select movies are available on DIRECTV CINEMA 28 days before Redbox or Netflix.",
+            "evergreen": true
+        }, {
+            "subtab": 1,
+            "title": null,
+            "point": "Some titles available the same day they premiere in theaters",
+            "evergreen": true
+        }, {
+            "subtab": 1,
+            "title": null,
+            "point": "Exclusive Premieres are available exclusively to DIRECTV customers one month before they hit theaters",
+            "evergreen": true
+        }, {
+            "subtab": 1,
+            "title": null,
+            "point": "Newest movies right out of the theater. New releases are on DIRECTV Cinema about 4 - 6 months before they go to premium channels.",
+            "evergreen": true
+        }, {
+            "subtab": 8,
+            "title": null,
+            "point": "4 easy ways to order including via remote, online, text, phone",
+            "evergreen": true
+        }, {
+            "subtab": 8,
+            "title": null,
+            "point": "Movies start at Ch. 125",
+            "evergreen": true
+        }, {
+            "subtab": 10,
+            "title": "New Releases",
+            "point": "Recent titles that are no longer in theaters and will become available on premium channels in about 4 \u2013 6 months. (After theaters, and before they air on premium channels)",
+            "evergreen": false
+        }, {
+            "subtab": 8,
+            "title": "Remote Control",
+            "point": "Internet or phone-line connection required. Programming is authorized on the receiver where order is placed, unless customer has Whole-Home DVR. (Free to order)",
+            "evergreen": false
+        }, {
+            "subtab": 8,
+            "title": "Text Message",
+            "point": "No internet\/phone-line connection required. If HD equipment is on the account, the listed titles default to HD. (Subject to data charges)",
+            "evergreen": false
+        }],
+        "objections": [{
+            "category": "Availability",
+            "responses": ["DIRECTV Cinema offers over 2500 titles. For access to full library, connect your DVR to the internet. New releases are added every week, about 30 new titles a month.", "Cinema titles are available at the touch of a button, with no need to leave the couch to watch a movie."]
+        }, {
+            "category": "Price/Value",
+            "responses": ["DIRECTV Cinema is cheaper than 1 ticket to the movie theater. Plus, there are no late fees."]
+        }],
+        "subs": [1, 8, 10],
+        "disclosures": [4]
     }],
     "subtabs": [{
         "id": 1,
@@ -1318,7 +1472,11 @@ var data = {
     }, {
         "id": 3,
         "lvl1": "Explain sports blackout restrictions:",
-        "lvl2": ["Sports Pack does not include professional sports games from outside the customer's local market.", "Out-of-market games are sold separately via professional sports subscription packages (NBA League Pass, NFL Sunday Ticket, etc.) ."]
+        "lvl2": ["Sports Pack does not include professional sports games from outside the customer's local market. ", "Out-of-market games are sold separately via professional sports subscription packages (NBA League Pass, NFL Sunday Ticket, etc.) . "]
+    }, {
+        "id": 4,
+        "lvl1": "Remind customer of any fees and system requirements:",
+        "lvl2": ["$5 fee if ordering a PPV movie through a CSR.", "The receiver must be internet-connected to order a PPV movie via remote.", "Customers cannot access full DIRECTV Cinema movie library if the receiver is not connected to the internet."]
     }],
     "calendars": [{
         "program": "Shameless",
@@ -1369,7 +1527,7 @@ var data = {
         "starActrs": null,
         "starDrctrs": null,
         "starPrdcrs": null,
-        "description": "Dark Net will explore unique themes of the web and uncover different tales of real people who have been affected by them.",
+        "description": "Dark Net will explore unique themes of the web and uncover different tales of real people who have been affected by them. ",
         "image": "Dark Net Key Art"
     }, {
         "program": "The Circus: Inside the Greatest Political Show on Earth",
@@ -1437,7 +1595,7 @@ var data = {
         "starActrs": null,
         "starDrctrs": null,
         "starPrdcrs": null,
-        "description": "DRUNK STONED BRILLIANT DEAD tells the story of how Americaâ€™s first adult humor magazine, changed comedy forever before the magazineâ€™s spectacular fall.",
+        "description": "DRUNK STONED BRILLIANT DEAD tells the story of how America\u2019s first adult humor magazine, changed comedy forever before the magazine\u2019s spectacular fall.",
         "image": "Drunk stoned brilliant dead... - unit 1"
     }, {
         "program": "Inside the NFL",
@@ -1471,7 +1629,7 @@ var data = {
         "starActrs": null,
         "starDrctrs": null,
         "starPrdcrs": null,
-        "description": "The award-winning team behind 60 Minutes now turns its investigative eye towards the world of sports.",
+        "description": "The award-winning team behind 60 Minutes now turns its investigative eye towards the world of sports. ",
         "image": "60 Minutes Sports Key Art - Horizontal"
     }, {
         "program": "SHO Champtionship Boxing",
@@ -1505,7 +1663,7 @@ var data = {
         "starActrs": ["Aubrey Plaza", "Rachel Bilson", "Andy Samberg"],
         "starDrctrs": null,
         "starPrdcrs": null,
-        "description": "All-star comedy about a type-A teenage girl who tries to shed her uptight image by undertaking a list of all the outrageous activities she missed out on in high school, before she goes to college.",
+        "description": "All-star comedy about a type-A teenage girl who tries to shed her uptight image by undertaking a list of all the outrageous activities she missed out on in high school, before she goes to college. ",
         "image": null
     }, {
         "program": "Camp X-Ray",
@@ -1527,7 +1685,7 @@ var data = {
     }, {
         "program": "The Lovely Bones",
         "premium": 2,
-        "chanName": "THE MOVIE CHANNEL",
+        "chanName": "THE MOVIE CHANNEL ",
         "chanNum": "543 (East) 544 (West)",
         "premDate": "2016-01-01",
         "dayWeek": "Friday",
@@ -1556,12 +1714,12 @@ var data = {
         "starActrs": ["Jessica Alba", "Joseph Gordon-Levitt", "Eva Green"],
         "starDrctrs": ["Frank"],
         "starPrdcrs": null,
-        "description": "Frank Miller's classic graphic novels return to the screen, weaving together gritty tales that feature Basin City's most hardboiled citizens as they cross paths with the town's more notorious inhabitants.Â ",
+        "description": "Frank Miller's classic graphic novels return to the screen, weaving together gritty tales that feature Basin City's most hardboiled citizens as they cross paths with the town's more notorious inhabitants.\u00a0",
         "image": null
     }, {
         "program": "Need for Speed",
         "premium": 2,
-        "chanName": "Showtime Extreme",
+        "chanName": "Showtime Extreme ",
         "chanNum": "549",
         "premDate": "2016-01-03",
         "dayWeek": "Sunday",
@@ -1576,7 +1734,7 @@ var data = {
         "description": "Aaron Paul stars as a street racer who was framed by a wealthy business associate. Now, fresh from prison, he gets his hands on the fastest car around and joins a secretive and extremely high stakes race with revenge in mind.",
         "image": null
     }, {
-        "program": "Snowpiercer",
+        "program": "Snowpiercer ",
         "premium": 2,
         "chanName": "Showtime Beyond",
         "chanNum": "550",
@@ -1593,7 +1751,7 @@ var data = {
         "description": "Set in a future where a failed climate-change experiment kills all life on the planet, a lucky few board a train that endlessly circles the icy globe with a cruel and dangerous class hierarchy separating the front and back passengers.",
         "image": null
     }, {
-        "program": "Vampire Academy",
+        "program": "Vampire Academy ",
         "premium": 2,
         "chanName": "Showtime Beyond",
         "chanNum": "550",
@@ -1610,7 +1768,7 @@ var data = {
         "description": "Rose Hathaway is a Dhampir, half human-half vampire, a guardian of the Moroi, peaceful, mortal vampires living discreetly within our world. Her calling is to protect the Moroi from bloodthirsty, immortal Vampires, the Strigoi.",
         "image": null
     }, {
-        "program": "Meet Joe Black",
+        "program": "Meet Joe Black ",
         "premium": 2,
         "chanName": "FLIX",
         "chanNum": "556",
@@ -1629,7 +1787,7 @@ var data = {
     }, {
         "program": "Child 44",
         "premium": 4,
-        "chanName": "Cinemax East",
+        "chanName": "Cinemax East ",
         "chanNum": "515",
         "premDate": "2016-01-02",
         "dayWeek": "Saturday",
@@ -1646,7 +1804,7 @@ var data = {
     }, {
         "program": "X-Men: Days of Future Past: Rogue Cut",
         "premium": 4,
-        "chanName": "Cinemax East",
+        "chanName": "Cinemax East ",
         "chanNum": "515",
         "premDate": "2016-01-09",
         "dayWeek": "Saturday",
@@ -1663,7 +1821,7 @@ var data = {
     }, {
         "program": "Dawn of the Planet of the Apes",
         "premium": 4,
-        "chanName": "Cinemax East",
+        "chanName": "Cinemax East ",
         "chanNum": "515",
         "premDate": "2016-01-23",
         "dayWeek": "Saturday",
@@ -1680,7 +1838,7 @@ var data = {
     }, {
         "program": "The Second Best Exotic Marigold Hotel",
         "premium": 1,
-        "chanName": "HBO East",
+        "chanName": "HBO East ",
         "chanNum": "501",
         "premDate": "2016-01-02",
         "dayWeek": "Saturday",
@@ -1695,9 +1853,9 @@ var data = {
         "description": "As the Best Exotic Marigold Hotel has only a single remaining vacancy - posing a rooming predicament for two fresh arrivals - Sonny pursues his expansionist dream of opening a second hotel.",
         "image": "The Second Best Exotic Marigold Hotel.jpg"
     }, {
-        "program": "J. Cole Forest Hills Drive: Homecoming",
+        "program": "J. Cole Forest Hills Drive: Homecoming (HBO Special) Special premieres Saturday January 9th at 10PM EST",
         "premium": 1,
-        "chanName": "HBO East",
+        "chanName": "HBO East ",
         "chanNum": "501",
         "premDate": "2016-01-09",
         "dayWeek": "Saturday",
@@ -1709,12 +1867,12 @@ var data = {
         "starActrs": ["J. Cole"],
         "starDrctrs": null,
         "starPrdcrs": null,
-        "description": "One of musicâ€™s biggest stars returns home for a riveting performance. Part concert film, part backstage pass, this special tells J. Cole's compelling life story through his own words and music, and through the observations of those who know him best.",
+        "description": "One of music\u2019s biggest stars returns home for a riveting performance. Part concert film, part backstage pass, this special tells J. Cole's compelling life story through his own words and music, and through the observations of those who know him best.",
         "image": null
     }, {
         "program": "Mad Max: Fury Road",
         "premium": 1,
-        "chanName": "HBO East",
+        "chanName": "HBO East ",
         "chanNum": "501",
         "premDate": "2016-01-09",
         "dayWeek": "Saturday",
@@ -1731,7 +1889,7 @@ var data = {
     }, {
         "program": "Real Time with Bill Maher",
         "premium": 1,
-        "chanName": "HBO East",
+        "chanName": "HBO East ",
         "chanNum": "501",
         "premDate": "2016-01-15",
         "dayWeek": "Friday",
@@ -1743,10 +1901,10 @@ var data = {
         "starActrs": ["Bill Maher"],
         "starDrctrs": null,
         "starPrdcrs": null,
-        "description": "Comedian and political satirist Bill Maher discusses topical events with guests from various backgrounds.",
+        "description": "Comedian and political satirist Bill Maher discusses topical events with guests from various backgrounds. ",
         "image": "Real Time Bill Maher.jpg"
     }, {
-        "program": "Sesame Street",
+        "program": "Sesame Street ",
         "premium": 1,
         "chanName": "HBO Family",
         "chanNum": "507",
@@ -1765,7 +1923,7 @@ var data = {
     }, {
         "program": "Entourage",
         "premium": 1,
-        "chanName": "HBO East",
+        "chanName": "HBO East ",
         "chanNum": "501",
         "premDate": "2016-01-16",
         "dayWeek": "Saturday",
@@ -1777,12 +1935,12 @@ var data = {
         "starActrs": ["Adrian Grenier", "Kevin Connolly", "Jerry Ferrara"],
         "starDrctrs": ["Doug Ellin"],
         "starPrdcrs": null,
-        "description": "Movie star Vincent Chase, together with his boys Eric, Turtle, and Johnny, are back - and back in business with super agent-turned-studio head Ari Gold on a risky project that will serve as Vince's directorial debut.",
+        "description": " Movie star Vincent Chase, together with his boys Eric, Turtle, and Johnny, are back - and back in business with super agent-turned-studio head Ari Gold on a risky project that will serve as Vince's directorial debut. ",
         "image": "Entourage1.jpg"
     }, {
         "program": "Whitney Cummings: I'm Your Girlfriend",
         "premium": 1,
-        "chanName": "HBO East",
+        "chanName": "HBO East ",
         "chanNum": "501",
         "premDate": "2016-01-23",
         "dayWeek": "Saturday",
@@ -1794,12 +1952,12 @@ var data = {
         "starActrs": ["Whitney Cummings"],
         "starDrctrs": null,
         "starPrdcrs": null,
-        "description": "Taped before a live audience at The Broad Stage in Santa Monica, CA, this exclusive presentation features Cummings in her first HBO stand-up comedy special.",
+        "description": "Taped before a live audience at The Broad Stage in Santa Monica, CA, this exclusive presentation features Cummings in her first HBO stand-up comedy special. ",
         "image": "Whitney Cummings - I'm Your Girlfriend.jpg"
     }, {
         "program": "Unfriended",
         "premium": 1,
-        "chanName": "HBO East",
+        "chanName": "HBO East ",
         "chanNum": "501",
         "premDate": "2016-01-23",
         "dayWeek": "Saturday",
@@ -1816,7 +1974,7 @@ var data = {
     }, {
         "program": "True Story",
         "premium": 1,
-        "chanName": "HBO East",
+        "chanName": "HBO East ",
         "chanNum": "501",
         "premDate": "2016-01-30",
         "dayWeek": "Saturday",
@@ -1828,7 +1986,7 @@ var data = {
         "starActrs": ["James Franco", "Jonah Hill", "Felicity Jones"],
         "starDrctrs": null,
         "starPrdcrs": null,
-        "description": "When disgraced New York Times reporter Michael Finkel meets accused killer Christian Longo - who has taken on Finkel's identity - his investigation morphs into a game of cat-and-mouse.",
+        "description": "When disgraced New York Times reporter Michael Finkel meets accused killer Christian Longo - who has taken on Finkel's identity - his investigation morphs into a game of cat-and-mouse. ",
         "image": "True Story.jpg"
     }, {
         "program": "Ash vs Evil Dead - A STARZ Original Series",
