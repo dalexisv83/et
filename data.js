@@ -11,7 +11,7 @@ var data = {
         "logo": null,
         "channels": [{
             "name": "HBO East",
-            "description": "Groundbreaking original series, big hit movies, sports, documentaries, comedy specials and more--that you won\u2019t find anywhere else",
+            "description": "Groundbreaking original series, big hit movies, sports, documentaries, comedy specials and more--that you wonâ€™t find anywhere else",
             "number": "501",
             "HD": true,
             "SD": true,
@@ -22,7 +22,7 @@ var data = {
             "number": "502",
             "HD": true,
             "SD": true,
-            "logo": null
+            "logo": "hbo-2"
         }, {
             "name": "HBO Signature",
             "description": "The best original series and movies that touch viewers' hearts, souls and minds",
@@ -43,7 +43,7 @@ var data = {
             "number": "505",
             "HD": true,
             "SD": true,
-            "logo": null
+            "logo": "hbo-2"
         }, {
             "name": "HBO Comedy",
             "description": "Uncut and uncensored stand-up featuring big name stars as well as up-and-coming talent, plus original series and movies",
@@ -53,18 +53,18 @@ var data = {
             "logo": null
         }, {
             "name": "HBO Family East",
-            "description": "Original family series and Hollywood\u2019s best kid-friendly entertainment 24\/7",
+            "description": "Original family series and Hollywoodâ€™s best kid-friendly entertainment 24\/7",
             "number": "507",
             "HD": true,
             "SD": true,
-            "logo": null
+            "logo": "hbo-family"
         }, {
             "name": "HBO Family West",
             "description": "3-hour time delay of programming that airs on HBO Family East (Ch. 507)",
             "number": "507",
             "HD": false,
             "SD": true,
-            "logo": null
+            "logo": "hbo-family"
         }, {
             "name": "HBO Zone",
             "description": "Cutting-edge movies, original series and documentaries geared towards a diverse 18- to 34-year-old audience",
@@ -79,28 +79,21 @@ var data = {
             "HD": true,
             "SD": true,
             "logo": null
-        }, {
-            "name": "HBO On Demand",
-            "description": "Access to over 100 hours of HBO series, movies, sports, specials and children's programming. New titles are added weekly.",
-            "number": "1501",
-            "HD": true,
-            "SD": true,
-            "logo": null
         }],
         "sellingPoints": [{
             "subtab": 4,
             "title": "DIRECTV and AT&T Everywhere",
-            "point": "Watch the movies and shows you want \u2013 whenever you want \u2013 with DIRECTV Everywhere. Or, use your DIRECTV.com login to access HBO's library at HBO GO.",
+            "point": "Watch the movies and shows you want â€“ whenever you want â€“ with DIRECTV Everywhere. Or, use your DIRECTV.com login to access HBO's library at HBO GO.",
             "evergreen": true
         }, {
             "subtab": 2,
             "title": "Entourage: The Movie",
-            "point": "Jan 23: (Comedy, Drama) Vince, E, Drama and Turtle make a splash in this raucous big-screen adaptation of the hit HBO series. When Vince tackles directing and starring in Ari's first picture, the boys have no idea what they are in for - especially when the film goes wildly over budget and threatens to implode. ",
+            "point": "(Comedy, Drama) Vince, E, Drama and Turtle make a splash in this raucous big-screen adaptation of the hit HBO series. When Vince tackles directing and starring in Ari's first picture, the boys have no idea what they are in for - especially when the film goes wildly over budget and threatens to implode. - Jan 23",
             "evergreen": false
         }, {
             "subtab": 2,
             "title": "Mad Max: Fury Road",
-            "point": "Jan 9: (Action, Adventure, Sci-Fi) The fourth installment of the post-apocalyptic saga fiends Max captured by a violent band of warriors, only to land in an escape plot against their deranged leader.",
+            "point": "(Action, Adventure, Sci-Fi) The fourth installment of the post-apocalyptic saga fiends Max captured by a violent band of warriors, only to land in an escape plot against their deranged leader. - Jan 9",
             "evergreen": false
         }, {
             "subtab": 1,
@@ -155,22 +148,22 @@ var data = {
         }, {
             "subtab": 3,
             "title": "Real Time with Bill Maher",
-            "point": " (Comedy Talk Series) Comedian and political satirist Bill Maher discusses topical events with guests from various backgrounds",
+            "point": "(Comedy Talk Series) Comedian and political satirist Bill Maher discusses topical events with guests from various backgrounds",
             "evergreen": false
         }, {
             "subtab": 3,
             "title": "The Fight Game with Jim Lampley",
-            "point": " (Sports Talk Series) A provocative, engaging and informative experience that delves into intriguing storylines, newsmakers and issues that are top-of-mind in boxing.",
+            "point": "(Sports Talk Series) A provocative, engaging and informative experience that delves into intriguing storylines, newsmakers and issues that are top-of-mind in boxing.",
             "evergreen": false
         }, {
             "subtab": 3,
             "title": "The Leftovers",
-            "point": "Sundays: (Drama Series) After a Rapture-like event, a group of people who didn't quite make the cut muddle through life in a suburban town. Based on the book by Tom Perrotta and starring Justin Theroux, Michael Gaston and Liv Tyler.",
+            "point": "(Drama Series) After a Rapture-like event, a group of people who didn't quite make the cut muddle through life in a suburban town. Based on the book by Tom Perrotta and starring Justin Theroux, Michael Gaston and Liv Tyler. - Sundays",
             "evergreen": false
         }, {
             "subtab": 2,
             "title": "The Second Best Exotic Marigold Hotel",
-            "point": "Jan 2: (Comedy, Drama) In this warm and witty sequel to the 2011 hit, resort owner Sonny has to juggle plans to open a second property while making arrangements for his upcoming wedding. ",
+            "point": "(Comedy, Drama) In this warm and witty sequel to the 2011 hit, resort owner Sonny has to juggle plans to open a second property while making arrangements for his upcoming wedding. - Jan 2",
             "evergreen": false
         }, {
             "subtab": 4,
@@ -185,7 +178,7 @@ var data = {
         }, {
             "subtab": 4,
             "title": "DIRECTV and AT&T Everywhere",
-            "point": "Get episodes in order by season \u2013 even if you recorded them to your receiver out of order.",
+            "point": "Get episodes in order by season â€“ even if you recorded them to your receiver out of order.",
             "evergreen": true
         }, {
             "subtab": 4,
@@ -205,7 +198,7 @@ var data = {
         }, {
             "subtab": 4,
             "title": "HBO Now",
-            "point": "Available on computer and Roku, AppleTV, iPad, iPhone and iPod Touch (currently on exclusive contract with Apple). ",
+            "point": "Available on computer and Roku, AppleTV, iPad, iPhone and iPod Touch (currently on exclusive contract with Apple).",
             "evergreen": false
         }, {
             "subtab": 4,
@@ -234,278 +227,6 @@ var data = {
         "disclosures": [1, 2]
     }, {
         "id": 2,
-        "name": "Showtime",
-        "url": "showtime",
-        "aacURL": "showtime_unlimited.html",
-        "dotcomURL": "premiums/showtime",
-        "premURL": "http://www.sho.com",
-        "price": "13.99",
-        "ODchan": "1545",
-        "logo": null,
-        "channels": [{
-            "name": "Showtime East",
-            "description": "East Coast schedule. Showtime is premium entertainment at its best with acclaimed series, movies, sports, and more.",
-            "number": "545",
-            "HD": true,
-            "SD": true,
-            "logo": null
-        }, {
-            "name": "Showtime West",
-            "description": "West Coast schedule of programs airing on Showtime East (Ch. 545)",
-            "number": "546",
-            "HD": true,
-            "SD": true,
-            "logo": null
-        }, {
-            "name": "Sho 2",
-            "description": "If you missed it on SHOWTIME, you\u2019ll find it on SHOWTIME 2 HD: hit movies, series and more.",
-            "number": "547",
-            "HD": true,
-            "SD": true,
-            "logo": null
-        }, {
-            "name": "Showcase",
-            "description": "Enjoy even more of what you love about SHOWTIME - feature films, documentaries and comedy specials",
-            "number": "548",
-            "HD": true,
-            "SD": true,
-            "logo": null
-        }, {
-            "name": "Showtime Extreme",
-            "description": "More adrenaline-pumping movies and the best of SHOWTIME SPORTS",
-            "number": "549",
-            "HD": true,
-            "SD": true,
-            "logo": null
-        }, {
-            "name": "Showtime Beyond",
-            "description": "Where you'll find the best of the best sci-fi, fantasy and horror films that push boundardaries all hours of the day...and night",
-            "number": "550",
-            "HD": true,
-            "SD": false,
-            "logo": null
-        }, {
-            "name": "Showtime Next",
-            "description": "With revolutionary films, music events and comedy for the next generation of film buffs",
-            "number": "551",
-            "HD": true,
-            "SD": false,
-            "logo": null
-        }, {
-            "name": "Showtime Women",
-            "description": "Bringing you films, documentaries and specials from today's aspiring and established female talents",
-            "number": "552",
-            "HD": true,
-            "SD": false,
-            "logo": null
-        }, {
-            "name": "The Movie Channel East",
-            "description": "East Coast Schedule. THE MOVIE CHANNEL HD has something for everyone with comedies, award-winning dramas and action films",
-            "number": "553",
-            "HD": true,
-            "SD": true,
-            "logo": null
-        }, {
-            "name": "The Movie Channel West",
-            "description": "West Coast Schedule",
-            "number": "554",
-            "HD": false,
-            "SD": true,
-            "logo": null
-        }, {
-            "name": "TMC Xtra",
-            "description": "Miss a movie on THE MOVIE CHANNEL HD? You have a second shot with THE MOVIE CHANNEL XTRA HD",
-            "number": "555",
-            "HD": true,
-            "SD": false,
-            "logo": null
-        }, {
-            "name": "Flix",
-            "description": "First-rate feature films as they were meant to be seen \u2013 uncut and uninterrupted",
-            "number": "556",
-            "HD": false,
-            "SD": true,
-            "logo": null
-        }, {
-            "name": "SundanceTV",
-            "description": "Award-winning films, shorts, documentaries and international cinema all uncut and commercial free",
-            "number": "557",
-            "HD": true,
-            "SD": true,
-            "logo": null
-        }, {
-            "name": "Showtime On Demand",
-            "description": "Access to early premieres, Showtime Original Series, blockbusters, sports, special events and behind the scenes extras at any time. Plus, new choices are added every week.",
-            "number": "1545",
-            "HD": true,
-            "SD": true,
-            "logo": null
-        }, {
-            "name": "The Movie Channel On Demand",
-            "description": "Outrageous comedies and heart-stopping dramas, as well as the most explosive action hits from The Movie Channel library.",
-            "number": "1553",
-            "HD": true,
-            "SD": true,
-            "logo": null
-        }, {
-            "name": "Flix On Demand",
-            "description": "Over 90 different movie choices from Flix's library each month. Available to watch any time.",
-            "number": "1556",
-            "HD": true,
-            "SD": true,
-            "logo": null
-        }, {
-            "name": "Sundance On Demand",
-            "description": "Award-winning feature films, shorts, documentaries and international cinema programming that airs on Sundance.",
-            "number": "1557",
-            "HD": true,
-            "SD": true,
-            "logo": null
-        }],
-        "sellingPoints": [{
-            "subtab": 3,
-            "title": "60 Minutes Sports",
-            "point": "Jan 5: The award-winning team behind 60 Minutes turns its investigative eye toward the world of sports. From in-depth reporting to the most compelling interviews. ",
-            "evergreen": false
-        }, {
-            "subtab": 3,
-            "title": "Billions",
-            "point": "Jan 1: (Drama Series) A complex drama about power politics in the world of New York's high finance. U.S. Attorney Chuck Rhoades and hedge fund king Bobby \"Axe\" Axelrod are on a collision course, with each using his considerable smarts to outmaneuver the other. Paul Giamatti and Damian Lewis star. Series Premiere",
-            "evergreen": false
-        }, {
-            "subtab": 3,
-            "title": "Dark Net",
-            "point": "Jan 21: (Documentary Series) Explore unique themes of the lesser-known side of the web and uncover different tales of real people who have been affected by them. Series Premiere",
-            "evergreen": false
-        }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Watch the movies and shows you want \u2013 whenever you want \u2013 with DIRECTV Everywhere. Or, use your DIRECTV.com login to access Showtime's library at Showtime Anytime.",
-            "evergreen": true
-        }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Instant Access to the hottest entertainment.",
-            "evergreen": true
-        }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Watch an episode of your favorite Showtime original series and DIRECTV automatically puts the next episode in your playlist.",
-            "evergreen": true
-        }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Get episodes in order by season \u2013 even if you recorded them to your receiver out of order.",
-            "evergreen": true
-        }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Streaming available for both Showtime On Demand and Showtime live broadcasts.",
-            "evergreen": true
-        }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Included with your subscription at no extra cost and is supported on TV, Apple and Android devices, Kindle, Chromecast, Playstation and Xbox, Roku, Smart TV and computer.",
-            "evergreen": true
-        }, {
-            "subtab": 2,
-            "title": "Drunk Stoned Brilliant Dead: The Story of The National Lampoon",
-            "point": "Jan 22: (Documentary) Catch the story of America's first adult humor magazine in this riveting documentary.",
-            "evergreen": false
-        }, {
-            "subtab": 3,
-            "title": "Inside the NFL",
-            "point": "Tuesdays: Emmy-winning weekly show with the most experienced, articulate and connected analysts in the business. Get expert insight, exclusive commentary and special on- and off-the-field features.",
-            "evergreen": false
-        }, {
-            "subtab": 1,
-            "title": null,
-            "point": "13 commercial-free channels with award winning original series, uncut hit movies, year round sports, documentaries and comedy specials.",
-            "evergreen": true
-        }, {
-            "subtab": 1,
-            "title": null,
-            "point": "With DIRECTV and AT&T Everywhere, you can watch past and present seasons of your favorite original series, movies, sports, documentaries and comedy specials anytime, anywhere.",
-            "evergreen": true
-        }, {
-            "subtab": 1,
-            "title": null,
-            "point": "No other premium channel has a wider variety of hard-hitting sports, from Showtime Championship Boxing and 60 Minutes Sports to Inside The NFL and Jim Rome on Showtime.",
-            "evergreen": true
-        }, {
-            "subtab": 1,
-            "title": null,
-            "point": "Premium network with the most HD channels, offering a variety of movies with Showtime networks, The Movie Channel, FLIX and Sundance.",
-            "evergreen": true
-        }, {
-            "subtab": 1,
-            "title": null,
-            "point": "Watch the best of past and present seasons of your favorite Showtime original series, movies, sports, documentaries and comedy specials \u2013 whenever you want \u2013 with Showtime On Demand or online with DIRECTV Everywhere.",
-            "evergreen": true
-        }, {
-            "subtab": 3,
-            "title": null,
-            "point": "Home to critically-acclaimed original series like Homeland, The Affair, Shameless and Ray Donovan.",
-            "evergreen": true
-        }, {
-            "subtab": 3,
-            "title": null,
-            "point": "See the best in commercial-free sports coverage and boxing matches with Showtime Championship Boxing, Inside the NFL, Jim Rome, 60 Minutes Sports and more.",
-            "evergreen": true
-        }, {
-            "subtab": 3,
-            "title": "Shameless",
-            "point": "Jan 10: (Comedy Series) Be sure to tune in and watch the return of the smash hit comedy about single dad and alcoholic Frank Gallagher and his industrious kids who have found ways to grow up in spite of him. Season Premiere",
-            "evergreen": false
-        }, {
-            "subtab": 3,
-            "title": "Showtime Championship Boxing: Wilder vs. Szpilka",
-            "point": "Jan 16: Undefeated WBC Heavyweight World Champion Deontay Wilder will make the third defense of his title against brawling Polish contender Artur Szpilka.",
-            "evergreen": false
-        }, {
-            "subtab": 4,
-            "title": "Showtime Standalone (OTT)",
-            "point": "Customers who sign up via PlayStation are limited to accessing Showtime OTT on PlayStation only.",
-            "evergreen": false
-        }, {
-            "subtab": 4,
-            "title": "Showtime Standalone (OTT)",
-            "point": "Standalone subscription is $10.99\/month. ",
-            "evergreen": false
-        }, {
-            "subtab": 4,
-            "title": "Showtime Standalone (OTT)",
-            "point": "Customers who stream through Hulu and Amazon Prime must pay subscription costs for both the Showtime OTT and their Hulu\/Amazon Prime monthly service.",
-            "evergreen": false
-        }, {
-            "subtab": 4,
-            "title": "Showtime Standalone (OTT)",
-            "point": "Streaming available for both Showtime On Demand and Showtime East\/West coast live feeds.",
-            "evergreen": false
-        }, {
-            "subtab": 3,
-            "title": "The Circus: Inside the Greatest Political Show on Earth",
-            "point": "Premiering January: This groundbreaking documentary series pulls back the curtain on the 2016 U.S. presidential race, providing behind-the-scenes access to the human drama involved in the pursuit of the Oval Office.",
-            "evergreen": false
-        }, {
-            "subtab": 2,
-            "title": "The Hundred-Foot Journey",
-            "point": "Jan 18: (Drama) Tune in and catch Helen Mirren in the feel-good culinary movie.",
-            "evergreen": false
-        }, {
-            "subtab": 2,
-            "title": "The Imitation Game",
-            "point": "Jan 15: (Drama, Thriller) Don't miss Benedict Cumberbatch in this Academy Award-nominated film. ",
-            "evergreen": false
-        }],
-        "objections": [{
-            "category": "No Variety",
-            "responses": ["Specialized channels offer targeted programming: sci-fi; independent films; action-adventure; suspense; women-focused; movies from the 70's, 80's and 90's; Hollywood hits."]
-        }],
-        "subs": [1, 2, 3, 4, 6],
-        "disclosures": [1, 2]
-    }, {
-        "id": 3,
         "name": "Starz",
         "url": "starz",
         "aacURL": "starz_super_pack.html",
@@ -619,40 +340,26 @@ var data = {
             "HD": false,
             "SD": true,
             "logo": null
-        }, {
-            "name": "Starz On Demand",
-            "description": "Get into premieres, big hit movies and captivating original series with STARZ On Demand - ready when you are",
-            "number": "1525",
-            "HD": true,
-            "SD": true,
-            "logo": null
-        }, {
-            "name": "Encore On Demand",
-            "description": "Wide selection of movies from every genre - all ready to watch anytime. Programming from Encore's large library of titles includes children's movies, action-adventure, comedy, independent film, suspense, Westerns, sci-fi and more",
-            "number": "1535",
-            "HD": true,
-            "SD": true,
-            "logo": null
         }],
         "sellingPoints": [{
             "subtab": 3,
-            "title": "Ash vs. Evil Dead (Action\/Comedy\/Horror) ",
-            "point": "Sundays: Bruce Campbell returns as the chainsaw-handed, monster hunter who has spent 30 years avoiding responsibility. With the thread of a Deadite plague, Ash is forced to become mankind's only hope.",
+            "title": "Ash vs. Evil Dead",
+            "point": "(Action\/Comedy\/Horror) Bruce Campbell returns as the chainsaw-handed, monster hunter who has spent 30 years avoiding responsibility. With the thread of a Deadite plague, Ash is forced to become mankind's only hope. - Sundays",
             "evergreen": false
         }, {
             "subtab": 2,
             "title": "Avengers: Age of Ultron",
-            "point": "Jan 22: Marvel's super heroes return to battle Ultron, a government created force that proves to be their most dangerous foe yet.",
+            "point": "Marvel's super heroes return to battle Ultron, a government created force that proves to be their most dangerous foe yet. - Jan 22",
             "evergreen": false
         }, {
             "subtab": 2,
             "title": "Cinderella",
-            "point": "Jan 8: In this live-action retelling of Disney's animated classic, a fairy godmother's magic helps young Ella escapes a life of hardship and meet the prince of her dreams.",
+            "point": "In this live-action retelling of Disney's animated classic, a fairy godmother's magic helps young Ella escapes a life of hardship and meet the prince of her dreams. - Jan 8",
             "evergreen": false
         }, {
             "subtab": 4,
             "title": "DIRECTV and AT&T Everywhere",
-            "point": "Watch the movies and shows you want \u2013 whenever you want \u2013 with DIRECTV Everywhere. Or, use your DIRECTV.com login to access both Starz and Encore libraries at Starz Play and Encore Play.",
+            "point": "Watch the movies and shows you want &ndash; whenever you want &ndash; with DIRECTV Everywhere. Or, use your DIRECTV.com login to access both Starz and Encore libraries at Starz Play and Encore Play.",
             "evergreen": true
         }, {
             "subtab": 1,
@@ -684,12 +391,261 @@ var data = {
             "title": null,
             "point": "Starz has compelling Original Series you can't see anywhere else.",
             "evergreen": true
+        }, {
+            "subtab": 7,
+            "title": null,
+            "point": null,
+            "evergreen": null
         }],
         "objections": [{
             "category": "No Variety",
             "responses": ["Starz channels specialize in new releases, entertainment suitable for the whole family and original programming."]
         }],
         "subs": [1, 2, 3, 4, 6, 7],
+        "disclosures": [1, 2]
+    }, {
+        "id": 3,
+        "name": "Showtime",
+        "url": "showtime",
+        "aacURL": "showtime_unlimited.html",
+        "dotcomURL": "premiums/showtime",
+        "premURL": "http://www.sho.com",
+        "price": "13.99",
+        "ODchan": "1545",
+        "logo": null,
+        "channels": [{
+            "name": "Showtime East",
+            "description": "East Coast schedule. Showtime is premium entertainment at its best with acclaimed series, movies, sports, and more.",
+            "number": "545",
+            "HD": true,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "Showtime West",
+            "description": "West Coast schedule of programs airing on Showtime East (Ch. 545)",
+            "number": "546",
+            "HD": true,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "Sho 2",
+            "description": "If you missed it on SHOWTIME, youâ€™ll find it on SHOWTIME 2 HD: hit movies, series and more.",
+            "number": "547",
+            "HD": true,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "Showcase",
+            "description": "Enjoy even more of what you love about SHOWTIME - feature films, documentaries and comedy specials",
+            "number": "548",
+            "HD": true,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "Showtime Extreme",
+            "description": "More adrenaline-pumping movies and the best of SHOWTIME SPORTS",
+            "number": "549",
+            "HD": true,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "Showtime Beyond",
+            "description": "Where you'll find the best of the best sci-fi, fantasy and horror films that push boundardaries all hours of the day...and night",
+            "number": "550",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "Showtime Next",
+            "description": "With revolutionary films, music events and comedy for the next generation of film buffs",
+            "number": "551",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "Showtime Women",
+            "description": "Bringing you films, documentaries and specials from today's aspiring and established female talents",
+            "number": "552",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "The Movie Channel East",
+            "description": "East Coast Schedule. THE MOVIE CHANNEL HD has something for everyone with comedies, award-winning dramas and action films",
+            "number": "553",
+            "HD": true,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "The Movie Channel West",
+            "description": "West Coast Schedule",
+            "number": "554",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "TMC Xtra",
+            "description": "Miss a movie on THE MOVIE CHANNEL HD? You have a second shot with THE MOVIE CHANNEL XTRA HD",
+            "number": "555",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "Flix",
+            "description": "First-rate feature films as they were meant to be seen â€“ uncut and uninterrupted",
+            "number": "556",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "SundanceTV",
+            "description": "Award-winning films, shorts, documentaries and international cinema all uncut and commercial free",
+            "number": "557",
+            "HD": true,
+            "SD": true,
+            "logo": null
+        }],
+        "sellingPoints": [{
+            "subtab": 3,
+            "title": "60 Minutes Sports",
+            "point": "The award-winning team behind 60 Minutes turns its investigative eye toward the world of sports. From in-depth reporting to the most compelling interviews. - Jan 5",
+            "evergreen": false
+        }, {
+            "subtab": 3,
+            "title": "Billions",
+            "point": "(Drama Series) A complex drama about power politics in the world of New York's high finance. U.S. Attorney Chuck Rhoades and hedge fund king Bobby \"Axe\" Axelrod are on a collision course, with each using his considerable smarts to outmaneuver the other. Paul Giamatti and Damian Lewis star. Series Premiere - Jan 1",
+            "evergreen": false
+        }, {
+            "subtab": 3,
+            "title": "Dark Net",
+            "point": "(Documentary Series) Explore unique themes of the lesser-known side of the web and uncover different tales of real people who have been affected by them. Series Premiere - Jan 21",
+            "evergreen": false
+        }, {
+            "subtab": 4,
+            "title": "DIRECTV and AT&T Everywhere",
+            "point": "Watch the movies and shows you want â€“ whenever you want â€“ with DIRECTV Everywhere. Or, use your DIRECTV.com login to access Showtime's library at Showtime Anytime.",
+            "evergreen": true
+        }, {
+            "subtab": 4,
+            "title": "DIRECTV and AT&T Everywhere",
+            "point": "Instant Access to the hottest entertainment.",
+            "evergreen": true
+        }, {
+            "subtab": 4,
+            "title": "DIRECTV and AT&T Everywhere",
+            "point": "Watch an episode of your favorite Showtime original series and DIRECTV automatically puts the next episode in your playlist.",
+            "evergreen": true
+        }, {
+            "subtab": 4,
+            "title": "DIRECTV and AT&T Everywhere",
+            "point": "Get episodes in order by season â€“ even if you recorded them to your receiver out of order.",
+            "evergreen": true
+        }, {
+            "subtab": 4,
+            "title": "DIRECTV and AT&T Everywhere",
+            "point": "Streaming available for both Showtime On Demand and Showtime live broadcasts.",
+            "evergreen": true
+        }, {
+            "subtab": 4,
+            "title": "DIRECTV and AT&T Everywhere",
+            "point": "Included with your subscription at no extra cost and is supported on TV, Apple and Android devices, Kindle, Chromecast, Playstation and Xbox, Roku, Smart TV and computer.",
+            "evergreen": true
+        }, {
+            "subtab": 2,
+            "title": "Drunk Stoned Brilliant Dead: The Story of The National Lampoon",
+            "point": "(Documentary) Catch the story of America's first adult humor magazine in this riveting documentary. - Jan 22",
+            "evergreen": false
+        }, {
+            "subtab": 3,
+            "title": "Inside the NFL",
+            "point": "Tuesdays: Emmy-winning weekly show with the most experienced, articulate and connected analysts in the business. Get expert insight, exclusive commentary and special on- and off-the-field features.",
+            "evergreen": false
+        }, {
+            "subtab": 1,
+            "title": null,
+            "point": "13 commercial-free channels with award winning original series, uncut hit movies, year round sports, documentaries and comedy specials.",
+            "evergreen": true
+        }, {
+            "subtab": 1,
+            "title": null,
+            "point": "With DIRECTV and AT&T Everywhere, you can watch past and present seasons of your favorite original series, movies, sports, documentaries and comedy specials anytime, anywhere.",
+            "evergreen": true
+        }, {
+            "subtab": 1,
+            "title": null,
+            "point": "No other premium channel has a wider variety of hard-hitting sports, from Showtime Championship Boxing and 60 Minutes Sports to Inside The NFL and Jim Rome on Showtime.",
+            "evergreen": true
+        }, {
+            "subtab": 1,
+            "title": null,
+            "point": "Premium network with the most HD channels, offering a variety of movies with Showtime networks, The Movie Channel, FLIX and Sundance.",
+            "evergreen": true
+        }, {
+            "subtab": 1,
+            "title": null,
+            "point": "Watch the best of past and present seasons of your favorite Showtime original series, movies, sports, documentaries and comedy specials â€“ whenever you want â€“ with Showtime On Demand or online with DIRECTV Everywhere.",
+            "evergreen": true
+        }, {
+            "subtab": 3,
+            "title": null,
+            "point": "Home to critically-acclaimed original series like Homeland, The Affair, Shameless and Ray Donovan.",
+            "evergreen": true
+        }, {
+            "subtab": 3,
+            "title": null,
+            "point": "See the best in commercial-free sports coverage and boxing matches with Showtime Championship Boxing, Inside the NFL, Jim Rome, 60 Minutes Sports and more.",
+            "evergreen": true
+        }, {
+            "subtab": 3,
+            "title": "Shameless",
+            "point": "(Comedy Series) Be sure to tune in and watch the return of the smash hit comedy about single dad and alcoholic Frank Gallagher and his industrious kids who have found ways to grow up in spite of him. Season Premiere - Jan 10",
+            "evergreen": false
+        }, {
+            "subtab": 3,
+            "title": "Showtime Championship Boxing: Wilder vs. Szpilka",
+            "point": "Undefeated WBC Heavyweight World Champion Deontay Wilder will make the third defense of his title against brawling Polish contender Artur Szpilka. - Jan 16",
+            "evergreen": false
+        }, {
+            "subtab": 4,
+            "title": "Showtime Standalone (OTT)",
+            "point": "Customers who sign up via PlayStation are limited to accessing Showtime OTT on PlayStation only.",
+            "evergreen": false
+        }, {
+            "subtab": 4,
+            "title": "Showtime Standalone (OTT)",
+            "point": "Standalone subscription is $10.99\/month.",
+            "evergreen": false
+        }, {
+            "subtab": 4,
+            "title": "Showtime Standalone (OTT)",
+            "point": "Customers who stream through Hulu and Amazon Prime must pay subscription costs for both the Showtime OTT and their Hulu\/Amazon Prime monthly service.",
+            "evergreen": false
+        }, {
+            "subtab": 4,
+            "title": "Showtime Standalone (OTT)",
+            "point": "Streaming available for both Showtime On Demand and Showtime East\/West coast live feeds.",
+            "evergreen": false
+        }, {
+            "subtab": 3,
+            "title": "The Circus: Inside the Greatest Political Show on Earth",
+            "point": "This groundbreaking documentary series pulls back the curtain on the 2016 U.S. presidential race, providing behind-the-scenes access to the human drama involved in the pursuit of the Oval Office. - Premiering January",
+            "evergreen": false
+        }, {
+            "subtab": 2,
+            "title": "The Hundred-Foot Journey",
+            "point": "(Drama) Tune in and catch Helen Mirren in the feel-good culinary movie. - Jan 18",
+            "evergreen": false
+        }, {
+            "subtab": 2,
+            "title": "The Imitation Game",
+            "point": "(Drama, Thriller) Don't miss Benedict Cumberbatch in this Academy Award-nominated film. - Jan 15",
+            "evergreen": false
+        }],
+        "objections": [{
+            "category": "No Variety",
+            "responses": ["Specialized channels offer targeted programming: sci-fi; independent films; action-adventure; suspense; women-focused; movies from the 70's, 80's and 90's; Hollywood hits."]
+        }],
+        "subs": [1, 2, 3, 4, 6],
         "disclosures": [1, 2]
     }, {
         "id": 4,
@@ -751,34 +707,27 @@ var data = {
             "SD": false,
             "logo": null
         }, {
-            "name": "Cinem\u00e1x",
+            "name": "CinemÃ¡x",
             "description": "The biggest variety of hit movies with top box office releases, buzzworthy original series and more, all in Spanish.",
             "number": "523",
             "HD": true,
             "SD": false,
             "logo": null
-        }, {
-            "name": "Cinemax On Demand",
-            "description": "Blockbusters, independent films, behind-the-scenes specials and more selections from Cinemax's library: classic movies, new releases and hard-to-find films",
-            "number": "1515",
-            "HD": true,
-            "SD": true,
-            "logo": null
         }],
         "sellingPoints": [{
             "subtab": 2,
-            "title": "Child 44 (Drama, Thriller)",
-            "point": "Jan 2: A disgraced member of the military police investigates a series of nasty child murders during the Stalin-era Soviet Union.",
+            "title": "Child 44",
+            "point": "(Drama, Thriller) A disgraced member of the military police investigates a series of nasty child murders during the Stalin-era Soviet Union. - Jan 2",
             "evergreen": false
         }, {
             "subtab": 2,
-            "title": "Dawn of the Planet of the Apes (Action, Drama, Sci-Fi)",
-            "point": "Jan 23: A growing nation of genetically evolved apes led by Caesar is threatened by a band of human survivors of the devastating virus unleashed a decade earlier.",
+            "title": "Dawn of the Planet of the Apes",
+            "point": "(Action, Drama, Sci-Fi) A growing nation of genetically evolved apes led by Caesar is threatened by a band of human survivors of the devastating virus unleashed a decade earlier. - Jan 23",
             "evergreen": false
         }, {
             "subtab": 4,
             "title": "DIRECTV and AT&T Everywhere",
-            "point": "With MAX GO, customers get instant access to over 400 of the biggest Hollywood hit movies, indie favorites, and Max After Dark Series. ",
+            "point": "With MAX GO, customers get instant access to over 400 of the biggest Hollywood hit movies, indie favorites, and Max After Dark Series.",
             "evergreen": true
         }, {
             "subtab": 4,
@@ -791,34 +740,69 @@ var data = {
             "point": "Customers can browse tags for a fun way to access movies, as well as create a personal watchlist to save shows and movies easily.",
             "evergreen": true
         }, {
+            "subtab": 4,
+            "title": "DIRECTV and AT&T Everywhere",
+            "point": "Instantly access over 400 of the biggest Hollywood hit movies, indie favorites, and Max After Dark Series.",
+            "evergreen": true
+        }, {
             "subtab": 1,
             "title": null,
             "point": "Cinemax is the first and only 100% True HD premium service.",
             "evergreen": true
         }, {
-            "subtab": 1,
+            "subtab": 2,
             "title": null,
-            "point": "For movie lovers. It's fully loaded with the most block buster movies (and fewest repeats) than any premium service. ",
+            "point": "For movie lovers. It's fully loaded with the most block buster movies (and fewest repeats) than any premium service.",
             "evergreen": true
         }, {
-            "subtab": 1,
+            "subtab": 2,
             "title": null,
             "point": "Offers a top notch movie every night at 10PM",
             "evergreen": true
         }, {
             "subtab": 1,
             "title": null,
-            "point": "Guaranteed a new Saturday night movie premiere at 10 PM ",
+            "point": "Guaranteed a new Saturday night movie premiere at 10 PM",
             "evergreen": true
         }, {
             "subtab": 1,
             "title": null,
-            "point": "Extensive library of recent hits and older films, as well as exclusive behind the scenes features. ",
+            "point": "Extensive library of recent hits and older films, as well as exclusive behind the scenes features.",
             "evergreen": true
         }, {
             "subtab": 2,
-            "title": "X-Men: Days of Future Past: Rogue Cut (Action, Adventure, Sci-Fi)",
-            "point": "Jan 9: The X-Men send Wolverine to the past in a desperate effort to change history and prevent an event that results in doom for both humans and mutants.",
+            "title": "X-Men: Days of Future Past: Rogue Cut",
+            "point": "(Action, Adventure, Sci-Fi) The X-Men send Wolverine to the past in a desperate effort to change history and prevent an event that results in doom for both humans and mutants. - Jan 9",
+            "evergreen": false
+        }, {
+            "subtab": 2,
+            "title": null,
+            "point": "With 8 channels, offers a wide variety of hit movies with few repeats.",
+            "evergreen": true
+        }, {
+            "subtab": 2,
+            "title": null,
+            "point": "All Cinemax channels are available in HD.",
+            "evergreen": true
+        }, {
+            "subtab": 3,
+            "title": null,
+            "point": "Viewers can catch up on episodes of Strike Back, The Knick and Banshee on Cinemax On Demand.",
+            "evergreen": true
+        }, {
+            "subtab": 3,
+            "title": null,
+            "point": "New original series Outcast and Quarry are slated for 2016.",
+            "evergreen": true
+        }, {
+            "subtab": 3,
+            "title": "Outcast",
+            "point": "Coming in 2016! Cinemax brings a new supernatural Original Series about a young man trying to discover why he's been suffering from supernatural possessions his entire life. Based on the comic book by Robert Kirkman, who also writes The Walking Dead. Features Patrick Fugit as Kyle Barnes and Brent Spiner as Sidney.",
+            "evergreen": false
+        }, {
+            "subtab": 3,
+            "title": "Quarry",
+            "point": "Coming in 2016! Mac Conway is a Marine whose homecoming from Vietnam is anything but heroic, as he is shunned by loved ones and demonized by the public. Conway is slowly drawn into a network of killing and corruption while trying to cope with his experiences at war.",
             "evergreen": false
         }],
         "objections": [{
@@ -923,7 +907,7 @@ var data = {
             "logo": null
         }, {
             "name": "FS Midwest",
-            "description": "More than 2,000 hours of local programming each year, including St. Louis Cardinals, Kansas City Royals, Indiana Pacers, St. Louis Blues, Big 12 football, Big 12 women's basketball, local high school sports, ",
+            "description": "More than 2,000 hours of local programming each year, including St. Louis Cardinals, Kansas City Royals, Indiana Pacers, St. Louis Blues, Big 12 football, Big 12 women's basketball, local high school sports,",
             "number": "671",
             "HD": true,
             "SD": true,
@@ -1028,7 +1012,7 @@ var data = {
             "logo": null
         }, {
             "name": "Prime Ticket",
-            "description": "Los Angeles Clippers, Anaheim Ducks, AVP, Club Deportivo Chivas USA, Los Angeles Sparks, USC Trojans, UCLA Bruins, local high school sports and Big West, WCC, ACC and Pac-12 ",
+            "description": "Los Angeles Clippers, Anaheim Ducks, AVP, Club Deportivo Chivas USA, Los Angeles Sparks, USC Trojans, UCLA Bruins, local high school sports and Big West, WCC, ACC and Pac-12",
             "number": "693",
             "HD": true,
             "SD": true,
@@ -1070,14 +1054,14 @@ var data = {
             "logo": null
         }, {
             "name": "SportsTime Ohio",
-            "description": "Cleveland Browns and Ohio State Buckeyes ",
+            "description": "Cleveland Browns and Ohio State Buckeyes",
             "number": "662",
             "HD": true,
             "SD": true,
             "logo": null
         }, {
             "name": "TWC SportsNet",
-            "description": "Los Angeles Lakers, LA Galaxy, Los Angeles Sparks and the California Interscholastic Federation (CIF), ",
+            "description": "Los Angeles Lakers, LA Galaxy, Los Angeles Sparks and the California Interscholastic Federation (CIF),",
             "number": "691",
             "HD": true,
             "SD": true,
@@ -1091,36 +1075,15 @@ var data = {
             "logo": null
         }, {
             "name": "YES",
-            "description": "New York Yankees and Brooklyn Nets ",
+            "description": "New York Yankees and Brooklyn Nets",
             "number": "631",
             "HD": true,
             "SD": true,
             "logo": null
         }, {
             "name": "Univision Deportes",
-            "description": "Liga Mexicana de F\u00fatbol, Major League Soccer, CONCACAF Champions League, U.S. National Team, Mexican National Team, World Cup qualifiers, NFL, NBA and MLB",
+            "description": "Liga Mexicana de FÃºtbol, Major League Soccer, CONCACAF Champions League, U.S. National Team, Mexican National Team, World Cup qualifiers, NFL, NBA and MLB",
             "number": "464",
-            "HD": true,
-            "SD": true,
-            "logo": null
-        }, {
-            "name": "Outdoor Channel On Demand",
-            "description": "Unlimited access to programming from Outdoor Channel",
-            "number": "1606",
-            "HD": true,
-            "SD": true,
-            "logo": null
-        }, {
-            "name": "Longhorn Network On Demand",
-            "description": "Unlimited access to programming from Longhorn Network",
-            "number": "1677",
-            "HD": true,
-            "SD": true,
-            "logo": null
-        }, {
-            "name": "Univision Deportes On Demand",
-            "description": "Unlimited access to programming from Univision Deportes",
-            "number": "1464",
             "HD": true,
             "SD": true,
             "logo": null
@@ -1133,27 +1096,27 @@ var data = {
             "logo": null
         }],
         "sellingPoints": [{
-            "subtab": 6,
+            "subtab": 1,
             "title": "Alternate Channels",
             "point": "Alternate channels are not included in the Channel Lineup tool because they are not 24\/7 sports networks and cannot be subscribed to",
             "evergreen": false
         }, {
-            "subtab": 6,
+            "subtab": 1,
             "title": "Alternate Channels",
             "point": "Alternate channels occasionally provide additional game coverage for ESPN, ESPN2 or Regional Sports Networks",
             "evergreen": false
         }, {
-            "subtab": 6,
+            "subtab": 1,
             "title": "Alternate Channels",
-            "point": "Customers cannot subscribe to these channels. Alternate channels are only viewable while the game is in progress. ",
+            "point": "Customers cannot subscribe to these channels. Alternate channels are only viewable while the game is in progress.",
             "evergreen": false
         }, {
-            "subtab": 6,
+            "subtab": 1,
             "title": "Alternate Channels",
             "point": "Channel numbers for alternates can be indicated by XXX-X (dash number) format",
             "evergreen": false
         }, {
-            "subtab": 6,
+            "subtab": 1,
             "title": "Alternate Channels",
             "point": "Usually located in the same channel neighborhood as the customer's local RSN, or near ESPN or ESPN2",
             "evergreen": false
@@ -1170,37 +1133,17 @@ var data = {
         }, {
             "subtab": 9,
             "title": "ESPN Bases Loaded",
-            "point": "Your ultimate viewing experience for the NCAA Softball and Baseball Championship Regionals, taking the viewer to the best action across sites from around the country.",
-            "evergreen": false
-        }, {
-            "subtab": 9,
-            "title": "ESPN Bases Loaded",
-            "point": "The channel is available 24\/7 throughout the Regional rounds.",
+            "point": "Your ultimate viewing experience for the NCAA Softball and Baseball Championship Regionals, taking the viewer to the best action across sites from around the country. The channel is available 24\/7 throughout the Regional rounds.",
             "evergreen": false
         }, {
             "subtab": 9,
             "title": "ESPN Buzzer Beater",
-            "point": "College Basketball game time-only channel providing whip-around coverage of men's and women's college basketball teams from each Division 1 conference.",
-            "evergreen": false
-        }, {
-            "subtab": 9,
-            "title": "ESPN Buzzer Beater",
-            "point": "The channel is available during the regular season on Wednesdays (7 PM - 11 PM ET) and Saturdays (12 PM - 11 PM ET). Coverage expands to 12:00 PM - 11:30 PM ET during Championship Week",
+            "point": "College Basketball game time-only channel providing whip-around coverage of men's and women's college basketball teams from each Division 1 conference. The channel is available during the regular season on Wednesdays (7 PM - 11 PM ET) and Saturdays (12 PM - 11 PM ET). Coverage expands to 12:00 PM - 11:30 PM ET during Championship Week",
             "evergreen": false
         }, {
             "subtab": 9,
             "title": "ESPN Goal Line",
-            "point": "Your one-stop destination every Saturday for all the College Football drama.",
-            "evergreen": false
-        }, {
-            "subtab": 9,
-            "title": "ESPN Goal Line",
-            "point": "Goal Line takes you to all the compelling showdowns across the country - with highlights, stats, scores, analysis and game cut-ins to scoring drives.",
-            "evergreen": false
-        }, {
-            "subtab": 9,
-            "title": "ESPN Goal Line",
-            "point": "The channel is available Saturdays at 12 PM - Sundays at 12 AM.",
+            "point": "Your one-stop destination every Saturday for all the College Football drama. Goal Line takes you to all the compelling showdowns across the country - with highlights, stats, scores, analysis and game cut-ins to scoring drives. The channel is available Saturdays at 12 PM - Sundays at 12 AM.",
             "evergreen": false
         }, {
             "subtab": 9,
@@ -1230,7 +1173,7 @@ var data = {
         }, {
             "subtab": 1,
             "title": null,
-            "point": "Access to RSNs that air local games and special programs that would not typically be available in the customer's area. ",
+            "point": "Access to RSNs that air local games and special programs that would not typically be available in the customer's area.",
             "evergreen": true
         }, {
             "subtab": 1,
@@ -1256,24 +1199,6 @@ var data = {
         "disclosures": [1, 2, 3]
     }, {
         "id": 6,
-        "name": "Streaming",
-        "url": "streaming",
-        "aacURL": "directv_everywhere.html",
-        "dotcomURL": "technology/directv_everywhere",
-        "premURL": "http://www.directv.com/technology/directv_everywhere",
-        "price": "Varies",
-        "ODchan": null,
-        "logo": null,
-        "channels": [{}],
-        "sellingPoints": [{}],
-        "objections": [{
-            "category": "Availability",
-            "responses": ["Sling TV content can only be streamed through one device at at time. Streaming content through multiple devices at the same time using one Sling TV account is not permitted."]
-        }],
-        "subs": [],
-        "disclosures": []
-    }, {
-        "id": 7,
         "name": "DIRECTV Cinema",
         "url": "directv-cinema",
         "aacURL": "ppv_dtv_cinema_info.html",
@@ -1297,16 +1222,16 @@ var data = {
             "SD": true,
             "logo": null
         }, {
-            "name": null,
-            "description": "HD linear PPV channels.",
-            "number": "127 - 172",
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "127",
             "HD": true,
             "SD": false,
             "logo": null
         }, {
-            "name": null,
-            "description": "Standard-definition linear PPV channels.",
-            "number": "173 - 199",
+            "name": "CINE",
+            "description": "Standard-definition linear PPV channel",
+            "number": "173",
             "HD": false,
             "SD": true,
             "logo": null
@@ -1338,6 +1263,433 @@ var data = {
             "HD": true,
             "SD": false,
             "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "129",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "130",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "132",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "136",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "139",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "141",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "142",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "143",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "145",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "146",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "147",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "148",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "149",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "150",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "151",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "152",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "153",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "154",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "155",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "156",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "157",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "158",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "159",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "160",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "161",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "162",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "163",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "164",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "165",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "166",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "167",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "169",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "170",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "171",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINEHD",
+            "description": "HD linear PPV channel",
+            "number": "172",
+            "HD": true,
+            "SD": false,
+            "logo": null
+        }, {
+            "name": "CINE",
+            "description": "Standard-definition linear PPV channel",
+            "number": "174",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "CINE",
+            "description": "Standard-definition linear PPV channel",
+            "number": "175",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "CINE",
+            "description": "Standard-definition linear PPV channel",
+            "number": "176",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "CINE",
+            "description": "Standard-definition linear PPV channel",
+            "number": "177",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "CINE",
+            "description": "Standard-definition linear PPV channel",
+            "number": "178",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "CINE",
+            "description": "Standard-definition linear PPV channel",
+            "number": "179",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "CINE",
+            "description": "Standard-definition linear PPV channel",
+            "number": "180",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "CINE",
+            "description": "Standard-definition linear PPV channel",
+            "number": "181",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "CINE",
+            "description": "Standard-definition linear PPV channel",
+            "number": "182",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "CINE",
+            "description": "Standard-definition linear PPV channel",
+            "number": "183",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "CINE",
+            "description": "Standard-definition linear PPV channel",
+            "number": "184",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "CINE",
+            "description": "Standard-definition linear PPV channel",
+            "number": "185",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "CINE",
+            "description": "Standard-definition linear PPV channel",
+            "number": "186",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "CINE",
+            "description": "Standard-definition linear PPV channel",
+            "number": "187",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "CINE",
+            "description": "Standard-definition linear PPV channel",
+            "number": "188",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "CINE",
+            "description": "Standard-definition linear PPV channel",
+            "number": "189",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "CINE",
+            "description": "Standard-definition linear PPV channel",
+            "number": "190",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "CINE",
+            "description": "Standard-definition linear PPV channel",
+            "number": "191",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "CINE",
+            "description": "Standard-definition linear PPV channel",
+            "number": "192",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "CINE",
+            "description": "Standard-definition linear PPV channel",
+            "number": "193",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "CINE",
+            "description": "Standard-definition linear PPV channel",
+            "number": "194",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "CINE",
+            "description": "Standard-definition linear PPV channel",
+            "number": "195",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "CINE",
+            "description": "Standard-definition linear PPV channel",
+            "number": "196",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "CINE",
+            "description": "Standard-definition linear PPV channel",
+            "number": "197",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "CINE",
+            "description": "Standard-definition linear PPV channel",
+            "number": "198",
+            "HD": false,
+            "SD": true,
+            "logo": null
+        }, {
+            "name": "CINE",
+            "description": "Standard-definition linear PPV channel",
+            "number": "199",
+            "HD": false,
+            "SD": true,
+            "logo": null
         }],
         "sellingPoints": [{
             "subtab": 8,
@@ -1347,7 +1699,7 @@ var data = {
         }, {
             "subtab": 8,
             "title": "DIRECTV.com",
-            "point": "No internet\/phone-line connection required. Programming is mirrored to all receivers in the house. (Free to order) ",
+            "point": "No internet\/phone-line connection required. Programming is mirrored to all receivers in the house. (Free to order)",
             "evergreen": false
         }, {
             "subtab": 10,
@@ -1357,12 +1709,12 @@ var data = {
         }, {
             "subtab": 10,
             "title": "Library Titles",
-            "point": " Older titles that have been out of theaters for at least a year. These titles may be free or chargeable and available through On Demand on cable network or premium channels.",
+            "point": "Older titles that have been out of theaters for at least a year. These titles may be free or chargeable and available through On Demand on cable network or premium channels.",
             "evergreen": false
         }, {
             "subtab": 1,
             "title": null,
-            "point": "DIRECTV CINEMA brings customers the hottest new releases from the comfort of their homes. ",
+            "point": "DIRECTV CINEMA brings customers the hottest new releases from the comfort of their homes.",
             "evergreen": true
         }, {
             "subtab": 1,
@@ -1397,7 +1749,7 @@ var data = {
         }, {
             "subtab": 10,
             "title": "New Releases",
-            "point": "Recent titles that are no longer in theaters and will become available on premium channels in about 4 \u2013 6 months. (After theaters, and before they air on premium channels)",
+            "point": "Recent titles that are no longer in theaters and will become available on premium channels in about 4 â€“ 6 months. (After theaters, and before they air on premium channels)",
             "evergreen": false
         }, {
             "subtab": 8,
@@ -1419,6 +1771,24 @@ var data = {
         }],
         "subs": [1, 8, 10],
         "disclosures": [4]
+    }, {
+        "id": 7,
+        "name": "Streaming",
+        "url": "streaming",
+        "aacURL": "directv_everywhere.html",
+        "dotcomURL": "technology/directv_everywhere",
+        "premURL": "http://www.directv.com/technology/directv_everywhere",
+        "price": null,
+        "ODchan": null,
+        "logo": null,
+        "channels": [{}],
+        "sellingPoints": [{}],
+        "objections": [{
+            "category": "Availability",
+            "responses": ["Sling TV content can only be streamed through one device at at time. Streaming content through multiple devices at the same time using one Sling TV account is not permitted."]
+        }],
+        "subs": [1, 11],
+        "disclosures": []
     }],
     "subtabs": [{
         "id": 1,
@@ -1460,6 +1830,10 @@ var data = {
         "id": 10,
         "name": "Pricing",
         "url": "pricing"
+    }, {
+        "id": 11,
+        "name": "Breakdown",
+        "url": "breakdown"
     }],
     "disclosures": [{
         "id": 1,
@@ -1472,7 +1846,7 @@ var data = {
     }, {
         "id": 3,
         "lvl1": "Explain sports blackout restrictions:",
-        "lvl2": ["Sports Pack does not include professional sports games from outside the customer's local market. ", "Out-of-market games are sold separately via professional sports subscription packages (NBA League Pass, NFL Sunday Ticket, etc.) . "]
+        "lvl2": ["Sports Pack does not include professional sports games from outside the customer's local market.", "Out-of-market games are sold separately via professional sports subscription packages (NBA League Pass, NFL Sunday Ticket, etc.) ."]
     }, {
         "id": 4,
         "lvl1": "Remind customer of any fees and system requirements:",
@@ -1480,13 +1854,14 @@ var data = {
     }],
     "calendars": [{
         "program": "Shameless",
-        "premium": 2,
+        "premium": 3,
         "chanName": "Showtime East HD",
         "chanNum": "545",
         "premDate": "2016-01-10",
-        "dayWeek": "Sunday",
+        "premTime": "21:00",
+        "dayWeek": null,
         "finDate": "2016-04-03",
-        "repDates": null,
+        "onDemand": "1545",
         "startOD": "2016-01-10",
         "keyDemos": "Adults",
         "genres": ["Comedy"],
@@ -1497,13 +1872,14 @@ var data = {
         "image": "Shameless Season 6 Version B Key Art - Horizontal"
     }, {
         "program": "Billions",
-        "premium": 2,
+        "premium": 3,
         "chanName": "Showtime East HD",
         "chanNum": "545",
         "premDate": "2016-01-17",
-        "dayWeek": "Sunday",
+        "premTime": "22:00",
+        "dayWeek": null,
         "finDate": "2016-04-10",
-        "repDates": null,
+        "onDemand": "1545",
         "startOD": "2016-01-17",
         "keyDemos": "Adults",
         "genres": ["Drama"],
@@ -1514,20 +1890,21 @@ var data = {
         "image": "Billions Season 1 Key Art (Horizontal)"
     }, {
         "program": "Dark Net",
-        "premium": 2,
+        "premium": 3,
         "chanName": "Showtime East HD",
         "chanNum": "545",
         "premDate": "2016-01-21",
-        "dayWeek": "Thursday",
+        "premTime": "23:00",
+        "dayWeek": null,
         "finDate": null,
-        "repDates": null,
+        "onDemand": "1545",
         "startOD": "2016-01-21",
         "keyDemos": null,
         "genres": ["Documentary"],
         "starActrs": null,
         "starDrctrs": null,
         "starPrdcrs": null,
-        "description": "Dark Net will explore unique themes of the web and uncover different tales of real people who have been affected by them. ",
+        "description": "Dark Net will explore unique themes of the web and uncover different tales of real people who have been affected by them.",
         "image": "Dark Net Key Art"
     }, {
         "program": "The Circus: Inside the Greatest Political Show on Earth",
@@ -1535,9 +1912,10 @@ var data = {
         "chanName": "Showtime East HD",
         "chanNum": "545",
         "premDate": "TBD",
+        "premTime": null,
         "dayWeek": "TBD",
         "finDate": null,
-        "repDates": null,
+        "onDemand": "1545",
         "startOD": "20-TB-D",
         "keyDemos": null,
         "genres": ["News", "Documentary"],
@@ -1548,13 +1926,14 @@ var data = {
         "image": "TheCircus"
     }, {
         "program": "The Imitation Game",
-        "premium": 2,
+        "premium": 3,
         "chanName": "Showtime East HD",
         "chanNum": "545",
         "premDate": "2016-01-15",
-        "dayWeek": "Friday",
+        "premTime": null,
+        "dayWeek": null,
         "finDate": null,
-        "repDates": ["2016-01-21", "2016-01-27", "2016-01-30"],
+        "onDemand": "1545",
         "startOD": "2016-01-15",
         "keyDemos": null,
         "genres": ["Historical", "Drama"],
@@ -1565,13 +1944,14 @@ var data = {
         "image": "Imitation Game, The - unit 1"
     }, {
         "program": "The Hundred-Foot Journey",
-        "premium": 2,
+        "premium": 3,
         "chanName": "Showtime East HD",
         "chanNum": "545",
         "premDate": "2016-01-08",
-        "dayWeek": "Friday",
+        "premTime": null,
+        "dayWeek": null,
         "finDate": null,
-        "repDates": ["2016-01-11", "2016-01-16", "2016-01-21"],
+        "onDemand": "1545",
         "startOD": "2016-01-08",
         "keyDemos": null,
         "genres": ["Comedy"],
@@ -1582,30 +1962,32 @@ var data = {
         "image": "Hundred-Foot Journey, The - Key Art (horizontal)"
     }, {
         "program": "Drunk Stoned Brilliant Dead: The Story of the National Lampoon",
-        "premium": 2,
+        "premium": 3,
         "chanName": "Showtime East HD",
         "chanNum": "545",
         "premDate": "2016-01-22",
-        "dayWeek": "Friday",
+        "premTime": null,
+        "dayWeek": null,
         "finDate": null,
-        "repDates": "2016-01-27",
+        "onDemand": "1545",
         "startOD": "2016-01-22",
         "keyDemos": null,
         "genres": ["Documentary"],
         "starActrs": null,
         "starDrctrs": null,
         "starPrdcrs": null,
-        "description": "DRUNK STONED BRILLIANT DEAD tells the story of how America\u2019s first adult humor magazine, changed comedy forever before the magazine\u2019s spectacular fall.",
+        "description": "DRUNK STONED BRILLIANT DEAD tells the story of how Americaâ€™s first adult humor magazine, changed comedy forever before the magazineâ€™s spectacular fall.",
         "image": "Drunk stoned brilliant dead... - unit 1"
     }, {
         "program": "Inside the NFL",
-        "premium": 2,
+        "premium": 3,
         "chanName": "Showtime East HD",
         "chanNum": "545",
         "premDate": "2016-01-05",
+        "premTime": null,
         "dayWeek": "Tuesday",
         "finDate": null,
-        "repDates": null,
+        "onDemand": "1545",
         "startOD": "2016-01-05",
         "keyDemos": null,
         "genres": ["Sports"],
@@ -1616,30 +1998,32 @@ var data = {
         "image": "Inside the NFL S8 (Horizontal)"
     }, {
         "program": "60 Minutes Sports",
-        "premium": 2,
+        "premium": 3,
         "chanName": "Showtime East HD",
         "chanNum": "545",
         "premDate": "2016-01-05",
+        "premTime": null,
         "dayWeek": "Tuesday",
         "finDate": null,
-        "repDates": null,
+        "onDemand": "1545",
         "startOD": "2016-01-05",
         "keyDemos": null,
         "genres": ["Sports"],
         "starActrs": null,
         "starDrctrs": null,
         "starPrdcrs": null,
-        "description": "The award-winning team behind 60 Minutes now turns its investigative eye towards the world of sports. ",
+        "description": "The award-winning team behind 60 Minutes now turns its investigative eye towards the world of sports.",
         "image": "60 Minutes Sports Key Art - Horizontal"
     }, {
-        "program": "SHO Champtionship Boxing",
-        "premium": 2,
+        "program": "SHO Championship Boxing",
+        "premium": 3,
         "chanName": "Showtime East HD",
         "chanNum": "545",
         "premDate": "2016-01-16",
+        "premTime": null,
         "dayWeek": "Saturday",
         "finDate": null,
-        "repDates": null,
+        "onDemand": "1545",
         "startOD": "2016-01-16",
         "keyDemos": null,
         "genres": ["Sports"],
@@ -1650,30 +2034,32 @@ var data = {
         "image": "Wilder horizontal"
     }, {
         "program": "The To Do List",
-        "premium": 2,
-        "chanName": "THE MOVIE CHANNEL XTRA",
+        "premium": 3,
+        "chanName": "The Movie Channel Xtra",
         "chanNum": "555",
         "premDate": "2016-01-04",
-        "dayWeek": "Monday",
+        "premTime": null,
+        "dayWeek": null,
         "finDate": null,
-        "repDates": ["2016-01-09", "2016-01-12"],
+        "onDemand": "1545",
         "startOD": "2016-01-04",
         "keyDemos": null,
         "genres": ["Comedy"],
         "starActrs": ["Aubrey Plaza", "Rachel Bilson", "Andy Samberg"],
         "starDrctrs": null,
         "starPrdcrs": null,
-        "description": "All-star comedy about a type-A teenage girl who tries to shed her uptight image by undertaking a list of all the outrageous activities she missed out on in high school, before she goes to college. ",
+        "description": "All-star comedy about a type-A teenage girl who tries to shed her uptight image by undertaking a list of all the outrageous activities she missed out on in high school, before she goes to college.",
         "image": null
     }, {
         "program": "Camp X-Ray",
-        "premium": 2,
-        "chanName": "THE MOVIE CHANNEL",
-        "chanNum": "543 (East) 544 (West)",
+        "premium": 3,
+        "chanName": "The Movie Channel East",
+        "chanNum": "543",
         "premDate": "2016-01-16",
-        "dayWeek": "Saturday",
+        "premTime": null,
+        "dayWeek": null,
         "finDate": null,
-        "repDates": null,
+        "onDemand": "1545",
         "startOD": "2016-01-16",
         "keyDemos": null,
         "genres": ["Drama"],
@@ -1684,13 +2070,14 @@ var data = {
         "image": null
     }, {
         "program": "The Lovely Bones",
-        "premium": 2,
-        "chanName": "THE MOVIE CHANNEL ",
-        "chanNum": "543 (East) 544 (West)",
+        "premium": 3,
+        "chanName": "The Movie Channel East",
+        "chanNum": "543",
         "premDate": "2016-01-01",
-        "dayWeek": "Friday",
+        "premTime": null,
+        "dayWeek": null,
         "finDate": null,
-        "repDates": ["2016-01-03", "2016-01-05", "2016-01-08"],
+        "onDemand": "1545",
         "startOD": "2016-01-01",
         "keyDemos": null,
         "genres": ["Mystery", "Thriller"],
@@ -1701,30 +2088,32 @@ var data = {
         "image": null
     }, {
         "program": "Frank Miller's Sin City: A Dame to Kill For",
-        "premium": 2,
+        "premium": 3,
         "chanName": "Showtime East HD",
         "chanNum": "545",
         "premDate": "2016-01-02",
-        "dayWeek": "Saturday",
+        "premTime": null,
+        "dayWeek": null,
         "finDate": null,
-        "repDates": ["2016-01-03", "2016-01-05", "2016-01-08"],
+        "onDemand": "1545",
         "startOD": "2016-01-02",
         "keyDemos": null,
         "genres": ["Action"],
         "starActrs": ["Jessica Alba", "Joseph Gordon-Levitt", "Eva Green"],
         "starDrctrs": ["Frank"],
         "starPrdcrs": null,
-        "description": "Frank Miller's classic graphic novels return to the screen, weaving together gritty tales that feature Basin City's most hardboiled citizens as they cross paths with the town's more notorious inhabitants.\u00a0",
+        "description": "Frank Miller's classic graphic novels return to the screen, weaving together gritty tales that feature Basin City's most hardboiled citizens as they cross paths with the town's more notorious inhabitants.Â ",
         "image": null
     }, {
         "program": "Need for Speed",
-        "premium": 2,
-        "chanName": "Showtime Extreme ",
+        "premium": 3,
+        "chanName": "Showtime Extreme",
         "chanNum": "549",
         "premDate": "2016-01-03",
-        "dayWeek": "Sunday",
+        "premTime": null,
+        "dayWeek": null,
         "finDate": null,
-        "repDates": null,
+        "onDemand": "1545",
         "startOD": "2016-01-03",
         "keyDemos": null,
         "genres": ["Action"],
@@ -1734,14 +2123,15 @@ var data = {
         "description": "Aaron Paul stars as a street racer who was framed by a wealthy business associate. Now, fresh from prison, he gets his hands on the fastest car around and joins a secretive and extremely high stakes race with revenge in mind.",
         "image": null
     }, {
-        "program": "Snowpiercer ",
-        "premium": 2,
+        "program": "Snowpiercer",
+        "premium": 3,
         "chanName": "Showtime Beyond",
         "chanNum": "550",
         "premDate": "2016-01-01",
-        "dayWeek": "Friday",
+        "premTime": null,
+        "dayWeek": null,
         "finDate": null,
-        "repDates": ["2016-01-05", "2016-01-07", "2016-01-10"],
+        "onDemand": "1545",
         "startOD": "2016-01-01",
         "keyDemos": null,
         "genres": ["Action"],
@@ -1751,16 +2141,17 @@ var data = {
         "description": "Set in a future where a failed climate-change experiment kills all life on the planet, a lucky few board a train that endlessly circles the icy globe with a cruel and dangerous class hierarchy separating the front and back passengers.",
         "image": null
     }, {
-        "program": "Vampire Academy ",
-        "premium": 2,
+        "program": "Vampire Academy",
+        "premium": 3,
         "chanName": "Showtime Beyond",
         "chanNum": "550",
         "premDate": "2016-01-02",
-        "dayWeek": "Saturday",
+        "premTime": null,
+        "dayWeek": null,
         "finDate": null,
-        "repDates": null,
+        "onDemand": "1545",
         "startOD": "2016-01-02",
-        "keyDemos": "teen",
+        "keyDemos": "Teens",
         "genres": ["Drama"],
         "starActrs": ["Zoey Deutch"],
         "starDrctrs": null,
@@ -1768,14 +2159,15 @@ var data = {
         "description": "Rose Hathaway is a Dhampir, half human-half vampire, a guardian of the Moroi, peaceful, mortal vampires living discreetly within our world. Her calling is to protect the Moroi from bloodthirsty, immortal Vampires, the Strigoi.",
         "image": null
     }, {
-        "program": "Meet Joe Black ",
-        "premium": 2,
+        "program": "Meet Joe Black",
+        "premium": 3,
         "chanName": "FLIX",
         "chanNum": "556",
         "premDate": "2016-01-03",
-        "dayWeek": "Sunday",
+        "premTime": null,
+        "dayWeek": null,
         "finDate": null,
-        "repDates": ["2016-01-06", "2016-01-19", "2016-01-25"],
+        "onDemand": "1545",
         "startOD": "2016-01-03",
         "keyDemos": null,
         "genres": ["Drama"],
@@ -1787,12 +2179,13 @@ var data = {
     }, {
         "program": "Child 44",
         "premium": 4,
-        "chanName": "Cinemax East ",
+        "chanName": "Cinemax East",
         "chanNum": "515",
         "premDate": "2016-01-02",
-        "dayWeek": "Saturday",
+        "premTime": null,
+        "dayWeek": null,
         "finDate": null,
-        "repDates": null,
+        "onDemand": "1515",
         "startOD": null,
         "keyDemos": null,
         "genres": ["Drama", "Thriller"],
@@ -1804,12 +2197,13 @@ var data = {
     }, {
         "program": "X-Men: Days of Future Past: Rogue Cut",
         "premium": 4,
-        "chanName": "Cinemax East ",
+        "chanName": "Cinemax East",
         "chanNum": "515",
         "premDate": "2016-01-09",
-        "dayWeek": "Saturday",
+        "premTime": null,
+        "dayWeek": null,
         "finDate": null,
-        "repDates": null,
+        "onDemand": "1515",
         "startOD": null,
         "keyDemos": null,
         "genres": ["Action", "Adventure", "Sci-Fi"],
@@ -1821,12 +2215,13 @@ var data = {
     }, {
         "program": "Dawn of the Planet of the Apes",
         "premium": 4,
-        "chanName": "Cinemax East ",
+        "chanName": "Cinemax East",
         "chanNum": "515",
         "premDate": "2016-01-23",
-        "dayWeek": "Saturday",
+        "premTime": null,
+        "dayWeek": null,
         "finDate": null,
-        "repDates": null,
+        "onDemand": "1515",
         "startOD": null,
         "keyDemos": null,
         "genres": ["Action", "Drama", "Sci-Fi"],
@@ -1838,12 +2233,13 @@ var data = {
     }, {
         "program": "The Second Best Exotic Marigold Hotel",
         "premium": 1,
-        "chanName": "HBO East ",
+        "chanName": "HBO East",
         "chanNum": "501",
         "premDate": "2016-01-02",
-        "dayWeek": "Saturday",
+        "premTime": "20:00",
+        "dayWeek": null,
         "finDate": null,
-        "repDates": null,
+        "onDemand": "1501",
         "startOD": null,
         "keyDemos": null,
         "genres": ["Comedy", "Drama"],
@@ -1853,31 +2249,33 @@ var data = {
         "description": "As the Best Exotic Marigold Hotel has only a single remaining vacancy - posing a rooming predicament for two fresh arrivals - Sonny pursues his expansionist dream of opening a second hotel.",
         "image": "The Second Best Exotic Marigold Hotel.jpg"
     }, {
-        "program": "J. Cole Forest Hills Drive: Homecoming (HBO Special) Special premieres Saturday January 9th at 10PM EST",
+        "program": "J. Cole Forest Hills Drive: Homecoming",
         "premium": 1,
-        "chanName": "HBO East ",
+        "chanName": "HBO East",
         "chanNum": "501",
         "premDate": "2016-01-09",
-        "dayWeek": "Saturday",
+        "premTime": "22:00",
+        "dayWeek": null,
         "finDate": null,
-        "repDates": null,
+        "onDemand": "1501",
         "startOD": null,
         "keyDemos": null,
         "genres": ["Musical", "Comedy", "Western"],
         "starActrs": ["J. Cole"],
         "starDrctrs": null,
         "starPrdcrs": null,
-        "description": "One of music\u2019s biggest stars returns home for a riveting performance. Part concert film, part backstage pass, this special tells J. Cole's compelling life story through his own words and music, and through the observations of those who know him best.",
+        "description": "One of musicâ€™s biggest stars returns home for a riveting performance. Part concert film, part backstage pass, this special tells J. Cole's compelling life story through his own words and music, and through the observations of those who know him best.",
         "image": null
     }, {
         "program": "Mad Max: Fury Road",
         "premium": 1,
-        "chanName": "HBO East ",
+        "chanName": "HBO East",
         "chanNum": "501",
         "premDate": "2016-01-09",
-        "dayWeek": "Saturday",
+        "premTime": "20:00",
+        "dayWeek": null,
         "finDate": null,
-        "repDates": null,
+        "onDemand": "1501",
         "startOD": null,
         "keyDemos": null,
         "genres": ["Action", "Adventure", "Sci-Fi"],
@@ -1889,29 +2287,31 @@ var data = {
     }, {
         "program": "Real Time with Bill Maher",
         "premium": 1,
-        "chanName": "HBO East ",
+        "chanName": "HBO East",
         "chanNum": "501",
         "premDate": "2016-01-15",
+        "premTime": null,
         "dayWeek": "Friday",
         "finDate": null,
-        "repDates": null,
+        "onDemand": "1501",
         "startOD": null,
         "keyDemos": null,
         "genres": ["Comedy", "Talk Series"],
         "starActrs": ["Bill Maher"],
         "starDrctrs": null,
         "starPrdcrs": null,
-        "description": "Comedian and political satirist Bill Maher discusses topical events with guests from various backgrounds. ",
+        "description": "Comedian and political satirist Bill Maher discusses topical events with guests from various backgrounds.",
         "image": "Real Time Bill Maher.jpg"
     }, {
-        "program": "Sesame Street ",
+        "program": "Sesame Street",
         "premium": 1,
         "chanName": "HBO Family",
         "chanNum": "507",
         "premDate": "2016-01-16",
+        "premTime": null,
         "dayWeek": "Saturday",
         "finDate": null,
-        "repDates": ["2016-01-17", "2016-01-18", "2016-01-19", "2016-01-20", "2016-01-21", "2016-01-22", "2016-01-23", "2016-01-24", "2016-01-25", "2016-01-26", "2016-01-27", "2016-01-28", "2016-01-29", "2016-01-30", "2016-01-31"],
+        "onDemand": "1507",
         "startOD": null,
         "keyDemos": null,
         "genres": ["Children", "Series"],
@@ -1923,46 +2323,49 @@ var data = {
     }, {
         "program": "Entourage",
         "premium": 1,
-        "chanName": "HBO East ",
+        "chanName": "HBO East",
         "chanNum": "501",
         "premDate": "2016-01-16",
-        "dayWeek": "Saturday",
+        "premTime": "20:00",
+        "dayWeek": null,
         "finDate": null,
-        "repDates": null,
+        "onDemand": "1501",
         "startOD": null,
         "keyDemos": null,
         "genres": ["Comedy"],
         "starActrs": ["Adrian Grenier", "Kevin Connolly", "Jerry Ferrara"],
         "starDrctrs": ["Doug Ellin"],
         "starPrdcrs": null,
-        "description": " Movie star Vincent Chase, together with his boys Eric, Turtle, and Johnny, are back - and back in business with super agent-turned-studio head Ari Gold on a risky project that will serve as Vince's directorial debut. ",
+        "description": "Movie star Vincent Chase, together with his boys Eric, Turtle, and Johnny, are back - and back in business with super agent-turned-studio head Ari Gold on a risky project that will serve as Vince's directorial debut.",
         "image": "Entourage1.jpg"
     }, {
         "program": "Whitney Cummings: I'm Your Girlfriend",
         "premium": 1,
-        "chanName": "HBO East ",
+        "chanName": "HBO East",
         "chanNum": "501",
         "premDate": "2016-01-23",
-        "dayWeek": "Saturday",
+        "premTime": null,
+        "dayWeek": null,
         "finDate": null,
-        "repDates": null,
+        "onDemand": "1506",
         "startOD": null,
         "keyDemos": null,
         "genres": ["Comedy"],
         "starActrs": ["Whitney Cummings"],
         "starDrctrs": null,
         "starPrdcrs": null,
-        "description": "Taped before a live audience at The Broad Stage in Santa Monica, CA, this exclusive presentation features Cummings in her first HBO stand-up comedy special. ",
+        "description": "Taped before a live audience at The Broad Stage in Santa Monica, CA, this exclusive presentation features Cummings in her first HBO stand-up comedy special.",
         "image": "Whitney Cummings - I'm Your Girlfriend.jpg"
     }, {
         "program": "Unfriended",
         "premium": 1,
-        "chanName": "HBO East ",
+        "chanName": "HBO East",
         "chanNum": "501",
         "premDate": "2016-01-23",
-        "dayWeek": "Saturday",
+        "premTime": "20:00",
+        "dayWeek": null,
         "finDate": null,
-        "repDates": null,
+        "onDemand": "1501",
         "startOD": null,
         "keyDemos": null,
         "genres": ["Horror", "Mystery", "Thriller"],
@@ -1974,29 +2377,31 @@ var data = {
     }, {
         "program": "True Story",
         "premium": 1,
-        "chanName": "HBO East ",
+        "chanName": "HBO East",
         "chanNum": "501",
         "premDate": "2016-01-30",
-        "dayWeek": "Saturday",
+        "premTime": "20:00",
+        "dayWeek": null,
         "finDate": null,
-        "repDates": null,
+        "onDemand": "1501",
         "startOD": null,
         "keyDemos": null,
         "genres": ["Crime", "Drama", "Mystery"],
         "starActrs": ["James Franco", "Jonah Hill", "Felicity Jones"],
         "starDrctrs": null,
         "starPrdcrs": null,
-        "description": "When disgraced New York Times reporter Michael Finkel meets accused killer Christian Longo - who has taken on Finkel's identity - his investigation morphs into a game of cat-and-mouse. ",
+        "description": "When disgraced New York Times reporter Michael Finkel meets accused killer Christian Longo - who has taken on Finkel's identity - his investigation morphs into a game of cat-and-mouse.",
         "image": "True Story.jpg"
     }, {
-        "program": "Ash vs Evil Dead - A STARZ Original Series",
-        "premium": "",
-        "chanName": "STARZ East",
+        "program": "Ash vs Evil Dead",
+        "premium": 2,
+        "chanName": "Starz East",
         "chanNum": "525",
         "premDate": "2015-10-31",
+        "premTime": null,
         "dayWeek": "Saturday",
         "finDate": "2016-01-02",
-        "repDates": "20-N/-A",
+        "onDemand": "1525",
         "startOD": "2015-10-31",
         "keyDemos": "Adults",
         "genres": ["Horror", "Drama"],
@@ -2006,14 +2411,15 @@ var data = {
         "description": "\"Ash vs Evil Dead\" follows Ash, stock boy, aging lothario and chainsaw-handed monster hunter who spent 30 years avoiding responsibility, and terrors of the Evil Dead.",
         "image": "AVEDS1_tw_1200x600_wcopyrights.jpg"
     }, {
-        "program": "Black Sails - A STARZ Original Series",
-        "premium": "",
-        "chanName": "STARZ East",
+        "program": "Black Sails",
+        "premium": 2,
+        "chanName": "Starz East",
         "chanNum": "525",
         "premDate": "2016-01-23",
+        "premTime": null,
         "dayWeek": "Saturday",
         "finDate": "2016-03-26",
-        "repDates": "20-N/-A",
+        "onDemand": "1525",
         "startOD": "2016-01-23",
         "keyDemos": "Adults",
         "genres": ["Drama", "Action"],
@@ -2024,15 +2430,16 @@ var data = {
         "image": "BKS3_key_art_finish_horizontal_1800x1200.jpg"
     }, {
         "program": "Cinderella",
-        "premium": "",
-        "chanName": "STARZ East",
+        "premium": 2,
+        "chanName": "Starz East",
         "chanNum": "525",
         "premDate": "2016-01-08",
-        "dayWeek": "Friday",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-09", "2016-01-10", "2016-01-14", "2016-01-20", "2016-01-25", "2016-01-29", "2016-01-30"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": "1525",
         "startOD": "2016-01-08",
-        "keyDemos": "Kids 2 - 11",
+        "keyDemos": "Kids",
         "genres": ["Drama", "Fantasy", "Romance", "Family"],
         "starActrs": ["Lily James", "Richard Madden", "Cate Blanchett"],
         "starDrctrs": ["Kenneth Branagh"],
@@ -2041,15 +2448,16 @@ var data = {
         "image": "Cinderella_2015_64_1800x1200.jpg"
     }, {
         "program": "Avengers: Age of Ultron",
-        "premium": "",
-        "chanName": "STARZ East",
+        "premium": 2,
+        "chanName": "Starz East",
         "chanNum": "525",
         "premDate": "2016-01-22",
-        "dayWeek": "Friday",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-23", "2016-01-24", "2016-01-25", "2016-01-28", "2016-01-31"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": "1525",
         "startOD": "2016-01-22",
-        "keyDemos": "Teens, Adults",
+        "keyDemos": "Teens,Adults",
         "genres": ["Action", "Adventure", "Sci-Fi"],
         "starActrs": ["Robert Downey Jr.", "Chris Evans", "Mark Ruffalo", "Chris Hemsworth", "Scarlett Johansson"],
         "starDrctrs": ["Joss Whedon"],
@@ -2058,13 +2466,14 @@ var data = {
         "image": "Marvels_the_avengers_age_of_ultron_2015_09_RU_1800x1200.jpg"
     }, {
         "program": "Accidental Love",
-        "premium": "",
-        "chanName": "STARZ Cinema",
+        "premium": 2,
+        "chanName": "Starz Cinema",
         "chanNum": "531",
         "premDate": "2016-01-06",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-12", "2016-01-23"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Comedy", "Romance"],
@@ -2075,13 +2484,14 @@ var data = {
         "image": null
     }, {
         "program": "Are You Hear",
-        "premium": "",
-        "chanName": "STARZ Cinema",
+        "premium": 2,
+        "chanName": "Starz Cinema",
         "chanNum": "531",
         "premDate": "2016-01-03",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-12", "2016-01-22", "2016-01-27"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Comedy"],
@@ -2092,13 +2502,14 @@ var data = {
         "image": null
     }, {
         "program": "Casanova",
-        "premium": "",
-        "chanName": "STARZ Cinema",
+        "premium": 2,
+        "chanName": "Starz Cinema",
         "chanNum": "531",
         "premDate": "2016-01-01",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-02", "2016-01-11", "2016-01-16"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Comedy", "Romance"],
@@ -2109,13 +2520,14 @@ var data = {
         "image": null
     }, {
         "program": "Napoleon Dynamite",
-        "premium": "",
-        "chanName": "STARZ Cinema",
+        "premium": 2,
+        "chanName": "Starz Cinema",
         "chanNum": "531",
         "premDate": "2016-01-05",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-14", "2016-01-22", "2016-01-27"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Comedy"],
@@ -2126,13 +2538,14 @@ var data = {
         "image": null
     }, {
         "program": "No Country For Old Men",
-        "premium": "",
-        "chanName": "STARZ Cinema",
+        "premium": 2,
+        "chanName": "Starz Cinema",
         "chanNum": "531",
         "premDate": "2016-01-04",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-10", "2016-01-23"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Drama", "Crime"],
@@ -2143,13 +2556,14 @@ var data = {
         "image": null
     }, {
         "program": "102 Dalmatians",
-        "premium": "",
-        "chanName": "STARZ Comedy",
+        "premium": 2,
+        "chanName": "Starz Comedy",
         "chanNum": "528",
         "premDate": "2016-01-04",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-05", "2016-01-11"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Comedy", "Family"],
@@ -2160,13 +2574,14 @@ var data = {
         "image": null
     }, {
         "program": "Bandits",
-        "premium": "",
-        "chanName": "STARZ Comedy",
+        "premium": 2,
+        "chanName": "Starz Comedy",
         "chanNum": "528",
         "premDate": "2016-01-08",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-26", "2016-01-31"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Comedy", ""],
@@ -2177,13 +2592,14 @@ var data = {
         "image": null
     }, {
         "program": "Go",
-        "premium": "",
-        "chanName": "STARZ Comedy",
+        "premium": 2,
+        "chanName": "Starz Comedy",
         "chanNum": "528",
         "premDate": "2016-01-19",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": "2016-01-27",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Comedy", "Action", "Crime"],
@@ -2194,13 +2610,14 @@ var data = {
         "image": null
     }, {
         "program": "Honeymoon In Vegas",
-        "premium": "",
-        "chanName": "STARZ Comedy",
+        "premium": 2,
+        "chanName": "Starz Comedy",
         "chanNum": "528",
         "premDate": "2016-01-13",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": "2016-01-22",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Comedy", "Romance"],
@@ -2211,13 +2628,14 @@ var data = {
         "image": null
     }, {
         "program": "Strange Magic",
-        "premium": "",
-        "chanName": "STARZ Comedy",
+        "premium": 2,
+        "chanName": "Starz Comedy",
         "chanNum": "528",
         "premDate": "2016-01-04",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": "2016-01-07",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Animated", "Family", "Fantasy"],
@@ -2228,13 +2646,14 @@ var data = {
         "image": null
     }, {
         "program": "22 Jump Street",
-        "premium": "",
-        "chanName": "STARZ Edge",
+        "premium": 2,
+        "chanName": "Starz Edge",
         "chanNum": "529",
         "premDate": "2016-01-09",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-11", "2016-01-21", "2016-01-24"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Comedy", "Action", "Crime"],
@@ -2245,13 +2664,14 @@ var data = {
         "image": null
     }, {
         "program": "Bridge Jone's Diary",
-        "premium": "",
-        "chanName": "STARZ Edge",
+        "premium": 2,
+        "chanName": "Starz Edge",
         "chanNum": "529",
         "premDate": "2016-01-08",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-11", "2016-01-24", "2016-01-26"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Comedy", "Romance"],
@@ -2262,13 +2682,14 @@ var data = {
         "image": null
     }, {
         "program": "Courage Under Fire",
-        "premium": "",
-        "chanName": "STARZ Edge",
+        "premium": 2,
+        "chanName": "Starz Edge",
         "chanNum": "529",
         "premDate": "2016-01-06",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": "2016-01-11",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Action", "War", "Drama"],
@@ -2279,13 +2700,14 @@ var data = {
         "image": null
     }, {
         "program": "Eraser",
-        "premium": "",
-        "chanName": "STARZ Edge",
+        "premium": 2,
+        "chanName": "Starz Edge",
         "chanNum": "529",
         "premDate": "2016-01-19",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": "2016-01-27",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Action", "Suspense"],
@@ -2296,16 +2718,17 @@ var data = {
         "image": null
     }, {
         "program": "Mask",
-        "premium": "",
-        "chanName": "STARZ Edge",
+        "premium": 2,
+        "chanName": "Starz Edge",
         "chanNum": "529",
         "premDate": "2016-01-03",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": "2016-01-18",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
-        "genres": ["Drama", "True Story"],
+        "genres": ["Drama", "True"],
         "starActrs": null,
         "starDrctrs": null,
         "starPrdcrs": null,
@@ -2313,13 +2736,14 @@ var data = {
         "image": null
     }, {
         "program": "Annie",
-        "premium": "",
-        "chanName": "STARZ InBlack",
+        "premium": 2,
+        "chanName": "Starz InBlack",
         "chanNum": "530",
         "premDate": "2016-01-05",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-17", "2016-01-22", "2016-01-27"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Family", "Drama", "Musical"],
@@ -2330,13 +2754,14 @@ var data = {
         "image": null
     }, {
         "program": "Big Game",
-        "premium": "",
-        "chanName": "STARZ InBlack",
+        "premium": 2,
+        "chanName": "Starz InBlack",
         "chanNum": "530",
         "premDate": "2016-01-04",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-12", "2016-01-16", "2016-01-24", "2016-01-25"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Action", "Adventure"],
@@ -2347,13 +2772,14 @@ var data = {
         "image": null
     }, {
         "program": "The Equalizer",
-        "premium": "",
-        "chanName": "STARZ InBlack",
+        "premium": 2,
+        "chanName": "Starz InBlack",
         "chanNum": "530",
         "premDate": "2016-01-04",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-09", "2016-01-31"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Action", "Crime"],
@@ -2364,13 +2790,14 @@ var data = {
         "image": null
     }, {
         "program": "Money Train",
-        "premium": "",
-        "chanName": "STARZ InBlack",
+        "premium": 2,
+        "chanName": "Starz InBlack",
         "chanNum": "530",
         "premDate": "2016-01-07",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-23", "2016-01-27"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Action", "Comedy", "Crime"],
@@ -2381,13 +2808,14 @@ var data = {
         "image": null
     }, {
         "program": "X2: X-Men United",
-        "premium": "",
-        "chanName": "STARZ InBlack",
+        "premium": 2,
+        "chanName": "Starz InBlack",
         "chanNum": "530",
         "premDate": "2016-01-01",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": "2016-01-26",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Action", "Sci-Fi", "Fantasy"],
@@ -2398,13 +2826,14 @@ var data = {
         "image": null
     }, {
         "program": "The Amazing Spider-Man 2",
-        "premium": "",
-        "chanName": "STARZ Kids & Family",
+        "premium": 2,
+        "chanName": "Starz Kids & Family",
         "chanNum": "527",
         "premDate": "2016-01-16",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": "2016-01-25",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Action", "Fantasy"],
@@ -2415,13 +2844,14 @@ var data = {
         "image": null
     }, {
         "program": "Big Hero 6",
-        "premium": "",
-        "chanName": "STARZ Kids & Family",
+        "premium": 2,
+        "chanName": "Starz Kids & Family",
         "chanNum": "527",
         "premDate": "2016-01-09",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-12", "2016-01-20", "2016-01-30"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Animated", "Family", "Comedy"],
@@ -2432,13 +2862,14 @@ var data = {
         "image": null
     }, {
         "program": "Edward Scissorhands",
-        "premium": "",
-        "chanName": "STARZ Kids & Family",
+        "premium": 2,
+        "chanName": "Starz Kids & Family",
         "chanNum": "527",
         "premDate": "2016-01-02",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-15", "2016-01-16", "2016-01-28"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Fantasy", "Romance"],
@@ -2449,13 +2880,14 @@ var data = {
         "image": null
     }, {
         "program": "The Garfield Movie",
-        "premium": "",
-        "chanName": "STARZ Kids & Family",
+        "premium": 2,
+        "chanName": "Starz Kids & Family",
         "chanNum": "527",
         "premDate": "2016-01-04",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-16", "2016-01-24", "2016-01-25", "2016-01-29"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Comedy", "Family", "Animation"],
@@ -2466,13 +2898,14 @@ var data = {
         "image": null
     }, {
         "program": "Look Who's Talking Too",
-        "premium": "",
-        "chanName": "STARZ Kids & Family",
+        "premium": 2,
+        "chanName": "Starz Kids & Family",
         "chanNum": "527",
         "premDate": "2016-01-08",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": "2016-01-24",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Comedy"],
@@ -2483,13 +2916,14 @@ var data = {
         "image": null
     }, {
         "program": "About Last Night",
-        "premium": "",
-        "chanName": "ENCORE",
+        "premium": 2,
+        "chanName": "Encore",
         "chanNum": "535",
         "premDate": "2016-01-05",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-06", "2016-01-08", "2016-01-13", "2016-01-23"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Comedy", "Romance"],
@@ -2500,13 +2934,14 @@ var data = {
         "image": null
     }, {
         "program": "The Brady Bunch Movie",
-        "premium": "",
-        "chanName": "ENCORE",
+        "premium": 2,
+        "chanName": "Encore",
         "chanNum": "535",
         "premDate": "2016-01-09",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": "2016-01-26",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Comedy"],
@@ -2517,13 +2952,14 @@ var data = {
         "image": null
     }, {
         "program": "A Fish Called Wanda",
-        "premium": "",
-        "chanName": "ENCORE",
+        "premium": 2,
+        "chanName": "Encore",
         "chanNum": "535",
         "premDate": "2016-01-01",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-21", "2016-01-25"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Comedy", "Crime"],
@@ -2534,16 +2970,17 @@ var data = {
         "image": null
     }, {
         "program": "Heaven Is For Real",
-        "premium": "",
-        "chanName": "ENCORE",
+        "premium": 2,
+        "chanName": "Encore",
         "chanNum": "535",
         "premDate": "2016-01-14",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": "20-N/-A",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
-        "genres": ["Drama", "True Story"],
+        "genres": ["Drama", "True"],
         "starActrs": null,
         "starDrctrs": null,
         "starPrdcrs": null,
@@ -2551,13 +2988,14 @@ var data = {
         "image": null
     }, {
         "program": "Open Season",
-        "premium": "",
-        "chanName": "ENCORE",
+        "premium": 2,
+        "chanName": "Encore",
         "chanNum": "535",
         "premDate": "2016-01-11",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": "2016-01-19",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Animation", "Comedy", "Family"],
@@ -2568,13 +3006,14 @@ var data = {
         "image": null
     }, {
         "program": "Alien Resurrection",
-        "premium": "",
-        "chanName": "ENCORE Action",
+        "premium": 2,
+        "chanName": "Encore Action",
         "chanNum": "541",
         "premDate": "2016-01-01",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": "2016-01-21",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Horror", "Sci-Fi", "Action"],
@@ -2585,13 +3024,14 @@ var data = {
         "image": null
     }, {
         "program": "Cutthroat Island",
-        "premium": "",
-        "chanName": "ENCORE Action",
+        "premium": 2,
+        "chanName": "Encore Action",
         "chanNum": "541",
         "premDate": "2016-01-08",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-19", "2016-01-27"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Adventure", "Action", "Romance"],
@@ -2602,13 +3042,14 @@ var data = {
         "image": null
     }, {
         "program": "Die Hard",
-        "premium": "",
-        "chanName": "ENCORE Action",
+        "premium": 2,
+        "chanName": "Encore Action",
         "chanNum": "541",
         "premDate": "2016-01-06",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": "2016-01-22",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Action", "Crime"],
@@ -2619,13 +3060,14 @@ var data = {
         "image": null
     }, {
         "program": "Fire Down Below",
-        "premium": "",
-        "chanName": "ENCORE Action",
+        "premium": 2,
+        "chanName": "Encore Action",
         "chanNum": "541",
         "premDate": "2016-01-02",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": "2016-01-14",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Action", "Suspense"],
@@ -2636,13 +3078,14 @@ var data = {
         "image": null
     }, {
         "program": "Murder at 1600",
-        "premium": "",
-        "chanName": "ENCORE Action",
+        "premium": 2,
+        "chanName": "Encore Action",
         "chanNum": "541",
         "premDate": "2016-01-16",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-16", "2016-01-29"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Drama", "Crime", "Suspense"],
@@ -2653,13 +3096,14 @@ var data = {
         "image": null
     }, {
         "program": "Bones",
-        "premium": "",
-        "chanName": "ENCORE Black",
+        "premium": 2,
+        "chanName": "Encore Black",
         "chanNum": "540",
         "premDate": "2016-01-10",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-19", "2016-01-27"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Horror"],
@@ -2670,13 +3114,14 @@ var data = {
         "image": null
     }, {
         "program": "Die Hard With A Vengeance",
-        "premium": "",
-        "chanName": "ENCORE Black",
+        "premium": 2,
+        "chanName": "Encore Black",
         "chanNum": "540",
         "premDate": "2016-01-17",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-11", "2016-01-12", "2016-01-24"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Action", "Drama", "Crime"],
@@ -2687,13 +3132,14 @@ var data = {
         "image": null
     }, {
         "program": "A Family Thing",
-        "premium": "",
-        "chanName": "ENCORE Black",
+        "premium": 2,
+        "chanName": "Encore Black",
         "chanNum": "540",
         "premDate": "2016-01-10",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-27", "2016-01-28"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Drama", "Comedy"],
@@ -2704,13 +3150,14 @@ var data = {
         "image": null
     }, {
         "program": "Harlem Nights",
-        "premium": "",
-        "chanName": "ENCORE Black",
+        "premium": 2,
+        "chanName": "Encore Black",
         "chanNum": "540",
         "premDate": "2016-01-09",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": "2016-01-19",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Comedy"],
@@ -2721,13 +3168,14 @@ var data = {
         "image": null
     }, {
         "program": "Jungle Fever",
-        "premium": "",
-        "chanName": "ENCORE Black",
+        "premium": 2,
+        "chanName": "Encore Black",
         "chanNum": "540",
         "premDate": "2016-01-07",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": "2016-01-29",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Drama", "Romance"],
@@ -2738,13 +3186,14 @@ var data = {
         "image": null
     }, {
         "program": "Mo' Money",
-        "premium": "",
-        "chanName": "ENCORE Black",
+        "premium": 2,
+        "chanName": "Encore Black",
         "chanNum": "540",
         "premDate": "2016-01-07",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": "2016-01-25",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Comedy", "Action"],
@@ -2755,13 +3204,14 @@ var data = {
         "image": null
     }, {
         "program": "Alien 3",
-        "premium": "",
-        "chanName": "ENCORE Classic",
+        "premium": 2,
+        "chanName": "Encore Classic",
         "chanNum": "537",
         "premDate": "2016-01-16",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": "2016-01-24",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Horror", "Sci-Fi", "Action"],
@@ -2772,13 +3222,14 @@ var data = {
         "image": null
     }, {
         "program": "Babe: Pig In The City",
-        "premium": "",
-        "chanName": "ENCORE Classic",
+        "premium": 2,
+        "chanName": "Encore Classic",
         "chanNum": "537",
         "premDate": "2016-01-11",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": "20-N/-A",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Fantasy", "Comedy", "Family"],
@@ -2789,16 +3240,17 @@ var data = {
         "image": null
     }, {
         "program": "Blow",
-        "premium": "",
-        "chanName": "ENCORE Classic",
+        "premium": 2,
+        "chanName": "Encore Classic",
         "chanNum": "537",
         "premDate": "2016-01-14",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": "2016-01-24",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
-        "genres": ["Drama", "True Story", "Crime"],
+        "genres": ["Drama", "True", "Crime"],
         "starActrs": null,
         "starDrctrs": null,
         "starPrdcrs": null,
@@ -2806,16 +3258,17 @@ var data = {
         "image": null
     }, {
         "program": "Born On The Fourth of July",
-        "premium": "",
-        "chanName": "ENCORE Classic",
+        "premium": 2,
+        "chanName": "Encore Classic",
         "chanNum": "537",
         "premDate": "2016-01-13",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-17", "2016-01-30"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
-        "genres": ["Drama", "True Story", "War"],
+        "genres": ["Drama", "True", "War"],
         "starActrs": null,
         "starDrctrs": null,
         "starPrdcrs": null,
@@ -2823,13 +3276,14 @@ var data = {
         "image": null
     }, {
         "program": "City of Angels",
-        "premium": "",
-        "chanName": "ENCORE Classic",
+        "premium": 2,
+        "chanName": "Encore Classic",
         "chanNum": "537",
         "premDate": "2016-01-02",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": "2016-01-24",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Romance", "Drama"],
@@ -2840,13 +3294,14 @@ var data = {
         "image": null
     }, {
         "program": "All Dogs Go To Heaven",
-        "premium": "",
-        "chanName": "ENCORE Family",
+        "premium": 2,
+        "chanName": "Encore Family",
         "chanNum": "542",
         "premDate": "2016-01-08",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-14", "2016-01-19", "2016-01-30"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Animation", "Adventure", "Children"],
@@ -2857,13 +3312,14 @@ var data = {
         "image": null
     }, {
         "program": "Cars",
-        "premium": "",
-        "chanName": "ENCORE Family",
+        "premium": 2,
+        "chanName": "Encore Family",
         "chanNum": "542",
         "premDate": "2016-01-09",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-20", "2016-01-29"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Animation", "Comedy", "Family"],
@@ -2874,13 +3330,14 @@ var data = {
         "image": null
     }, {
         "program": "Dr. Dolittle",
-        "premium": "",
-        "chanName": "ENCORE Family",
+        "premium": 2,
+        "chanName": "Encore Family",
         "chanNum": "542",
         "premDate": "2016-01-02",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-13", "2016-01-22", "2016-01-25"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Comedy"],
@@ -2891,13 +3348,14 @@ var data = {
         "image": null
     }, {
         "program": "Home Alone 4",
-        "premium": "",
-        "chanName": "ENCORE Family",
+        "premium": 2,
+        "chanName": "Encore Family",
         "chanNum": "542",
         "premDate": "2016-01-03",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": "2016-01-24",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Comedy"],
@@ -2908,13 +3366,14 @@ var data = {
         "image": null
     }, {
         "program": "The Nutty Professor",
-        "premium": "",
-        "chanName": "ENCORE Family",
+        "premium": 2,
+        "chanName": "Encore Family",
         "chanNum": "542",
         "premDate": "2016-01-14",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-19", "2016-01-31"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Comedy"],
@@ -2925,13 +3384,14 @@ var data = {
         "image": null
     }, {
         "program": "8 Million Ways To Die",
-        "premium": "",
-        "chanName": "ENCORE Suspense",
+        "premium": 2,
+        "chanName": "Encore Suspense",
         "chanNum": "539",
         "premDate": "2016-01-20",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-21", "2016-01-28"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Crime", "Drama", "Action"],
@@ -2942,13 +3402,14 @@ var data = {
         "image": null
     }, {
         "program": "The Clearing",
-        "premium": "",
-        "chanName": "ENCORE Suspense",
+        "premium": 2,
+        "chanName": "Encore Suspense",
         "chanNum": "539",
         "premDate": "2016-01-11",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": "2016-01-20",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Drama", "Thriller", "Suspense"],
@@ -2959,13 +3420,14 @@ var data = {
         "image": null
     }, {
         "program": "Dirty",
-        "premium": "",
-        "chanName": "ENCORE Suspense",
+        "premium": 2,
+        "chanName": "Encore Suspense",
         "chanNum": "539",
         "premDate": "2016-01-25",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": "20-N/-A",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Crime", "Drama"],
@@ -2976,13 +3438,14 @@ var data = {
         "image": null
     }, {
         "program": "Flatliners",
-        "premium": "",
-        "chanName": "ENCORE Suspense",
+        "premium": 2,
+        "chanName": "Encore Suspense",
         "chanNum": "539",
         "premDate": "2016-01-16",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-17", "2016-01-22", "2016-01-23", "2016-01-26", "2016-01-27"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Horror", "Sci-Fi", "Drama"],
@@ -2993,13 +3456,14 @@ var data = {
         "image": null
     }, {
         "program": "Invasion of the Body Snatchers",
-        "premium": "",
-        "chanName": "ENCORE Suspense",
+        "premium": 2,
+        "chanName": "Encore Suspense",
         "chanNum": "539",
         "premDate": "2016-01-27",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": "20-N/-A",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Horror", "Sci-Fi"],
@@ -3010,13 +3474,14 @@ var data = {
         "image": null
     }, {
         "program": "Black Fox: The Price of Peace",
-        "premium": "",
-        "chanName": "ENCORE Westerns",
+        "premium": 2,
+        "chanName": "Encore Westerns",
         "chanNum": "538",
         "premDate": "2016-01-13",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": "2016-01-29",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Western", "Sequel"],
@@ -3027,13 +3492,14 @@ var data = {
         "image": null
     }, {
         "program": "Buck and the Preacher",
-        "premium": "",
-        "chanName": "ENCORE Westerns",
+        "premium": 2,
+        "chanName": "Encore Westerns",
         "chanNum": "538",
         "premDate": "2016-01-03",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-12", "2016-01-21", "2016-01-22", "2016-01-29"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Western", "Drama"],
@@ -3044,13 +3510,14 @@ var data = {
         "image": null
     }, {
         "program": "Fancy Pants",
-        "premium": "",
-        "chanName": "ENCORE Westerns",
+        "premium": 2,
+        "chanName": "Encore Westerns",
         "chanNum": "538",
         "premDate": "2016-01-25",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-26", "2016-01-30", "2016-01-31"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Musical", "Comedy", "Western"],
@@ -3061,13 +3528,14 @@ var data = {
         "image": null
     }, {
         "program": "Gunsmoke",
-        "premium": "",
-        "chanName": "ENCORE Westerns",
+        "premium": 2,
+        "chanName": "Encore Westerns",
         "chanNum": "538",
         "premDate": "2016-01-09",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-16", "2016-01-23", "2016-01-30"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Western"],
@@ -3078,13 +3546,14 @@ var data = {
         "image": null
     }, {
         "program": "Legends of the Fall",
-        "premium": "",
-        "chanName": "ENCORE Westerns",
+        "premium": 2,
+        "chanName": "Encore Westerns",
         "chanNum": "538",
         "premDate": "2016-01-11",
-        "dayWeek": "N/A",
-        "finDate": "20-N/-A",
-        "repDates": ["2016-01-12", "2016-01-22"],
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
         "startOD": null,
         "keyDemos": null,
         "genres": ["Drama", "Romance", "War"],
@@ -3092,6 +3561,24 @@ var data = {
         "starDrctrs": null,
         "starPrdcrs": null,
         "description": null,
+        "image": null
+    }, {
+        "program": "World Championship Boxing: Mikhaylenko vs. Robinson",
+        "premium": 1,
+        "chanName": "HBO East",
+        "chanNum": "501",
+        "premDate": "2016-01-30",
+        "premTime": "21:45",
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": null,
+        "startOD": null,
+        "keyDemos": null,
+        "genres": ["Boxing", "Sports"],
+        "starActrs": null,
+        "starDrctrs": null,
+        "starPrdcrs": null,
+        "description": "Dmitry Mikhaylenko takes on Ray Robinson in a Welterweight battle. Sergey Kovalev and Jean Pascal meet for the Light Heavyweight bout.",
         "image": null
     }]
 };
