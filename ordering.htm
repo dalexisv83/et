@@ -1,0 +1,5 @@
+<h2>Ordering</h2>
+<ul>
+<li ng-repeat-start="point in premium.sellingPoints | filter:{evergreen: true} | filter:{subtab: (prem.params.subName | getIdByURL:data.subtabs)}">{{point.point}}</li>
+<hr ng-if="!$last" ng-repeat-end />
+</ul>
