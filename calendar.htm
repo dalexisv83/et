@@ -18,7 +18,7 @@
         <input ng-model="search.$" placeholder="Search" /><a href ng-show="search.$" ng-click="search = null">(x)</a>
         <label>Filter By Date:</label>
         <input type="date" ng-model="rangeStart" datepicker />
-        <input type="date" ng-model="rangeEnd" min="{{rangeStart | date:'yyyy-MM-dd'}}" datepicker />{{rangeStart}}
+        <input type="date" ng-model="rangeEnd" min="{{rangeStart | date:'yyyy-MM-dd'}}" datepicker />
         <span ng-if="premSel">{{premSel | getById:data.premiums}} <a href ng-click="aParam('premium', null)">(x)</a></span>
         <span ng-if="genSel">{{genSel}} <a href ng-click="aParam('genre', null)">(x)</a></span>
         <span ng-if="typeSel">{{typeSel}} <a href ng-click="aParam('type', null)">(x)</a></span>
