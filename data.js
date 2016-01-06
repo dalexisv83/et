@@ -4,6 +4,8 @@ var data = {
         "name": "HBO",
         "url": "hbo",
         "aacURL": "hbo.html",
+        "streamName": "HBO Go",
+        "streamFrag": "5",
         "dotcomURL": "premiums/hbo",
         "premURL": "http://www.hbo.com/",
         "price": "17.99",
@@ -82,7 +84,7 @@ var data = {
         }],
         "sellingPoints": [{
             "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
+            "title": null,
             "point": "Watch the movies and shows you want â€“ whenever you want â€“ with DIRECTV Everywhere. Or, use your DIRECTV.com login to access HBO's library at HBO GO.",
             "evergreen": true
         }, {
@@ -167,51 +169,74 @@ var data = {
             "evergreen": false
         }, {
             "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Instant Access to the hottest entertainment.",
+            "title": null,
+            "point": "Included at no extra cost with an HBO subscription. More than 1400 titles available to watch through the DIRECTV App, online or HBO GO.",
             "evergreen": true
         }, {
             "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Watch an episode of your favorite HBO original series and DIRECTV automatically puts the next episode in your playlist.",
+            "title": null,
+            "point": "Supported on TV, Apple and Android devices, Kindle, Chromecast, Playstation and Xbox, Roku, Smart TV and computer.",
             "evergreen": true
         }, {
             "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Get episodes in order by season â€“ even if you recorded them to your receiver out of order.",
-            "evergreen": true
-        }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Streaming available for both HBO On Demand and HBO live broadcasts.",
-            "evergreen": true
-        }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Included with your subscription at no extra cost and is supported on TV, Apple and Android devices, Kindle, Chromecast, Playstation and Xbox, Roku, Smart TV and computer.",
-            "evergreen": true
-        }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "More than 1400 titles available on HBO GO for HBO subscribers. HBO GO allows subscribers to instantly watch their favorite programs from an iPad, iPhone, Android or on their computer.",
-            "evergreen": false
-        }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
+            "title": null,
             "point": "Instantly watch every episode of classics like The Sopranos, Sex and the City and Deadwood and award-winning series like Boardwalk Empire, Entourage and True Blood, as well as blockbuster theatricals.",
-            "evergreen": false
+            "evergreen": true
         }, {
             "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
+            "title": null,
             "point": "For talking points about HBO Now streaming, see DIRECTV vs. HBO Now competitive information.",
+            "evergreen": true
+        }, {
+            "subtab": 2,
+            "title": "Unfriended",
+            "point": "A group of online chat-room friends find themselves haunted by a mysterious, supernatural force using the account of their dead friend. - Jan 23",
+            "evergreen": false
+        }, {
+            "subtab": 2,
+            "title": "True Story",
+            "point": "When disgraced New York Times reporter Michael Finkel meets accused killer Christian Longo, who has taken on Finkel's identity, his investigation morphs into a game of cat-and-mouse. - Jan 30",
+            "evergreen": false
+        }, {
+            "subtab": 3,
+            "title": "Sesame Street",
+            "point": "Season 46 of the children's show launches on HBO with the boldest changes to date including 30-minute episodes, new preschool-relevant themes and new songs. - Jan 16",
+            "evergreen": false
+        }, {
+            "subtab": 3,
+            "title": "Whitney Cummings: I'm Your Girlfriend",
+            "point": "Tthis exclusive presentation features Cummings in her first HBO stand-up comedy special. - Jan 23",
+            "evergreen": false
+        }, {
+            "subtab": 2,
+            "title": "Voley",
+            "point": "(HBO Latino Movie) Six friends spend New Year's at a summer house where sex addict Nicolas gets with every single girl, including his best friend's girlfriend. - Jan 1",
+            "evergreen": false
+        }, {
+            "subtab": 2,
+            "title": "La Isla Minima",
+            "point": "(HBO Latino Movie) In the deep Spanish south in 1980, a series of brutal murders of adolescent girls bring together a pair of disparate homicide detectives. - Jan 8",
+            "evergreen": false
+        }, {
+            "subtab": 3,
+            "title": "Psi",
+            "point": "(HBO Latino Series) The psychological drama series returns for its second season. - Jan 22",
+            "evergreen": false
+        }, {
+            "subtab": 3,
+            "title": "Bikini: Una Historia Real",
+            "point": "(HBO Latino Short Film) Based on real 1950s events, Bikini tells the story of when the mayor of a Spanish seaside village convinced General Franco to legalize bikinis. - Jan 1",
             "evergreen": false
         }],
         "objections": [{
             "category": "Price/Value",
             "responses": ["In-home entertainment is more affordable than going to the movies or getting movies through rental services", "The same amount of titles would cost over $150 a month with Red Box"]
         }, {
+            "category": "No Time to Watch",
+            "responses": ["If you missed it on HBO East, it can be seen later on another HBO network"]
+        }, {
             "category": "Too Many Repeats",
-            "responses": ["If you missed it on HBO East, it can be seen later on another HBO network", "New movies debut frequently, with a guaranteed blockbuster premiere every Saturday", "All HBO channels air a variety of shows at different times to reduce repeats", "Over 20 currently running original shows, plus former hits like Flight of the Conchords air throughout the month, so there are few repeats"]
+            "responses": ["New movies debut frequently, with a guaranteed blockbuster premiere every Saturday", "All HBO channels air a variety of shows at different times to reduce repeats", "Over 20 currently running original shows, plus former hits like Flight of the Conchords air throughout the month, so there are few repeats"]
         }, {
             "category": "Availability",
             "responses": ["With DIRECTV, you can watch HBO programming in multiple rooms through your receivers â€“ plus stream HBO GO content on compatible devices"]
@@ -223,6 +248,8 @@ var data = {
         "name": "Starz",
         "url": "starz",
         "aacURL": "starz_super_pack.html",
+        "streamName": "Starz/Encore Play",
+        "streamFrag": "6",
         "dotcomURL": "premiums/starz",
         "premURL": "http://www.starz.com",
         "price": "13.99",
@@ -351,7 +378,7 @@ var data = {
             "evergreen": false
         }, {
             "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
+            "title": null,
             "point": "Watch the movies and shows you want &ndash; whenever you want &ndash; with DIRECTV Everywhere. Or, use your DIRECTV.com login to access both Starz and Encore libraries at Starz Play and Encore Play.",
             "evergreen": true
         }, {
@@ -414,10 +441,64 @@ var data = {
             "title": null,
             "point": "Starz movie library includes blockbusters like Guardians of the Galaxy, Maleficent, Fury, Cinderella and more.",
             "evergreen": true
+        }, {
+            "subtab": 3,
+            "title": null,
+            "point": "Critically acclaimed series include Blunt Talk, Power, Outlander, Black Sales and Survivor's Remorse.",
+            "evergreen": true
+        }, {
+            "subtab": 3,
+            "title": null,
+            "point": "Former series like Party Down and Magic City are available On Demand and online streaming.",
+            "evergreen": true
+        }, {
+            "subtab": 3,
+            "title": "Black Sails",
+            "point": "In the wake of Charles Town, the world lives in fear of Captain Flint. The new season of the drama about a pirate's life returns for a new season. - Jan 23",
+            "evergreen": false
+        }, {
+            "subtab": 3,
+            "title": "Flesh and Bone",
+            "point": "(Drama Series) A talented but emotionally troubled dancer joins a company in New York City and finds herself immersed in the tough and cutthroat world of professional ballet. - Available On Demand",
+            "evergreen": false
+        }, {
+            "subtab": 2,
+            "title": null,
+            "point": "Best selection of family movies from Disney, Pixar and Touchstone.",
+            "evergreen": true
+        }, {
+            "subtab": 4,
+            "title": null,
+            "point": "Hundreds of hit movies and original series available whenever you want.",
+            "evergreen": false
+        }, {
+            "subtab": 4,
+            "title": null,
+            "point": "Register and watch on multiple devices. Customers can start a movie on their computer and finish watching it on their phone.",
+            "evergreen": false
+        }, {
+            "subtab": 2,
+            "title": null,
+            "point": "Starz and Encore have large libraries of movie titles, going all the way back to classics from the 1950's and beyond.",
+            "evergreen": true
+        }, {
+            "subtab": 2,
+            "title": null,
+            "point": "New movies premiere all month long, and popular movies play only a few times each day across all Starz channels.",
+            "evergreen": true
         }],
         "objections": [{
-            "category": "No Variety",
+            "category": "Not Enough Variety",
             "responses": ["Starz channels specialize in new releases, entertainment suitable for the whole family and original programming."]
+        }, {
+            "category": "Content",
+            "responses": ["Starz And Encore have a large selection of family-friendly movies spanning all eras and genres.", "No adult content airs on Starz or Encore.", "Not only will you get big hit movies only a few months after the theater, you also have exclusive new original series."]
+        }, {
+            "category": "Price/Value",
+            "responses": ["For less than $0.50 a day you get over 450 movies a month, that's less than two movie tickets!"]
+        }, {
+            "category": "No Time to Watch",
+            "responses": ["You can watch anytime with Starz On Demand and anywhere on multiple devices with DIRECTV Everywhere. Best of all, they are included with your Starz subscription."]
         }],
         "subs": [1, 2, 3, 4, 6, 7],
         "disclosures": [1, 2]
@@ -426,6 +507,8 @@ var data = {
         "name": "Showtime",
         "url": "showtime",
         "aacURL": "showtime_unlimited.html",
+        "streamName": "Showtime Anytime",
+        "streamFrag": "7",
         "dotcomURL": "premiums/showtime",
         "premURL": "http://www.sho.com",
         "price": "13.99",
@@ -540,33 +623,18 @@ var data = {
             "evergreen": false
         }, {
             "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
+            "title": null,
             "point": "Watch the movies and shows you want â€“ whenever you want â€“ with DIRECTV Everywhere. Or, use your DIRECTV.com login to access Showtime's library at Showtime Anytime.",
             "evergreen": true
         }, {
             "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Instant Access to the hottest entertainment.",
-            "evergreen": true
-        }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Watch an episode of your favorite Showtime original series and DIRECTV automatically puts the next episode in your playlist.",
-            "evergreen": true
-        }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Get episodes in order by season â€“ even if you recorded them to your receiver out of order.",
-            "evergreen": true
-        }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
+            "title": null,
             "point": "Streaming available for both Showtime On Demand and Showtime live broadcasts.",
             "evergreen": true
         }, {
             "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Included with your subscription at no extra cost and is supported on TV, Apple and Android devices, Kindle, Chromecast, Playstation and Xbox, Roku, Smart TV and computer.",
+            "title": null,
+            "point": "Showtime Anytime is included with your subscription at no extra cost and is supported on TV, Apple and Android devices, Kindle, Chromecast, Playstation and Xbox, Roku, Smart TV and computer.",
             "evergreen": true
         }, {
             "subtab": 2,
@@ -586,11 +654,6 @@ var data = {
         }, {
             "subtab": 1,
             "title": null,
-            "point": "With DIRECTV and AT&T Everywhere, you can watch past and present seasons of your favorite original series, movies, sports, documentaries and comedy specials anytime, anywhere.",
-            "evergreen": true
-        }, {
-            "subtab": 1,
-            "title": null,
             "point": "No other premium channel has a wider variety of hard-hitting sports, from Showtime Championship Boxing and 60 Minutes Sports to Inside The NFL and Jim Rome on Showtime.",
             "evergreen": true
         }, {
@@ -601,7 +664,7 @@ var data = {
         }, {
             "subtab": 1,
             "title": null,
-            "point": "Watch the best of past and present seasons of your favorite Showtime original series, movies, sports, documentaries and comedy specials â€“ whenever you want â€“ with Showtime On Demand or online with DIRECTV Everywhere.",
+            "point": "Watch the best of past and present seasons of your favorite Showtime original series, movies, sports, documentaries and comedy specials - whenever you want - with Showtime On Demand or online with DIRECTV Everywhere.",
             "evergreen": true
         }, {
             "subtab": 3,
@@ -624,26 +687,6 @@ var data = {
             "point": "Undefeated WBC Heavyweight World Champion Deontay Wilder will make the third defense of his title against brawling Polish contender Artur Szpilka. - Jan 16",
             "evergreen": false
         }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Customers can watch their favorite Showtime original programming and hit movies whenever and wherever they want with Showtime Anytime. Showtime Anytime is available free as part of their Showtime Unlimited subscription.",
-            "evergreen": true
-        }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Showtime Anytime features include playlist, option to automatically add next episodes as they premiere, live TV.",
-            "evergreen": true
-        }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Viewers can start a Showtime Anytime program on 1 device, and finish watching it on another device &ndash; right where they left off.",
-            "evergreen": true
-        }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "For talking points about Showtime's standalone streaming services, see DIRECTV vs. Showtime OTT competitive information.",
-            "evergreen": true
-        }, {
             "subtab": 3,
             "title": "The Circus: Inside the Greatest Political Show on Earth",
             "point": "This groundbreaking documentary series pulls back the curtain on the 2016 U.S. presidential race, providing behind-the-scenes access to the human drama involved in the pursuit of the Oval Office. - Premiering January",
@@ -658,10 +701,34 @@ var data = {
             "title": "The Imitation Game",
             "point": "(Drama, Thriller) Don't miss Benedict Cumberbatch in this Academy Award-nominated film. - Jan 15",
             "evergreen": false
+        }, {
+            "subtab": 2,
+            "title": null,
+            "point": "Over 700 titles each month â€“ almost 10 times as many titles as a Netflix monthly subscription allows.",
+            "evergreen": true
+        }, {
+            "subtab": 2,
+            "title": null,
+            "point": "Sundance Channel offers hard-to-find independent films and documentaries.",
+            "evergreen": true
+        }, {
+            "subtab": 2,
+            "title": null,
+            "point": "Showtime features riveting dramas, hilarious comedies and thrilling action &ndash; all avaialble in HD.",
+            "evergreen": true
         }],
         "objections": [{
-            "category": "No Variety",
-            "responses": ["Specialized channels offer targeted programming: sci-fi; independent films; action-adventure; suspense; women-focused; movies from the 70's, 80's and 90's; Hollywood hits."]
+            "category": "Not Enough Variety",
+            "responses": ["Specialized channels offer targeted programming: sci-fi; independent films; action-adventure; suspense; women-focused; movies from the 70's, 80's and 90's; Hollywood hits.", "The Movie Channel East and West and TMC Xtra HD have extensive movie libraries of new and classic films."]
+        }, {
+            "category": "Price/Value",
+            "responses": ["The same amount of titles would cost over $700 a month with Red Box."]
+        }, {
+            "category": "Too Many Repeats",
+            "responses": ["Sho2 provides double the viewing options with no same-day repeats of movies and series airing on Showtime (East\/West) or Showcase."]
+        }, {
+            "category": "Content",
+            "responses": ["Mature programming always airs at night."]
         }],
         "subs": [1, 2, 3, 4, 6],
         "disclosures": [1, 2]
@@ -670,6 +737,8 @@ var data = {
         "name": "Cinemax",
         "url": "cinemax",
         "aacURL": "cinemax.html",
+        "streamName": "Max Go",
+        "streamFrag": "5",
         "dotcomURL": "premiums/cinemax",
         "premURL": "http://www.cinemax.com",
         "price": "13.99",
@@ -744,23 +813,18 @@ var data = {
             "evergreen": false
         }, {
             "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "With MAX GO, customers get instant access to over 400 of the biggest Hollywood hit movies, indie favorites, and Max After Dark Series.",
+            "title": null,
+            "point": "Instant access to over 400 of the biggest Hollywood hit movies, indie favorites, and Max After Dark Series.",
             "evergreen": true
         }, {
             "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "MAX GO features Exclusive movies and bonus content featuring the biggest Hollywood stars.",
+            "title": null,
+            "point": "Exclusive bonus content featuring the biggest Hollywood stars.",
             "evergreen": true
         }, {
             "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Customers can browse tags for a fun way to access movies, as well as create a personal watchlist to save shows and movies easily.",
-            "evergreen": true
-        }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
-            "point": "Instantly access over 400 of the biggest Hollywood hit movies, indie favorites, and Max After Dark Series.",
+            "title": null,
+            "point": "Browse tags for a fun way to access movies, as well as create a personal watchlist to save shows and movies easily.",
             "evergreen": true
         }, {
             "subtab": 1,
@@ -822,10 +886,24 @@ var data = {
             "title": "Quarry",
             "point": "Coming in 2016! Mac Conway is a Marine whose homecoming from Vietnam is anything but heroic, as he is shunned by loved ones and demonized by the public. Conway is slowly drawn into a network of killing and corruption while trying to cope with his experiences at war.",
             "evergreen": false
+        }, {
+            "subtab": 3,
+            "title": "Banshee",
+            "point": "(Drama, Thriller) The final season of Cinemax's original series about an ex-con who assumes the identity of the sheriff of Banshee, PA, where his criminal activities continue. - Coming in 2016",
+            "evergreen": false
         }],
         "objections": [{
-            "category": "Content Quality",
+            "category": "Content",
             "responses": ["Parental controls are available to prevent younger viewers from seeing mature programming."]
+        }, {
+            "category": "Price/Value",
+            "responses": ["Cinemax is even cheaper when taken as part of Premier or Lo Maximo.", "The same amount of titles would cost over $150 a month with Red Box."]
+        }, {
+            "category": "Too Many Repeats",
+            "responses": ["Movies are spread across all Cinemax channels, so the same movie won't play more than a few times the entire day."]
+        }, {
+            "category": "Not Enough Variety",
+            "responses": ["More Max has double the entertainment choice, with popular films and rare gems to complement Cinemax.", "Over 160 titles each month. Plus, Subscribers can register at www.maxgo.com to watch more movies from Cinemax's large library of titles."]
         }],
         "subs": [1, 2, 3, 4, 6],
         "disclosures": [1, 2]
@@ -834,6 +912,8 @@ var data = {
         "name": "Sports Pack",
         "url": "sports-pack",
         "aacURL": "sports_pack.html",
+        "streamName": null,
+        "streamFrag": null,
         "dotcomURL": "sports/sports_pack",
         "premURL": "http://www.directv.com/sports/sports_pack",
         "price": "13.99",
@@ -1115,37 +1195,42 @@ var data = {
         }],
         "sellingPoints": [{
             "subtab": 1,
-            "title": "Alternate Channels",
-            "point": "Alternate channels are not included in the Channel Lineup tool because they are not 24\/7 sports networks and cannot be subscribed to",
-            "evergreen": false
+            "title": null,
+            "point": "Access to RSNs that air local games and special programs that would not typically be available in the customer's area.",
+            "evergreen": true
         }, {
             "subtab": 1,
-            "title": "Alternate Channels",
+            "title": null,
+            "point": "Over 34 regional and specialty sports networks; including full-time coverage from FS San Diego.",
+            "evergreen": true
+        }, {
+            "subtab": 1,
+            "title": null,
+            "point": "Includes: ESPN Classic, The Outdoor Channel, Comcast Sports Net, YES and TVG.",
+            "evergreen": true
+        }, {
+            "subtab": 1,
+            "title": null,
             "point": "Alternate channels occasionally provide additional game coverage for ESPN, ESPN2 or Regional Sports Networks",
             "evergreen": false
         }, {
             "subtab": 1,
-            "title": "Alternate Channels",
-            "point": "Customers cannot subscribe to these channels. Alternate channels are only viewable while the game is in progress.",
-            "evergreen": false
-        }, {
-            "subtab": 1,
-            "title": "Alternate Channels",
+            "title": null,
             "point": "Channel numbers for alternates can be indicated by XXX-X (dash number) format",
             "evergreen": false
         }, {
             "subtab": 1,
-            "title": "Alternate Channels",
+            "title": null,
             "point": "Usually located in the same channel neighborhood as the customer's local RSN, or near ESPN or ESPN2",
             "evergreen": false
         }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
+            "subtab": 1,
+            "title": null,
             "point": "Watch Comcast SportsNet coverage of local RSN action on the web and compatible mobile devices.",
             "evergreen": true
         }, {
-            "subtab": 4,
-            "title": "DIRECTV and AT&T Everywhere",
+            "subtab": 1,
+            "title": null,
             "point": "View Time Warner Cable SportsNet content on the web, iPhone, iPad and Android through a high-speed internet connection",
             "evergreen": true
         }, {
@@ -1188,26 +1273,6 @@ var data = {
             "title": null,
             "point": "Live events delivered to fans on up to 8 channels, including college basketball and football games from SEC, ACC, WAC, Big East, Big 12, MAC and Sun Belt conferences.",
             "evergreen": true
-        }, {
-            "subtab": 1,
-            "title": null,
-            "point": "Access to RSNs that air local games and special programs that would not typically be available in the customer's area.",
-            "evergreen": true
-        }, {
-            "subtab": 1,
-            "title": null,
-            "point": "Over 34 regional and specialty sports networks; including full-time coverage from FS San Diego.",
-            "evergreen": true
-        }, {
-            "subtab": 1,
-            "title": null,
-            "point": "Includes: ESPN Classic, The Outdoor Channel, Comcast Sports Net, YES and TVG.",
-            "evergreen": true
-        }, {
-            "subtab": 4,
-            "title": "Third-party Streaming",
-            "point": "Live, local sports coverage not available through services like Netflix and Hulu.",
-            "evergreen": false
         }],
         "objections": [{
             "category": "Blackouts",
@@ -1220,6 +1285,8 @@ var data = {
         "name": "DIRECTV Cinema",
         "url": "directv-cinema",
         "aacURL": "ppv_dtv_cinema_info.html",
+        "streamName": null,
+        "streamFrag": null,
         "dotcomURL": "technology/directv_cinema",
         "premURL": "http://www.directv.com/technology/directv_cinema",
         "price": "Varies",
@@ -1762,7 +1829,12 @@ var data = {
         }, {
             "subtab": 8,
             "title": null,
-            "point": "Movies start at Ch. 125",
+            "point": "Movies start at Ch. 125. Customers can also order On Demand titles on Ch. 1100.",
+            "evergreen": true
+        }, {
+            "subtab": 8,
+            "title": null,
+            "point": "Customers can access the Recently Watched On Demand folder in their playlist to view continue watching select PPV titles they started watching online, on TV or on a mobile device.",
             "evergreen": true
         }, {
             "subtab": 10,
@@ -1794,6 +1866,8 @@ var data = {
         "name": "Streaming",
         "url": "streaming",
         "aacURL": "directv_everywhere.html",
+        "streamName": null,
+        "streamFrag": null,
         "dotcomURL": "technology/directv_everywhere",
         "premURL": "http://www.directv.com/technology/directv_everywhere",
         "price": null,
@@ -1820,15 +1894,13 @@ var data = {
             "title": null,
             "point": "Customers can stream programming through the DIRECTV App, or log into the streaming website\/app for participating programmers, such as A&E, Comcast SportsNet, Golf Channel, TNT, FX, SEC Network and more. (Customer's base package must include the channel to stream content.)",
             "evergreen": true
-        }, {
-            "subtab": 1,
-            "title": null,
-            "point": "For talking points about standalone streaming services like Hulu and Netflix, see Competitive Streaming Services vs. DIRECTV.",
-            "evergreen": true
         }],
         "objections": [{
             "category": "Availability",
             "responses": ["Sling TV content can only be streamed through one device at at time. Streaming content through multiple devices at the same time using one Sling TV account is not permitted.", "DIRECTV lets customers watch live TV without the fear of buffering or error messages, so they don't miss a minute of their show!", "DIRECTV offers the convenience of keeping all of your favorite programming in 1 place. If you record your favorite shows and movies to your DVR, you can have the content you enjoy the most at your fingertips!"]
+        }, {
+            "category": "Content",
+            "responses": ["Live, local sports coverage not available through services like Netflix and Hulu."]
         }],
         "subs": [1, 11],
         "disclosures": []
@@ -1973,7 +2045,7 @@ var data = {
         "chanName": "Showtime East HD",
         "chanNum": "545",
         "premDate": "2016-01-15",
-        "premTime": null,
+        "premTime": "20:00",
         "dayWeek": null,
         "finDate": null,
         "onDemand": "1545",
@@ -1991,7 +2063,7 @@ var data = {
         "chanName": "Showtime East HD",
         "chanNum": "545",
         "premDate": "2016-01-08",
-        "premTime": null,
+        "premTime": "20:00",
         "dayWeek": null,
         "finDate": null,
         "onDemand": "1545",
@@ -2009,7 +2081,7 @@ var data = {
         "chanName": "Showtime East HD",
         "chanNum": "545",
         "premDate": "2016-01-22",
-        "premTime": null,
+        "premTime": "21:00",
         "dayWeek": null,
         "finDate": null,
         "onDemand": "1545",
@@ -2225,7 +2297,7 @@ var data = {
         "chanName": "Cinemax East",
         "chanNum": "515",
         "premDate": "2016-01-02",
-        "premTime": null,
+        "premTime": "22:00",
         "dayWeek": null,
         "finDate": null,
         "onDemand": "1515",
@@ -2243,7 +2315,7 @@ var data = {
         "chanName": "Cinemax East",
         "chanNum": "515",
         "premDate": "2016-01-09",
-        "premTime": null,
+        "premTime": "22:00",
         "dayWeek": null,
         "finDate": null,
         "onDemand": "1515",
@@ -2261,7 +2333,7 @@ var data = {
         "chanName": "Cinemax East",
         "chanNum": "515",
         "premDate": "2016-01-23",
-        "premTime": null,
+        "premTime": "22:00",
         "dayWeek": null,
         "finDate": null,
         "onDemand": "1515",
@@ -2303,7 +2375,7 @@ var data = {
         "onDemand": "1501",
         "startOD": null,
         "keyDemos": null,
-        "genres": ["Musical", "Comedy", "Western"],
+        "genres": ["Music"],
         "starActrs": ["J. Cole"],
         "starDrctrs": null,
         "starPrdcrs": null,
@@ -2387,7 +2459,7 @@ var data = {
         "chanName": "HBO East",
         "chanNum": "501",
         "premDate": "2016-01-23",
-        "premTime": null,
+        "premTime": "22:00",
         "dayWeek": null,
         "finDate": null,
         "onDemand": "1506",
@@ -2477,7 +2549,7 @@ var data = {
         "chanName": "Starz East",
         "chanNum": "525",
         "premDate": "2016-01-08",
-        "premTime": null,
+        "premTime": "20:00",
         "dayWeek": null,
         "finDate": null,
         "onDemand": "1525",
@@ -2495,7 +2567,7 @@ var data = {
         "chanName": "Starz East",
         "chanNum": "525",
         "premDate": "2016-01-22",
-        "premTime": null,
+        "premTime": "21:00",
         "dayWeek": null,
         "finDate": null,
         "onDemand": "1525",
@@ -2789,7 +2861,7 @@ var data = {
         "onDemand": null,
         "startOD": null,
         "keyDemos": null,
-        "genres": ["Family", "Drama", "Musical"],
+        "genres": ["Family", "Drama", "Music"],
         "starActrs": null,
         "starDrctrs": null,
         "starPrdcrs": null,
@@ -3563,7 +3635,7 @@ var data = {
         "onDemand": null,
         "startOD": null,
         "keyDemos": null,
-        "genres": ["Musical", "Comedy", "Western"],
+        "genres": ["Music", "Comedy", "Western"],
         "starActrs": null,
         "starDrctrs": null,
         "starPrdcrs": null,
@@ -3622,6 +3694,60 @@ var data = {
         "starDrctrs": null,
         "starPrdcrs": null,
         "description": "Dmitry Mikhaylenko takes on Ray Robinson in a Welterweight battle. Sergey Kovalev and Jean Pascal meet for the Light Heavyweight bout.",
+        "image": null
+    }, {
+        "program": "The Martian",
+        "premium": 6,
+        "chanName": "CINE",
+        "chanNum": "Varies",
+        "premDate": "2016-01-12",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": "1100",
+        "startOD": "2016-01-12",
+        "keyDemos": null,
+        "genres": ["Drama", "Sci-Fi", "Action"],
+        "starActrs": ["Matt Damon"],
+        "starDrctrs": null,
+        "starPrdcrs": null,
+        "description": "During a mission to Mars, Astronaut Mark Watney is presumed dead after a fierce storm and left behind by his crew. But Watney has survived and finds himself stranded and alone.",
+        "image": null
+    }, {
+        "program": "Straight Outta Compton",
+        "premium": 6,
+        "chanName": "CINE",
+        "chanNum": "Varies",
+        "premDate": "2016-01-12",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": "1100",
+        "startOD": "2016-01-12",
+        "keyDemos": null,
+        "genres": ["Drama", "Music", "True"],
+        "starActrs": null,
+        "starDrctrs": null,
+        "starPrdcrs": null,
+        "description": "The group NWA emerges from the mean streets of Compton in Los Angeles, California, in the mid-1980s and revolutionizes Hip Hop culture with their music and tales about life in the hood.",
+        "image": null
+    }, {
+        "program": "Standoff",
+        "premium": 6,
+        "chanName": "CINE",
+        "chanNum": "Varies",
+        "premDate": "2016-01-14",
+        "premTime": null,
+        "dayWeek": null,
+        "finDate": null,
+        "onDemand": "1100",
+        "startOD": "2016-01-14",
+        "keyDemos": null,
+        "genres": ["Drama", "Action", "Thriller"],
+        "starActrs": null,
+        "starDrctrs": null,
+        "starPrdcrs": null,
+        "description": "A troubled veteran gets a chance at redemption by protecting a 12 year-old girl from an assassin. Holding a shotgun with a single shell, he engages in a desperate fight for her life.",
         "image": null
     }]
 };
