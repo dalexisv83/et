@@ -192,28 +192,18 @@ var data = {
             "evergreen": true
         }, {
             "subtab": 4,
-            "title": "HBO Now",
-            "point": "Access to HBO On Demand library. Content must be searched by program (titles are not available through traditional channel guide).",
+            "title": "DIRECTV and AT&T Everywhere",
+            "point": "More than 1400 titles available on HBO GO for HBO subscribers. HBO GO allows subscribers to instantly watch their favorite programs from an iPad, iPhone, Android or on their computer.",
             "evergreen": false
         }, {
             "subtab": 4,
-            "title": "HBO Now",
-            "point": "Available on computer and Roku, AppleTV, iPad, iPhone and iPod Touch (currently on exclusive contract with Apple).",
+            "title": "DIRECTV and AT&T Everywhere",
+            "point": "Instantly watch every episode of classics like The Sopranos, Sex and the City and Deadwood and award-winning series like Boardwalk Empire, Entourage and True Blood, as well as blockbuster theatricals.",
             "evergreen": false
         }, {
             "subtab": 4,
-            "title": "HBO Now",
-            "point": "AppleTV is required to view content on television.",
-            "evergreen": false
-        }, {
-            "subtab": 4,
-            "title": "HBO Now",
-            "point": "Live TV streaming is not available.",
-            "evergreen": false
-        }, {
-            "subtab": 4,
-            "title": "HBO Now",
-            "point": "$14.99\/month",
+            "title": "DIRECTV and AT&T Everywhere",
+            "point": "For talking points about HBO Now streaming, see DIRECTV vs. HBO Now competitive information.",
             "evergreen": false
         }],
         "objections": [{
@@ -222,6 +212,9 @@ var data = {
         }, {
             "category": "Too Many Repeats",
             "responses": ["If you missed it on HBO East, it can be seen later on another HBO network", "New movies debut frequently, with a guaranteed blockbuster premiere every Saturday", "All HBO channels air a variety of shows at different times to reduce repeats", "Over 20 currently running original shows, plus former hits like Flight of the Conchords air throughout the month, so there are few repeats"]
+        }, {
+            "category": "Availability",
+            "responses": ["With DIRECTV, you can watch HBO programming in multiple rooms through your receivers â€“ plus stream HBO GO content on compatible devices"]
         }],
         "subs": [1, 2, 3, 4, 6],
         "disclosures": [1, 2]
@@ -394,8 +387,33 @@ var data = {
         }, {
             "subtab": 7,
             "title": null,
-            "point": null,
-            "evergreen": null
+            "point": "8 channels featuring A wide selection of movies from every genre â€” all ready to watch anytime. Programming from Encore's large library of titles includes children's movies, action-adventure, comedy, independent film, suspense, Westerns, sci-fi and more.",
+            "evergreen": true
+        }, {
+            "subtab": 7,
+            "title": null,
+            "point": "Available as part of Starz Super Pack, Premier base package or Ultimate base package.",
+            "evergreen": true
+        }, {
+            "subtab": 7,
+            "title": null,
+            "point": "Existing customers can add on Encore a la carte service for $7.99, if they don't already subscribe to a package that includes Encore channels.",
+            "evergreen": true
+        }, {
+            "subtab": 7,
+            "title": null,
+            "point": "Some movies that air on Starz will air later on Encore channels.",
+            "evergreen": true
+        }, {
+            "subtab": 2,
+            "title": null,
+            "point": "The best movie value, with 12 movie channels including 6 HD simulcasts, plus 3 HD-only channels, for a total of 15 channels and over 900 movies each month.",
+            "evergreen": true
+        }, {
+            "subtab": 2,
+            "title": null,
+            "point": "Starz movie library includes blockbusters like Guardians of the Galaxy, Maleficent, Fury, Cinderella and more.",
+            "evergreen": true
         }],
         "objections": [{
             "category": "No Variety",
@@ -607,24 +625,24 @@ var data = {
             "evergreen": false
         }, {
             "subtab": 4,
-            "title": "Showtime Standalone (OTT)",
-            "point": "Customers who sign up via PlayStation are limited to accessing Showtime OTT on PlayStation only.",
-            "evergreen": false
+            "title": "DIRECTV and AT&T Everywhere",
+            "point": "Customers can watch their favorite Showtime original programming and hit movies whenever and wherever they want with Showtime Anytime. Showtime Anytime is available free as part of their Showtime Unlimited subscription.",
+            "evergreen": true
         }, {
             "subtab": 4,
-            "title": "Showtime Standalone (OTT)",
-            "point": "Standalone subscription is $10.99\/month.",
-            "evergreen": false
+            "title": "DIRECTV and AT&T Everywhere",
+            "point": "Showtime Anytime features include playlist, option to automatically add next episodes as they premiere, live TV.",
+            "evergreen": true
         }, {
             "subtab": 4,
-            "title": "Showtime Standalone (OTT)",
-            "point": "Customers who stream through Hulu and Amazon Prime must pay subscription costs for both the Showtime OTT and their Hulu\/Amazon Prime monthly service.",
-            "evergreen": false
+            "title": "DIRECTV and AT&T Everywhere",
+            "point": "Viewers can start a Showtime Anytime program on 1 device, and finish watching it on another device &ndash; right where they left off.",
+            "evergreen": true
         }, {
             "subtab": 4,
-            "title": "Showtime Standalone (OTT)",
-            "point": "Streaming available for both Showtime On Demand and Showtime East\/West coast live feeds.",
-            "evergreen": false
+            "title": "DIRECTV and AT&T Everywhere",
+            "point": "For talking points about Showtime's standalone streaming services, see DIRECTV vs. Showtime OTT competitive information.",
+            "evergreen": true
         }, {
             "subtab": 3,
             "title": "The Circus: Inside the Greatest Political Show on Earth",
@@ -1782,10 +1800,35 @@ var data = {
         "ODchan": null,
         "logo": null,
         "channels": [{}],
-        "sellingPoints": [{}],
+        "sellingPoints": [{
+            "subtab": 1,
+            "title": null,
+            "point": "DIRECTV Everywhere lets customers take their favorite movies and programs with them, to watch whenever and wherever they want.",
+            "evergreen": true
+        }, {
+            "subtab": 1,
+            "title": null,
+            "point": "With the DIRECTV App, customers can stream live TV, recorded shows, Pay Per View, On Demand and Premium titles on their computer or compatible mobile devices.",
+            "evergreen": true
+        }, {
+            "subtab": 1,
+            "title": null,
+            "point": "Some equipment requirements apply for in-home streaming.",
+            "evergreen": true
+        }, {
+            "subtab": 1,
+            "title": null,
+            "point": "Customers can stream programming through the DIRECTV App, or log into the streaming website\/app for participating programmers, such as A&E, Comcast SportsNet, Golf Channel, TNT, FX, SEC Network and more. (Customer's base package must include the channel to stream content.)",
+            "evergreen": true
+        }, {
+            "subtab": 1,
+            "title": null,
+            "point": "For talking points about standalone streaming services like Hulu and Netflix, see Competitive Streaming Services vs. DIRECTV.",
+            "evergreen": true
+        }],
         "objections": [{
             "category": "Availability",
-            "responses": ["Sling TV content can only be streamed through one device at at time. Streaming content through multiple devices at the same time using one Sling TV account is not permitted."]
+            "responses": ["Sling TV content can only be streamed through one device at at time. Streaming content through multiple devices at the same time using one Sling TV account is not permitted.", "DIRECTV lets customers watch live TV without the fear of buffering or error messages, so they don't miss a minute of their show!", "DIRECTV offers the convenience of keeping all of your favorite programming in 1 place. If you record your favorite shows and movies to your DVR, you can have the content you enjoy the most at your fingertips!"]
         }],
         "subs": [1, 11],
         "disclosures": []
