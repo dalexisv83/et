@@ -2,9 +2,10 @@
     <img src="streaming.jpg" alt="">
 </div>
 <div class="grid__item five-eighths">
-    <h2 class="grad-blue">DIRECTV Everywhere</h2>
+    <h2 class="grad-blue">DIRECTV Everywhere <span ng-if="premium.streamName">with {{premium.streamName}}</span></h2>
     <ul>
         <li ng-repeat="point in premium.sellingPoints | filter:{evergreen: true} | filter:{subtab: (prem.params.subName | getIdByURL:data.subtabs)}">{{point.point}}</li>
+        <li ng-if="premium.streamName">For more detailed information about <b>{{premium.streamName}}</b>, visit the <a ng-href="http://agentanswercenter.directv.com/en-us/res/programming/{{premium.aacURL}}#fragment={{premium.streamFrag}}" target="_blank">{{premium.name}} page on Agent Answer Center</a></li>
     </ul>
     <h2 class="grad-blue" ng-repeat="point in premium.sellingPoints | filter:{evergreen: false} | filter:{subtab: (prem.params.subName | getIdByURL:data.subtabs)} | limitTo: 1" | limitTo: 1>{{point.title}}</h2>
     <ul ng-repeat="point in premium.sellingPoints | filter:{evergreen: false} | filter:{subtab: (prem.params.subName | getIdByURL:data.subtabs)}" >

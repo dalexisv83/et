@@ -49,6 +49,10 @@ li ul {
     line-height: 1.45;
 }
 
+li a, p a {
+    color: #0072ae;
+}
+
 th, td {
     padding: 6px 10px;
 }
