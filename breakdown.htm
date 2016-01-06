@@ -1,0 +1,29 @@
+<h2>DIRECTV vs Competitive Streaming Services</h2>
+<div>
+    <label ng-repeat="vs in versus" for="check-{{vs.service}}"><input type="checkbox" ng-model="selChecks.services[vs.service]" name="group" id="check-{{vs.service}}" ng-disabled="vs.service === 'DIRECTV'">&nbsp;{{vs.service}}</label>
+</div>
+<table>
+    <thead>
+        <tr>
+            <td></td>
+            <td ng-repeat="vs in versus" ng-show="selChecks.services[vs.service]">{{vs.service}}</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Price</td><td ng-repeat="vs in versus" ng-show="selChecks.services[vs.service]">{{vs.price}}</td>
+        </tr>
+        <tr>
+            <td>Max Simultaneous Streaming Devices</td><td ng-repeat="vs in versus" ng-show="selChecks.services[vs.service]">{{vs.simDevices}}</td>
+        </tr>
+        <tr>
+            <td>Live Programming</td><td ng-repeat="vs in versus" ng-show="selChecks.services[vs.service]"><span ng-if="vs.live">Yes</span><span ng-if="!vs.live">No</span></td>
+        </tr>
+        <tr>
+            <td>Sports</td><td ng-repeat="vs in versus" ng-show="selChecks.services[vs.service]"><span ng-if="vs.sports">Yes</span><span ng-if="!vs.sports">No</span></td>
+        </tr>
+        <tr>
+            <td>Internet Connection Required At All Times</td><td ng-repeat="vs in versus" ng-show="selChecks.services[vs.service]"><span ng-if="vs.connection">Yes</span><span ng-if="!vs.connection">No</span></td>
+        </tr>
+    </tbody>
+</table>
