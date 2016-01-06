@@ -4,7 +4,7 @@
         .config(['$routeProvider', '$locationProvider',
             function($routeProvider, $locationProvider) {
                 $routeProvider
-                    .when('/calendars', {
+                    .when('/calendar', {
                         templateUrl: 'calendar.htm',
                         controller: 'CalCtrl',
                         controllerAs: 'cal',
