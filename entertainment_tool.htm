@@ -29,6 +29,14 @@
 </head>
 
 <body ng-app="entertainment">
+    <div class="header">
+        <div class="grid__item four-eighths">
+            <img src="http://agentanswercenter.directv.com/en-us/res/system/img/Logo_DTV_ATT.png">
+        </div><!--
+         --><div class="grid__item four-eighths">
+            <h1 class="tool-title palm--center">Entertainment Tool</h1>
+        </div>
+    </div>
     <div ng-controller="MainCtrl as main">
         <div class="nav" id="top">
           <a ng-repeat="premium in data.premiums" href="#/{{premium.name | lowercase | spcToHyphen}}/{{main.$routeParams.subName}}">{{premium.name}}</a>
