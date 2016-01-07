@@ -1,0 +1,36 @@
+<div ng-repeat="premium in data.premiums | filter:{url: (prem.params.premName | lowercase | spcToHyphen)}">
+    <div class="nav" id="sub">
+        <a ng-repeat="sub in premium.subs" href="#/{{premium.name | lowercase | spcToHyphen}}/{{sub | getById:data.subtabs | lowercase | spcToHyphen}}">{{sub | getById:data.subtabs}}</a>
+    </div>
+    <div ng-include="'views/playing.htm'" class="grid__item one-eighth" id="playing"></div><!--
+ --><div class="grid__item seven-eighths">
+      <div ng-if="prem.params.subName === 'overview'" class="grid__item" id="photos">
+        <div><div ng-repeat="calendar in data.calendars | filter:{premium: (prem.params.premName | getIdByURL:data.premiums)} | limitTo: 3" class="grid__item"><img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{calendar.program | lowercase | spcToHyphen}}.jpg" alt="" /></div></div>
+    </div><!--
+   --><div class="grid__item one-seventh" id="aside">
+          <img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{premium.name | lowercase | spcToHyphen}}-logo.png" />
+          <div ng-show="{{premium.price}}" class="info">
+              <div class="price">${{premium.price}}</div>
+              <a href="#/{{prem.params.premName}}/channels">
+                  <ul>
+                      <li>{{premium.channels.length}} Channels</li>
+                      <li>{{HD = (premium.channels | filter:{HD: true, SD: false}).length}} HD Only</li>
+                      <li>{{SD = (premium.channels | filter:{HD: false, SD: true}).length}} SD Only</li>
+                      <li>{{SDHD = (premium.channels | filter:{HD: true, SD: true}).length}} SD/HD</li>
+                  </ul>
+              </a>
+          </div>
+          <div ng-show="{{premium.ODchan}}" class="info ondemand">
+              {{premium.name}} DIRECTV On&nbsp;Demand Ch:&nbsp;{{premium.ODchan}}
+          </div>
+      </div><!--
+   --><div ng-if="(prem.params.subName !== 'channels') && (prem.params.subName !== 'streaming') && (prem.params.subName !== 'breakdown') && (prem.params.subName !== 'ordering') && (prem.params.subName !== 'pricing')" ng-include="'views/selling.htm'" id="selling" class="grid__item three-sevenths"></div><!--
+   --><div ng-if="prem.params.subName === 'ordering'" ng-include="'views/ordering.htm'" id="ordering" class="grid__item three-sevenths"></div><!--
+   --><div ng-if="prem.params.subName === 'pricing'" ng-include="'views/pricing.htm'" id="pricing" class="grid__item three-sevenths"></div><!--
+   --><div ng-if="prem.params.subName === 'breakdown'" ng-include="'views/breakdown.htm'" id="breakdown" class="grid__item six-sevenths"></div><!--
+   --><div ng-if="prem.params.subName === 'overview'" ng-include="'views/objections.htm'" id="objections" class="grid__item three-sevenths accordion"></div><!--
+   --><div ng-if="(prem.params.subName === 'movies') || (prem.params.subName === 'original-programming') || (prem.params.subName === 'pricing') || (prem.params.subName === 'ordering') || (prem.params.subName === 'espn-college-extra') || (prem.params.subName === 'encore')" ng-include="'views/movieorig.htm'" id="movieorig" class="grid__item three-sevenths accordion"></div><!--
+   --><div ng-if="prem.params.subName === 'channels'" ng-include="'views/channels.htm'" class="grid__item six-sevenths" id="channels"></div><!--
+   --><div ng-if="prem.params.subName === 'streaming'" ng-include="'views/streaming.htm'" class="grid__item six-sevenths" id="streaming"></div><!--
+ --></div><!--
+ --></div>
