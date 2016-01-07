@@ -1,6 +1,6 @@
 (function(angular) {
     'use strict';
-    angular.module('entertainment', ['ngRoute'])
+    angular.module('entertainment')
         .controller('CalCtrl', ['$scope', '$routeParams', '$location', '$filter',
             function($scope, $routeParams, $location, $filter) {
                 this.name = "CalCtrl";

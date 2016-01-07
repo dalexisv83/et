@@ -4,7 +4,7 @@
     <div ng-repeat="calendar in data.calendars |
 filter:{premium: (prem.params.premName | getIdByURL:data.premiums)} |
 progType:prem.params.subName">
-        <img ng-src="img/{{calendar.program | lowercase | spcToHyphen}}.jpg" />
+        <img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{calendar.program | lowercase | spcToHyphen}}.jpg" />
         <h3>{{calendar.program}}</h3>
         <span>{{calendar.premDate | date:'MMM d'}}</span> &ndash; <span>{{calendar.premTime}}</span>
         <br />{{calendar.chanNum}}

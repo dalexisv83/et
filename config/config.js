@@ -1,21 +1,21 @@
 (function(angular) {
     'use strict';
-    angular.module('entertainment', ['ngRoute'])
+    angular.module('entertainment')
         .config(['$routeProvider', '$locationProvider',
             function($routeProvider, $locationProvider) {
                 $routeProvider
                     .when('/calendar', {
-                        templateUrl: 'calendar.htm',
+                        templateUrl: 'views/calendar.htm',
                         controller: 'CalCtrl',
                         controllerAs: 'cal',
                     })
                     .when('/:premName', {
-                        templateUrl: 'premium.htm',
+                        templateUrl: 'views/premium.htm',
                         controller: 'PremCtrl',
                         controllerAs: 'prem'
                     })
                     .when('/:premName/:subName', {
-                        templateUrl: 'premium.htm',
+                        templateUrl: 'views/premium.htm',
                         controller: 'PremCtrl',
                         controllerAs: 'prem'
                     });

@@ -1,6 +1,6 @@
 (function(angular) {
     'use strict';
-    angular.module('entertainment', ['ngRoute'])
+    angular.module('entertainment')
         .controller('PremCtrl', ['$routeParams', '$location', '$scope', '$filter',
             function($routeParams, $location, $scope, $filter) {
                 this.name = "PremCtrl";
