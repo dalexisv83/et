@@ -1,6 +1,6 @@
 <h2>DIRECTV vs Competitive Streaming Services</h2>
 <div>
-    <label ng-repeat="vs in versus" for="check-{{vs.service}}"><input type="checkbox" ng-model="selChecks.services[vs.service]" name="group" id="check-{{vs.service}}" ng-disabled="vs.service === 'DIRECTV'">&nbsp;{{vs.service}}</label>
+    <label class="serviceChk" ng-repeat="vs in versus" for="check-{{vs.service}}"><input type="checkbox" ng-model="selChecks.services[vs.service]" name="group" id="check-{{vs.service}}" ng-disabled="vs.service === 'DIRECTV'">&nbsp;{{vs.service}}</label>
 </div>
 <table>
     <thead>
@@ -28,6 +28,8 @@
     </tbody>
 </table>
 <p>More more detailed competitive information, visit the Competitive Information Center Tool on Agent Answer Center:
-    <br />CIC Tool <a href="https://cicsales.getdirectv.com/" target="_blank"><strong>(New Customers)</strong></a>
-    <br />CIC Tool <a href="https://cic.getdirectv.com/" target="_blank"><strong>(Existing Customers)</strong></a>
+    <br /><a href="https://cicsales.getdirectv.com/" target="_blank">CIC Tool (<strong>New</strong> Customers)</a>
+    <br /><a href="https://cic.getdirectv.com/" target="_blank">CIC Tool (<strong>Existing</strong> Customers)</a>
+</p>
+<p>Or visit the <a href="http://agentanswercenter.directv.com/en-us/res/retention_offers/directv_vs_comp_streaming.html" target="_blank">Competitive Streaming Services vs. DIRECTV page</a> on Agent Answer Center
 </p>

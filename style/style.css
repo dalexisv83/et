@@ -72,6 +72,18 @@ tbody th {
     background-color: #0072ae;
     color: white;
     border: 1px solid #0072ae;
+    text-align: left;
+}
+
+.corner {
+    background-color: white;
+    border: none;
+    border-bottom: 1px solid #0072ae;
+    border-right: 1px solid #faa519;
+}
+
+.serviceChk + .serviceChk {
+    margin-left: 20px;
 }
 
 .header {
