@@ -13,14 +13,14 @@ var data = {
         "logo": null,
         "channels": [{
             "name": "HBO East",
-            "description": "Groundbreaking original series, big hit movies, sports, documentaries, comedy specials and more--that you wonâ€™t find anywhere else",
+            "description": "Groundbreaking original series, hit movies, sports, documentaries, comedy specials and more",
             "number": "501",
             "HD": true,
             "SD": true,
             "logo": null
         }, {
             "name": "HBO 2 East",
-            "description": "Movies and original programming scheduled in different time slots to complement HBO, offering subscribers more choice and viewing opportunities",
+            "description": "Movies and original programming scheduled in different time slots to complement HBO",
             "number": "502",
             "HD": true,
             "SD": true,
@@ -34,60 +34,55 @@ var data = {
             "logo": null
         }, {
             "name": "HBO West",
-            "description": "3-hour time delay of programming that airs on HBO East (Ch. 501)",
+            "description": "3-hour time delay of programming that airs on HBO East",
             "number": "504",
             "HD": true,
             "SD": true,
             "logo": null
         }, {
             "name": "HBO2 West",
-            "description": "3-hour time delay of programming that airs on HBO2 East (Ch. 502)",
+            "description": "3-hour time delay of programming that airs on HBO2 East",
             "number": "505",
             "HD": true,
             "SD": true,
             "logo": "hbo-2"
         }, {
             "name": "HBO Comedy",
-            "description": "Uncut and uncensored stand-up featuring big name stars as well as up-and-coming talent, plus original series and movies",
+            "description": "Uncut and uncensored stand-up, plus original series and movies",
             "number": "506",
             "HD": true,
             "SD": false,
             "logo": null
         }, {
             "name": "HBO Family East",
-            "description": "Original family series and Hollywoodâ€™s best kid-friendly entertainment 24\/7",
+            "description": "Original family series and kid-friendly entertainment 24\/7",
             "number": "507",
             "HD": true,
             "SD": true,
             "logo": "hbo-family"
         }, {
             "name": "HBO Family West",
-            "description": "3-hour time delay of programming that airs on HBO Family East (Ch. 507)",
+            "description": "3-hour time delay of programming that airs on HBO Family East",
             "number": "507",
             "HD": false,
             "SD": true,
             "logo": "hbo-family"
         }, {
             "name": "HBO Zone",
-            "description": "Cutting-edge movies, original series and documentaries geared towards a diverse 18- to 34-year-old audience",
+            "description": "Cutting-edge movies, original series and documentaries for viewers ages 18-34",
             "number": "509",
             "HD": true,
             "SD": false,
             "logo": null
         }, {
             "name": "HBO Latino",
-            "description": "The only premium channel designed to give the U.S. Latino audience expanded Spanish-language and Latino-relevant entertainment options",
+            "description": "Designed for the U.S. Latino audience, with Spanish-language content and Latino-relevent programs",
             "number": "511",
             "HD": true,
             "SD": true,
             "logo": null
         }],
         "sellingPoints": [{
-            "subtab": 4,
-            "title": null,
-            "point": "Watch the movies and shows you want â€“ whenever you want â€“ with DIRECTV Everywhere. Or, use your DIRECTV.com login to access HBO's library at HBO GO.",
-            "evergreen": true
-        }, {
             "subtab": 2,
             "title": "Entourage: The Movie",
             "point": "(Comedy, Drama) Vince, E, Drama and Turtle make a splash in this raucous big-screen adaptation of the hit HBO series. When Vince tackles directing and starring in Ari's first picture, the boys have no idea what they are in for - especially when the film goes wildly over budget and threatens to implode. - Jan 23",
@@ -183,11 +178,6 @@ var data = {
             "point": "Instantly watch every episode of classics like The Sopranos, Sex and the City and Deadwood and award-winning series like Boardwalk Empire, Entourage and True Blood, as well as blockbuster theatricals.",
             "evergreen": true
         }, {
-            "subtab": 4,
-            "title": null,
-            "point": "For talking points about HBO Now streaming, see DIRECTV vs. HBO Now competitive information.",
-            "evergreen": true
-        }, {
             "subtab": 2,
             "title": "Unfriended",
             "point": "A group of online chat-room friends find themselves haunted by a mysterious, supernatural force using the account of their dead friend. - Jan 23",
@@ -239,7 +229,10 @@ var data = {
             "responses": ["New movies debut frequently, with a guaranteed blockbuster premiere every Saturday", "All HBO channels air a variety of shows at different times to reduce repeats", "Over 20 currently running original shows, plus former hits like Flight of the Conchords air throughout the month, so there are few repeats"]
         }, {
             "category": "Availability",
-            "responses": ["With DIRECTV, you can watch HBO programming in multiple rooms through your receivers â€“ plus stream HBO GO content on compatible devices"]
+            "responses": ["With DIRECTV, you can watch HBO programming in multiple rooms through your receivers - plus stream HBO GO content on compatible devices"]
+        }, {
+            "category": "HBO Now",
+            "responses": ["With DIRECTV, customers can watch live and on demand HBO movies and shows on their TVs, mobile devices and computers - included at no extra cost.", "HBO Now does not provide streams of live broadcasts on HBO channels.", "Customers can save even more each month when they have HBO, plus additional premium services.", "With HBO Now, customers can only watch on television with Apple TV, and streaming quality depends on the internet connection."]
         }],
         "subs": [1, 2, 3, 4, 6],
         "disclosures": [1, 2]
@@ -257,7 +250,7 @@ var data = {
         "logo": null,
         "channels": [{
             "name": "Starz East",
-            "description": "Immerse yourself in STARZ and discover worlds full of exciting entertainment",
+            "description": "orlds full of exciting entertainment, from movies to original series",
             "number": "525",
             "HD": true,
             "SD": true,
@@ -271,42 +264,42 @@ var data = {
             "logo": null
         }, {
             "name": "Starz Kids and Family",
-            "description": "Spark the imagination of the whole family with the incredible adventures on STARZ Kids & Family",
+            "description": "Spark the imagination of the whole family with incredible kid-friendly programs",
             "number": "527",
             "HD": true,
             "SD": true,
             "logo": null
         }, {
             "name": "Starz Comedy",
-            "description": "We put you in the thick of the lunacy with STARZ Comedy, delivering brilliantly funny entertainment around the clock",
+            "description": "We put you in the thick of the lunacy with brilliantly funny entertainment 24\/7",
             "number": "528",
             "HD": true,
             "SD": false,
             "logo": null
         }, {
             "name": "Starz Edge",
-            "description": "With more original series, more hit movies and more excitement, STARZ Edge takes you into unknown territory every single day",
+            "description": "More original series, more hit movies and more excitement every single day",
             "number": "529",
             "HD": true,
             "SD": true,
             "logo": null
         }, {
             "name": "Starz InBlack",
-            "description": "Get into new worlds filled with diverse, urban experiences, captivating original series and hot movies on STARZ in Black",
+            "description": "Diverse entertainment, urban experiences, captivating original series and hot movies",
             "number": "530",
             "HD": true,
             "SD": true,
             "logo": null
         }, {
             "name": "Starz Cinema",
-            "description": "Challenging, gritty and exciting, STARZ Cinema takes you on unmistakable journeys",
+            "description": "Challenging, gritty and exciting, Starz Cinema takes you on unmistakable journeys",
             "number": "531",
             "HD": true,
             "SD": false,
             "logo": null
         }, {
             "name": "Encore East",
-            "description": "You don't have to think about where to find your favorite movies, they're always on ENCORE. Playing favorites",
+            "description": "You don't have to think about where to find your favorite movies, they're always on Encore. Playing favorites",
             "number": "535",
             "HD": true,
             "SD": true,
@@ -320,7 +313,7 @@ var data = {
             "logo": null
         }, {
             "name": "Encore Classic",
-            "description": "Gives you the best selection of timeless entertainment that leaves you saying, \"This one's a classic.\"",
+            "description": "The best selection of timeless entertainment that leaves you saying, \"This one's a classic.\"",
             "number": "537",
             "HD": false,
             "SD": true,
@@ -334,28 +327,28 @@ var data = {
             "logo": null
         }, {
             "name": "Encore Suspense",
-            "description": "All things that go bump in the night are waiting for you on ENCORE Suspense.",
+            "description": "All things that go bump in the night are waiting for you on Encore Suspense.",
             "number": "539",
             "HD": false,
             "SD": true,
             "logo": null
         }, {
             "name": "Encore Black",
-            "description": "The destination for great dramatic performances, comedy trailblazers and iconic directors and actors who define the very best",
+            "description": "Great dramatic performances, comedies and iconic directors and actors",
             "number": "540",
             "HD": false,
             "SD": true,
             "logo": null
         }, {
             "name": "Encore Action",
-            "description": "Hold on tight while ENCORE Action delivers the films that get your adrenaline flowing and your heart pounding.",
+            "description": "Delivers the films that get your adrenaline flowing and your heart pounding.",
             "number": "541",
             "HD": true,
             "SD": true,
             "logo": null
         }, {
             "name": "Encore Family",
-            "description": "Watch your favorites, your way, on your schedule",
+            "description": "Family favorites, classics and programs suitable for the entire household",
             "number": "542",
             "HD": false,
             "SD": true,
@@ -379,7 +372,7 @@ var data = {
         }, {
             "subtab": 4,
             "title": null,
-            "point": "Watch the movies and shows you want &ndash; whenever you want &ndash; with DIRECTV Everywhere. Or, use your DIRECTV.com login to access both Starz and Encore libraries at Starz Play and Encore Play.",
+            "point": "Watch the movies and shows you want - whenever you want - with DIRECTV Everywhere. Or, use your DIRECTV.com login to access both Starz and Encore libraries at Starz Play and Encore Play.",
             "evergreen": true
         }, {
             "subtab": 1,
@@ -414,7 +407,7 @@ var data = {
         }, {
             "subtab": 7,
             "title": null,
-            "point": "8 channels featuring A wide selection of movies from every genre â€” all ready to watch anytime. Programming from Encore's large library of titles includes children's movies, action-adventure, comedy, independent film, suspense, Westerns, sci-fi and more.",
+            "point": "8 channels featuring A wide selection of movies from every genre - all ready to watch anytime. Programming from Encore's large library of titles includes children's movies, action-adventure, comedy, independent film, suspense, Westerns, sci-fi and more.",
             "evergreen": true
         }, {
             "subtab": 7,
@@ -469,13 +462,13 @@ var data = {
         }, {
             "subtab": 4,
             "title": null,
-            "point": "Hundreds of hit movies and original series available whenever you want.",
-            "evergreen": false
+            "point": "Enjoy unlimited access to over 2,100 hit movies and original series any time you want On Demand, or online with DIRECTV Everywhere and Starz Play.",
+            "evergreen": true
         }, {
             "subtab": 4,
             "title": null,
             "point": "Register and watch on multiple devices. Customers can start a movie on their computer and finish watching it on their phone.",
-            "evergreen": false
+            "evergreen": true
         }, {
             "subtab": 2,
             "title": null,
@@ -485,6 +478,21 @@ var data = {
             "subtab": 2,
             "title": null,
             "point": "New movies premiere all month long, and popular movies play only a few times each day across all Starz channels.",
+            "evergreen": true
+        }, {
+            "subtab": 7,
+            "title": "Western movies and TV shows",
+            "point": "Fans of classic Western TV shows and movies can watch all their timeless favorites on Encore Westerns. Programming includes movies like Butch Cassidy and the Sundance Kid, Hang 'Em High, Lonesome Dove and Gunsmoke.",
+            "evergreen": false
+        }, {
+            "subtab": 7,
+            "title": "Classic sitcoms and TV dramas",
+            "point": "Watch classic TV shows like Sanford and Son, Different Strokes, Good Times, The A Team and Magnum PI.",
+            "evergreen": false
+        }, {
+            "subtab": 1,
+            "title": null,
+            "point": "Skip the long lines and the expensive cost of the movie theater and catch hit movies and shows on the comfort of your own couch.",
             "evergreen": true
         }],
         "objections": [{
@@ -499,6 +507,9 @@ var data = {
         }, {
             "category": "No Time to Watch",
             "responses": ["You can watch anytime with Starz On Demand and anywhere on multiple devices with DIRECTV Everywhere. Best of all, they are included with your Starz subscription."]
+        }, {
+            "category": "Availability",
+            "responses": ["By adding Starz, there is no hassle of video rental machines and no DVDs to remember to return. It is simple and will always be available for your movie watching needs."]
         }],
         "subs": [1, 2, 3, 4, 6, 7],
         "disclosures": [1, 2]
@@ -516,91 +527,91 @@ var data = {
         "logo": null,
         "channels": [{
             "name": "Showtime East",
-            "description": "East Coast schedule. Showtime is premium entertainment at its best with acclaimed series, movies, sports, and more.",
+            "description": "Premium entertainment at its best with acclaimed series, movies, sports, and more",
             "number": "545",
             "HD": true,
             "SD": true,
             "logo": null
         }, {
             "name": "Showtime West",
-            "description": "West Coast schedule of programs airing on Showtime East (Ch. 545)",
+            "description": "West Coast schedule of programs airing on Showtime East",
             "number": "546",
             "HD": true,
             "SD": true,
             "logo": null
         }, {
             "name": "Sho 2",
-            "description": "If you missed it on SHOWTIME, youâ€™ll find it on SHOWTIME 2 HD: hit movies, series and more.",
+            "description": "If you missed it on Showtime, you'll find it on Showtime 2",
             "number": "547",
             "HD": true,
             "SD": true,
             "logo": null
         }, {
             "name": "Showcase",
-            "description": "Enjoy even more of what you love about SHOWTIME - feature films, documentaries and comedy specials",
+            "description": "Enjoy even more feature films, documentaries and comedy specials",
             "number": "548",
             "HD": true,
             "SD": true,
             "logo": null
         }, {
             "name": "Showtime Extreme",
-            "description": "More adrenaline-pumping movies and the best of SHOWTIME SPORTS",
+            "description": "More adrenaline-pumping movies and the best of Showtime Sports",
             "number": "549",
             "HD": true,
             "SD": true,
             "logo": null
         }, {
             "name": "Showtime Beyond",
-            "description": "Where you'll find the best of the best sci-fi, fantasy and horror films that push boundardaries all hours of the day...and night",
+            "description": "The best sci-fi, fantasy and horror films all day...and night",
             "number": "550",
             "HD": true,
             "SD": false,
             "logo": null
         }, {
             "name": "Showtime Next",
-            "description": "With revolutionary films, music events and comedy for the next generation of film buffs",
+            "description": "Revolutionary films, music events and comedy for the next generation of film buffs",
             "number": "551",
             "HD": true,
             "SD": false,
             "logo": null
         }, {
             "name": "Showtime Women",
-            "description": "Bringing you films, documentaries and specials from today's aspiring and established female talents",
+            "description": "Documentaries and specials from today's aspiring and established female talents",
             "number": "552",
             "HD": true,
             "SD": false,
             "logo": null
         }, {
             "name": "The Movie Channel East",
-            "description": "East Coast Schedule. THE MOVIE CHANNEL HD has something for everyone with comedies, award-winning dramas and action films",
+            "description": "Something for everyone with comedies, award-winning dramas and action films",
             "number": "553",
             "HD": true,
             "SD": true,
             "logo": null
         }, {
             "name": "The Movie Channel West",
-            "description": "West Coast Schedule",
+            "description": "West Coast Schedule of programs airing on The Movie Channel",
             "number": "554",
             "HD": false,
             "SD": true,
             "logo": null
         }, {
             "name": "TMC Xtra",
-            "description": "Miss a movie on THE MOVIE CHANNEL HD? You have a second shot with THE MOVIE CHANNEL XTRA HD",
+            "description": "Miss a movie on The Movie Channel, catch it on The Movie Channel Xtra",
             "number": "555",
             "HD": true,
             "SD": false,
             "logo": null
         }, {
             "name": "Flix",
-            "description": "First-rate feature films as they were meant to be seen â€“ uncut and uninterrupted",
+            "description": "First-rate feature films - uncut and uninterrupted",
             "number": "556",
             "HD": false,
             "SD": true,
             "logo": null
         }, {
             "name": "SundanceTV",
-            "description": "Award-winning films, shorts, documentaries and international cinema all uncut and commercial free",
+            "description": "Award-winning films, shorts, documentaries and international cinema",
             "number": "557",
             "HD": true,
             "SD": true,
@@ -644,7 +655,7 @@ var data = {
         }, {
             "subtab": 3,
             "title": "Inside the NFL",
-            "point": "Tuesdays: Emmy-winning weekly show with the most experienced, articulate and connected analysts in the business. Get expert insight, exclusive commentary and special on- and off-the-field features.",
+            "point": "Emmy-winning weekly show with the most experienced, articulate and connected analysts in the business. Get expert insight, exclusive commentary and special on- and off-the-field features. - Tuesdays",
             "evergreen": false
         }, {
             "subtab": 1,
@@ -704,7 +715,7 @@ var data = {
         }, {
             "subtab": 2,
             "title": null,
-            "point": "Over 700 titles each month â€“ almost 10 times as many titles as a Netflix monthly subscription allows.",
+            "point": "Over 700 titles each month - almost 10 times as many titles as a Netflix monthly subscription allows.",
             "evergreen": true
         }, {
             "subtab": 2,
@@ -729,6 +740,9 @@ var data = {
         }, {
             "category": "Content",
             "responses": ["Mature programming always airs at night."]
+        }, {
+            "category": "Showtime OTT (Including Hulu and Amazon)",
+            "responses": ["A DIRECTV subscription lets customers watch live and on demand programming from Showtime.", "Customers who get Showtime OTT or through Amazon\/Hulu can only access Showtime's On Demand library.", "Showtime OTT subscription price is in addition to the monthly subscription costs for Amazon and Huly.", "When added to more premium services, Showtime Unlimited costs even less."]
         }],
         "subs": [1, 2, 3, 4, 6],
         "disclosures": [1, 2]
@@ -879,12 +893,12 @@ var data = {
         }, {
             "subtab": 3,
             "title": "Outcast",
-            "point": "Coming in 2016! Cinemax brings a new supernatural Original Series about a young man trying to discover why he's been suffering from supernatural possessions his entire life. Based on the comic book by Robert Kirkman, who also writes The Walking Dead. Features Patrick Fugit as Kyle Barnes and Brent Spiner as Sidney.",
+            "point": "Cinemax brings a new supernatural Original Series about a young man trying to discover why he's been suffering from supernatural possessions his entire life. Based on the comic book by Robert Kirkman, who also writes The Walking Dead. Features Patrick Fugit as Kyle Barnes and Brent Spiner as Sidney. - Coming in 2016",
             "evergreen": false
         }, {
             "subtab": 3,
             "title": "Quarry",
-            "point": "Coming in 2016! Mac Conway is a Marine whose homecoming from Vietnam is anything but heroic, as he is shunned by loved ones and demonized by the public. Conway is slowly drawn into a network of killing and corruption while trying to cope with his experiences at war.",
+            "point": "Mac Conway is a Marine whose homecoming from Vietnam is anything but heroic, as he is shunned by loved ones and demonized by the public. Conway is slowly drawn into a network of killing and corruption while trying to cope with his experiences at war. - Coming in 2016",
             "evergreen": false
         }, {
             "subtab": 3,
@@ -1212,17 +1226,17 @@ var data = {
             "subtab": 1,
             "title": null,
             "point": "Alternate channels occasionally provide additional game coverage for ESPN, ESPN2 or Regional Sports Networks",
-            "evergreen": false
+            "evergreen": true
         }, {
             "subtab": 1,
             "title": null,
             "point": "Channel numbers for alternates can be indicated by XXX-X (dash number) format",
-            "evergreen": false
+            "evergreen": true
         }, {
             "subtab": 1,
             "title": null,
             "point": "Usually located in the same channel neighborhood as the customer's local RSN, or near ESPN or ESPN2",
-            "evergreen": false
+            "evergreen": true
         }, {
             "subtab": 1,
             "title": null,
@@ -1278,7 +1292,7 @@ var data = {
             "category": "Blackouts",
             "responses": ["RSNs require limited distribution of certain programs, including games and press conferences that may not be available everywhere.", "Out-of-market games are sold separately via professional sports subscription packages (NBA League Pass, NFL Sunday Ticket, etc.).", "Sports blackouts are controlled by the leagues, sports associations, and program carriers. In some areas, we may no longer have rights to broadcast the customer's games."]
         }],
-        "subs": [1, 4, 6, 9],
+        "subs": [1, 6, 9],
         "disclosures": [1, 2, 3]
     }, {
         "id": 6,
@@ -2699,7 +2713,7 @@ var data = {
         "onDemand": null,
         "startOD": null,
         "keyDemos": null,
-        "genres": ["Comedy", ""],
+        "genres": ["Comedy"],
         "starActrs": null,
         "starDrctrs": null,
         "starPrdcrs": null,
