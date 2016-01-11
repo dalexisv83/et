@@ -1,17 +1,17 @@
 <div ng-repeat="premium in data.premiums | filter:{url: (prem.params.premName | lowercase | spcToHyphen)}">
     <div class="nav" id="sub">
-        <a ng-repeat="sub in premium.subs" href="#/{{premium.name | lowercase | spcToHyphen}}/{{sub | getById:data.subtabs | lowercase | spcToHyphen}}">{{sub | getById:data.subtabs}}</a>
+        <a ng-repeat="sub in premium.subs" ng-href="#/{{premium.name | lowercase | spcToHyphen}}/{{sub | getById:data.subtabs | lowercase | spcToHyphen}}">{{sub | getById:data.subtabs}}</a>
     </div>
-    <div ng-include="'views/playing.htm'" class="grid__item one-eighth" id="playing"></div><!--
+    <div ng-if="(prem.params.premName !== 'sports-pack') && (prem.params.premName !== 'streaming')" ng-include="'views/playing.htm'" class="grid__item one-eighth" id="playing"></div><!--
  --><div class="grid__item seven-eighths">
       <div ng-if="prem.params.subName === 'overview'" class="grid__item" id="photos">
-        <div><div ng-repeat="calendar in data.calendars | filter:{premium: (prem.params.premName | getIdByURL:data.premiums)} | limitTo: 3" class="grid__item"><img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{calendar.program | lowercase | spcToHyphen}}.jpg" alt="" /></div></div>
+        <div><div ng-repeat="calendar in data.calendars | filter:{premium: (prem.params.premName | getIdByURL:data.premiums)} | limitTo: 3" class="grid__item"><img ng-src="%%pub%%system/img/{{calendar.program | lowercase | spcToHyphen}}.jpg" err-hide /></div></div>
     </div><!--
    --><div class="grid__item one-seventh" id="aside">
-          <img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{premium.name | lowercase | spcToHyphen}}-logo.png" />
-          <div ng-show="{{premium.price}}" class="info">
-              <div class="price">${{premium.price}}</div>
-              <a href="#/{{prem.params.premName}}/channels">
+          <img ng-src="%%pub%%system/img/{{premium.name | lowercase | spcToHyphen}}-logo.png" />
+          <div ng-hide="(premium.price == null) && (premium.channels == null)" class="info">
+              <div ng-show="premium.price" class="price"><span ng-if="isStringNumber(premium.price)">&#36;</span>{{premium.price}}</div>
+              <a ng-show="premium.channels" ng-href="#/{{prem.params.premName}}/channels">
                   <ul>
                       <li>{{premium.channels.length}} Channels</li>
                       <li>{{HD = (premium.channels | filter:{HD: true, SD: false}).length}} HD Only</li>
@@ -22,6 +22,17 @@
           </div>
           <div ng-show="{{premium.ODchan}}" class="info ondemand">
               {{premium.name}} DIRECTV On&nbsp;Demand Ch:&nbsp;{{premium.ODchan}}
+          </div>
+          <div class="dropdown">
+            <label for="helpful" class="helpful" dropdown>Useful Links</label><input type="checkbox" name="dropdown" id="helpful" />
+            <div>
+              <ul>
+                <li ng-if="premium.premURL"><a ng-href="{{premium.premURL}}" target="_blank">{{premium.name}} Website</a></li>
+                <li ng-if="premium.dotcomURL"><a ng-href="http://www.directv.com/{{premium.dotcomURL}}" target="_blank">{{premium.name}} on DIRECTV.com</a></li>
+                <li ng-if="premium.aacURL"><a ng-href="http://agentanswercenter.directv.com/en-us/res/programming/{{premium.aacURL}}" target="_blank">{{premium.name}} on AAC</a></li>
+                <li ng-if="premium.streamFrag"><a ng-href="http://agentanswercenter.directv.com/en-us/res/programming/{{premium.aacURL}}#fragment={{premium.streamFrag}}" target="_blank">{{premium.streamName}} on AAC</a></li>
+              </ul>
+            </div>
           </div>
       </div><!--
    --><div ng-if="(prem.params.subName !== 'channels') && (prem.params.subName !== 'streaming') && (prem.params.subName !== 'breakdown') && (prem.params.subName !== 'ordering') && (prem.params.subName !== 'pricing')" ng-include="'views/selling.htm'" id="selling" class="grid__item three-sevenths"></div><!--
