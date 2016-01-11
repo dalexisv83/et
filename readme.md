@@ -27,3 +27,24 @@ The revamp of Entertainment Tool is written using [AngularJS]. It is a has a two
 ### Disclosures
 
 ### Listings
+
+## To Do's
+
+  - Active Tabs
+  - Additional Calender info
+  - Calendar item limit (for IE8 performance)
+  - IE styling (CSS3PIE)
+  - Channel counts disclaimer ("Never discuss exact channel counts")
+  - Add Competitive Streaming Services data to spreadsheet/parser
+	  - Possibly Cinema pricing as well
+  - Back Button in IE (When previous subtab is not available in new top tier tab) 
+  - Sticky header (esp for calendar tab)
+  - Script error for slideshow plugin
+	  - Short term fix: debug plugin
+	  - Long term fix: Angular based slideshow/carousel (no vendor plugin)
+  - Hide Now Playing view if no programming is available
+  - Helpful Links layout/style (Line breaks are awkward)
+  - Revert to old QL script
+  - Datepicker init issues
+  - Apply date range filter to start date
+  - Responsive Layout
