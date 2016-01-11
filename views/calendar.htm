@@ -16,7 +16,7 @@
         </select>
         <br />
         <input ng-model="search.$" placeholder="Search" /><a href ng-show="search.$" ng-click="search = null">(x)</a>
-        <label>Filter By Date:</label>
+        <label>Filter By Premiere Date:</label>
         <input type="date" ng-model="rangeStart" datepicker />
         <input type="date" ng-model="rangeEnd" min="{{rangeStart | date:'yyyy-MM-dd'}}" datepicker />
         <span ng-if="premSel">{{premSel | getById:data.premiums}} <a href ng-click="aParam('premium', null)">(x)</a></span>
@@ -60,5 +60,5 @@
         </div>
 </div>
 <div class="pdf">
-    <p><a href="%%pub%%system/img/calendar_premiums_yearly.pdf" target="_blank">2016 Yearly Calendar PDF</a></p>
+    <p><a href="%%pub%%system/img/calendar_premiums_yearly.pdf" target="_blank">Premiums Original Series Calendar 2016 - PDF</a></p>
 </div>
