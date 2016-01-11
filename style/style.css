@@ -276,6 +276,47 @@ label[for=disclosures] {
     padding: 7px 10px 5px;
 }
 
+.dropdown {
+    margin-top: 10px;
+}
+
+.dropdown div {
+    height: 0;
+    overflow: hidden;
+}
+
+.dropdown div.checked {
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.dropdown input {
+    display: none;
+}
+
+.dropdown input.checked {
+    display: block;
+}
+
+.dropdown ul {
+    margin: 0;
+    font-size: .95em;
+}
+
+label.helpful {
+    font-weight: bold;
+    font-size: 1.05em;
+    color: #2baae1;
+}
+
+label.helpful:after {
+    content: ' \25B8';
+}
+
+label.checked.helpful:after {
+    content: ' \25BE'
+}
+
 .grid__item {
     display: inline-block;
     vertical-align: top;
@@ -337,6 +378,21 @@ label[for=disclosures] {
 
 #calendar {
     background-color: #fbfbfb;
+    padding-bottom: 40px;
+}
+
+.pdf {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 30px;
+    background-color: #eaeaea;
+    padding: 4px 20px;
+}
+
+.pdf p {
+    margin: 0;
 }
 
 .program {
