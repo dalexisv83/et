@@ -32,7 +32,7 @@
     progType:typeSel |
     dateRange:rangeStart:rangeEnd |
     orderBy: 'premDate'">
-        <a href ng-click="aParam('program', calendar.program)"><img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{calendar.program | lowercase | spcToHyphen}}.jpg" /></a>
+        <a href ng-click="aParam('program', calendar.program)"><img ng-src="%%pub%%system/img/{{calendar.program | lowercase | spcToHyphen}}.jpg" /></a>
         <br /><a href ng-click="aParam('program', calendar.program)" ng-bind="calendar.program"></a>
         <br /><a href ng-click="aParam('premium', calendar.premium, 'getById', data.premiums)" ng-bind="calendar.premium | getById:data.premiums"></a>
         <br /><a href ng-click="aParam('channel', calendar.chanNum)">{{calendar.chanName}} &ndash; {{calendar.chanNum}}</a>
@@ -46,7 +46,7 @@
     filter:{program: progSel}">
         <a href ng-click="aParam('program', null)">(x)</a><br />
         <div class="grid__item four-eighths">
-            <img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{calendar.program | lowercase | spcToHyphen}}.jpg" />
+            <img ng-src="%%pub%%system/img/{{calendar.program | lowercase | spcToHyphen}}.jpg" />
             <br />{{calendar.program}}
             <br><a href ng-click="aParam('premium', calendar.premium, 'getById', data.premiums)" ng-bind="calendar.premium | getById:data.premiums"></a>
             <br>{{calendar.premDate | date:'MMM d'}} &ndash; {{calendar.premTime}}
@@ -58,4 +58,7 @@
             <span ng-if="calendar.starActrs"><br />Star Actors: <span ng-repeat-start="actor in calendar.starActrs">{{actor}}</span><span ng-repeat-end ng-if="!$last">, </span></span>
             <span ng-if="calendar.starDrctrs"><br />Star Directors: <span ng-repeat-start="director in calendar.starDrctrs">{{director}}</span><span ng-repeat-end ng-if="!$last">, </span></span>
         </div>
+</div>
+<div class="pdf">
+    <p><a href="%%pub%%system/img/calendar_premiums_yearly.pdf" target="_blank">2016 Yearly Calendar PDF</a></p>
 </div>
