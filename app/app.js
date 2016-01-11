@@ -42,8 +42,29 @@
                 element.bind('click', function(e) {
                     jQuery('.checked').removeClass();
                     element.next().next().toggleClass("checked");
-                    //element.leClass("checked");
                     angular.element(document.body).addClass('ieFix').removeClass('ieFix');
+                });
+            };
+        })
+        .directive("dropdown", function() {
+            'use strict';
+            /*jslint unparam: true*/
+            return function(scope, element, attrs) {
+                element.bind('click', function(e) {
+                    element.toggleClass("checked");
+                    element.next().next().toggleClass("checked");
+                    angular.element(document.body).addClass('ieFix').removeClass('ieFix');
+                });
+            };
+        })
+        .directive("errHide", function() {
+            'use strict';
+            /*jslint unparam: true*/
+            return function(scope, element, attrs) {
+                element.bind('error', function(e) {
+                    element.hide();
+                    element.parent('a').hide();
+                    element.parent('a').next('br').hide();
                 });
             };
         })
@@ -220,4 +241,9 @@ var checkSubs = function(obj,premium,sub) {
             }
         }
     }
+}
+
+var stringIsNumber = function (s) {
+    var x = +s; // made cast obvious for demonstration
+    return x.toString() === s;
 }
