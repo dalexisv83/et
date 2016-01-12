@@ -118,12 +118,22 @@ tbody th {
 }
 
 #top a {
+    min-width: 75px;
     color: #ddd;
     text-transform: uppercase;
 }
 
+#top a + a {
+    border-left: 1px solid white;
+}
+
 #top a:hover {
     color: white;
+}
+
+#top a.active {
+    background-color: #eaeaea;
+    color: #333;
 }
 
 #sub {
@@ -136,8 +146,12 @@ tbody th {
     color: #808284;
 }
 
-#sub a:hover {
+#sub a:hover, #sub a.active {
     color: #333;
+}
+
+#sub a.active {
+    text-decoration: underline;
 }
 
 .nav a {
