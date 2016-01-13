@@ -161,11 +161,6 @@ tbody th {
     font-weight: bold;
 }
 
-#playing {
-    background-color: #e6e7e8;
-    line-height: 1.2;
-}
-
 #photos {
     margin-bottom: 10px;
 }
@@ -176,6 +171,8 @@ tbody th {
 }
 
 #playing {
+    background-color: #e6e7e8;
+    line-height: 1.2;
     font-size: .95em;
 }
 
@@ -187,6 +184,10 @@ tbody th {
 
 #playing h3 {
     font-size: 1em;
+}
+
+#playing div {
+    width: 100%;
 }
 
 #playing div + div {
