@@ -32,6 +32,7 @@ The revamp of Entertainment Tool is written using [AngularJS]. It is a has a two
 ## To Do's
 
   - ~~Active Tabs~~ Completed: 1/12 - [add6e72]
+  - Fix programming type filter
   - Revert to old QL script
   - Additional Calendar info
   - IE styling (CSS3PIE)
