@@ -134,7 +134,7 @@
                     case 'movies':
                         var movies = [];
                         angular.forEach(items, function(item) {
-                            if (item.repDates !== null) {
+                            if (item.dayWeek === null) {
                                 movies.push(item);
                             }
                         });
@@ -145,7 +145,7 @@
                     case 'series':
                         var series = [];
                         angular.forEach(items, function(item) {
-                            if (item.repDates === null) {
+                            if (item.dayWeek !== null) {
                                 series.push(item);
                             }
                         });
