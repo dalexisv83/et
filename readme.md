@@ -31,8 +31,11 @@ The revamp of Entertainment Tool is written using [AngularJS]. It is a has a two
 
 ## To Do's
 
-  - ~~Active Tabs~~ Completed: 1/12 - [add6e72]
-  - Fix programming type filter
+  - ~~Active Tabs~~
+	  - Completed: 1/12 - [add6e72]
+  - ~~Fix programming type filter~~
+	  - Completed: 1/13 - [ddc1a89]
+  - Fluid Now Playing images on IE 11
   - Revert to old QL script
   - Additional Calendar info
   - IE styling (CSS3PIE)
@@ -54,6 +57,7 @@ The revamp of Entertainment Tool is written using [AngularJS]. It is a has a two
 
 [//]: # (COMMIT LINKS)
 [add6e72]: http://vwecda05.testla.testfrd.directv.com/repository_list/entertainment_tool/commit/add6e727af9462815f0b64a918a9b9daf30f0a89
+[ddc1a89]: http://vwecda05.testla.testfrd.directv.com/repository_list/entertainment_tool/commit/ddc1a89e48819435d3edc0c893a14df33f943e60
 
 [//]: # (HYPERLINK DEFINITIONS)
 [Entertainment Tool on AAC Source Code Repository]: http://vwecda05.testla.testfrd.directv.com/repository_list/entertainment_tool/
