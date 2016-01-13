@@ -94,7 +94,6 @@
                 if ((jQuery.fn.datetimepicker) && (!Modernizr.inputtypes.date)) {
                     angular.element(element).on('click focus', function(e) {
                         if ((attrs.min) && (scope.rangeStart != undefined) && (scope.rangeStart != '')) {
-                            console.log('YES');
                             var userStart = moment(scope.rangeStart, 'YYYY-MM-DD').format('YYYY/MM/DD');
                             angular.element(element).datetimepicker({
                                 lazyInit: true,
@@ -104,7 +103,6 @@
                                 startDate: userStart
                             })[0];
                         } else {
-                            console.log('nodate');
                             angular.element(element).datetimepicker({
                                 lazyInit: true,
                                 timepicker: false,
