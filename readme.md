@@ -37,7 +37,9 @@ The revamp of Entertainment Tool is written using [AngularJS]. It is a has a two
 	  - Completed: 1/13 - [ddc1a89]
   - ~~Fluid Now Playing images on IE 11~~
 	  - Completed: 1/13 - [d2d00b4]
-  - Revert to old QL script
+  - ~~Revert to old QL script~~
+	  - Completed: 1/14
+  - Same name program modal issue
   - Additional Calendar info
   - IE styling (CSS3PIE)
   - Calendar item limit (for IE8 performance)
