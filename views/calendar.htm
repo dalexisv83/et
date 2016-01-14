@@ -45,7 +45,7 @@
 <div class="overlay" ng-if="progSel" ng-click="aParam('program', null)">
 </div>
 <div class="modal" ng-if="progSel" ng-repeat="calendar in data.calendars |
-    filter:{program: progSel}">
+    filter:{program: progSel}: true">
         <a href ng-click="aParam('program', null)">(x)</a><br />
         <div class="grid__item four-eighths">
             <img ng-src="%%pub%%system/img/{{calendar.program | lowercase | spcToHyphen}}.jpg" />
