@@ -11,6 +11,9 @@
             <option value="Movies">Movies</option>
             <option value="Series">Series</option>
         </select>
+        <select ng-show="typeSel" ng-model="daySel" ng-options="calendar.dayWeek as calendar.dayWeek for calendar in data.calendars | filter:{dayWeek: ''} | unique: 'dayWeek' | orderBy:daySort(weekOrder)">
+            <option value="">All Days</option>
+        </select>
         <select ng-model="chanSel" ng-options="calendar.chanNum as (calendar.chanName + ' &ndash; ' + calendar.chanNum) group by (calendar.premium | getById:data.premiums) for calendar in data.calendars | unique: 'chanNum' | orderBy: 'chanNum'">
             <option value="">All Channels</option>
         </select>
@@ -31,6 +34,7 @@
     filter:{premium: premSel || undefined} |
     filter:{genres: genSel || undefined} |
     filter:{chanNum: chanSel || undefined} |
+    filter:{dayWeek: daySel} |
     progType:typeSel |
     dateRange:rangeStart:rangeEnd |
     orderBy: 'premDate'">

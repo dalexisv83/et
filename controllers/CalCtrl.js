@@ -5,6 +5,15 @@
             function($scope, $routeParams, $location, $filter) {
                 this.name = "CalCtrl";
                 this.params = $routeParams;
+                $scope.weekOrder = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'TBD'];
+                $scope.daySort = function(order) {
+                    return function(input) {
+                        console.log('input:' + input.dayWeek + '\norder:' + order);
+                        if (input.dayWeek != null) {
+                            return $.inArray(input.dayWeek, order);
+                        }
+                    }
+                }
                 $scope.aParam = function(param, value, filter, filterparam) {
                     if (filter) {
                         value = $filter(filter)(value, filterparam);
