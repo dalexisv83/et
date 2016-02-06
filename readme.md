@@ -246,7 +246,7 @@ Handles routing, getting/setting filter values to/from url params for Calendar v
   - **Premium "aside" to it's own partial**
 
 
-[//]: # (HYPERLINK DEFINITIONS)
+[//h]: # (HYPERLINK DEFINITIONS)
 [Entertainment Tool on AAC Source Code Repository]: http://vwecda05.testla.testfrd.directv.com/repository_list/entertainment_tool/
 [AngularJS]: https://angularjs.org/ "AngularJS"
 [Master Spreadsheet]: https://tspace.web.att.com/viewer/app/lcfiles/cddbea06-3d69-4fae-8283-7b0ad912d99f/content
@@ -258,7 +258,7 @@ Handles routing, getting/setting filter values to/from url params for Calendar v
 [Moment.js]: http://momentjs.com/
 [HTML5Shiv]: https://github.com/aFarkas/html5shiv
 
-[//]: # (COMMIT LINKS)
+[//c]: # (COMMIT LINKS)
 [add6e72]: http://vwecda05.testla.testfrd.directv.com/repository_list/entertainment_tool/commit/add6e727af9462815f0b64a918a9b9daf30f0a89
 [ddc1a89]: http://vwecda05.testla.testfrd.directv.com/repository_list/entertainment_tool/commit/ddc1a89e48819435d3edc0c893a14df33f943e60
 [d2d00b4]: http://vwecda05.testla.testfrd.directv.com/repository_list/entertainment_tool/commit/d2d00b4a5e8974344b4824b320de03d6ab91c6f9
