@@ -224,6 +224,7 @@ Handles routing, getting/setting filter values to/from url params for Calendar v
 	  - Completed: 1/14 - [538d57c]
   - **~~Finish Documentation~~**
 	  - Version 1 completed: 2/5 - [7103e04]
+  - **Developer comments in code**
   - **Additional Calendar info**
   - **IE styling (CSS3PIE)**
   - **Calendar item limit (for IE8 performance)**
