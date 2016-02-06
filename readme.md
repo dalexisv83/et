@@ -3,7 +3,7 @@
 
 ## Overview
 
-The revamp of Entertainment Tool is primarily written using [AngularJS]. It is a has a two tiered tabbed layout with the top tier mostly* listing premium packages and the second tier categorizing and displaying selling points and other miscellaneous information.
+The revamp of Entertainment Tool is primarily written using [AngularJS]. It has a two-tiered, tabbed layout with the top tier mostly* listing premium packages and the second tier categorizing and displaying selling points and other miscellaneous information.
 
 *The Calendar tab lists Movie and Series data across all premium packages, filterable by various metadata. 
 
@@ -25,7 +25,7 @@ The revamp of Entertainment Tool is primarily written using [AngularJS]. It is a
   - [Moment.js]
   - [HTML5Shiv]
 
-## Datasource
+## Datasource (data.js)
 
 The content for Entertainment Tool is now maintained via a [Master Spreadsheet] which is updated and converted into JSON data using a [Parser].
 
@@ -208,7 +208,7 @@ Handles routing, getting/setting filter values to/from url params for Calendar v
 ### Breakdown (breakdown.htm)
 
   - Interactive table comparing DIRECTV with several competitive streaming services
-  - Currently the data is stored in a JSON object in the MainCtrl scope.
+  - Currently the data is stored in a JSON object (versus.js) in the MainCtrl scope.
 
 ## To Do's
 
