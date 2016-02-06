@@ -3,7 +3,7 @@
 
 ## Overview
 
-The revamp of Entertainment Tool is written using [AngularJS]. It is a has a two tiered tabbed layout with the top tier mostly* listing premium packages and the second tier categorizing and displaying selling points and other miscellaneous information.
+The revamp of Entertainment Tool is primarily written using [AngularJS]. It is a has a two tiered tabbed layout with the top tier mostly* listing premium packages and the second tier categorizing and displaying selling points and other miscellaneous information.
 
 *The Calendar tab lists Movie and Series data across all premium packages, filterable by various metadata. 
 
@@ -14,6 +14,16 @@ The revamp of Entertainment Tool is written using [AngularJS]. It is a has a two
   - Less prone to caching issues
   - Updated presentation and enhanced UX
   - Robust, filterable Movie/Series listings
+
+## Libraries
+
+  - [AngularJS]
+  - [Angular Route]
+  - [jQuery]
+  - [jQuery Datetimepicker]
+  - [Modernizr]
+  - [Moment.js]
+  - [HTML5Shiv]
 
 ## Datasource
 
@@ -212,7 +222,8 @@ Handles routing, getting/setting filter values to/from url params for Calendar v
 	  - Completed: 1/14
   - **~~Same name program modal issue~~**
 	  - Completed: 1/14 - [538d57c]
-  - **Finish Documentation**
+  - **~~Finish Documentation~~**
+	  - Version 1 completed: 2/5 - [7103e04]
   - **Additional Calendar info**
   - **IE styling (CSS3PIE)**
   - **Calendar item limit (for IE8 performance)**
@@ -239,9 +250,16 @@ Handles routing, getting/setting filter values to/from url params for Calendar v
 [AngularJS]: https://angularjs.org/ "AngularJS"
 [Master Spreadsheet]: https://tspace.web.att.com/viewer/app/lcfiles/cddbea06-3d69-4fae-8283-7b0ad912d99f/content
 [Parser]: http://vwecda05.testla.testfrd.directv.com/tools/site/EntToolParser
+[Angular Route]: https://docs.angularjs.org/api/ngRoute
+[jQuery]: https://jquery.com/
+[jQuery Datetimepicker]: http://xdsoft.net/jqplugins/datetimepicker/
+[Modernizr]: https://modernizr.com/
+[Moment.js]: http://momentjs.com/
+[HTML5Shiv]: https://github.com/aFarkas/html5shiv
 
 [//]: # (COMMIT LINKS)
 [add6e72]: http://vwecda05.testla.testfrd.directv.com/repository_list/entertainment_tool/commit/add6e727af9462815f0b64a918a9b9daf30f0a89
 [ddc1a89]: http://vwecda05.testla.testfrd.directv.com/repository_list/entertainment_tool/commit/ddc1a89e48819435d3edc0c893a14df33f943e60
 [d2d00b4]: http://vwecda05.testla.testfrd.directv.com/repository_list/entertainment_tool/commit/d2d00b4a5e8974344b4824b320de03d6ab91c6f9
 [538d57c]: http://vwecda05.testla.testfrd.directv.com/repository_list/entertainment_tool/commit/538d57c74e12ba4b1e77ece674d9fb4c21bc6872
+[7103e04]: http://vwecda05.testla.testfrd.directv.com/repository_list/entertainment_tool/commit/7103e044f6a654f920e41520e942610892b7ba16
