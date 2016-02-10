@@ -64,6 +64,8 @@ Each sheet in the document corresponds to a root property in the JSON data. Each
 
 ### Channels
 
+Used to populate Channels subtabs within premiums and high level channel info in the Premium view aside.
+
   - **premium**
   - **name**
   - **description**
@@ -104,7 +106,7 @@ Disclosures work similarly to objections and are displayed in an accordion with 
 
 ### Calendar/Listings
 
-Each program in the Calendar tab listing is an object of various data
+Each program in the Calendar tab listing is an object of various data. This data is used primarily in the Calendar view, but is also queried for the now playing section and Overview header images. (Images are dynamically pulled from the first three listings per premium)
 
   - **program**
 	  - The title of the program
@@ -155,6 +157,7 @@ Handles routing, getting/setting filter values to/from url params for Calendar v
   - Second level navigation
   - Conditionally any of the partials below.
 	  - Playing This Month
+	  - Overview photos (currently not a partial but part of the premium view)
 	  - Logo, price, channel info, useful links (currently not a partial but part of the premium view)
 	  - Selling Points
 	  - Objections Disclosures
