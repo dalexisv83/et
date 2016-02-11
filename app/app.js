@@ -1,6 +1,6 @@
 (function(angular) {
     'use strict';
-    angular.module('entertainment', ['ngRoute'])
+    angular.module('entertainment', ['entertainment.filters', 'ngRoute'])
         .filter('getById', function() {
             return function(input, obj) {
                 var match = null;
