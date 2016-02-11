@@ -1,11 +1,11 @@
 <div ng-repeat="premium in data.premiums | filter:{url: (prem.params.premName | lowercase | spcToHyphen)}">
     <div class="nav" id="sub">
-        <a ng-repeat-start="sub in premium.subs" ng-href="#/{{premium.name | lowercase | spcToHyphen}}/{{sub | getById:data.subtabs | lowercase | spcToHyphen}}" ng-class="{active: prem.params.subName == (sub | getById:data.subtabs | lowercase | spcToHyphen)}">{{sub | getById:data.subtabs}}</a><span class="navDivider" ng-if="!$last" ng-repeat-end> | </span>
+        <a ng-repeat-start="sub in premium.subs" ng-href="#/{{premium.name | lowercase | spcToHyphen}}/{{sub | getItByThat:data.subtabs:'name':'id' | lowercase | spcToHyphen}}" ng-class="{active: prem.params.subName == (sub | getItByThat:data.subtabs:'name':'id' | lowercase | spcToHyphen)}">{{sub | getItByThat:data.subtabs:'name':'id'}}</a><span class="navDivider" ng-if="!$last" ng-repeat-end> | </span>
     </div>
     <div ng-if="(prem.params.premName !== 'sports-pack') && (prem.params.premName !== 'streaming')" ng-include="'views/playing.htm'" class="grid__item one-eighth" id="playing"></div><!--
  --><div class="grid__item seven-eighths">
       <div ng-if="prem.params.subName === 'overview'" class="grid__item" id="photos">
-        <div><div ng-repeat="calendar in data.calendars | filter:{premium: (prem.params.premName | getIdByURL:data.premiums)} | limitTo: 3" class="grid__item"><img ng-src="%%pub%%system/img/{{calendar.program | lowercase | spcToHyphen}}.jpg" err-hide /></div></div>
+        <div><div ng-repeat="calendar in data.calendars | filter:{premium: (prem.params.premName | getItByThat:data.premiums:'id':'url')} | limitTo: 3" class="grid__item"><img ng-src="%%pub%%system/img/{{calendar.program | lowercase | spcToHyphen}}.jpg" err-hide /></div></div>
     </div><!--
    --><div class="grid__item one-seventh" id="aside">
           <img ng-src="%%pub%%system/img/{{premium.name | lowercase | spcToHyphen}}-logo.png" />
