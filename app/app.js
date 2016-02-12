@@ -1,40 +1,6 @@
 (function(angular) {
     'use strict';
     angular.module('entertainment', ['entertainment.filters', 'ngRoute'])
-        .filter('getById', function() {
-            return function(input, obj) {
-                var match = null;
-                angular.forEach(obj, function(value, key) {
-                    if (value.id === input) {
-                        match = value.name;
-                    }
-                });
-                return match;
-            }
-        })
-        .filter('getIdByURL', function() {
-            return function(input, obj) {
-                var match = null;
-                angular.forEach(obj, function(value, key) {
-                    if (value.url === input) {
-                        match = value.id;
-                    }
-                });
-                return match;
-            }
-        })
-        .filter('getByName', function() {
-            return function(name, obj) {
-                var match = null;
-                angular.forEach(obj, function(value, key) {
-                    var normal = value.name.replace(/\s+/g, '-').replace("(", '').replace(")", '').replace("/", '-');
-                    if (normal == name) {
-                        match = value.id;
-                    }
-                });
-                return match;
-            }
-        })
         .directive("checker", function() {
             'use strict';
             /*jslint unparam: true*/
