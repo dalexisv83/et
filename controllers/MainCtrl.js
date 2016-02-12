@@ -21,8 +21,8 @@
                 };
                 $scope.genres = getGenres($scope.data.calendars);
                 this.init = function() {
-                    var premNameFiltered = $filter('getIdByURL')(this.$routeParams.premName, $scope.data.premiums);
-                    var subNameFiltered = $filter('getIdByURL')(this.$routeParams.subName, $scope.data.subtabs);
+                    var premNameFiltered = $filter('getItByThat')(this.$routeParams.premName, $scope.data.premiums, 'id', 'url');
+                    var subNameFiltered = $filter('getItByThat')(this.$routeParams.subName, $scope.data.subtabs, 'id', 'url');
                     if ((this.$routeParams.premName !== undefined) && (this.$routeParams.subName === undefined)) {
                         $location.path(this.$routeParams.premName + '/overview');
                     }
