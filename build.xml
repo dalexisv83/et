@@ -84,7 +84,7 @@
 	
 	<target name="jslint">
 		<jslint options="white,nomen,regexp" haltOnFailure="true">
-			<predef>window, angular, jQuery</predef>
+			<predef>window, angular, jQuery, moment, document, setTimeout, $, Modernizr, data, versus</predef>
 			<formatter type="plain" />
 			<formatter type="xml" destfile="${build.dir}/test-reports/jslint.xml" />
 			<fileset dir="." includes="**/*.js" excludes="**/unit_test/tests.js, **/vendor/*.*" />
