@@ -4,3 +4,6 @@
 [submodule "filters/spcToHyphen"]
 	path = filters/spcToHyphen
 	url = y:/git/angular_filters/spcToHyphen
+[submodule "filters/encode"]
+	path = filters/encode
+	url = y:/git/angular_filters/encode
