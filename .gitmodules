@@ -1,3 +1,6 @@
 [submodule "filters/getItByThat"]
 	path = filters/getItByThat
 	url = y:/git/angular-filters/getItByThat
+[submodule "filters/spcToHyphen"]
+	path = filters/spcToHyphen
+	url = y:/git/angular_filters/spcToHyphen
