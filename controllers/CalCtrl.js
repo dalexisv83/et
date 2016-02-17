@@ -10,9 +10,9 @@
                         value = $filter(filter)(value, filterparam1, filterparam2, filterparam3);
                     }
                     $location.search(param, value);
-                }
+                };
                 $scope.$watch(function() {
-                    return $location.search()
+                    return $location.search();
                 }, function(params) {
                     $scope.genSel = params.genre;
                     var filteredModel = $filter('getItByThat')(params.premium, $scope.data.premiums, 'id','name');
@@ -38,5 +38,5 @@
                     $location.search('program', $scope.progSel);
                 });
             }
-        ])
-})(window.angular);
+        ]);
+}(window.angular));
