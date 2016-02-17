@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>spToHyphen Unit Tests</title>
+    <link rel="stylesheet" href="//code.jquery.com/qunit/qunit-1.21.0.css">
+</head>
+
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="//code.jquery.com/qunit/qunit-1.21.0.js"></script>
+    <script src="http://agentanswercenter.directv.com/en-us/res/system/js/angular.min.1.2.11.js"></script>
+    <script src="spcToHyphen.js"></script>
+    <script>
+    QUnit.test("spcToHyphen", function(assert) {
+        var testInput;
+
+        testInput = "A (\"really\") long string/sentence that\'s saying: \"Now check.\"";
+
+        assert.deepEqual(spcToHyphen(testInput), 'A-really-long-string-sentence-thats-saying-Now-check', "Passed");
+    });
+    </script>
+</body>
+
+</html>

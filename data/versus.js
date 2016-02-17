@@ -33,4 +33,4 @@ var versus = [{
     "live": false,
     "sports": false,
     "connection": true
-}]
+}];

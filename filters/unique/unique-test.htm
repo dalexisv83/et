@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>unique Unit Tests</title>
+    <link rel="stylesheet" href="//code.jquery.com/qunit/qunit-1.21.0.css">
+</head>
+
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="//code.jquery.com/qunit/qunit-1.21.0.js"></script>
+    <script src="http://agentanswercenter.directv.com/en-us/res/system/js/angular.min.1.2.11.js"></script>
+    <script src="unique.js"></script>
+    <script>
+    QUnit.test("unique - Simple objects", function(assert) {
+        var arrayToFilter = [{
+                key: 'value'
+            }, {
+                key: 'value2'
+            }, {
+                key: 'value'
+            }],
+            expectedResult = [{
+                key: 'value'
+            }, {
+                key: 'value2'
+            }];
+
+        assert.deepEqual(unique(arrayToFilter), expectedResult, JSON.stringify(arrayToFilter) + " filtered to " + JSON.stringify(expectedResult));
+    });
+
+    QUnit.test("unique - Complex objects", function(assert) {
+        var arrayToFilter = [{
+                key: 'value',
+                other: 'other1'
+            }, {
+                key: 'value2',
+                other: 'other2'
+            }, {
+                other: 'other1',
+                key: 'value'
+            }],
+            expectedResult = [{
+                key: 'value',
+                other: 'other1'
+            }, {
+                key: 'value2',
+                other: 'other2'
+            }];
+
+        assert.deepEqual(unique(arrayToFilter), expectedResult, JSON.stringify(arrayToFilter) + " filtered to " + JSON.stringify(expectedResult));
+    });
+
+    QUnit.test("unique - Primitives in arrays", function(assert) {
+        var arrayToFilter = [1, 2, 1, 3],
+            expectedResult = [1, 2, 3];
+
+        assert.deepEqual(unique(arrayToFilter), expectedResult, JSON.stringify(arrayToFilter) + " filtered to " + JSON.stringify(expectedResult));
+    });
+
+    QUnit.test("unique - Arrays of mixed elements and object equality", function(assert) {
+        var arrayToFilter = [1, {
+                key: 'value'
+            }, 1, {
+                key: 'value'
+            }, 2, "string", 3],
+            expectedResult = [1, {
+                key: 'value'
+            }, 2, "string", 3];
+
+        assert.deepEqual(unique(arrayToFilter), expectedResult, JSON.stringify(arrayToFilter) + " filtered to " + JSON.stringify(expectedResult));
+    });
+
+    QUnit.test("unique - Based on the key provided for complex objects", function(assert) {
+        var arrayToFilter = [{
+                key: 'value',
+                other: 'other1'
+            }, {
+                key: 'value2',
+                other: 'other1'
+            }, {
+                key: 'value',
+                other: 'other3'
+            }],
+            expectedResult = [{
+                key: 'value',
+                other: 'other1'
+            }, {
+                key: 'value2',
+                other: 'other1'
+            }];
+
+        assert.deepEqual(unique(arrayToFilter, 'key'), expectedResult, JSON.stringify(arrayToFilter) + " filtered to " + JSON.stringify(expectedResult));
+    });
+
+    QUnit.test("unique - Unmodified array if provided key === false", function(assert) {
+        var arrayToFilter = [{
+            key: 'value1'
+        }, {
+            key: 'value1'
+        }];
+
+        assert.deepEqual(unique(arrayToFilter, false), arrayToFilter, JSON.stringify(arrayToFilter) + " filtered to " + JSON.stringify(arrayToFilter));
+    });
+    </script>
+</body>
+
+</html>

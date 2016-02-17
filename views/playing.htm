@@ -2,7 +2,7 @@
 <button data-cycle-cmd="prev" data-cycle-context="#playCarousel">Previous</button>
 <div id="playCarousel" data-cycle-fx="carousel" data-cycle-timeout="3500" data-cycle-slides="> div" data-cycle-carousel-visible="3" data-cycle-carousel-vertical="true" data-cycle-log="false" cycle-slideshow>
     <div ng-repeat="calendar in data.calendars |
-filter:{premium: (prem.params.premName | getIdByURL:data.premiums)} |
+filter:{premium: (prem.params.premName | getItByThat:data.premiums:'id':'url')} |
 progType:prem.params.subName">
         <a ng-href="#/calendar?program={{calendar.program | encode}}"><img ng-src="%%pub%%system/img/{{calendar.program | lowercase | spcToHyphen}}.jpg" /></a>
         <h3><a ng-href="#/calendar?program={{calendar.program | encode}}">{{calendar.program}}</a></h3>
