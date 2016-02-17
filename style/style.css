@@ -450,3 +450,23 @@ label.checked.helpful:after {
     margin-left: -25%;
     border-radius: 5px;
 }
+
+div.ui-datepicker {
+    background-color: white;
+}
+
+div.ui-datepicker-title {
+    text-align: center;
+}
+
+a.ui-datepicker-prev, a.ui-datepicker-next {
+    padding: 0 10px;
+}
+
+a.ui-datepicker-prev {
+    float: left;
+}
+
+a.ui-datepicker-next {
+    float: right;
+}
