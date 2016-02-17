@@ -1,0 +1,3 @@
+[submodule "filters/getItByThat"]
+	path = filters/getItByThat
+	url = y:/git/angular-filters/getItByThat
