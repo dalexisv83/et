@@ -7,3 +7,6 @@
 [submodule "filters/encode"]
 	path = filters/encode
 	url = y:/git/angular_filters/encode
+[submodule "filters/dateRange"]
+	path = filters/dateRange
+	url = y:/git/angular_filters/dateRange
