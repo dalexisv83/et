@@ -20,10 +20,11 @@ The revamp of Entertainment Tool is primarily written using [AngularJS]. It has 
   - [AngularJS]
   - [Angular Route]
   - [jQuery]
-  - [jQuery Datetimepicker]
+  - [jQuery UI Datepicker]
   - [Modernizr]
   - [Moment.js]
   - [HTML5Shiv]
+  - [Cycle2]
 
 ## Datasource (data.js)
 
@@ -173,12 +174,15 @@ Handles routing, getting/setting filter values to/from url params for Calendar v
   - Filtered programs with basic data
   - Modal program drilldown with more in-depth data
   - Link to PDF of yearly series info
+  - Date inputs use [Modernizr] to check for native feature and falls back on [jQuery UI Datepicker] when necessary
+  - Date range filter uses [Moment.js] for date comparison
 
 ## Partials
 
 ### Playing This Month (playing.htm)
 
   - Program listing with basic data filtered by premium and programming type (set via route) displayed as a vertical carousel
+  - Carousel uses [Cycle2] library
 
 ### Selling Points (selling.htm)
 
@@ -239,7 +243,10 @@ Handles routing, getting/setting filter values to/from url params for Calendar v
 	  - Long term fix: Angular based slideshow/carousel (no vendor plugin)
   - **Hide Now Playing view if no programming is available**
   - **Helpful Links layout/style (Line breaks are awkward)**
-  - **Datepicker init issues**
+  - **~~Datepicker init issues~~**
+	  - Switched to jQuery UI library for Datepicker
+	  - Completed 2/22 - [c243877]
+  - **Create and implement custom jQuery UI build with just Datepicker**
   - **Apply date range filter to start date**
   - **Responsive Layout**
   - **Channel counts disclaimer ("Never discuss exact channel counts")**
@@ -256,10 +263,11 @@ Handles routing, getting/setting filter values to/from url params for Calendar v
 [Parser]: http://vwecda05.testla.testfrd.directv.com/tools/site/EntToolParser
 [Angular Route]: https://docs.angularjs.org/api/ngRoute
 [jQuery]: https://jquery.com/
-[jQuery Datetimepicker]: http://xdsoft.net/jqplugins/datetimepicker/
+[jQuery UI Datepicker]: https://jqueryui.com/datepicker/
 [Modernizr]: https://modernizr.com/
 [Moment.js]: http://momentjs.com/
 [HTML5Shiv]: https://github.com/aFarkas/html5shiv
+[Cycle2]: http://jquery.malsup.com/cycle2/
 
 [//c]: # (COMMIT LINKS)
 [add6e72]: http://vwecda05.testla.testfrd.directv.com/repository_list/entertainment_tool/commit/add6e727af9462815f0b64a918a9b9daf30f0a89
@@ -267,3 +275,4 @@ Handles routing, getting/setting filter values to/from url params for Calendar v
 [d2d00b4]: http://vwecda05.testla.testfrd.directv.com/repository_list/entertainment_tool/commit/d2d00b4a5e8974344b4824b320de03d6ab91c6f9
 [538d57c]: http://vwecda05.testla.testfrd.directv.com/repository_list/entertainment_tool/commit/538d57c74e12ba4b1e77ece674d9fb4c21bc6872
 [7103e04]: http://vwecda05.testla.testfrd.directv.com/repository_list/entertainment_tool/commit/7103e044f6a654f920e41520e942610892b7ba16
+[c243877]: http://vwecda05.testla.testfrd.directv.com/repository_list/entertainment_tool/commit/c2438775c88cd794087c39ee80ffdf6edb313a53
