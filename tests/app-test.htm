@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>app Unit Tests</title>
+    <link rel="stylesheet" href="//code.jquery.com/qunit/qunit-1.21.0.css">
+</head>
+
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="//code.jquery.com/qunit/qunit-1.21.0.js"></script>
+    <script src="http://agentanswercenter.directv.com/en-us/res/system/js/angular.min.1.2.11.js"></script>
+    <script src="../app/app.js"></script>
+    <script>
+    QUnit.test("app - filter: progType - Predicate: \"Movies\"", function(assert) {
+        var testObjects = [{
+                "program": "Program 1",
+                "dayWeek": "Monday",
+            }, {
+                "program": "Program 2",
+                "dayWeek": "Tuesday",
+            }, {
+                "program": "Program 3",
+                "dayWeek": null,
+            }, {
+                "program": "Program 4",
+                "dayWeek": null,
+            }, {
+                "program": "Program 5",
+                "dayWeek": "Rabbit",
+            }, {
+                "program": "Program 6",
+                "dayWeek": null,
+            }],
+            expectedResult = [{
+                "program": "Program 3",
+                "dayWeek": null,
+            }, {
+                "program": "Program 4",
+                "dayWeek": null,
+            }, {
+                "program": "Program 6",
+                "dayWeek": null,
+            }],
+            testPred = "Movies";
+
+        assert.deepEqual(progType(testObjects, testPred), expectedResult, "Filtered list of programs that are " + testPred + " (dayWeek === null): " + JSON.stringify(expectedResult));
+    });
+
+    QUnit.test("app - filter: progType - Predicate: \"movies\"", function(assert) {
+        var testObjects = [{
+                "program": "Program 1",
+                "dayWeek": "Monday",
+            }, {
+                "program": "Program 2",
+                "dayWeek": "Tuesday",
+            }, {
+                "program": "Program 3",
+                "dayWeek": null,
+            }, {
+                "program": "Program 4",
+                "dayWeek": null,
+            }, {
+                "program": "Program 5",
+                "dayWeek": "Rabbit",
+            }, {
+                "program": "Program 6",
+                "dayWeek": null,
+            }],
+            expectedResult = [{
+                "program": "Program 3",
+                "dayWeek": null,
+            }, {
+                "program": "Program 4",
+                "dayWeek": null,
+            }, {
+                "program": "Program 6",
+                "dayWeek": null,
+            }],
+            testPred = "movies";
+
+        assert.deepEqual(progType(testObjects, testPred), expectedResult, "Filtered list of programs that are " + testPred + " (dayWeek === null): " + JSON.stringify(expectedResult));
+    });
+
+    QUnit.test("app - filter: progType - Predicate: \"original-programming\"", function(assert) {
+        var testObjects = [{
+                "program": "Program 1",
+                "dayWeek": "Monday",
+            }, {
+                "program": "Program 2",
+                "dayWeek": "Tuesday",
+            }, {
+                "program": "Program 3",
+                "dayWeek": null,
+            }, {
+                "program": "Program 4",
+                "dayWeek": null,
+            }, {
+                "program": "Program 5",
+                "dayWeek": "Rabbit",
+            }, {
+                "program": "Program 6",
+                "dayWeek": null,
+            }],
+            expectedResult = [{
+                "program": "Program 1",
+                "dayWeek": "Monday",
+            }, {
+                "program": "Program 2",
+                "dayWeek": "Tuesday",
+            }, {
+                "program": "Program 5",
+                "dayWeek": "Rabbit",
+            }],
+            testPred = "original-programming";
+
+        assert.deepEqual(progType(testObjects, testPred), expectedResult, "Filtered list of programs that are " + testPred + " (dayWeek !== null): " + JSON.stringify(expectedResult));
+    });
+
+    QUnit.test("app - filter: progType - Predicate: \"Series\"", function(assert) {
+        var testObjects = [{
+                "program": "Program 1",
+                "dayWeek": "Monday",
+            }, {
+                "program": "Program 2",
+                "dayWeek": "Tuesday",
+            }, {
+                "program": "Program 3",
+                "dayWeek": null,
+            }, {
+                "program": "Program 4",
+                "dayWeek": null,
+            }, {
+                "program": "Program 5",
+                "dayWeek": "Rabbit",
+            }, {
+                "program": "Program 6",
+                "dayWeek": null,
+            }],
+            expectedResult = [{
+                "program": "Program 1",
+                "dayWeek": "Monday",
+            }, {
+                "program": "Program 2",
+                "dayWeek": "Tuesday",
+            }, {
+                "program": "Program 5",
+                "dayWeek": "Rabbit",
+            }],
+            testPred = "Series";
+
+        assert.deepEqual(progType(testObjects, testPred), expectedResult, "Filtered list of programs that are " + testPred + " (dayWeek !== null): " + JSON.stringify(expectedResult));
+    });
+
+    QUnit.test("app - filter: progType - Predicate: \"series\"", function(assert) {
+        var testObjects = [{
+                "program": "Program 1",
+                "dayWeek": "Monday",
+            }, {
+                "program": "Program 2",
+                "dayWeek": "Tuesday",
+            }, {
+                "program": "Program 3",
+                "dayWeek": null,
+            }, {
+                "program": "Program 4",
+                "dayWeek": null,
+            }, {
+                "program": "Program 5",
+                "dayWeek": "Rabbit",
+            }, {
+                "program": "Program 6",
+                "dayWeek": null,
+            }],
+            expectedResult = [{
+                "program": "Program 1",
+                "dayWeek": "Monday",
+            }, {
+                "program": "Program 2",
+                "dayWeek": "Tuesday",
+            }, {
+                "program": "Program 5",
+                "dayWeek": "Rabbit",
+            }],
+            testPred = "series";
+
+        assert.deepEqual(progType(testObjects, testPred), expectedResult, "Filtered list of programs that are " + testPred + " (dayWeek !== null): " + JSON.stringify(expectedResult));
+    });
+    </script>
+</body>
+
+</html>
