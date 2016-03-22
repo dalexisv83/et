@@ -236,7 +236,7 @@ Handles routing, getting/setting filter values to/from url params for Calendar v
   - **IE styling (CSS3PIE)**
   - **Calendar item limit (for IE8 performance)**
   - **Add Competitive Streaming Services data to spreadsheet/parser**
-	  - Possibly Cinema pricing as well
+  - **Add Cinema pricing to spreadsheet/parser**
   - **Back Button in IE (When previous subtab is not available in new top tier tab)**
   - **Script error for slideshow plugin**
 	  - Short term fix: debug plugin
