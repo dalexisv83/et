@@ -10,6 +10,7 @@ var checkSubs = function(obj, premium, sub) {
                             return true;
                         }
                     }
+                    return false;
                 }
             }
         }

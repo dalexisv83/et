@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>MainCtrl Unit Tests</title>
+    <link rel="stylesheet" href="//code.jquery.com/qunit/qunit-1.21.0.css">
+</head>
+
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="//code.jquery.com/qunit/qunit-1.21.0.js"></script>
+    <script src="http://agentanswercenter.directv.com/en-us/res/system/js/angular.min.1.2.11.js"></script>
+    <script>
+    var entertainment = angular.module('entertainment', []);
+    </script>
+    <script src="../controllers/MainCtrl.js"></script>
+    <script>
+    QUnit.test("MainCtrl - checkSubs", function(assert) {
+        var testObjects = {
+                "premiums": [{
+                    "id": 1,
+                    "subs": [1,2,3,4]
+                    }, {
+                    "id": 2,
+                    "subs": [1,2,4,5]
+                }]
+            },
+            testPrem = 2,
+            testSub = 5,
+            expectedResult = true;
+
+        assert.deepEqual(checkSubs(testObjects, testPrem, testSub), expectedResult, "The Subtab (" + testSub + ") was found in the Premium's subtab list: (" + testObjects['premiums'][testPrem - 1]['subs'] + ")");
+
+        testSub = 3,
+        expectedResult = false;
+
+        assert.deepEqual(checkSubs(testObjects, testPrem, testSub), expectedResult, "The Subtab (" + testSub + ") was NOT found in the Premium's subtab list: (" + testObjects['premiums'][testPrem - 1]['subs'] + ")");
+    });
+
+    QUnit.test("MainCtrl - getGenres", function(assert) {
+        var testObjects = [
+                {"genres": ["Boxing", "Comedy"]},
+                {"genres": ["Sci-Fi"]},
+                {"genres": ["Action"]},
+                {"genres": ["Documentary", "Boxing"]}
+            ],
+            expectedResult = ["Boxing", "Comedy", "Sci-Fi", "Action", "Documentary", "Boxing"];
+
+        assert.deepEqual(getGenres(testObjects), expectedResult, "getGenres found the following genres: " + expectedResult);
+    });
+
+    QUnit.test("MainCtrl - stringIsNumber", function(assert) {
+        var testVar = "Nineteen",
+            expectedResult = false;
+
+        assert.deepEqual(stringIsNumber(testVar), expectedResult, testVar + " (" + typeof testVar + ") is a string of a number: " + expectedResult);
+
+        var testVar = "19",
+            expectedResult = true;
+
+        assert.deepEqual(stringIsNumber(testVar), expectedResult, testVar + " (" + typeof testVar + ") is a string of a number: " + expectedResult);
+
+        var testVar = 19,
+            expectedResult = false;
+
+        assert.deepEqual(stringIsNumber(testVar), expectedResult, testVar + " (" + typeof testVar + ") is a string of a number: " + expectedResult);
+
+        var testVar = null,
+            expectedResult = false;
+
+        assert.deepEqual(stringIsNumber(testVar), expectedResult, testVar + " (" + typeof testVar + ") is a string of a number: " + expectedResult);
+
+        var testVar = undefined,
+            expectedResult = false;
+
+        assert.deepEqual(stringIsNumber(testVar), expectedResult, testVar + " (" + typeof testVar + ") is a string of a number: " + expectedResult);
+
+        var testVar = true,
+            expectedResult = false;
+
+        assert.deepEqual(stringIsNumber(testVar), expectedResult, testVar + " (" + typeof testVar + ") is a string of a number: " + expectedResult);
+
+        var testVar = function() {
+                    return 19
+                },
+            expectedResult = false;
+
+        assert.deepEqual(stringIsNumber(testVar), expectedResult, testVar + " (" + typeof testVar + ") is a string of a number: " + expectedResult);
+    });
+    </script>
+</body>
+
+</html>
