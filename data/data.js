@@ -2911,5 +2911,24 @@ var data = {
         "starPrdcrs": null,
         "description": "The new Vice Special Report: Fighting ISIS takes you to the front lines in Iraq, where Sunni, Shiite and Kurdish forces are fighting for their lives.",
         "image": null
+    }],
+    "cinema": [{
+        "format": "SD",
+        "releases": "$4.99",
+        "theatrical": "$6.99",
+        "library": "$2.99",
+        "premieres": "$9.99"
+    }, {
+        "format": "HD",
+        "releases": "$5.99",
+        "theatrical": "$7.99",
+        "library": "$3.99",
+        "premieres": "$10.99"
+    }, {
+        "format": "4K",
+        "releases": "$12.99",
+        "theatrical": "N/A",
+        "library": "Free (Shorts)<br />$9.99 (Major films)",
+        "premieres": "N/A"
     }]
 };

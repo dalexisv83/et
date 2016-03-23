@@ -10,27 +10,12 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>SD</td>
-            <td>$4.99</td>
-            <td>$6.99</td>
-            <td>$2.99</td>
-            <td>$9.99</td>
-        </tr>
-        <tr>
-            <td>HD</td>
-            <td>$5.99</td>
-            <td>$7.99</td>
-            <td>$3.99</td>
-            <td>$10.99</td>
-        </tr>
-        <tr>
-            <td>4K</td>
-            <td>$15.99</td>
-            <td>N/A</td>
-            <td>$6.99 (Shorts)
-                <br>$12.99 (Major films)</td>
-            <td>N/A</td>
+        <tr ng-repeat="cinema in data.cinema">
+            <td ng-bind-html="cinema.format"></td>
+            <td ng-bind-html="cinema.releases"></td>
+            <td ng-bind-html="cinema.theatrical"></td>
+            <td ng-bind-html="cinema.library"></td>
+            <td ng-bind-html="cinema.premieres"></td>
         </tr>
     </tbody>
 </table>
