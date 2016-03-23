@@ -47,13 +47,13 @@
 	<property environment="env" />
 	<property name="build.dir" value="build" />
 	<!-- point this to the location of the YUI Compression Library -->
-	<property name="lib.dir" value="C:/yui-compression/lib" />
+	<property name="lib.dir" value="C:/yui-compression-master/lib" />
 	<property name="final_js" value="${basedir}/${build.dir}/js/complete.js" />
 	<property name="final_css" value="${basedir}/${build.dir}/css/complete.css" />
 	
 	<!-- libraries -->
-	<property name="yui-compressor" location="${lib.dir}/yuicompressor-2.4.8.jar" />
-	<property name="yui-compressor-ant-task" location="${lib.dir}/yui-compressor-ant-task-0.5.1.jar" />
+	<property name="yui-compressor" location="${lib.dir}/yuicompressor-2.4.7.jar" />
+	<property name="yui-compressor-ant-task" location="${lib.dir}/yui-compressor-ant-task-0.5.jar" />
 	
 	<!-- classpath -->
 	<path id="yui.classpath">
@@ -66,7 +66,7 @@
 		<classpath refid="yui.classpath" />
 	</taskdef>
 	
-	<taskdef name="jslint" classname="com.googlecode.jslint4java.ant.JSLintTask" classpath="C:/jslint4java-2.0.5/jslint4java-2.0.5.jar" />
+	<taskdef name="jslint" classname="com.googlecode.jslint4java.ant.JSLintTask" classpath="${lib.dir}/jslint4java-2.0.5.jar" />
 	
 	<!-- targets -->
 	<target name="start">
