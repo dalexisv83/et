@@ -43,7 +43,7 @@ var progType = function(items, predicate) {
                     }
                 });
                 return match;
-            }
+            };
         })
         .filter('getIdByURL', function() {
             return function(input, obj) {
@@ -54,19 +54,19 @@ var progType = function(items, predicate) {
                     }
                 });
                 return match;
-            }
+            };
         })
         .filter('getByName', function() {
             return function(name, obj) {
                 var match = null;
                 angular.forEach(obj, function(value, key) {
                     var normal = value.name.replace(/\s+/g, '-').replace("(", '').replace(")", '').replace("/", '-');
-                    if (normal == name) {
+                    if (normal === name) {
                         match = value.id;
                     }
                 });
                 return match;
-            }
+            };
         })
         .filter('progType', function() {
             return progType;
