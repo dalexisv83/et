@@ -34,7 +34,7 @@
     progType:typeSel |
     dateRange:rangeStart:rangeEnd |
     orderBy: 'premDate'">
-        <a href ng-click="aParam('program', calendar.program)"><img ng-src="%%pub%%system/img/{{calendar.program | lowercase | spcToHyphen}}.jpg" /></a>
+        <a href ng-click="aParam('program', calendar.program)"><img ng-src="%%pub%%system/img/{{calendar.image || calendar.program | lowercase | spcToHyphen}}.jpg" /></a>
         <br /><a href ng-click="aParam('program', calendar.program)" ng-bind="calendar.program"></a>
         <br /><a href ng-click="aParam('premium', calendar.premium, 'getItByThat', data.premiums,'name','id')" ng-bind="calendar.premium | getItByThat:data.premiums:'name':'id'"></a>
         <br /><a href ng-click="aParam('channel', calendar.chanNum)">{{calendar.chanName}} &ndash; {{calendar.chanNum}}</a>
@@ -48,7 +48,7 @@
     filter:{program: progSel}: true">
         <a href ng-click="aParam('program', null)">(x)</a><br />
         <div class="grid__item four-eighths">
-            <img ng-src="%%pub%%system/img/{{calendar.program | lowercase | spcToHyphen}}.jpg" />
+            <img ng-src="%%pub%%system/img/{{calendar.image || calendar.program | lowercase | spcToHyphen}}.jpg" />
             <br />{{calendar.program}}
             <br><a href ng-click="aParam('premium', calendar.premium, 'getItByThat', data.premiums,'name','id')" ng-bind="calendar.premium | getItByThat:data.premiums:'name':'id'"></a>
             <br>{{calendar.premDate | date:'MMM d'}} &ndash; {{calendar.premTime}}
