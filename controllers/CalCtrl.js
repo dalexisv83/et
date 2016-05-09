@@ -1,3 +1,23 @@
+//Converts time strings to decimals for ordering ('8:30 PM' -> 20.5)
+var strTimeOrder = function(obj) {
+        "use strict";
+        if (obj.premTime) {
+            var mins = obj.premTime.replace(/\:/g, '-').replace(/\s/g, '-').split('-'),
+                i,
+                l = mins.length;
+            for (i=0; i<l-1; i+=1) {
+                mins[i] = parseInt(mins[i], 10);
+            }
+            if (l === 3) {
+                mins[0] += mins[1]/60;
+            }
+            if ((mins[l-1] === "PM") && (mins[0] < 12)) {
+                mins[0] += 12;
+            }
+            return mins[0];
+        }
+    };
+
 (function(angular) {
     'use strict';
     angular.module('entertainment')
@@ -5,6 +25,7 @@
             function($scope, $routeParams, $location, $filter) {
                 this.name = "CalCtrl";
                 this.params = $routeParams;
+                $scope.orderStrTime = strTimeOrder;
                 $scope.aParam = function(param, value, filter, filterparam1, filterparam2, filterparam3) {
                     if (filter) {
                         value = $filter(filter)(value, filterparam1, filterparam2, filterparam3);

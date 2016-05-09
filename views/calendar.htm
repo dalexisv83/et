@@ -33,7 +33,7 @@
     filter:{chanNum: chanSel || undefined} |
     progType:typeSel |
     dateRange:rangeStart:rangeEnd |
-    orderBy: 'premDate'">
+    orderBy: ['premDate', orderStrTime]">
         <a href ng-click="aParam('program', calendar.program)"><img ng-src="%%pub%%system/img/{{calendar.image || calendar.program | lowercase | spcToHyphen}}.jpg" /></a>
         <br /><a href ng-click="aParam('program', calendar.program)" ng-bind="calendar.program"></a>
         <br /><a href ng-click="aParam('premium', calendar.premium, 'getItByThat', data.premiums,'name','id')" ng-bind="calendar.premium | getItByThat:data.premiums:'name':'id'"></a>
