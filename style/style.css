@@ -210,6 +210,7 @@ tbody th {
 
 #streaming li {
     border: solid 2px #0072ae;
+    border-top: none;
     padding: 10px;
 }
 
