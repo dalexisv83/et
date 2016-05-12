@@ -1,5 +1,7 @@
 html {
   box-sizing: border-box;
+  overflow: hidden;
+  height: 100%;
 }
 
 *, *:before, *:after {
@@ -11,6 +13,8 @@ body {
     font-family: 'Franklin Gothic', sans-serif;
     color: #333;
     line-height: 1.55;
+    overflow: auto;
+    height: 100%;
 }
 
 img {
@@ -33,7 +37,11 @@ label:hover {
     cursor: pointer;
 }
 
-h1, h2, h3 {
+h2 {
+    margin: 10px 0;
+}
+
+h3 {
     margin: 0;
 }
 
@@ -75,6 +83,53 @@ tbody th {
     text-align: left;
 }
 
+.outer {
+    padding: 0 24px;
+}
+
+.bg__col:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: inherit;
+    top: 0;
+    bottom: 0;
+    margin-left: -24px;
+    z-index: -1;
+    background-color: inherit;
+    /* box-sizing: content-box; */
+    /* padding-right: 12px; */
+}
+
+.bg__box {
+    position: relative;
+}
+
+.bg__box:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: inherit;
+    /* box-sizing: content-box; */
+    /* padding-right: 12px; */
+}
+
+.bg--white {
+    background-color: white;
+}
+
+.bg--light-gray, .bg--light-grey {
+    background-color: #e6e7e8;
+}
+
+.bg--dark-gray, .bg--dark-grey {
+    background-color: #808284;
+}
+
 .corner {
     background-color: white;
     border: none;
@@ -90,6 +145,10 @@ tbody th {
     background: url(http://agentanswercenter.directv.com/en-us/res/system/img/rcc_bg.jpg) right -20px no-repeat #071F31;
 }
 
+.header .grid__item {
+    vertical-align: middle;
+}
+
 .dtvLogo {
     max-width: 235px\9;
     max-height: 26px\9;
@@ -100,7 +159,7 @@ tbody th {
     font-size: 22px;
     font-weight: bold;
     text-align: right;
-    margin: 0px;
+    margin: 10px 0;
     color: white;
 }
 
@@ -140,6 +199,7 @@ tbody th {
     position: relative;
     background-color: #eaeaea;
     box-shadow: 3px 3px 3px #838383;
+    z-index: 2;
 }
 
 #sub a {
@@ -157,21 +217,16 @@ tbody th {
 .nav a {
     display: inline-block;
     text-align: center;
-    padding: 7px 10px;
+    padding: 7px 24px;
     font-weight: bold;
 }
 
-#photos {
-    margin-bottom: 10px;
-}
-
-#photos div div {
-    width: 33%;
-    background-color: #808284;
+.photo {
+    vertical-align: bottom;
+    margin: 20px 0;
 }
 
 #playing {
-    background-color: #e6e7e8;
     line-height: 1.2;
     font-size: .95em;
 }
@@ -179,7 +234,6 @@ tbody th {
 #playing h2 {
     font-size: .9em;
     color: #838383;
-    margin: 5px 0;
 }
 
 #playing h3 {
@@ -187,7 +241,7 @@ tbody th {
 }
 
 #playing div {
-    width: 100%;
+    padding-right: 12px
 }
 
 #playing div + div {
@@ -196,6 +250,10 @@ tbody th {
 
 #playing a {
     color: #454545;
+}
+
+#selling ul {
+    margin: 0;
 }
 
 #streaming h2 {
@@ -264,7 +322,7 @@ label[for=disclosures] {
     box-shadow: 1px 1px 5px #838383;
 }
 
-.accordion {
+.accordion label, .accordion li {
     font-size: .9em;
     line-height: 1.2;
 }
@@ -332,7 +390,7 @@ label.helpful:after {
 label.checked.helpful:after {
     content: ' \25BE'
 }
-
+/*
 .grid__item {
     display: inline-block;
     vertical-align: top;
@@ -391,7 +449,7 @@ label.checked.helpful:after {
 .seven-eighths {
     width: 87.5%;
 }
-
+*/
 #calendar {
     background-color: #fbfbfb;
     padding-bottom: 40px;
@@ -440,6 +498,7 @@ label.checked.helpful:after {
     opacity: .8;
     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
     background-color: #333;
+    z-index: 99;
 }
 
 .modal {
@@ -450,6 +509,7 @@ label.checked.helpful:after {
     left: 50%;
     margin-left: -25%;
     border-radius: 5px;
+    z-index: 100;
 }
 
 div.ui-datepicker {

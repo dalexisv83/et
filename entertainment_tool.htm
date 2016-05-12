@@ -36,26 +36,27 @@
     <script src="../angular_directives/dropCheck/dropCheck.js"></script>
 
     <link rel="stylesheet" type="text/css" href="%%pub%%system/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="style/csswizardry-grids.css">
     <link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
 
 <body ng-app="entertainment" id="ng-app">
-    <div class="header">
-        <div class="grid__item four-eighths">
-            <img class="dtvLogo" src="%%pub%%system/img/Logo_DTV_ATT.png">
-        </div><!--
-         --><div class="grid__item four-eighths">
-            <h1 class="tool-title palm--center">Entertainment Tool</h1>
-        </div>
+<div class="outer header">
+<div class="grid grid--full">
+    <div class="grid__item one-half">
+        <img class="dtvLogo" src="%%pub%%system/img/Logo_DTV_ATT.png">
     </div>
-    <div ng-controller="MainCtrl as main">
+    <div class="grid__item one-half">
+        <h1 class="tool-title palm--center">Entertainment Tool</h1>
+    </div>
+</div>
+</div>
+    <div class="controller" ng-controller="MainCtrl as main">
         <div class="nav" id="top">
           <a ng-repeat="premium in data.premiums" ng-href="#/{{premium.name | lowercase | spcToHyphen}}/{{main.$routeParams.subName}}" ng-class="{active: main.$routeParams.premName == (premium.name | lowercase | spcToHyphen)}">{{premium.name}}</a><!-- 
            --><a href="#/calendar" ng-class="{active: main.$route.current.loadedTemplateUrl == 'views/calendar.htm'}">Calendar</a>
         </div>
-        <div>
-            <div ng-view>Loading&hellip;</div>
-        </div>
+        <div class="view" ng-view>Loading&hellip;</div>
     </div>
 
     <input type="hidden" id="tool-author-id" value="David Velasquez">
