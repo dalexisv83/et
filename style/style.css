@@ -141,6 +141,11 @@ tbody th {
     margin-left: 20px;
 }
 
+.nav, .header {
+    position: relative;
+    z-index: 2;
+}
+
 .header {
     background: url(http://agentanswercenter.directv.com/en-us/res/system/img/rcc_bg.jpg) right -20px no-repeat #071F31;
 }
@@ -196,10 +201,8 @@ tbody th {
 }
 
 #sub {
-    position: relative;
     background-color: #eaeaea;
     box-shadow: 3px 3px 3px #838383;
-    z-index: 2;
 }
 
 #sub a {
