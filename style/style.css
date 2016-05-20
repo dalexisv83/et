@@ -95,7 +95,7 @@ tbody th {
     top: 0;
     bottom: 0;
     margin-left: -24px;
-    z-index: -1;
+    z-index: -2;
     background-color: inherit;
     /* box-sizing: content-box; */
     /* padding-right: 12px; */
