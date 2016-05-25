@@ -2,7 +2,7 @@
     <label>Search Channels: </label><input ng-model="search.$" placeholder="Search" /><a href ng-show="search.$" ng-click="search = null">(x)</a>
 </div>
 <div class="grid__item two-eighths" ng-repeat="channel in premium.channels | filter: search">
-    <img ng-src="%%pub%%system/img/{{(channel.logo) || (channel.name | lowercase | spcToHyphen)}}-logo.png" />
+    <img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{(channel.logo) || (channel.name | lowercase | spcToHyphen)}}-logo.png" />
     <br />{{channel.name}} &ndash; {{channel.number}}
     <br /><span ng-if="channel.HD">HD</span><span ng-if="(channel.HD) && (channel.SD)"> | </span><span ng-if="channel.SD">SD</span>
     <br />{{channel.description}}

@@ -8,10 +8,10 @@
         <div class="grid__item seven-eighths bg__col bg--white">
             <div class="grid">
                 <div class="grid__item one-third bg__box bg--dark-grey" ng-if="prem.params.subName === 'overview'" ng-repeat="calendar in data.calendars | filter:{premium: premium.id} | limitTo: 3">
-                    <img class="photo" ng-src="%%pub%%system/img/{{calendar.program | lowercase | spcToHyphen}}.jpg" />
+                    <img class="photo" ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{calendar.program | lowercase | spcToHyphen}}.jpg" />
                 </div>
                 <div class="grid__item one-seventh" id="aside">
-                    <img ng-src="%%pub%%system/img/{{premium.name | lowercase | spcToHyphen}}-logo.png" />
+                    <img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{premium.name | lowercase | spcToHyphen}}-logo.png" />
                     <div class="info" ng-hide="(premium.price == null) && (premium.channels == null)">
                         <div ng-show="premium.price" class="price"><span ng-if="isStringNumber(premium.price)">&#36;</span>{{premium.price}}</div>
                         <a ng-show="premium.channels" ng-href="#/{{prem.params.premName}}/channels">
@@ -33,8 +33,8 @@
                             <ul>
                                 <li ng-if="premium.premURL"><a ng-href="{{premium.premURL}}" target="_blank">{{premium.name}} Website</a></li>
                                 <li ng-if="premium.dotcomURL"><a ng-href="http://www.directv.com/{{premium.dotcomURL}}" target="_blank">{{premium.name}} on DIRECTV.com</a></li>
-                                <li ng-if="premium.aacURL"><a ng-href="%%pub%%programming/{{premium.aacURL}}" target="_blank">{{premium.name}} on AAC</a></li>
-                                <li ng-if="premium.streamFrag"><a ng-href="%%pub%%programming/{{premium.aacURL}}#fragment={{premium.streamFrag}}" target="_blank">{{premium.streamName}} on AAC</a></li>
+                                <li ng-if="premium.aacURL"><a ng-href="http://agentanswercenter.directv.com/en-us/res/programming/{{premium.aacURL}}" target="_blank">{{premium.name}} on AAC</a></li>
+                                <li ng-if="premium.streamFrag"><a ng-href="http://agentanswercenter.directv.com/en-us/res/programming/{{premium.aacURL}}#fragment={{premium.streamFrag}}" target="_blank">{{premium.streamName}} on AAC</a></li>
                             </ul>
                         </div>
                     </div>

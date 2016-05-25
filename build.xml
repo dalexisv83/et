@@ -45,7 +45,7 @@
 	
 	<!-- props -->
 	<property environment="env" />
-	<property name="build.dir" value="build" />
+	<property name="build.dir" value="c:/wamp/www/rover_tools/entertainment_tool/build" />
 	<!-- point this to the location of the YUI Compression Library -->
 	<property name="lib.dir" value="C:/yui-compression-master/lib" />
 	<property name="final_js" value="${basedir}/${build.dir}/js/complete.js" />
@@ -74,12 +74,14 @@
 		<delete dir="${build.dir}"/>
 		<echo message="Building ${ant.project.name} with ${ant.version} - System Java ${ant.java.version}" />
 		<mkdir dir="${build.dir}" />
-		<echo message="Building build/js" />
-		<mkdir dir="${build.dir}/js" />
-		<echo message="Building build/css" />
-		<mkdir dir="${build.dir}/css" />
 		<echo message="Building build/test-reports" />
-		<mkdir dir="${build.dir}/test-reports" />		
+		<mkdir dir="${build.dir}/test-reports" />
+		<copy todir="${build.dir}">
+			<file file="entertainment_tool.htm" />
+		</copy>
+		<copy todir="${build.dir}/views">
+			<fileset dir="views" />
+		</copy>
 	</target>
 	
 	<target name="jslint">
@@ -90,15 +92,14 @@
 			<fileset dir="." includes="**/*.js" excludes="**/unit_test/tests.js, **/vendor/*.*" />
 		</jslint>
 	</target>
-	
-	<target name="compress">		
+	<target name="compress">
 		<yui-compressor
 			warn="false"
 			munge="true"
 			preserveallsemicolons="false"
 			fromdir="."
-			todir="${build.dir}"			
-		>   
+			todir="${build.dir}"
+		>
 			<exclude name="script/unit_test/tests.js" />                       
 		</yui-compressor>		
 	</target>
@@ -115,12 +116,24 @@
 		<concat destfile="${final_css}" force="true" fixlastline="true">
 			<fileset dir="${build.dir}" includes="**/*.css" />
 			<fileset dir="${build.dir}" includes="**/version_two/style/*.css" />
-		</concat>		
+		</concat>
 	</target>
 	
+	<target name="replace">
+		<replace dir="${build.dir}">
+			<include name="**/*.*"/>
+			<replacetoken>http://agentanswercenter.directv.com/en-us/res/</replacetoken>
+			<replacevalue>%%pub%%</replacevalue>
+		</replace>
+		<replace dir="${build.dir}">
+			<include name="**/*.*"/>
+			<replacetoken>&lt;!-- &lt;base href=&quot;%%pub%%rover_tools/sell_premium/sell_premium_overhaul.htm&quot; /&gt; --&gt;</replacetoken>
+			<replacevalue>&lt;base href=&quot;%%pub%%rover_tools/sell_premium/sell_premium_overhaul.htm&quot; /&gt;</replacevalue>
+		</replace>
+	</target>
 	<!-- cleaning tasks -->
 	<target name="clean">
 	</target>
 	
-	<target name="main" depends="start,jslint,compress,concat,clean" />	
+	<target name="main" depends="start,jslint,compress,replace,clean" />	
 </project>
