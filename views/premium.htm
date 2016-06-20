@@ -4,7 +4,7 @@
     </div>
     <div class="outer">
     <div class="grid">
-        <div class="grid__item one-eighth bg__col bg--light-grey" ng-if="(prem.params.premName !== 'sports-pack') && (prem.params.premName !== 'streaming')" ng-include="'views/playing.htm'" id="playing"></div>
+        <div class="grid__item one-eighth bg__col bg--light-grey" ng-if="data.tool != 'sports' && (prem.params.premName !== 'sports-pack') && (prem.params.premName !== 'streaming')" ng-include="'views/playing.htm'" id="playing"></div>
         <div class="grid__item seven-eighths bg__col bg--white">
             <div class="grid">
                 <div class="grid__item one-third bg__box bg--dark-grey" ng-if="prem.params.subName === 'overview'" ng-repeat="calendar in data.calendars | filter:{premium: premium.id} | limitTo: 3">
@@ -12,8 +12,9 @@
                 </div>
                 <div class="grid__item one-seventh" id="aside">
                     <img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{premium.name | lowercase | spcToHyphen}}-logo.png" />
-                    <div class="info" ng-hide="(premium.price == null) && (premium.channels == null)">
+                    <div class="info" ng-hide="(premium.price == null) && (premium.channels == null) && data.tool == !'sports'">
                         <div ng-show="premium.price" class="price"><span ng-if="isStringNumber(premium.price)">&#36;</span>{{premium.price}}</div>
+                        <p ng-if="data.tool == 'sports'">{{premium.name}}</p>
                         <a ng-show="premium.channels" ng-href="#/{{prem.params.premName}}/channels">
                             <ul>
                                 <li>{{premium.channels.length}} Channels</li>
@@ -43,7 +44,7 @@
                 <div ng-if="prem.params.subName === 'ordering'" ng-include="'views/ordering.htm'" id="ordering" class="grid__item three-sevenths"></div>
                 <div ng-if="prem.params.subName === 'pricing'" ng-include="'views/pricing.htm'" id="pricing" class="grid__item three-sevenths"></div>
                 <div ng-if="prem.params.subName === 'breakdown'" ng-include="'views/breakdown.htm'" id="breakdown" class="grid__item six-sevenths"></div>
-                <div ng-if="prem.params.subName === 'overview'" ng-include="'views/objections.htm'" id="objections" class="grid__item three-sevenths accordion"></div>
+                <div ng-if="data.tool == 'sports' || prem.params.subName === 'overview'" ng-include="'views/objections.htm'" id="objections" class="grid__item three-sevenths accordion"></div>
                 <div ng-if="(prem.params.subName !== 'channels') && (prem.params.subName !== 'overview') && (prem.params.subName !== 'streaming') && (prem.params.subName !== 'breakdown')" ng-include="'views/movieorig.htm'" id="movieorig" class="grid__item three-sevenths accordion"></div>
                 <div ng-if="prem.params.subName === 'channels'" ng-include="'views/channels.htm'" class="grid__item six-sevenths" id="channels"></div>
                 <div ng-if="prem.params.subName === 'streaming'" ng-include="'views/streaming.htm'" class="grid__item six-sevenths" id="streaming"></div>

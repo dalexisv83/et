@@ -33,7 +33,7 @@ var progType = function(items, predicate) {
 
 (function(angular) {
     'use strict';
-    angular.module('entertainment', ['entertainment.filters', 'entertainment.directives', 'ngRoute', 'ngSanitize'])
+    angular.module('entertainment', ['entertainment.filters', 'entertainment.directives', 'ngRoute', 'ngSanitize', 'ngResource'])
         .filter('getById', function() {
             return function(input, obj) {
                 var match = null;

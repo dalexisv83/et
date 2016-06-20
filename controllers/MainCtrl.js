@@ -41,14 +41,27 @@ var checkSubs = function(obj, premium, sub) {
 (function(angular) {
     'use strict';
     angular.module('entertainment')
-        .controller('MainCtrl', ['$scope', '$route', '$routeParams', '$location', '$filter',
-            function($scope, $route, $routeParams, $location, $filter) {
+        .controller('MainCtrl', ['$scope', '$route', '$routeParams', '$location', '$filter', '$resource',
+            function($scope, $route, $routeParams, $location, $filter, $resource) {
                 this.$route = $route;
                 this.$location = $location;
                 this.$routeParams = $routeParams;
                 this.params = $routeParams; // redundant?
-                $scope.data = data;
-                $scope.premium = $filter('filter')(data.premiums, { url: this.$routeParams.premName })[0];
+                $resource('data/sports.js',{},{'get': { method:'GET', cache: true}}).get().$promise.then(function(data) {
+                    $scope.data = data;
+                    $scope.premium = $filter('filter')($scope.data.premiums, { url: $routeParams.premName })[0];
+                    //$scope.genres = getGenres($scope.data.calendars);
+                    var premNameFiltered = $filter('getItByThat')($routeParams.premName, $scope.data.premiums, 'id', 'url'),
+                        subNameFiltered = $filter('getItByThat')($routeParams.subName, $scope.data.subtabs, 'id', 'url');
+                    if (($routeParams.premName !== undefined) && ($routeParams.subName === undefined)) {
+                        $location.path($routeParams.premName + '/overview');
+                    }
+                    if (($routeParams.premName !== undefined) && ($routeParams.subName !== undefined)) {
+                        if (!checkSubs($scope.data, premNameFiltered, subNameFiltered)) {
+                            $location.path($routeParams.premName + '/overview');
+                        }
+                    }
+                });
                 $scope.versus = versus;
                 $scope.isStringNumber = stringIsNumber;
                 $scope.selChecks = {
@@ -60,20 +73,6 @@ var checkSubs = function(obj, premium, sub) {
                         "Amazon Prime Video": true
                     }
                 };
-                $scope.genres = getGenres($scope.data.calendars);
-                this.init = function() {
-                    var premNameFiltered = $filter('getItByThat')(this.$routeParams.premName, $scope.data.premiums, 'id', 'url'),
-                        subNameFiltered = $filter('getItByThat')(this.$routeParams.subName, $scope.data.subtabs, 'id', 'url');
-                    if ((this.$routeParams.premName !== undefined) && (this.$routeParams.subName === undefined)) {
-                        $location.path(this.$routeParams.premName + '/overview');
-                    }
-                    if ((this.$routeParams.premName !== undefined) && (this.$routeParams.subName !== undefined)) {
-                        if (!checkSubs($scope.data, premNameFiltered, subNameFiltered)) {
-                            $location.path(this.$routeParams.premName + '/overview');
-                        }
-                    }
-                };
-                this.init();
             }
         ]);
 }(window.angular));
