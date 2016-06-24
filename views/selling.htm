@@ -1,4 +1,4 @@
-<h2>Selling Points</h2>
+<h2>{{prem.params.subName | getItByThat:data.subtabs:'name':'url'}}</h2>
 <ul ng-repeat="sellingPoint in filteredPoints = (premium.sellingPoints | filter:{title: null} | filter:{subtab: (prem.params.subName | getItByThat:data.subtabs:'id':'url')})">
 <li ng-repeat-start="text in sellingPoint.point">{{text}}</li>
 <hr ng-if="!$last" ng-repeat-end />
