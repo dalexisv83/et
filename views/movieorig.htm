@@ -1,8 +1,9 @@
 <h2><span ng-if="(prem.params.subName !== 'ordering') && (prem.params.subName !== 'pricing')">{{prem.params.subName | getItByThat:data.subtabs:'name':'url'}}</span><span ng-if="prem.params.subName === 'ordering'">Ways To Order</span><span ng-if="prem.params.subName === 'pricing'">PPV Life Cycle</span></h2>
-<label ng-repeat-start="sellingPoint in filteredPoints = (premium.sellingPoints | filter:!{title:null} | filter:{subtab: (prem.params.subName | getItByThat:data.subtabs:'id':'url')}) track by $index" for="{{sellingPoint.title}}" class="grad-blue" checker>{{sellingPoint.title}}</label><input type="radio" name="accordion" id="{{sellingPoint.title}}">
+<label ng-repeat-start="sellingPoint in bluePoints = (premium.sellingPoints | filter:{title: ''} | filter:{subtab: (prem.params.subName | getItByThat:data.subtabs:'id':'url')}) track by $index" for="{{sellingPoint.title}}" class="grad-blue" checker>{{sellingPoint.title}}</label>
+<input type="radio" name="accordion" id="{{sellingPoint.title}}">
 <div ng-repeat-end>
-  <ul>
-    <li ng-repeat-start="text in sellingPoint.point">{{text}}</li>
-    <hr ng-if="!$last" ng-repeat-end />
-  </ul>
+    <ul>
+        <li ng-repeat-start="text in sellingPoint.point">{{text}}</li>
+        <hr ng-if="!$last" ng-repeat-end />
+    </ul>
 </div>
