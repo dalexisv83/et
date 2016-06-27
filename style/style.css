@@ -255,7 +255,7 @@ tbody th {
     color: #454545;
 }
 
-#selling ul {
+#selling > ul {
     margin: 0;
 }
 
@@ -319,7 +319,11 @@ label[for=disclosures] {
     color: white;
 }
 
-#movieorig.accordion label {
+.movieorig.inner {
+    margin: 10px 0;
+}
+
+.movieorig.accordion label {
     padding: 7px 10px 5px;
     color: white;
     box-shadow: 1px 1px 5px #838383;
