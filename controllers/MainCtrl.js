@@ -37,31 +37,67 @@ var checkSubs = function(obj, premium, sub) {
         return x.toString() === s;
     };
 
+(function(angular) {
+    'use strict';
+    angular.module('entertainment')
+        .factory('ContentFactory', [
+            '$resource',
+            function ($resource, toolName){
+                var Content = function (toolName){
+                    return $resource('data/' + toolName + '.js',{},{'get': { method:'GET', cache: true}});
+                };
+                return function ContentFactory(toolName){
+                    var contentFactory = new Content(toolName);
+                    return contentFactory;
+                }
+            }]);
+}(window.angular));
 
 (function(angular) {
     'use strict';
     angular.module('entertainment')
-        .controller('MainCtrl', ['$scope', '$route', '$routeParams', '$location', '$filter', '$resource',
-            function($scope, $route, $routeParams, $location, $filter, $resource) {
+        .factory('ContentPromise', [
+            'ContentFactory',
+            function (ContentFactory, toolName){
+                return function(toolName) {
+                    return ContentFactory(toolName).get().$promise.then(function(data) {
+                        return data;
+                    });
+                }
+            }]);
+}(window.angular));
+
+(function(angular) {
+    'use strict';
+    angular.module('entertainment')
+        .controller('MainCtrl', ['$scope', '$route', '$routeParams', '$location', '$filter', 'contentData',
+            function($scope, $route, $routeParams, $location, $filter, contentData) {
                 this.$route = $route;
                 this.$location = $location;
                 this.$routeParams = $routeParams;
                 this.params = $routeParams; // redundant?
-                $resource('data/sports.js',{},{'get': { method:'GET', cache: true}}).get().$promise.then(function(data) {
-                    $scope.data = data;
-                    $scope.premium = $filter('filter')($scope.data.premiums, { url: $routeParams.premName })[0];
-                    //$scope.genres = getGenres($scope.data.calendars);
-                    var premNameFiltered = $filter('getItByThat')($routeParams.premName, $scope.data.premiums, 'id', 'url'),
-                        subNameFiltered = $filter('getItByThat')($routeParams.subName, $scope.data.subtabs, 'id', 'url');
-                    if (($routeParams.premName !== undefined) && ($routeParams.subName === undefined)) {
-                        $location.path($routeParams.premName + '/overview');
-                    }
-                    if (($routeParams.premName !== undefined) && ($routeParams.subName !== undefined)) {
-                        if (!checkSubs($scope.data, premNameFiltered, subNameFiltered)) {
-                            $location.path($routeParams.premName + '/overview');
+                $scope.data = contentData;
+                $scope.tool = function(test) {
+                    if (test) {
+                        switch (test) {
+                            case 'entertainment':
+                                return 'Entertainment Tool'
+                            case 'sports':
+                                return 'Sports Sales Tool'
                         }
                     }
-                });
+                };
+                $scope.premium = $filter('filter')($scope.data.premiums, { url: $routeParams.premName })[0];
+                var premNameFiltered = $filter('getItByThat')($routeParams.premName, $scope.data.premiums, 'id', 'url'),
+                    subNameFiltered = $filter('getItByThat')($routeParams.subName, $scope.data.subtabs, 'id', 'url');
+                if (($routeParams.tool !== undefined) && ($routeParams.premName !== undefined) && ($routeParams.premName !== 'calendar') && ($routeParams.subName === undefined)) {
+                    $location.path($routeParams.tool + '/' + $routeParams.premName + '/overview');
+                }
+                if (($routeParams.premName !== undefined) && ($routeParams.subName !== undefined)) {
+                    if (!checkSubs($scope.data, premNameFiltered, subNameFiltered)) {
+                        $location.path($routeParams.tool + '/' + $routeParams.premName + '/overview');
+                    }
+                }
                 $scope.versus = versus;
                 $scope.isStringNumber = stringIsNumber;
                 $scope.selChecks = {
@@ -75,4 +111,22 @@ var checkSubs = function(obj, premium, sub) {
                 };
             }
         ]);
+}(window.angular));
+
+
+(function(angular) {
+    'use strict';
+    angular.module('entertainment')
+        .directive('subView', ['$routeParams', function($routeParams) {
+            return {
+                templateUrl: function() {
+                    switch($routeParams.premName) {
+                        case 'calendar':
+                            return 'views/calendar.htm';
+                        default:
+                            return 'views/premium.htm';
+                    }
+                }
+            };
+        }]);
 }(window.angular));

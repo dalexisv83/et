@@ -13,22 +13,29 @@
                 // Routing logic for calendar and premium views
                 // /:premName/:subName are variables, can be anything (hbo/overview or mtv/news) set by url
                 $routeProvider
-                    .when('/calendar', {
-                        templateUrl: 'views/calendar.htm',
-                        controller: 'CalCtrl',
-                        controllerAs: 'cal'
+                    .when('/:tool', {
+                        redirectTo: '/:tool/baseball/overview'
                     })
-                    .when('/:premName', {
-                        templateUrl: 'views/premium.htm',
+                    .when('/:tool/:premName', {
+                        templateUrl: 'views/main.htm',
                         controller: 'MainCtrl',
-                        controllerAs: 'prem'
+                        controllerAs: 'prem',
+                        resolve: {
+                            contentData: ['$route', 'ContentPromise', function($route, ContentPromise) {
+                                return ContentPromise($route.current.params.tool);
+                            }
+                        ]}
                     })
-                    .when('/:premName/:subName', {
-                        templateUrl: 'views/premium.htm',
+                    .when('/:tool/:premName/:subName', {
+                        templateUrl: 'views/main.htm',
                         controller: 'MainCtrl',
-                        controllerAs: 'prem'
-                    })
-                    .otherwise({redirectTo:'/hbo/overview'});
+                        controllerAs: 'prem',
+                        resolve: {
+                            contentData: ['$route', 'ContentPromise', function($route, ContentPromise) {
+                                return ContentPromise($route.current.params.tool);
+                            }
+                        ]}
+                    });
 
                 // Important for IE to modern browser url compatibilty
                 $locationProvider.html5Mode(false);

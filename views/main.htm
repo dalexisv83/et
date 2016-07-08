@@ -1,0 +1,17 @@
+<div class="outer header">
+    <div class="grid grid--full">
+        <div class="grid__item one-half">
+            <img class="dtvLogo" src="http://agentanswercenter.directv.com/en-us/res/system/img/Logo_DTV_ATT.png">
+        </div>
+        <div class="grid__item one-half">
+            <h1 class="tool-title palm--center">{{tool(prem.params.tool)}}</h1>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="nav" id="top">
+      <a ng-repeat="premium in data.premiums" ng-href="#/{{prem.params.tool}}/{{premium.name | lowercase | spcToHyphen}}/{{prem.params.subName}}" ng-class="{active: main.$routeParams.premName == (premium.name | lowercase | spcToHyphen)}" ng-bind="premium.name">Loading Premiums&hellip;</a><!--
+       --><a ng-if="data.tool != 'sports'" href="#/entertainment/calendar" ng-class="{active: main.$route.current.loadedTemplateUrl == 'views/calendar.htm'}">Calendar</a>
+    </div>
+    <div sub-view></div>
+</div>
