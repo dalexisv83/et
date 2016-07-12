@@ -13,3 +13,22 @@
         </ul>
     </div>
 </div>
+<table ng-if="prem.params.subName == '101-by-team'">
+    <tbody ng-repeat="conference in premium.conferences | orderBy:'name'">
+        <tr>
+            <td width="33%" colspan="3">{{conference.name}}</td>
+        </tr>
+        <tr>
+            <td ng-repeat="division in conference.divisions | orderBy:'name'">{{division.name}}</td>
+        </tr>
+        <tr>
+            <td style="padding:0;" cellspacing="0" cellpadding="0" ng-repeat="division in conference.divisions | orderBy:'name'">
+                <table style="width:100%; margin:0;" cellspacing="0" cellpadding="0">
+                    <tr ng-repeat="team in division.teams | orderBy:'name'">
+                        <td>{{team.name}}</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
