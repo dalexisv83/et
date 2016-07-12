@@ -13,8 +13,9 @@
 		"endEarly": "42405",
 		"multiReg": "28.99",
 		"oneReg": "173.94",
-		"startReg": "42406",
-		"channels": null,
+		"startReg": "2/6",
+		"endReg": "7/10",
+		"channels": "719-749",
 		"sellingPoints": [{
 			"id": 1,
 			"subtab": 2,
@@ -69,7 +70,7 @@
 			"category": "Not Interested",
 			"responses": null
 		}],
-		"subs": [1,2,3,4,5],
+		"subs": [1,2,3,5,10],
 		"disclosures": [1,2,3,4]
 	}, {
 		"id": 2,
@@ -84,8 +85,54 @@
 		"endEarly": "42611",
 		"multiReg": "39.99",
 		"oneReg": "199.95",
-		"startReg": "42612",
-		"channels": null,
+		"startReg": "8/30",
+		"endReg": "12/8",
+		"channels": "750-768",
+		"conferences": [{
+			"id": 1,
+			"name": "Eastern",
+			"divisions": [{
+				"id": 1,
+				"name": "Atlantic",
+				"teams": [{
+					"id": 1,
+					"name": "New York Knicks",
+					"point": ["Knicks Rule"]
+				}, {
+					"id": 2,
+					"name": "Boston Celtics",
+					"point": ["Wasted draft"]
+				}]
+			}, {
+				"id": 2,
+				"name": "Central",
+				"teams": [{
+					"id": 1,
+					"name": "Chicago Bulls",
+					"point": "No more Rose"
+				}]
+			}, {
+				"id": 3,
+				"name": "Southeast",
+				"teams": [{
+					"id": 1,
+					"name": "Charlotte Hornets",
+					"point": "Grandmama"
+				}]
+			}]
+		}, {
+			"id": 2,
+			"name": "Western",
+			"divisions": [{
+				"id": 1,
+				"name": "Pacific",
+				"teams": [{
+					"id": 1,
+					"name": "Los Angeles Lakers",
+					"point": "Kobe's gone"
+				}]
+			}]
+		}],
 		"sellingPoints": [{
 			"subtab": 1,
 			"title": null,
@@ -134,7 +181,7 @@
 			"category": "Not Interested",
 			"responses": null
 		}],
-		"subs": [1,2,3,4,6],
+		"subs": [1,2,3,6,10],
 		"disclosures": [5,6,7]
 	}, {
 		"id": 3,
@@ -150,34 +197,7 @@
 		"multiReg": "44.99",
 		"oneReg": "269.94",
 		"startReg": "42373",
-		"channels": null,
-		"sellingPoints": [{
-			"subtab": null,
-			"title": null,
-			"point": null,
-			"evergreen": null
-		}],
-		"objections": [{
-			"category": "",
-			"responses": null
-		}],
-		"subs": [],
-		"disclosures": []
-	}, {
-		"id": 4,
-		"name": "FOOTBALL",
-		"url": "football",
-		"aacURL": null,
-		"premName": "",
-		"dotcomURL": null,
-		"multiEarly": null,
-		"oneEarly": null,
-		"startEarly": null,
-		"endEarly": null,
-		"multiReg": "59.99",
-		"oneReg": "359.94",
-		"startReg": "42373",
-		"channels": null,
+		"channels": "701-718",
 		"sellingPoints": [{
 			"subtab": null,
 			"title": null,
@@ -204,7 +224,7 @@
 		"multiReg": "35.99",
 		"oneReg": "143.96",
 		"startReg": "42673",
-		"channels": null,
+		"channels": "769-787",
 		"sellingPoints": [{
 			"subtab": 2,
 			"title": "NHL Center Ice",
@@ -266,7 +286,7 @@
 		"multiReg": "22.25",
 		"oneReg": "89",
 		"startReg": "42423",
-		"channels": null,
+		"channels": "471-476",
 		"sellingPoints": null,
 		"objections": null,
 		"subs": [],
@@ -290,24 +310,28 @@
 		"url": "disclosures"
 	}, {
 		"id": 5,
-		"name": "MLB101",
-		"url": "mlb101"
+		"name": "MLB 101",
+		"url": "mlb-101"
 	}, {
 		"id": 6,
-		"name": "NBA101",
-		"url": "nba101"
+		"name": "NBA 101",
+		"url": "nba-101"
 	}, {
 		"id": 7,
-		"name": "NFL101",
-		"url": "nfl101"
+		"name": "NFL 101",
+		"url": "nfl-101"
 	}, {
 		"id": 8,
-		"name": "NHL101",
-		"url": "nhl101"
+		"name": "NHL 101",
+		"url": "nhl-101"
 	}, {
 		"id": 9,
-		"name": "MLS101",
-		"url": "mls101"
+		"name": "MLS 101",
+		"url": "mls-101"
+	}, {
+		"id": 10,
+		"name": "101 By Team",
+		"url": "101-by-team"
 	}],
 	"disclosures": [{
 		"id": 1,
