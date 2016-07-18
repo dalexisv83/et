@@ -141,11 +141,6 @@ tbody th {
     margin-left: 20px;
 }
 
-.nav, .header {
-    position: relative;
-    z-index: 2;
-}
-
 .header {
     background: url(http://agentanswercenter.directv.com/en-us/res/system/img/rcc_bg.jpg) right -20px no-repeat #071F31;
 }
@@ -177,11 +172,38 @@ tbody th {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2baae1', endColorstr='#0072ae',GradientType=0 ); /* IE6-8 */
 }
 
+ul.nav {
+    margin: 0;
+}
+
+.nav > li {
+    display: inline-block;
+}
+
+.nav li ul {
+    display: none;
+    position: absolute;
+    background-color: grey;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav li ul a {
+    width: 100%;
+    text-align: left;
+    padding: 10px 24px;
+}
+
+.nav li:hover ul {
+    display: block;
+}
+
 #top {
     background-color: #404041;
 }
 
-#top a {
+#top a, #top span {
     min-width: 75px;
     color: #ddd;
     text-transform: uppercase;
@@ -202,7 +224,6 @@ tbody th {
 
 #sub {
     background-color: #eaeaea;
-    box-shadow: 3px 3px 3px #838383;
 }
 
 #sub a {
@@ -217,7 +238,7 @@ tbody th {
     text-decoration: underline;
 }
 
-.nav a {
+.nav a, .nav span {
     display: inline-block;
     text-align: center;
     padding: 7px 24px;
@@ -515,6 +536,7 @@ label.checked.helpful:after {
     top: 50px;
     left: 50%;
     margin-left: -25%;
+    padding: 10px;
     border-radius: 5px;
     z-index: 100;
 }
