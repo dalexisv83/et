@@ -16,26 +16,26 @@ var checkSubs = function(obj, premium, sub) {
         }
     },
 
-    getGenres = function(source) {
-        'use strict';
-        var genres = [],
-            i,
-            n;
-        for (i=0; i<source.length; i+=1) {
-            for (n=0; n<source[i].genres.length; n+=1) {
-                if (typeof source[i].genres[n] === 'string') { // cause IE
-                    genres.push(source[i].genres[n]);
-                }
-            }
-        }
-        return genres;
-    },
-
     stringIsNumber = function(s) {
         "use strict";
         var x = +s; // made cast obvious for demonstration
         return x.toString() === s;
+    },
+
+    getChildren = function (input) {
+        var i,
+            parent,
+            children = [];
+        for (i = input.length - 1; i >= 0; i -= 1) {
+            if (input[i].category == parent) {
+                children.push.apply(children, [input[i].name, input[i+1].name]);
+            }
+            parent = input[i].category;
+            console.log(parent);
+        }
+        return children;
     };
+
 
 (function(angular) {
     'use strict';
@@ -72,6 +72,7 @@ var checkSubs = function(obj, premium, sub) {
     angular.module('entertainment')
         .controller('MainCtrl', ['$scope', '$route', '$routeParams', '$location', '$filter', 'contentData',
             function($scope, $route, $routeParams, $location, $filter, contentData) {
+                this.name = 'MainCtrl';
                 this.$route = $route;
                 this.$location = $location;
                 this.$routeParams = $routeParams;
@@ -87,6 +88,21 @@ var checkSubs = function(obj, premium, sub) {
                         }
                     }
                 };
+                $scope.aParam = function(param, value, filter, filterparam1, filterparam2, filterparam3) {
+                    if (filter) {
+                        value = $filter(filter)(value, filterparam1, filterparam2, filterparam3);
+                    }
+                    $location.search(param, value);
+                };
+                $scope.$watch(function() {
+                    return $location.search();
+                }, function(params) {
+                    $scope.trivia = params.trivia;
+                });
+                $scope.$watch('trivia', function() {
+                    $location.search('trivia', $scope.trivia);
+                });
+                $scope.children = getChildren($scope.data.premiums);
                 $scope.premium = $filter('filter')($scope.data.premiums, { url: $routeParams.premName })[0];
                 var premNameFiltered = $filter('getItByThat')($routeParams.premName, $scope.data.premiums, 'id', 'url'),
                     subNameFiltered = $filter('getItByThat')($routeParams.subName, $scope.data.subtabs, 'id', 'url');
@@ -112,7 +128,6 @@ var checkSubs = function(obj, premium, sub) {
             }
         ]);
 }(window.angular));
-
 
 (function(angular) {
     'use strict';
