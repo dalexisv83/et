@@ -5,10 +5,10 @@
 filter:{premium: premium.id} |
 progType:prem.params.subName">
         <a ng-href="#/calendar?program={{calendar.program | encode}}"><img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{calendar.image || calendar.program | lowercase | spcToHyphen}}.jpg" /></a>
-        <h3><a ng-href="#/calendar?program={{calendar.program | encode}}">{{calendar.program}}</a></h3>
+        <h3><a ng-href="#/entertainment/calendar?program={{calendar.program | encode}}">{{calendar.program}}</a></h3>
         <span>{{calendar.premDate | date:'MMM d'}}</span> &ndash; <span>{{calendar.premTime}}</span>
         <br />{{calendar.chanNum}}
-        <br /><a ng-href="#/calendar?program={{calendar.program | encode}}">More info</a>
+        <br /><a ng-href="#/entertainment/calendar?program={{calendar.program | encode}}">More info</a>
     </div>
 </div>
 <button data-cycle-cmd="next" data-cycle-context="#playCarousel">Next</button>
