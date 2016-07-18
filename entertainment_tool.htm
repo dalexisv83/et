@@ -9,6 +9,16 @@
     <!--[if lt IE 9]>
       <script src="http://agentanswercenter.directv.com/en-us/res/system/js/html5shiv.js"></script>
     <![endif]-->
+    <script>
+    if (!Array.prototype.indexOf) {
+        Array.prototype.indexOf = function(obj, start) {
+             for (var i = (start || 0), j = this.length; i < j; i++) {
+                 if (this[i] === obj) { return i; }
+             }
+             return -1;
+        }
+    }
+    </script>
     <script src="http://agentanswercenter.directv.com/en-us/res/system/js/modernizr-inputtypes.js"></script>
     <script src="http://agentanswercenter.directv.com/en-us/res/system/js/jquery-1.11.3.min.js" type="text/javascript"></script>
     <script src="http://agentanswercenter.directv.com/en-us/res/system/js/angular.min.1.2.11.js"></script>
