@@ -560,3 +560,68 @@ a.ui-datepicker-prev {
 a.ui-datepicker-next {
     float: right;
 }
+
+.by-team + .by-team {
+    margin-top: 20px;
+}
+
+.by-team td {
+    border: none;
+}
+
+.conference {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: #454545;
+    border: none;
+}
+
+.division {
+    background-color: #e6e6e6;
+    font-size: 1.125em;
+    font-weight: bold;
+    color: black;
+}
+
+.teamBox {
+    vertical-align: top;
+}
+
+.team {
+    color: #0077dd;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.team:hover {
+    color: #0099ff;
+}
+
+.team img {
+    width: 25px;
+    height: auto;
+    vertical-align: bottom;
+    margin-right: 10px;
+}
+
+.trivia {
+    margin-top: 20px;
+    border: 2px solid #0077dd;
+    padding: 10px;
+}
+
+.trivia img {
+    float: left;
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+.trivia p {
+    margin: 0;
+    padding-right: 30px;
+    min-height: 64px;
+}
+
+.close {
+    float: right;
+}

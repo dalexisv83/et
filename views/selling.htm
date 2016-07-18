@@ -13,22 +13,26 @@
         </ul>
     </div>
 </div>
-<table ng-if="prem.params.subName == '101-by-team'">
-    <tbody ng-repeat="conference in premium.conferences | orderBy:'name'">
+<table class="by-team" ng-if="prem.params.subName == '101-by-team'" ng-repeat="conference in premium.conferences | orderBy:'name'">
+    <tbody>
         <tr>
-            <td width="33%" colspan="3">{{conference.name}}</td>
+            <td class="conference" width="33%" colspan="3">{{conference.name}}</td>
         </tr>
         <tr>
-            <td ng-repeat="division in conference.divisions | orderBy:'name'">{{division.name}}</td>
+            <td class="division" ng-repeat="division in premium.divisions | orderBy:'name' | filter:{conference: conference.id}">{{division.name}}</td>
         </tr>
         <tr>
-            <td style="padding:0;" cellspacing="0" cellpadding="0" ng-repeat="division in conference.divisions | orderBy:'name'">
+            <td class="teamBox" style="padding:0;" cellspacing="0" cellpadding="0" ng-repeat="division in premium.divisions | orderBy:'name' | filter:{conference: conference.id}">
                 <table style="width:100%; margin:0;" cellspacing="0" cellpadding="0">
-                    <tr ng-repeat="team in division.teams | orderBy:'name'">
-                        <td>{{team.name}}</td>
+                    <tr ng-repeat="team in premium.teams | orderBy:'name' | filter:{division: division.id}">
+                        <td class="team"><img ng-src="img/{{team.name | lowercase | spcToHyphen}}-sm.png" ng-click="aParam('trivia', team.name)" /><span ng-bind="team.name" ng-click="aParam('trivia', team.name)"></span></td>
                     </tr>
                 </table>
             </td>
         </tr>
     </tbody>
 </table>
+<div class="trivia" ng-if="trivia" ng-repeat="team in premium.teams | orderBy:'name' | filter:{name: trivia}">
+    <a class="close" href ng-click="aParam('trivia', null)">&#x2716;</a>
+    <p><img ng-src="img/{{team.name | lowercase | spcToHyphen}}.gif" /><b ng-bind="team.name"></b> - <span ng-repeat="point in team.point" ng-bind="point"></span></p>
+</div>

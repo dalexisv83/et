@@ -2,10 +2,10 @@
 	"tool": "sports",
 	"premiums": [{
 		"id": 1,
-		"name": "BASEBALL",
-		"url": "baseball",
+		"name": "MLB Extra Innings",
+		"url": "mlb-extra-innings",
 		"aacURL": null,
-		"premName": "MLB Extra Innings",
+		"category": "Baseball",
 		"dotcomURL": null,
 		"multiEarly": "28.99",
 		"oneEarly": "173.94",
@@ -74,10 +74,10 @@
 		"disclosures": [1,2,3,4]
 	}, {
 		"id": 2,
-		"name": "BASKETBALL",
-		"url": "basketball",
+		"name": "NBA League Pass",
+		"url": "nba-league-pass",
 		"aacURL": null,
-		"premName": "NBA League Pass",
+		"category": "Basketball",
 		"dotcomURL": null,
 		"multiEarly": "39.99",
 		"oneEarly": "199.95",
@@ -90,48 +90,53 @@
 		"channels": "750-768",
 		"conferences": [{
 			"id": 1,
-			"name": "Eastern",
-			"divisions": [{
-				"id": 1,
-				"name": "Atlantic",
-				"teams": [{
-					"id": 1,
-					"name": "New York Knicks",
-					"point": ["Knicks Rule"]
-				}, {
-					"id": 2,
-					"name": "Boston Celtics",
-					"point": ["Wasted draft"]
-				}]
-			}, {
-				"id": 2,
-				"name": "Central",
-				"teams": [{
-					"id": 1,
-					"name": "Chicago Bulls",
-					"point": "No more Rose"
-				}]
-			}, {
-				"id": 3,
-				"name": "Southeast",
-				"teams": [{
-					"id": 1,
-					"name": "Charlotte Hornets",
-					"point": "Grandmama"
-				}]
-			}]
+			"name": "Eastern Conference"
 		}, {
 			"id": 2,
-			"name": "Western",
-			"divisions": [{
-				"id": 1,
-				"name": "Pacific",
-				"teams": [{
-					"id": 1,
-					"name": "Los Angeles Lakers",
-					"point": "Kobe's gone"
-				}]
-			}]
+			"name": "Western Conference"
+		}],
+		"divisions": [{
+			"id": 1,
+			"conference": 1,
+			"name": "Atlantic Division"
+		}, {
+			"id": 2,
+			"conference": 1,
+			"name": "Central Division"
+		}, {
+			"id": 3,
+			"conference": 1,
+			"name": "Southeast Division"
+		}, {
+			"id": 4,
+			"conference": 2,
+			"name": "Pacific Division"
+		}],
+		"teams": [{
+			"id": 1,
+			"division": 1,
+			"name": "New York Knicks",
+			"point": ["The Knicks have won 8 conference titles"]
+		}, {
+			"id": 2,
+			"division": 1,
+			"name": "Boston Celtics",
+			"point": ["The Boston Celtics have won 17 NBA Championships!"]
+		}, {
+			"id": 3,
+			"division": 2,
+			"name": "Chicago Bulls",
+			"point": ["The Bulls won three NBA titles in a row on two separate occasions"]
+		}, {
+			"id": 4,
+			"division": 3,
+			"name": "Charlotte Hornets",
+			"point": ["The Hornets are owned by NBA great Michael Jordan"]
+		}, {
+			"id": 5,
+			"division": 4,
+			"name": "Los Angeles Lakers",
+			"point": ["The Lakers won 4 of their 16 championships while they were known as the Minneapolis Lakers"]
 		}],
 		"sellingPoints": [{
 			"subtab": 1,
@@ -185,10 +190,10 @@
 		"disclosures": [5,6,7]
 	}, {
 		"id": 3,
-		"name": "FOOTBALL",
-		"url": "football",
+		"name": "NFL Sunday Ticket",
+		"url": "nfl-sunday-ticket",
 		"aacURL": null,
-		"premName": "",
+		"category": "Football",
 		"dotcomURL": null,
 		"multiEarly": null,
 		"oneEarly": null,
@@ -211,11 +216,38 @@
 		"subs": [],
 		"disclosures": []
 	}, {
-		"id": 5,
-		"name": "HOCKEY",
-		"url": "hockey",
+		"id": 4,
+		"name": "NFL Sunday Ticket MAX",
+		"url": "nfl-sunday-ticket-max",
 		"aacURL": null,
-		"premName": "NHL Center Ice",
+		"category": "Football",
+		"dotcomURL": null,
+		"multiEarly": null,
+		"oneEarly": null,
+		"startEarly": null,
+		"endEarly": null,
+		"multiReg": "50.99",
+		"oneReg": "310.94",
+		"startReg": "42373",
+		"channels": "701-718",
+		"sellingPoints": [{
+			"subtab": null,
+			"title": null,
+			"point": null,
+			"evergreen": null
+		}],
+		"objections": [{
+			"category": "",
+			"responses": null
+		}],
+		"subs": [],
+		"disclosures": []
+	}, {
+		"id": 5,
+		"name": "NHL Center Ice",
+		"url": "nhl-center-ice",
+		"aacURL": null,
+		"category": "Hockey",
 		"dotcomURL": null,
 		"multiEarly": "34.99",
 		"oneEarly": "139.96",
@@ -274,10 +306,10 @@
 		"disclosures": []
 	}, {
 		"id": 6,
-		"name": "SOCCER",
-		"url": "soccer",
+		"name": "MLS Direct Kick",
+		"url": "mls-direct-kick",
 		"aacURL": null,
-		"premName": "MLS Direct Kick",
+		"category": "Soccer",
 		"dotcomURL": null,
 		"multiEarly": null,
 		"oneEarly": null,
