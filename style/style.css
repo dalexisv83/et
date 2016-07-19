@@ -631,5 +631,7 @@ a.ui-datepicker-next {
 }
 
 .close {
+    position: relative;
+    top: -.4em;
     float: right;
 }
