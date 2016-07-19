@@ -31,7 +31,6 @@ var checkSubs = function(obj, premium, sub) {
                 children.push.apply(children, [input[i].name, input[i+1].name]);
             }
             parent = input[i].category;
-            console.log(parent);
         }
         return children;
     };
