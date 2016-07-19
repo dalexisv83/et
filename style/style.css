@@ -209,7 +209,7 @@ ul.nav {
     text-transform: uppercase;
 }
 
-#top a + a {
+#top li + li {
     border-left: 1px solid white;
 }
 
@@ -228,6 +228,14 @@ ul.nav {
 
 #sub a {
     color: #808284;
+    border-left: 2px solid #808284;
+    padding: 0px 24px;
+    margin: 10px 0;
+    line-height: 18px;
+}
+
+#sub li:first-child a {
+    border-left: none;
 }
 
 #sub a:hover, #sub a.active {

@@ -1,6 +1,10 @@
 <div class="view-inner">
-    <div class="nav" id="sub">
-        <a ng-repeat-start="sub in premium.subs" ng-href="#/{{prem.params.tool}}/{{premium.name | lowercase | spcToHyphen}}/{{sub | getItByThat:data.subtabs:'name':'id' | lowercase | spcToHyphen}}" ng-class="{active: prem.params.subName == (sub | getItByThat:data.subtabs:'name':'id' | lowercase | spcToHyphen)}">{{sub | getItByThat:data.subtabs:'name':'id'}}</a><span class="navDivider" ng-if="!$last" ng-repeat-end> | </span>
+    <div>
+        <ul class="nav" id="sub">
+            <li ng-repeat="sub in premium.subs">
+                <a ng-href="#/{{prem.params.tool}}/{{premium.name | lowercase | spcToHyphen}}/{{sub | getItByThat:data.subtabs:'name':'id' | lowercase | spcToHyphen}}" ng-class="{active: prem.params.subName == (sub | getItByThat:data.subtabs:'name':'id' | lowercase | spcToHyphen)}" ng-bind="sub | getItByThat:data.subtabs:'name':'id'">Loading&hellip;</a>
+            </li>
+        </ul>
     </div>
     <div class="outer">
     <div class="grid">
