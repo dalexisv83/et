@@ -15,7 +15,7 @@
                     <img class="photo" ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{calendar.program | lowercase | spcToHyphen}}.jpg" />
                 </div>
                 <div class="grid__item one-seventh" id="aside">
-                    <img ng-src="img/{{premium.name | lowercase | spcToHyphen}}.png" />
+                    <img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{premium.name | lowercase | spcToHyphen}}.png" />
                     <div class="info" ng-hide="(premium.price == null) && (premium.channels == null) && data.tool == !'sports'">
                         <p ng-if="data.tool == 'sports'">Regular Season Offer<br />{{premium.startReg}} - {{premium.endReg}}</p>
                         <div ng-show="premium.multiReg" class="price">
