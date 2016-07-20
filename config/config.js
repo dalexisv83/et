@@ -22,7 +22,7 @@
                         controllerAs: 'prem',
                         resolve: {
                             contentData: ['$route', 'ContentPromise', function($route, ContentPromise) {
-                                return ContentPromise($route.current.params.tool);
+                                return new ContentPromise($route.current.params.tool);
                             }
                         ]}
                     })
@@ -32,7 +32,7 @@
                         controllerAs: 'prem',
                         resolve: {
                             contentData: ['$route', 'ContentPromise', function($route, ContentPromise) {
-                                return ContentPromise($route.current.params.tool);
+                                return new ContentPromise($route.current.params.tool);
                             }
                         ]}
                     });

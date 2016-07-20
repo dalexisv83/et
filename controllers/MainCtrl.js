@@ -23,12 +23,14 @@ var checkSubs = function(obj, premium, sub) {
     },
 
     getChildren = function (input) {
+        'use strict';
         var i,
             parent,
             children = [];
         for (i = input.length - 1; i >= 0; i -= 1) {
-            if (input[i].category == parent) {
-                children.push.apply(children, [input[i].name, input[i+1].name]);
+            if (input[i].category === parent) {
+                children.push(input[i].name);
+                children.push(input[i+1].name);
             }
             parent = input[i].category;
         }
@@ -39,16 +41,25 @@ var checkSubs = function(obj, premium, sub) {
 (function(angular) {
     'use strict';
     angular.module('entertainment')
-        .factory('ContentFactory', [
+        .factory('Content', [
             '$resource',
-            function ($resource, toolName){
-                var Content = function (toolName){
+            function ($resource){
+                return function(toolName){
                     return $resource('data/' + toolName + '.js',{},{'get': { method:'GET', cache: true}});
                 };
-                return function ContentFactory(toolName){
+            }]);
+}(window.angular));
+
+(function(angular) {
+    'use strict';
+    angular.module('entertainment')
+        .factory('ContentFactory', [
+            'Content',
+            function (Content){
+                return function(toolName){
                     var contentFactory = new Content(toolName);
                     return contentFactory;
-                }
+                };
             }]);
 }(window.angular));
 
@@ -57,12 +68,12 @@ var checkSubs = function(obj, premium, sub) {
     angular.module('entertainment')
         .factory('ContentPromise', [
             'ContentFactory',
-            function (ContentFactory, toolName){
+            function (ContentFactory){
                 return function(toolName) {
-                    return ContentFactory(toolName).get().$promise.then(function(data) {
+                    return new ContentFactory(toolName).get().$promise.then(function(data) {
                         return data;
                     });
-                }
+                };
             }]);
 }(window.angular));
 
@@ -81,9 +92,9 @@ var checkSubs = function(obj, premium, sub) {
                     if (test) {
                         switch (test) {
                             case 'entertainment':
-                                return 'Entertainment Tool'
+                                return 'Entertainment Tool';
                             case 'sports':
-                                return 'Sports Sales Tool'
+                                return 'Sports Sales Tool';
                         }
                     }
                 };
