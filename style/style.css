@@ -130,6 +130,10 @@ tbody th {
     background-color: #808284;
 }
 
+.bg--blue {
+    background-color: #0088cc;
+}
+
 .corner {
     background-color: white;
     border: none;
@@ -142,6 +146,8 @@ tbody th {
 }
 
 .header {
+    position: relative;
+    z-index: 0;
     background: url(http://agentanswercenter.directv.com/en-us/res/system/img/rcc_bg.jpg) right -20px no-repeat #071F31;
 }
 
@@ -200,6 +206,8 @@ ul.nav {
 }
 
 #top {
+    position: relative;
+    z-index: 1;
     background-color: #404041;
 }
 
@@ -223,6 +231,8 @@ ul.nav {
 }
 
 #sub {
+    position: relative;
+    z-index: 0;
     background-color: #eaeaea;
 }
 
@@ -634,4 +644,20 @@ a.ui-datepicker-next {
     position: relative;
     top: -.4em;
     float: right;
+}
+
+.button {
+    display: block;
+    max-width: 300px;
+    margin: 0 auto 20px;
+    padding: 20px 40px;
+    text-align: center;
+}
+
+.button.bg--blue {
+    color: white;
+}
+
+.button.bg--blue:hover {
+    background-color: #0099dd;
 }

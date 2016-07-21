@@ -13,8 +13,11 @@
                 // Routing logic for calendar and premium views
                 // /:premName/:subName are variables, can be anything (hbo/overview or mtv/news) set by url
                 $routeProvider
-                    .when('/:tool', {
-                        redirectTo: '/:tool/baseball/overview'
+                    .when('/entertainment', {
+                        redirectTo: '/entertainment/hbo/overview'
+                    })
+                    .when('/sports', {
+                        redirectTo: '/sports/nfl-sunday-ticket-max/overview'
                     })
                     .when('/:tool/:premName', {
                         templateUrl: 'views/main.htm',
@@ -35,6 +38,12 @@
                                 return new ContentPromise($route.current.params.tool);
                             }
                         ]}
+                    })
+                    .otherwise({
+                        redirectTo: '/choose',
+                        templateUrl: 'views/choose.htm',
+                        controller: 'ChooseCtrl',
+                        controllerAs: 'choose'
                     });
 
                 // Important for IE to modern browser url compatibilty

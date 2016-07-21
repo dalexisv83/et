@@ -70,9 +70,13 @@ var checkSubs = function(obj, premium, sub) {
             'ContentFactory',
             function (ContentFactory){
                 return function(toolName) {
-                    return new ContentFactory(toolName).get().$promise.then(function(data) {
-                        return data;
-                    });
+                    return new ContentFactory(toolName).get().$promise.then(
+                        function(data) {
+                            return data;
+                        }, function () {
+                            return null;
+                        }
+                    );
                 };
             }]);
 }(window.angular));
@@ -82,6 +86,9 @@ var checkSubs = function(obj, premium, sub) {
     angular.module('entertainment')
         .controller('MainCtrl', ['$scope', '$route', '$routeParams', '$location', '$filter', 'contentData',
             function($scope, $route, $routeParams, $location, $filter, contentData) {
+                if (!contentData) {
+                    $location.path('choose').replace();
+                }
                 this.name = 'MainCtrl';
                 this.$route = $route;
                 this.$location = $location;
@@ -97,6 +104,7 @@ var checkSubs = function(obj, premium, sub) {
                                 return 'Sports Sales Tool';
                         }
                     }
+                    return false;
                 };
                 $scope.aParam = function(param, value, filter, filterparam1, filterparam2, filterparam3) {
                     if (filter) {
@@ -112,16 +120,18 @@ var checkSubs = function(obj, premium, sub) {
                 $scope.$watch('trivia', function() {
                     $location.search('trivia', $scope.trivia);
                 });
-                $scope.children = getChildren($scope.data.premiums);
-                $scope.premium = $filter('filter')($scope.data.premiums, { url: $routeParams.premName })[0];
-                var premNameFiltered = $filter('getItByThat')($routeParams.premName, $scope.data.premiums, 'id', 'url'),
-                    subNameFiltered = $filter('getItByThat')($routeParams.subName, $scope.data.subtabs, 'id', 'url');
-                if (($routeParams.tool !== undefined) && ($routeParams.premName !== undefined) && ($routeParams.premName !== 'calendar') && ($routeParams.subName === undefined)) {
-                    $location.path($routeParams.tool + '/' + $routeParams.premName + '/overview');
-                }
-                if (($routeParams.premName !== undefined) && ($routeParams.subName !== undefined)) {
-                    if (!checkSubs($scope.data, premNameFiltered, subNameFiltered)) {
-                        $location.path($routeParams.tool + '/' + $routeParams.premName + '/overview');
+                if ($scope.data) {
+                    $scope.children = getChildren($scope.data.premiums);
+                    $scope.premium = $filter('filter')($scope.data.premiums, { url: $routeParams.premName })[0];
+                    var premNameFiltered = $filter('getItByThat')($routeParams.premName, $scope.data.premiums, 'id', 'url'),
+                        subNameFiltered = $filter('getItByThat')($routeParams.subName, $scope.data.subtabs, 'id', 'url');
+                    if (($routeParams.tool !== undefined) && ($routeParams.premName !== undefined) && ($routeParams.premName !== 'calendar') && ($routeParams.subName === undefined)) {
+                        $location.path($routeParams.tool + '/' + $routeParams.premName + '/overview').replace();
+                    }
+                    if (($routeParams.premName !== undefined) && ($routeParams.subName !== undefined)) {
+                        if (!checkSubs($scope.data, premNameFiltered, subNameFiltered)) {
+                            $location.path($routeParams.tool + '/' + $routeParams.premName + '/overview').replace();
+                        }
                     }
                 }
                 $scope.versus = versus;
@@ -145,6 +155,9 @@ var checkSubs = function(obj, premium, sub) {
         .directive('subView', ['$routeParams', function($routeParams) {
             return {
                 templateUrl: function() {
+                    if ($routeParams.tool === 'choose') {
+                        return 'views/choose.htm';
+                    }
                     switch($routeParams.premName) {
                         case 'calendar':
                             return 'views/calendar.htm';
