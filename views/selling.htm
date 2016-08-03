@@ -16,7 +16,7 @@
 <table class="by-team" ng-if="prem.params.subName == '101-by-team'" ng-repeat="conference in premium.conferences | orderBy:'name'">
     <tbody>
         <tr>
-            <td class="conference" width="33%" colspan="3">{{conference.name}}</td>
+            <td class="conference" colspan="{{(premium.divisions).length}}">{{conference.name}}</td>
         </tr>
         <tr>
             <td class="division" ng-repeat="division in premium.divisions | orderBy:'name' | filter:{conference: conference.id}">{{division.name}}</td>
