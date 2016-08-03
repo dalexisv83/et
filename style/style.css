@@ -623,13 +623,16 @@ a.ui-datepicker-next {
 }
 
 .trivia {
-    margin-top: 20px;
+    margin: 20px 0;
+    overflow: auto;
     border: 2px solid #0077dd;
     padding: 10px;
 }
 
 .trivia img {
     float: left;
+    width: 80px;
+    height: auto;
     margin-right: 10px;
     vertical-align: top;
 }
@@ -637,7 +640,6 @@ a.ui-datepicker-next {
 .trivia p {
     margin: 0;
     padding-right: 30px;
-    min-height: 64px;
 }
 
 .close {
