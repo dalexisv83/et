@@ -11,11 +11,11 @@
 <div>
     <ul class="nav" id="top">
         <li ng-repeat="premium in data.premiums | unique:'category'">
-            <a ng-if="children.indexOf(premium.name) < 0" ng-href="#/{{prem.params.tool}}/{{premium.name | lowercase | spcToHyphen}}/{{prem.params.subName}}" ng-class="{active: main.$routeParams.premName == (premium.name | lowercase | spcToHyphen)}" ng-bind="premium.category || premium.name">Loading Premiums&hellip;</a>
+            <a ng-if="children.indexOf(premium.name) < 0" ng-href="#/{{prem.params.tool}}/{{premium.name | lowercase | spcToHyphen}}/{{prem.params.subName}}" ng-class="{active: prem.params.premName == (premium.name | lowercase | spcToHyphen)}" ng-bind="premium.category || premium.name">Loading Premiums&hellip;</a>
             <span ng-if="children.indexOf(premium.name) >= 0" ng-class="{active: main.$routeParams.premName == (premium.name | lowercase | spcToHyphen)}" ng-bind="premium.category || premium.name">Loading Premiums&hellip;</span>
             <ul ng-if="children.indexOf(premium.name) >= 0">
                 <li ng-repeat="premium in data.premiums | filter:{category:$parent.premium.category}">
-                    <a ng-href="#/{{prem.params.tool}}/{{premium.name | lowercase | spcToHyphen}}/{{prem.params.subName}}" ng-class="{active: main.$routeParams.premName == (premium.name | lowercase | spcToHyphen)}" ng-bind="premium.name">Loading Premiums&hellip;</a>
+                    <a ng-href="#/{{prem.params.tool}}/{{premium.name | lowercase | spcToHyphen}}/{{prem.params.subName}}" ng-class="{active: prem.params.premName == (premium.name | lowercase | spcToHyphen)}" ng-bind="premium.name">Loading Premiums&hellip;</a>
                 </li>
             </ul>
         </li>
