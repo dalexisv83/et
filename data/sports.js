@@ -58,7 +58,7 @@
         }, {
             "id": 5,
             "subtab": 2,
-            "title": "",
+            "title": null,
             "point": ["Watch up to 8 in-progress games on one screen. Highlight and click to watch one game full screen.", "Airs on Tuesday and Friday nights during the regular season", null]
         }, {
             "id": 6,
@@ -316,7 +316,7 @@
             "id": 1,
             "subtab": 1,
             "title": null,
-            "point": [null, "See the most NBA regular season games with up to 40 live out-of-market games per week", "Follow your favorite NBA team all season long anywhere ", "NBA League Pass is for the ultimate basketball fan"]
+            "point": ["See the most NBA regular season games with up to 40 live out-of-market games per week", "Follow your favorite NBA team all season long anywhere ", "NBA League Pass is for the ultimate basketball fan"]
         }, {
             "id": 2,
             "subtab": 3,
@@ -331,7 +331,7 @@
             "id": 4,
             "subtab": 3,
             "title": "Emphasize mobility:",
-            "point": ["You'll get NBA League Pass Broadband and Mobile at no additional cost.", null, "Watch basketball wherever you go!"]
+            "point": ["You'll get NBA League Pass Broadband and Mobile at no additional cost.", "Watch basketball wherever you go!"]
         }, {
             "id": 5,
             "subtab": 3,
@@ -341,12 +341,12 @@
             "id": 6,
             "subtab": 2,
             "title": null,
-            "point": ["Get up to 40 live out-of-market games a week", "Access live NBA games on your favorite connected device (smartphone, tablet, computer\/laptop), so you can watch basketball wherever you are.", null, "Your ticket to the most NBA action"]
+            "point": ["Get up to 40 live out-of-market games a week", "Access live NBA games on your favorite connected device (smartphone, tablet, computer\/laptop), so you can watch basketball wherever you are.", "Your ticket to the most NBA action"]
         }, {
             "id": 7,
             "subtab": 6,
             "title": null,
-            "point": [null, "National Basketball Association (NBA) has 2 conferences (Eastern and Western), and each conference is divided into 3 divisions for a total of 30 teams.", "The top 8 teams from each conference qualify for the playoffs.", "In the 2015-2016 season, the Cleveland Cavaliers beat the Golden State Warriors in the NBA Finals."]
+            "point": ["National Basketball Association (NBA) has 2 conferences (Eastern and Western), and each conference is divided into 3 divisions for a total of 30 teams.", "The top 8 teams from each conference qualify for the playoffs.", "In the 2015-2016 season, the Cleveland Cavaliers beat the Golden State Warriors in the NBA Finals."]
         }, {
             "id": 8,
             "subtab": 6,
@@ -436,6 +436,207 @@
         "endFinal": null,
         "channelRange": "701-718",
         "sellingPoints": null,
+        "conferences": [{
+            "id": 1,
+            "name": "American Football Conference (AFC)"
+        }, {
+            "id": 2,
+            "name": "National Football Conference (NFC)"
+        }],
+        "divisions": [{
+            "id": 1,
+            "conference": 1,
+            "name": "AFC North"
+        }, {
+            "id": 2,
+            "conference": 1,
+            "name": "AFC South"
+        }, {
+            "id": 3,
+            "conference": 1,
+            "name": "AFC East"
+        }, {
+            "id": 4,
+            "conference": 1,
+            "name": "AFC West"
+        }, {
+            "id": 5,
+            "conference": 2,
+            "name": "NFC North"
+        }, {
+            "id": 6,
+            "conference": 2,
+            "name": "NFC South"
+        }, {
+            "id": 7,
+            "conference": 2,
+            "name": "NFC East"
+        }, {
+            "id": 8,
+            "conference": 2,
+            "name": "NFC West"
+        }],
+        "teams": [{
+            "id": 1,
+            "division": 1,
+            "name": "Baltimore Ravens",
+            "point": ["Egdar Allen Poe"]
+        }, {
+            "id": 2,
+            "division": 1,
+            "name": "Cincinatti Bengals",
+            "point": ["Boomer Esiason"]
+        }, {
+            "id": 3,
+            "division": 1,
+            "name": "Cleveland Browns",
+            "point": ["LeBron James"]
+        }, {
+            "id": 4,
+            "division": 1,
+            "name": "Pittsburgh Steelers",
+            "point": ["Jerome Bettis"]
+        }, {
+            "id": 5,
+            "division": 2,
+            "name": "Houston Texans",
+            "point": ["???"]
+        }, {
+            "id": 6,
+            "division": 2,
+            "name": "Indianapolis Colts",
+            "point": ["kjsadf"]
+        }, {
+            "id": 7,
+            "division": 2,
+            "name": "Jacksonville Jaguars",
+            "point": ["Jerome Bettis"]
+        }, {
+            "id": 8,
+            "division": 2,
+            "name": "Tennessee Titans",
+            "point": ["Jerome Bettis"]
+        }, {
+            "id": 9,
+            "division": 3,
+            "name": "Buffalo Bills",
+            "point": ["???"]
+        }, {
+            "id": 10,
+            "division": 3,
+            "name": "Miami Dolphins",
+            "point": ["kjsadf"]
+        }, {
+            "id": 11,
+            "division": 3,
+            "name": "New England Patriots",
+            "point": ["Jerome Bettis"]
+        }, {
+            "id": 12,
+            "division": 3,
+            "name": "New York Jets",
+            "point": ["Jerome Bettis"]
+        }, {
+            "id": 13,
+            "division": 4,
+            "name": "Denver Broncos",
+            "point": ["???"]
+        }, {
+            "id": 14,
+            "division": 4,
+            "name": "Kansas City Chiefs",
+            "point": ["kjsadf"]
+        }, {
+            "id": 15,
+            "division": 4,
+            "name": "Oakland Raiders",
+            "point": ["Jerome Bettis"]
+        }, {
+            "id": 16,
+            "division": 4,
+            "name": "San Diego Chargers",
+            "point": ["Jerome Bettis"]
+        }, {
+            "id": 17,
+            "division": 5,
+            "name": "Chicago Bears",
+            "point": ["???"]
+        }, {
+            "id": 18,
+            "division": 5,
+            "name": "Detroit Lions",
+            "point": ["kjsadf"]
+        }, {
+            "id": 19,
+            "division": 5,
+            "name": "Green Bay Packers",
+            "point": ["Jerome Bettis"]
+        }, {
+            "id": 20,
+            "division": 5,
+            "name": "Minnesota Vikings",
+            "point": ["Jerome Bettis"]
+        }, {
+            "id": 21,
+            "division": 6,
+            "name": "Atlanta Falcons",
+            "point": ["???"]
+        }, {
+            "id": 22,
+            "division": 6,
+            "name": "Carolina Panthers",
+            "point": ["kjsadf"]
+        }, {
+            "id": 23,
+            "division": 6,
+            "name": "New Orleans Saints",
+            "point": ["Jerome Bettis"]
+        }, {
+            "id": 24,
+            "division": 6,
+            "name": "Tampa Bay Buccaneers",
+            "point": ["Jerome Bettis"]
+        }, {
+            "id": 25,
+            "division": 7,
+            "name": "Dallas Cowboys",
+            "point": ["???"]
+        }, {
+            "id": 26,
+            "division": 7,
+            "name": "New York Giants",
+            "point": ["kjsadf"]
+        }, {
+            "id": 27,
+            "division": 7,
+            "name": "Philadelphia Eagles",
+            "point": ["Jerome Bettis"]
+        }, {
+            "id": 28,
+            "division": 7,
+            "name": "Washington Redskins",
+            "point": ["Jerome Bettis"]
+        }, {
+            "id": 29,
+            "division": 8,
+            "name": "Arizona Cardinals",
+            "point": ["???"]
+        }, {
+            "id": 30,
+            "division": 8,
+            "name": "Los Angeles Rams",
+            "point": ["kjsadf"]
+        }, {
+            "id": 31,
+            "division": 8,
+            "name": "San Francisco 49ers",
+            "point": ["Jerome Bettis"]
+        }, {
+            "id": 32,
+            "division": 8,
+            "name": "Seattle Seahawks",
+            "point": ["Jerome Bettis"]
+        }],
         "objections": null,
         "subs": [1, 2, 3, 4, 7, 10],
         "disclosures": []
@@ -517,7 +718,7 @@
         "id": 6,
         "category": "Soccer",
         "name": "MLS Direct Kick",
-        "url": "mls-direct-kick-",
+        "url": "mls-direct-kick",
         "aacURL": null,
         "dotcomURL": null,
         "startSeason": null,
@@ -597,15 +798,15 @@
     "disclosures": [{
         "id": 1,
         "lvl1": "MLB Extra Innings automatically continues each year, provided DIRECTV carries this service, unless customer calls to cancel prior to the season.",
-        "lvl2": [""]
+        "lvl2": null
     }, {
         "id": 2,
         "lvl1": "MLB Extra Innings cannot be cancelled, transferred, refunded, or credited (in part or in whole) after the season starts.",
-        "lvl2": [""]
+        "lvl2": null
     }, {
         "id": 3,
         "lvl1": "Sports schedules can change due to unforeseen circumstances.",
-        "lvl2": [""]
+        "lvl2": null
     }, {
         "id": 4,
         "lvl1": "Blackout rules apply.",
@@ -613,23 +814,23 @@
     }, {
         "id": 5,
         "lvl1": "This subscription will continue at a special rate each year unless you cancel it before the season starts.",
-        "lvl2": [""]
+        "lvl2": null
     }, {
         "id": 6,
         "lvl1": "NBA League Pass cannot be cancelled, transferred, refunded, or credited (in part in or in whole) after the season starts.",
-        "lvl2": [""]
+        "lvl2": null
     }, {
         "id": 7,
         "lvl1": "NBA League Pass shows out of market games only. Games may be subject to local, regional, and national blackout restrictions.",
-        "lvl2": [""]
+        "lvl2": null
     }, {
         "id": 8,
         "lvl1": "This subscription will continue at a special rate each year unless you cancel it before the season starts.",
-        "lvl2": [""]
+        "lvl2": null
     }, {
         "id": 9,
         "lvl1": "NHL Center Ice cannot be cancelled, transferred, refunded, or credited (in part or in whole) after the season starts.",
-        "lvl2": [""]
+        "lvl2": null
     }, {
         "id": 10,
         "lvl1": "NHL Center Ice shows out of market games only. Games may be subject to local, regional, and national blackout restrictions. Blackout restrictions apply regardless of arena sellouts or game site.",
