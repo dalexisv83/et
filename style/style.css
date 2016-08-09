@@ -251,6 +251,10 @@ tbody th {
     color: #454545;
 }
 
+.cycle-carousel-wrap {
+    width: 100%;
+}
+
 #selling ul {
     margin: 0;
 }
