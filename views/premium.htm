@@ -5,7 +5,7 @@
     <div class="outer">
     <div class="grid">
         <div class="grid__item one-eighth bg__col bg--light-grey" ng-if="(prem.params.premName !== 'sports-pack') && (prem.params.premName !== 'streaming')" ng-include="'views/playing.htm'" id="playing"></div>
-        <div class="grid__item seven-eighths bg__col bg--white">
+        <div class="grid__item seven-eighths bg--white">
             <div class="grid">
                 <div class="grid__item one-third bg__box bg--dark-grey" ng-if="prem.params.subName === 'overview'" ng-repeat="calendar in data.calendars | filter:{premium: premium.id} | limitTo: 3">
                     <img class="photo" ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{calendar.program | lowercase | spcToHyphen}}.jpg" />
