@@ -17,6 +17,7 @@
                 <div class="grid__item" ng-class="{'one-seventh': (data.tool != 'sports'), 'one-eighth': (data.tool == 'sports')}" id="aside">
                     <img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{premium.name | lowercase | spcToHyphen}}-logo.png" />
                     <div class="info" ng-hide="(premium.price == null) && (premium.channels == null) && data.tool == !'sports'">
+                        <div ng-show="premium.price" class="price"><span ng-if="isStringNumber(premium.price)">&#36;</span>{{premium.price}}</div>
                         <p ng-if="data.tool == 'sports'">Regular Season Offer<br />{{premium.startReg}} - {{premium.endReg}}</p>
                         <div ng-show="premium.multiReg" class="price">
                             <span ng-if="isStringNumber(premium.multiReg)">&#36;</span>{{premium.multiReg}}<span style="font-size: .8em;">/month - Multi Pay</span><br />
