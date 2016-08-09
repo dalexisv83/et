@@ -18,7 +18,7 @@ body {
 }
 
 img {
-    width: 100%\9;
+    width: 100% \9;
     max-width: 100%;
     height: auto;
 }
@@ -97,8 +97,6 @@ tbody th {
     margin-left: -24px;
     z-index: -2;
     background-color: inherit;
-    /* box-sizing: content-box; */
-    /* padding-right: 12px; */
 }
 
 .bg__box {
@@ -114,8 +112,6 @@ tbody th {
     bottom: 0;
     z-index: -1;
     background-color: inherit;
-    /* box-sizing: content-box; */
-    /* padding-right: 12px; */
 }
 
 .bg--white {
@@ -292,6 +288,10 @@ ul.nav {
 
 #playing a {
     color: #454545;
+}
+
+.cycle-carousel-wrap {
+    width: 100%;
 }
 
 #selling > ul {
