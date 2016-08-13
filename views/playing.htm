@@ -1,7 +1,8 @@
+<div class="outer">
 <h2>Playing This Month</h2>
 <button data-cycle-cmd="prev" data-cycle-context="#playCarousel">Previous</button>
-<div id="playCarousel" data-cycle-fx="carousel" data-cycle-timeout="3500" data-cycle-slides="> div" data-cycle-carousel-visible="3" data-cycle-carousel-vertical="true" data-cycle-log="false" cycle-slideshow>
-    <div ng-repeat="calendar in data.calendars |
+<div class="grid" id="playCarousel" data-cycle-fx="carousel" data-cycle-slides="> div" data-cycle-log="false" cycle-slideshow>
+    <div class="grid__item one-third" ng-repeat="calendar in data.calendars |
 filter:{premium: premium.id} |
 progType:prem.params.subName">
         <a ng-href="#/calendar?program={{calendar.program | encode}}"><img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{calendar.image || calendar.program | lowercase | spcToHyphen}}.jpg" /></a>
@@ -12,3 +13,4 @@ progType:prem.params.subName">
     </div>
 </div>
 <button data-cycle-cmd="next" data-cycle-context="#playCarousel">Next</button>
+</div>

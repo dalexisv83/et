@@ -810,7 +810,7 @@
     width: 91.666%;
   }
 }
-@media only screen and (min-width: 565px) and (max-width: 750px) {
+@media only screen and (min-width: 565px) and (max-width: 768px) {
   /**
    * Whole
    */
@@ -1077,7 +1077,7 @@
     width: 91.666%;
   }
 }
-@media only screen and (min-width: 751px) and (max-width: 1023px) {
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
   /**
    * Whole
    */

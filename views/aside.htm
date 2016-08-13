@@ -1,0 +1,58 @@
+<div class="grid">
+    <div class="grid__item one-quarter portable--one-whole desk--one-whole">
+        <img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{premium.name | lowercase | spcToHyphen}}-logo.png" />
+    </div>
+    <div class="grid__item three-quarters portable--one-whole desk--one-whole">
+        <div class="grid grid--full">
+            <div class="grid__item two-thirds portable--one-whole desk--one-whole">
+                <div class="info" ng-show="(premium.price || premium.channels || (premium.startReg && premium.endReg))">
+                    <div class="grid">
+                        <div class="grid__item one-half portable--one-whole desk--one-whole">
+                            <div ng-if="premium.price" class="price"><span ng-if="isStringNumber(premium.price)">&#36;</span>{{premium.price}}</div>
+                            <p ng-if="premium.startReg && premium.endReg">Regular Season Offer
+                                <br />{{premium.startReg | excelDate | date: aacFormats.DATE}} - {{premium.endReg | excelDate | date: aacFormats.DATE}}</p>
+                            <div ng-if="premium.multiReg" class="price">
+                                <span ng-if="isStringNumber(premium.multiReg)">&#36;</span>{{premium.multiReg}}<small>/month - Multi Pay</small>
+                                <br />
+                                <span ng-if="isStringNumber(premium.oneReg)">&#36;</span>{{premium.oneReg}}<small> - One Pay</small>
+                            </div>
+                        </div>
+                        <div class="grid__item one-half portable--one-whole desk--one-whole">
+                            <a ng-if="premium.channels" ng-href="#/{{prem.params.tool}}/{{prem.params.premName}}/channels">
+                                <ul>
+                                    <li>{{premium.channels.length}} Channels</li>
+                                    <li>{{HD = (premium.channels | filter:{HD: true, SD: false}).length}} HD Only</li>
+                                    <li>{{SD = (premium.channels | filter:{HD: false, SD: true}).length}} SD Only</li>
+                                    <li>{{SDHD = (premium.channels | filter:{HD: true, SD: true}).length}} SD/HD</li>
+                                </ul>
+                            </a>
+                            <ul ng-if="premium.channelRange">
+                                <li>Channels {{premium.channelRange}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid__item one-third portable--one-whole desk--one-whole">
+                <div ng-if="premium.ODchan" class="info ondemand">
+                    {{premium.name}} DIRECTV On&nbsp;Demand Ch:&nbsp;{{premium.ODchan}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid__item">
+        <div class="dropdown">
+            <label for="helpful" class="helpful" dropdown>Useful Links</label>
+            <input type="checkbox" name="dropdown" id="helpful" />
+            <div>
+                <ul>
+                    <li ng-if="premium.premURL"><a ng-href="{{premium.premURL}}" target="_blank">{{premium.name}} Website</a></li>
+                    <li ng-if="premium.dotcomURL"><a ng-href="http://www.directv.com/{{premium.dotcomURL}}" target="_blank">{{premium.name}} on DIRECTV.com</a></li>
+                    <li ng-if="premium.aacURL"><a ng-href="http://agentanswercenter.directv.com/en-us/res/programming/{{premium.aacURL}}" target="_blank">{{premium.name}} on AAC</a></li>
+                    <li ng-if="premium.streamFrag"><a ng-href="http://agentanswercenter.directv.com/en-us/res/programming/{{premium.aacURL}}#fragment={{premium.streamFrag}}" target="_blank">{{premium.streamName}} on AAC</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

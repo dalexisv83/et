@@ -174,12 +174,36 @@ tbody th {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2baae1', endColorstr='#0072ae',GradientType=0 ); /* IE6-8 */
 }
 
-ul.nav {
+.nav {
     margin: 0;
 }
 
 .nav > li {
     display: inline-block;
+}
+
+.nav a, .nav span {
+    display: inline-block;
+    text-align: center;
+    padding: 7px 10px;
+    font-weight: bold;
+    font-size: .95em;
+}
+
+@media only screen and (min-width: 790px) {
+    .nav a, .nav span {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (min-width: 999px) {
+    .nav a, .nav span {
+        padding: 7px 24px;
+    }
+}
+
+.nav > li:first-child a {
+    padding-left: 24px;
 }
 
 .nav li ul {
@@ -208,7 +232,6 @@ ul.nav {
 }
 
 #top a, #top span {
-    min-width: 75px;
     color: #ddd;
     text-transform: uppercase;
 }
@@ -250,13 +273,6 @@ ul.nav {
 
 #sub a.active {
     text-decoration: underline;
-}
-
-.nav a, .nav span {
-    display: inline-block;
-    text-align: center;
-    padding: 7px 24px;
-    font-weight: bold;
 }
 
 .photo {
@@ -319,8 +335,17 @@ ul.nav {
     border: solid 1px #a7a9ab;
     font-weight: bold;
     padding: 5px;
-    border-bottom-color: #faa519;
-    border-bottom-width: 2px;
+    border-right-color: #faa519;
+    border-right-width: 2px;
+}
+
+@media only screen and (min-width: 769px) {
+    .info {
+        border-right-color: #a7a9ab;
+        border-right-width: 1px;
+        border-bottom-color: #faa519;
+        border-bottom-width: 2px;
+    }
 }
 
 .info ul {
@@ -331,8 +356,16 @@ ul.nav {
 .ondemand {
     font-size: .9em;
     padding-left: 10px;
-    border-top: none;
-    border-bottom-color: #a7a9ab;
+    border-left: none;
+    border-right-color: #a7a9ab;
+    border-right-width: 1px;
+}
+
+@media only screen and (min-width: 769px) {
+    .ondemand {
+        border-top: none;
+        border-bottom-color: #a7a9ab;
+    }
 }
 
 .price {
