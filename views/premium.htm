@@ -8,22 +8,22 @@
     </div>
     <div class="outer">
     <div class="grid">
-        <div class="grid__item one-eighth bg__col bg--light-grey" ng-if="data.tool != 'sports' && (prem.params.premName !== 'sports-pack') && (prem.params.premName !== 'streaming')" ng-include="'views/playing.htm'" id="playing"></div>
-        <div class="grid__item bg--white" ng-class="{'seven-eighths': (data.tool != 'sports'), 'one-whole': (data.tool == 'sports')}">
+        <div class="grid__item one-eighth bg__col bg--light-grey" ng-if="(data.calendars | filter:{premium: (prem.params.premName | getItByThat:data.premiums:'id':'url')}).length" ng-include="'views/playing.htm'" id="playing"></div>
+        <div class="grid__item bg--white" ng-class="{'seven-eighths': (data.calendars), 'one-whole': (!data.calendars)}">
             <div class="grid">
                 <div class="grid__item one-third bg__box bg--dark-grey" ng-if="prem.params.subName === 'overview'" ng-repeat="calendar in data.calendars | filter:{premium: premium.id} | limitTo: 3">
                     <img class="photo" ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{calendar.program | lowercase | spcToHyphen}}.jpg" />
                 </div>
-                <div class="grid__item" ng-class="{'one-seventh': (data.tool != 'sports'), 'one-eighth': (data.tool == 'sports')}" id="aside">
+                <div class="grid__item" ng-class="{'one-seventh': data.calendars, 'one-eighth': !data.calendars}" id="aside">
                     <img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{premium.name | lowercase | spcToHyphen}}-logo.png" />
-                    <div class="info" ng-hide="(premium.price == null) && (premium.channels == null) && data.tool == !'sports'">
-                        <div ng-show="premium.price" class="price"><span ng-if="isStringNumber(premium.price)">&#36;</span>{{premium.price}}</div>
-                        <p ng-if="data.tool == 'sports'">Regular Season Offer<br />{{premium.startReg}} - {{premium.endReg}}</p>
-                        <div ng-show="premium.multiReg" class="price">
-                            <span ng-if="isStringNumber(premium.multiReg)">&#36;</span>{{premium.multiReg}}<span style="font-size: .8em;">/month - Multi Pay</span><br />
-                            <span ng-if="isStringNumber(premium.oneReg)">&#36;</span>{{premium.oneReg}}<span style="font-size: .8em;"> - One Pay</span><br />
+                    <div class="info" ng-show="(premium.price || premium.channels || (premium.startReg && premium.endReg))">
+                        <div ng-if="premium.price" class="price"><span ng-if="isStringNumber(premium.price)">&#36;</span>{{premium.price}}</div>
+                        <p ng-if="premium.startReg && premium.endReg">Regular Season Offer<br />{{premium.startReg | excelDate | date: aacFormats.DATE}} - {{premium.endReg | excelDate | date: aacFormats.DATE}}</p>
+                        <div ng-if="premium.multiReg" class="price">
+                            <span ng-if="isStringNumber(premium.multiReg)">&#36;</span>{{premium.multiReg}}<small>/month - Multi Pay</small><br />
+                            <span ng-if="isStringNumber(premium.oneReg)">&#36;</span>{{premium.oneReg}}<small> - One Pay</small>
                         </div>
-                        <a ng-if="data.tool != 'sports'" ng-show="premium.channels" ng-href="#/{{prem.params.tool}}/{{prem.params.premName}}/channels">
+                        <a ng-if="premium.channels" ng-href="#/{{prem.params.tool}}/{{prem.params.premName}}/channels">
                             <ul>
                                 <li>{{premium.channels.length}} Channels</li>
                                 <li>{{HD = (premium.channels | filter:{HD: true, SD: false}).length}} HD Only</li>
@@ -31,11 +31,11 @@
                                 <li>{{SDHD = (premium.channels | filter:{HD: true, SD: true}).length}} SD/HD</li>
                             </ul>
                         </a>
-                        <ul ng-if="data.tool == 'sports'">
+                        <ul ng-if="premium.channelRange">
                             <li>Channels {{premium.channelRange}}</li>
                         </ul>
                     </div>
-                    <div ng-show="{{premium.ODchan}}" class="info ondemand">
+                    <div ng-if="premium.ODchan" class="info ondemand">
                         {{premium.name}} DIRECTV On&nbsp;Demand Ch:&nbsp;{{premium.ODchan}}
                     </div>
                     <div class="dropdown">
@@ -51,13 +51,14 @@
                         </div>
                     </div>
                 </div>
-                <div ng-if="(prem.params.subName !== 'channels') && (prem.params.subName !== 'streaming') && (prem.params.subName !== 'breakdown') && (prem.params.subName !== 'pricing')" ng-include="'views/selling.htm'" id="selling" class="grid__item" ng-class="{'three-sevenths': (data.tool != 'sports'), 'four-eighths': (data.tool == 'sports')}"></div>
-                <div ng-if="prem.params.subName === 'pricing'" ng-include="'views/pricing.htm'" id="pricing" class="grid__item three-sevenths"></div>
-                <div ng-if="prem.params.subName === 'breakdown'" ng-include="'views/breakdown.htm'" id="breakdown" class="grid__item six-sevenths"></div>
-                <div ng-if="data.tool == 'sports' || prem.params.subName === 'overview'" ng-include="'views/objections.htm'" id="objections" class="grid__item accordion" ng-class="{'three-sevenths': (data.tool != 'sports'), 'three-eighths': (data.tool == 'sports')}"></div>
-                <div ng-if="data.tool != 'sports' && (prem.params.subName !== 'channels') && (prem.params.subName !== 'overview') && (prem.params.subName !== 'streaming') && (prem.params.subName !== 'breakdown')" ng-include="'views/movieorig.htm'" id="movieorig" class="grid__item three-sevenths movieorig accordion"></div>
-                <div ng-if="prem.params.subName === 'channels'" ng-include="'views/channels.htm'" class="grid__item six-sevenths" id="channels"></div>
-                <div ng-if="prem.params.subName === 'streaming'" ng-include="'views/streaming.htm'" class="grid__item six-sevenths" id="streaming"></div>
+                <div ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasSelling" ng-include="'views/selling.htm'" id="selling" class="grid__item" ng-class="{'three-sevenths': (data.calendar), 'four-eighths': (!data.calendar)}"></div>
+                <div ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasByTeam" ng-include="'views/by-team.htm'" class="grid__item four-eighths" id="by-team"></div>
+                <div ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasPricing" ng-include="'views/pricing.htm'" id="pricing" class="grid__item three-sevenths"></div>
+                <div ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasBreakdown" ng-include="'views/breakdown.htm'" id="breakdown" class="grid__item six-sevenths"></div>
+                <div ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasObjection" ng-include="'views/objections.htm'" id="objections" class="grid__item accordion" ng-class="{'three-sevenths': (data.calendar), 'three-eighths': (!data.calendar)}"></div>
+                <div ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasBlue" ng-include="'views/movieorig.htm'" id="movieorig" class="grid__item three-sevenths movieorig accordion"></div>
+                <div ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasChannels" ng-include="'views/channels.htm'" class="grid__item six-sevenths" id="channels"></div>
+                <div ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasStreaming" ng-include="'views/streaming.htm'" class="grid__item six-sevenths" id="streaming"></div>
             </div>
         </div>
     </div>
