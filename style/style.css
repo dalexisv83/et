@@ -330,6 +330,10 @@ tbody th {
     padding: 10px;
 }
 
+.info-box {
+    position: relative;
+}
+
 .info {
     background-color: #e6e7e8;
     border: solid 1px #a7a9ab;
@@ -353,17 +357,28 @@ tbody th {
     padding-left: 10px;
 }
 
+.ondemand-box {
+    position: absolute;
+    height: 100%;
+}
+
 .ondemand {
     font-size: .9em;
     padding-left: 10px;
     border-left: none;
     border-right-color: #a7a9ab;
     border-right-width: 1px;
+    height: 100%;
 }
 
 @media only screen and (min-width: 769px) {
+    .ondemand-box {
+        position: static;
+        height: 100%;
+    }
     .ondemand {
         border-top: none;
+        border-left: solid 1px #a7a9ab;;
         border-bottom-color: #a7a9ab;
     }
 }

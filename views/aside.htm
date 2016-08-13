@@ -3,21 +3,21 @@
         <img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{premium.name | lowercase | spcToHyphen}}-logo.png" />
     </div>
     <div class="grid__item three-quarters portable--one-whole desk--one-whole">
-        <div class="grid grid--full">
+        <div class="grid grid--full info-box">
             <div class="grid__item two-thirds portable--one-whole desk--one-whole">
                 <div class="info" ng-show="(premium.price || premium.channels || (premium.startReg && premium.endReg))">
                     <div class="grid">
                         <div class="grid__item one-half portable--one-whole desk--one-whole">
                             <div ng-if="premium.price" class="price"><span ng-if="isStringNumber(premium.price)">&#36;</span>{{premium.price}}</div>
                             <p ng-if="premium.startReg && premium.endReg">Regular Season Offer
-                                <br />{{premium.startReg | excelDate | date: aacFormats.DATE}} - {{premium.endReg | excelDate | date: aacFormats.DATE}}</p>
+                                <br />{{premium.startReg | date: aacFormats.DATE}} - {{premium.endReg | date: aacFormats.DATE}}</p>
+                        </div>
+                        <div class="grid__item one-half portable--one-whole desk--one-whole">
                             <div ng-if="premium.multiReg" class="price">
                                 <span ng-if="isStringNumber(premium.multiReg)">&#36;</span>{{premium.multiReg}}<small>/month - Multi Pay</small>
                                 <br />
                                 <span ng-if="isStringNumber(premium.oneReg)">&#36;</span>{{premium.oneReg}}<small> - One Pay</small>
                             </div>
-                        </div>
-                        <div class="grid__item one-half portable--one-whole desk--one-whole">
                             <a ng-if="premium.channels" ng-href="#/{{prem.params.tool}}/{{prem.params.premName}}/channels">
                                 <ul>
                                     <li>{{premium.channels.length}} Channels</li>
@@ -26,16 +26,16 @@
                                     <li>{{SDHD = (premium.channels | filter:{HD: true, SD: true}).length}} SD/HD</li>
                                 </ul>
                             </a>
-                            <ul ng-if="premium.channelRange">
-                                <li>Channels {{premium.channelRange}}</li>
-                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="grid__item one-third portable--one-whole desk--one-whole">
+            <div class="grid__item one-third portable--one-whole desk--one-whole ondemand-box">
                 <div ng-if="premium.ODchan" class="info ondemand">
                     {{premium.name}} DIRECTV On&nbsp;Demand Ch:&nbsp;{{premium.ODchan}}
+                </div>
+                <div ng-if="premium.channelRange" class="info ondemand">
+                    Channels {{premium.channelRange}}
                 </div>
             </div>
         </div>
