@@ -1,0 +1,5 @@
+<form ng-controller="LookupCtrl">
+    <input type="text" ng-model="zip" />
+    <button ng-click="lookup = 'rsn'; zipClick = zip;">RSN</button><button ng-click="zip = null; lookup = null; zipClick = null;">Reset</button>
+    <div ng-if="lookup == 'rsn'" ng-include="'views/rsn.htm'"></div>
+</form>

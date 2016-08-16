@@ -35,6 +35,27 @@ var checkSubs = function(obj, premium, sub) {
             parent = input[i].category;
         }
         return children;
+    },
+
+    checkRange = function(items, model) {
+        if (items) {
+            var matches = [];
+            angular.forEach(items, function(value) {
+                var zips = value.ZIP_CODE.split('-');
+                zips[0]= Number(zips[0]);
+                if (zips[1]) {
+                    zips[1] = Number(zips[1]);
+                }
+                model = Number(model);
+                if (model == zips[0]) {
+                    matches.push(value);
+                }
+                if ((model >= zips[0]) && (model <= zips[1])) {
+                    matches.push(value);
+                }
+            });
+            return matches;
+        }
     };
 
 
@@ -125,7 +146,7 @@ var checkSubs = function(obj, premium, sub) {
                     $scope.premium = $filter('filter')($scope.data.premiums, { url: $routeParams.premName })[0];
                     var premNameFiltered = $filter('getItByThat')($routeParams.premName, $scope.data.premiums, 'id', 'url'),
                         subNameFiltered = $filter('getItByThat')($routeParams.subName, $scope.data.subtabs, 'id', 'url');
-                    if (($routeParams.tool !== undefined) && ($routeParams.premName !== undefined) && ($routeParams.premName !== 'calendar') && ($routeParams.subName === undefined)) {
+                    if (($routeParams.tool !== undefined) && ($routeParams.premName !== undefined) && ($routeParams.premName !== 'calendar') && ($routeParams.premName !== 'lookup') && ($routeParams.subName === undefined)) {
                         $location.path($routeParams.tool + '/' + $routeParams.premName + '/overview').replace();
                     }
                     if (($routeParams.premName !== undefined) && ($routeParams.subName !== undefined)) {
@@ -161,10 +182,41 @@ var checkSubs = function(obj, premium, sub) {
                     switch($routeParams.premName) {
                         case 'calendar':
                             return 'views/calendar.htm';
+                        case 'lookup':
+                            return 'views/lookup.htm';
                         default:
                             return 'views/premium.htm';
                     }
                 }
             };
         }]);
+}(window.angular));
+
+(function(angular) {
+    'use strict';
+    angular.module('entertainment')
+        .controller('LookupCtrl', ['$scope',
+            function($scope) {
+                $scope.zip = null;
+                $scope.lookup = null;
+            }
+        ]);
+}(window.angular));
+
+(function(angular) {
+    'use strict';
+    angular.module('entertainment')
+        .controller('RsnCtrl', ['$scope', '$filter', '$http',
+            function($scope, $filter, $http) {
+                $scope.rsndata = rsnzip; // $http.get("http://agentanswercenter.directv.com/en-us/res/rover_tools/rsn/rsnzip.js");
+            }
+        ]);
+}(window.angular));
+
+(function(angular) {
+    'use strict';
+    angular.module('entertainment')
+        .filter('checkRange', function() {
+            return checkRange;
+        })
 }(window.angular));
