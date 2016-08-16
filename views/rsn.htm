@@ -1,0 +1,17 @@
+<div ng-controller="RsnCtrl">
+<table datatable="ng">
+    <thead>
+        <tr>
+            <td>Zip Code</td><td>ST</td><td>Choice / Mas Ultra</td><td>Xtra</td><td>Choice / Mas Ultra with Sports Pack</td><td>Baseball</td><td>Basketball</td><td>Hockey</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="data in filteredRSN = (rsndata | checkRange:$parent.zipClick)">
+            <td>{{data.ZIP_CODE}}</td><td>{{data.STATE}}</td><td>{{data.CHOICE_MAS_ULTRA}}</td><td>{{data.XTRA}}</td><td>{{data.SPORTS_PACK}}</td><td>{{data.MLB}}</td><td>{{data.NBA}}</td><td>{{data.NHL}}</td>
+        </tr>
+        <tr ng-if="filteredRSN.length == 0">
+            <td colspan="8">Sorry there were no matches</td>
+        </tr>
+    </tbody>
+</table>
+</div>
