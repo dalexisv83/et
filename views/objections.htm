@@ -1,5 +1,5 @@
 <h2>Objections</h2>
-<label ng-repeat-start="objection in premium.objections" for="{{objection.category}}" dropdown>{{objection.category}}</label><input type="checkbox" name="accordion" id="{{objection.category}}">
+<label ng-repeat-start="objection in premium.objections" for="{{objection.category}}" dropdown><span ng-bind="objection.category"></span></label><input type="checkbox" name="accordion" id="{{objection.category}}">
 <div ng-repeat-end>
   <ul>
     <hr ng-repeat-start="response in objection.responses" ng-if="!$first" />
@@ -7,7 +7,7 @@
   </ul>
 </div>
 
-<label ng-if="premium.disclosures" for="disclosures" dropdown>Disclosures</label><input type="checkbox" name="accordion" id="disclosures">
+<label ng-if="premium.disclosures" for="disclosures" dropdown><span>Disclosures</span></label><input type="checkbox" name="accordion" id="disclosures">
 <div ng-if="premium.disclosures">
   <ul>
     <hr ng-repeat-start="disclosure in premium.disclosures" ng-if="!$first" />

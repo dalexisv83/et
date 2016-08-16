@@ -92,7 +92,7 @@ a:hover {
     text-decoration: underline;
 }
 
-label:hover {
+label:hover span {
     text-decoration: underline;
     cursor: pointer;
 }
@@ -497,14 +497,16 @@ tbody th {
     box-shadow: 1px 1px 5px #838383;
 }
 
-.accordion label:after {
+.accordion label:before {
     position: absolute;
     left: 10px;
-    content: '\2795';
+    font-weight: bold;
+    font-size: 1.1em;
+    content: '\2b';
 }
 
-.accordion label.open:after {
-    content: '\2796';
+.accordion label.open:before {
+    content: '\2212';
 }
 
 label[for=disclosures] {
@@ -587,7 +589,7 @@ label.helpful:after {
     content: ' \25B8';
 }
 
-label.checked.helpful:after {
+label.helpful.open:after {
     content: ' \25BE'
 }
 /*
