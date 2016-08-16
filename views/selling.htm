@@ -3,13 +3,4 @@
     <li ng-repeat-start="text in sellingPoint.point">{{text}}</li>
     <hr ng-if="!$last" ng-repeat-end />
 </ul>
-<div class="movieorig inner accordion" ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasBlueL">
-    <label ng-repeat-start="sellingPoint in bluePoints = (premium.sellingPoints | filter:{title: ''} | filter:{subtab: (prem.params.subName | getItByThat:data.subtabs:'id':'url')}) track by $index" for="{{sellingPoint.title}}" class="grad-blue" checker>{{sellingPoint.title}}</label>
-    <input type="radio" name="accordion" id="{{sellingPoint.title}}">
-    <div ng-repeat-end>
-        <ul>
-            <li ng-repeat-start="text in sellingPoint.point">{{text}}</li>
-            <hr ng-if="!$last" ng-repeat-end />
-        </ul>
-    </div>
-</div>
+<div class="movieorig inner accordion" ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasBlueL" ng-include="'views/accordion.htm'"></div>

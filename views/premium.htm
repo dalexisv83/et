@@ -17,7 +17,7 @@
                 <div ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasPricing" ng-include="'views/pricing.htm'" id="pricing" class="grid__item four-sevenths portable--three-sevenths desk--three-sevenths"></div>
                 <div ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasBreakdown" ng-include="'views/breakdown.htm'" id="breakdown" class="grid__item portable--six-sevenths desk--six-sevenths"></div>
                 <div ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasObjection" ng-include="'views/objections.htm'" id="objections" class="grid__item accordion three-sevenths"></div>
-                <div ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasBlue" ng-include="'views/movieorig.htm'" id="movieorig" class="grid__item four-sevenths portable--three-sevenths desk--three-sevenths movieorig accordion"></div>
+                <div ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasBlue" ng-include="'views/movieorig.htm'" id="movieorig" class="grid__item four-sevenths portable--three-sevenths desk--three-sevenths"></div>
                 <div ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasChannels" ng-include="'views/channels.htm'" class="grid__item six-sevenths" id="channels"></div>
                 <div ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasStreaming" ng-include="'views/streaming.htm'" class="grid__item six-sevenths" id="streaming"></div>
             </div>

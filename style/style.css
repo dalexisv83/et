@@ -488,12 +488,23 @@ tbody th {
 }
 
 .accordion label {
+    position: relative;
     display: inline-block;
     width: 100%;
     border-radius: 5px;
     background-color: #e6e7e8;
-    padding: 7px 10px 5px;
+    padding: 7px 10px 5px 30px;
     box-shadow: 1px 1px 5px #838383;
+}
+
+.accordion label:after {
+    position: absolute;
+    left: 10px;
+    content: '\2795';
+}
+
+.accordion label.open:after {
+    content: '\2796';
 }
 
 label[for=disclosures] {
@@ -507,7 +518,6 @@ label[for=disclosures] {
 }
 
 .movieorig.accordion label {
-    padding: 7px 10px 5px;
     color: white;
     box-shadow: 1px 1px 5px #838383;
 }
