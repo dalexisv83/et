@@ -1,13 +1,4 @@
-<div class="outer header">
-    <div class="grid grid--full">
-        <div class="grid__item one-half">
-            <img class="dtvLogo" src="http://agentanswercenter.directv.com/en-us/res/system/img/Logo_DTV_ATT.png">
-        </div>
-        <div class="grid__item one-half">
-            <h1 class="tool-title palm--center">{{tool(prem.params.tool)}}</h1>
-        </div>
-    </div>
-</div>
+<div ng-include="'views/header.htm'"></div>
 <div>
     <ul class="nav" id="top">
         <li ng-repeat="premium in data.premiums | unique:'category'">
@@ -18,9 +9,12 @@
                     <a ng-href="#/{{prem.params.tool}}/{{premium.name | lowercase | spcToHyphen}}/{{prem.params.subName}}" ng-class="{active: prem.params.premName == (premium.name | lowercase | spcToHyphen)}" ng-bind="premium.name">Loading Premiums&hellip;</a>
                 </li>
             </ul>
-        </li>
-        <li ng-if="data.calendars">
+        </li><!-- 
+         --><li ng-if="data.calendars">
             <a href="#/entertainment/calendar" ng-class="{active: main.$route.current.loadedTemplateUrl == 'views/calendar.htm'}">Calendar</a>
+        </li>
+        <li ng-if="!data.calendars">
+            <a href="#/sports/lookup" ng-class="{active: main.$route.current.loadedTemplateUrl == 'views/lookup.htm'}">Lookup</a>
         </li>
     </ul>
     <div class="sub-view" sub-view></div>

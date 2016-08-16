@@ -7,9 +7,9 @@
         </ul>
     </div>
     <div class="grid">
-        <div class="grid__item one-whole bg__col bg--light-grey" ng-if="(data.calendars | filter:{premium: (prem.params.premName | getItByThat:data.premiums:'id':'url')}).length" ng-include="'views/playing.htm'" id="playing"></div>
+        <div class="grid__item one-whole bg--dark-grey" ng-if="(data.calendars | filter:{premium: (prem.params.premName | getItByThat:data.premiums:'id':'url')}).length && data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasCarousel" ng-include="'views/playing.htm'" id="playing"></div>
     <div class="outer">
-        <div class="grid__item one-whole bg__col bg--white">
+        <div class="grid__item one-whole bg--white">
             <div class="grid">
                 <div class="grid__item portable--one-seventh desk--one-seventh" ng-include="'views/aside.htm'" id="aside"></div>
                 <div ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasSelling" ng-include="'views/selling.htm'" id="selling" class="grid__item four-sevenths portable--three-sevenths desk--three-sevenths"></div>

@@ -2,7 +2,7 @@
     'use strict';
     angular.module('entertainment.directives', [
         'directives.dropCheck',
-        'directives.cycleSlideshow',
+        'slick',
         'directives.datepicker'
     ]);
 }(window.angular));

@@ -1,16 +1,13 @@
 <div class="outer">
-<h2>Playing This Month</h2>
-<button data-cycle-cmd="prev" data-cycle-context="#playCarousel">Previous</button>
-<div class="grid" id="playCarousel" data-cycle-fx="carousel" data-cycle-slides="> div" data-cycle-log="false" cycle-slideshow>
-    <div class="grid__item one-third" ng-repeat="calendar in data.calendars |
+<slick class="grid" infinite="true" slides-to-show="4" slides-to-scroll="4" on-init="ieFix">
+    <div class="grid__item one-quarter" ng-repeat="calendar in data.calendars |
 filter:{premium: premium.id} |
 progType:prem.params.subName">
         <a ng-href="#/calendar?program={{calendar.program | encode}}"><img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{calendar.image || calendar.program | lowercase | spcToHyphen}}.jpg" /></a>
-        <h3><a ng-href="#/entertainment/calendar?program={{calendar.program | encode}}">{{calendar.program}}</a></h3>
+        <h3><a ng-href="#/entertainment/calendar?program={{calendar.program | encode}}" title="{{calendar.program}}">{{calendar.program}}</a></h3>
         <span>{{calendar.premDate | date:'MMM d'}}</span> &ndash; <span>{{calendar.premTime}}</span>
-        <br />{{calendar.chanNum}}
-        <br /><a ng-href="#/entertainment/calendar?program={{calendar.program | encode}}">More info</a>
+        | {{calendar.chanNum}}
+        | <a ng-href="#/entertainment/calendar?program={{calendar.program | encode}}">More&nbsp;info</a>&nbsp;&raquo;
     </div>
-</div>
-<button data-cycle-cmd="next" data-cycle-context="#playCarousel">Next</button>
+</slick>
 </div>
