@@ -99,11 +99,9 @@ var checkSubs = function(obj, premium, sub) {
                     if (test) {
                         switch (test) {
                             case 'entertainment':
-                                return 'Entertainment Tool';
+                                return 'hdr_entertainment.png';
                             case 'sports':
-                                return 'Sports Sales Tool';
-                            default:
-                                return 'Choose A Tool';
+                                return 'hdr_sports.png';
                         }
                     }
                     return false;

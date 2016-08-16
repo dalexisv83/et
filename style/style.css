@@ -1,63 +1,5 @@
 // console.log('<>');
 
-/* FONTS */
-@font-face {
-  font-family: "Omnes-ATT-W02";
-  src: url('http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02.eot');
-  src: url('http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02.eot?#iefix') format('embedded-opentype'), url("http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02.woff") format("woff"), url("http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Omnes-ATT-W02-Medium";
-  src: url('http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02Medium.eot');
-  src: url('http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02Medium.eot?#iefix') format('embedded-opentype'), url("http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02Medium.woff") format("woff"), url("http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02Medium.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Omnes-ATT-W02-Italic";
-  src: url('http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02Italic.eot');
-  src: url('http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02Italic.eot?#iefix') format('embedded-opentype'), url("http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02Italic.woff") format("woff"), url("http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02Italic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Omnes-ATT-W02-Light";
-  src: url('http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02Light.eot');
-  src: url('http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02Light.eot?#iefix') format('embedded-opentype'), url("http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02Light.woff") format("woff"), url("http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02Light.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Omnes-ATT-W02-Bold";
-  src: url('http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02Bold.eot');
-  src: url('http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02Bold.eot?#iefix') format('embedded-opentype'), url("http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02Bold.woff") format("woff"), url("http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02Bold.woff2") format("woff2"), url("http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02Bold.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Omnes-ATT-W02-Light-Italic";
-  src: url('http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02LightItalic.eot');
-  src: url('http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02LightItalic.eot?#iefix') format('embedded-opentype'), url("http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02LightItalic.woff") format("woff"), url("http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02LightItalic.woff2") format("woff2"), url("http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02LightItalic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Omnes-ATT-W02-Medium-Italic";
-  src: url('http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02MediumItalic.eot');
-  src: url('http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02MediumItalic.eot?#iefix') format('embedded-opentype'), url("http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02MediumItalic.woff") format("woff"), url("http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02MediumItalic.woff2") format("woff2"), url("http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02MediumItalic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Omnes-ATT-W02-Bold-Italic";
-  src: url('http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02BoldItalic.eot');
-  src: url('http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02BoldItalic.eot?#iefix') format('embedded-opentype'), url("http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02BoldItalic.woff") format("woff"), url("http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02BoldItalic.woff2") format("woff2"), url("http://digitaldesign.web.att.com/digitaldesign/styles/att/rwd/1.0.0/css/fonts/Omnes_ATTW02BoldItalic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
 html {
   box-sizing: border-box;
   overflow: hidden;
@@ -217,12 +159,16 @@ tbody th {
 }
 
 .dtvLogo {
-    max-width: 235px;
-    max-height: 66px\9;
+    max-width: 235px \9;
+    max-height: 66px \9;
+}
+
+.tool-img {
+    max-width: 326px \9;
+    max-height: 21px \9;
 }
 
 .tool-title {
-    font-family: "Omnes-ATT-W02-Medium";
     text-transform: uppercase;
     font-weight: bold;
     text-align: right;
