@@ -45,7 +45,7 @@ var checkSubs = function(obj, premium, sub) {
             '$resource',
             function ($resource){
                 return function(toolName){
-                    return $resource('data/' + toolName + '.js',{},{'get': { method:'GET', cache: true}});
+                    return $resource('data/' + toolName + '.htm',{},{'get': { method:'GET', cache: true}});
                 };
             }]);
 }(window.angular));
@@ -102,6 +102,8 @@ var checkSubs = function(obj, premium, sub) {
                                 return 'Entertainment Tool';
                             case 'sports':
                                 return 'Sports Sales Tool';
+                            default:
+                                return 'Choose A Tool';
                         }
                     }
                     return false;
