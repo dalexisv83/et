@@ -82,6 +82,9 @@
 		<copy todir="${build.dir}/views">
 			<fileset dir="views" />
 		</copy>
+		<copy todir="${build.dir}/style">
+			<fileset dir="style" />
+		</copy>
 	</target>
 	
 	<target name="jslint">
@@ -89,7 +92,7 @@
 			<predef>window, angular, jQuery, moment, document, setTimeout, $, Modernizr, data, versus</predef>
 			<formatter type="plain" />
 			<formatter type="xml" destfile="${build.dir}/test-reports/jslint.xml" />
-			<fileset dir="." includes="**/*.js" excludes="**/unit_test/tests.js, **/vendor/*.*" />
+			<fileset dir="." includes="**/*.js" excludes="**/unit_test/tests.js, **/vendor/*.*, **/data/*.*" />
 		</jslint>
 	</target>
 	<target name="compress">
@@ -127,6 +130,11 @@
 		</replace>
 		<replace dir="${build.dir}">
 			<include name="**/*.*"/>
+			<replacetoken>http://agentanswercenterstg.directv.com/en-us/res/</replacetoken>
+			<replacevalue>%%pub%%</replacevalue>
+		</replace>
+		<replace dir="${build.dir}">
+			<include name="**/*.*"/>
 			<replacetoken>&lt;!-- &lt;base href=&quot;%%pub%%rover_tools/sell_premium/sell_premium_overhaul.htm&quot; /&gt; --&gt;</replacetoken>
 			<replacevalue>&lt;base href=&quot;%%pub%%rover_tools/sell_premium/sell_premium_overhaul.htm&quot; /&gt;</replacevalue>
 		</replace>
@@ -135,5 +143,5 @@
 	<target name="clean">
 	</target>
 	
-	<target name="main" depends="start,jslint,compress,replace,clean" />	
+	<target name="main" depends="start,jslint,replace,clean" />	
 </project>
