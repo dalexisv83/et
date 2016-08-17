@@ -227,6 +227,7 @@ tbody th {
 }
 
 .nav li ul a {
+    box-sizing: border-box;
     width: 100%;
     text-align: left;
     padding: 10px 24px;
@@ -251,13 +252,18 @@ tbody th {
     border-left: 1px solid white;
 }
 
-#top a:hover {
+#top a:hover, #top span:hover {
     color: white;
 }
 
-#top a.active {
+#top a.active, #top span.active {
     background-color: #eaeaea;
     color: #333;
+}
+
+#top ul a.active {
+    background-color: #404041;
+    color: white;
 }
 
 #sub {
