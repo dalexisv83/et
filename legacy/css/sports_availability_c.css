@@ -32,7 +32,7 @@ table.dataTable span.highlight { background-color: #FFFF88; margin: 0; padding: 
 
 
 .zipblock {width:100%;height:30px;background-color:#eaeaea;padding:15px 20px;}
-.gameav_block{display:none;padding:0 10px;}
+.gameav_block{display:none;padding:0 20px;}
 .lookup_btns{color:#fff;border:0;padding:5px 10px;text-transform:uppercase;text-shadow: 1px 1px 4px #000}
 .rs_btn{background-color:#e97400;}
 .av_btn{background-color:#009edb;}
