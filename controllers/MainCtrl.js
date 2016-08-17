@@ -199,6 +199,9 @@ var checkSubs = function(obj, premium, sub) {
             function($scope) {
                 $scope.zip = null;
                 $scope.lookup = null;
+                $scope.go = function() {
+                    start($scope.zip);
+                };
             }
         ]);
 }(window.angular));
