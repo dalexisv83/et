@@ -893,7 +893,7 @@ function resetState(){
 };
 
 var start = function(user_zipcode){
-        if(user_zipcode == null){
+        if(user_zipcode == null || user_zipcode.toString().length < 5){
             $(".zipinp").css("border-color","red");
             return;
         }
