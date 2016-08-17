@@ -892,31 +892,25 @@ function resetState(){
     return;
 };
 
-$(function() {
-    // $(".user_zipcode").on("propertychange input", function(){
-    //     if(checkZip($(".user_zipcode").val().replace(/\s+/g, ''))){
-    //         start();
-    //     } else {
-    //         $('.games_table').html("<div class='alert alert-warning' role='alert'>Please enter a zip code to start.</div>");
-    //         return;
-    //     }
-    // });
-    $(".btn_submit").bind( "click", function(){
-        if(!checkZip($(".user_zipcode").val().replace(/\s+/g, ''))){
-            $('.games_table').html("<div class='alert alert-warning' role='alert'>Please enter a zip code to start.</div>");
+var start = function(user_zipcode){
+        if(user_zipcode == null){
+            $(".zipinp").css("border-color","red");
             return;
-        } else {
-            start();
         }
-    });
-    var start = function(){
+        else{
+            $(".zipinp").css("border-color","initial");
+        }
         user = {};
         $('.games_table, .filter, .daterange').empty();
-        user.zipcode = $(".user_zipcode").val();
+
+        user.zipcode = user_zipcode;
+
         $("body").bind('DataProcessing.Start', function(ev){
             $(".processing").show();
         });
+
         $("body").bind('DataProcessing.End', function(ev){
+            $(".gameav_block").css("display","block");
             $(".processing").hide();
         });
         $("body").trigger('DataProcessing.Start');
@@ -1028,9 +1022,6 @@ $(function() {
             };
         },50);
     };
-});
-
-
 
 //date sorting plugin
 (function($) {
