@@ -408,6 +408,10 @@ tbody th {
         border: none;
         border-bottom: #E97400 2px solid;
     }
+
+    .info p {
+        margin: 0;
+    }
 }
 
 .accordion label {
