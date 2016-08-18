@@ -808,6 +808,14 @@ footer {
     right: 0;
 }
 
+.submitted input.ng-invalid {
+    border: red 2px solid;
+}
+
+input.ng-valid {
+    border: green 2px solid;
+}
+
 .sticky_footer {
     position: fixed;
     bottom: 0;
