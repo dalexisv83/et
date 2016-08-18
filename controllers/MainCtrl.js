@@ -195,13 +195,45 @@ var checkSubs = function(obj, premium, sub) {
 (function(angular) {
     'use strict';
     angular.module('entertainment')
-        .controller('LookupCtrl', ['$scope',
-            function($scope) {
+        .controller('LookupCtrl', ['$scope', '$timeout',
+            function($scope, $timeout) {
+                $scope.submitted = false;
                 $scope.zip = null;
                 $scope.lookup = null;
-                $scope.go = function() {
-                    start($scope.zip);
+                $scope.zipClick = null;
+                $scope.clickRsn = function() {
+                    $scope.submitted = true;
+                    if ($scope.zipcode.$valid) {
+                        $scope.lookup = null;
+                        $scope.lookup = 'rsn';
+                        $scope.zipClick = $scope.zip;
+                    }
+                }
+                $scope.clickAvail = function() {
+                    if (($scope.zip != $scope.zipClick) || ($scope.lookup != 'availability')) {
+                        $scope.submitted = true;
+                        if ($scope.zipcode.$valid) {
+                            $scope.lookup = null;
+                            $timeout(function(){
+                                $scope.lookup = 'availability';
+                                $scope.zipClick = $scope.zip;
+                            }, 0);
+                        }
+                    }
+                }
+            }
+        ]);
+}(window.angular));
+
+(function(angular) {
+    'use strict';
+    angular.module('entertainment')
+        .controller('AvailCtrl', ['$scope', '$timeout',
+            function($scope, $timeout) {
+                $scope.init = function() {
+                    $timeout(function(){start($scope.$parent.zipClick)}, 100);
                 };
+                $scope.init();
             }
         ]);
 }(window.angular));
