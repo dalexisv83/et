@@ -1,14 +1,15 @@
-<script type="text/javascript" src="http://agentanswercenterstg.directv.com/en-us/res/system/js/underscore.js"></script>
-<script type="text/javascript" src="http://agentanswercenterstg.directv.com/en-us/res/rover_tools/dsse/dsset.js"></script>
-<script type="text/javascript" src="legacy/js/sports_availability_j.js"></script>
-<form ng-controller="LookupCtrl">
-	<div class="zipblock">
-	    <span class="ziplbl mr10"> ZIP CODE </span>
-	    <input type="text" ng-model="zip" class="zipinp mr10" autofocus onkeypress="return event.charCode >= 48 && event.charCode <= 57" />
-	    <button ng-click="lookup = 'availability'; zipClick = zip; go();" class="lookup_btns av_btn mr10" >Game Availability</button>
-	    <button ng-click="lookup = 'rsn'; zipClick = zip;" class="lookup_btns rs_btn mr10">Lookup RSN</button>
-	    <button ng-click="zip = null; lookup = null; zipClick = null;" class="lookup_btns">Reset</button>
-	</div>
-	<div ng-if="lookup == 'availability'" ng-include="'views/availability.htm'"></div>
-	<div ng-if="lookup == 'rsn'" ng-include="'views/rsn.htm'"></div>
-</form>
+<div ng-controller="LookupCtrl">
+{{zip}}
+    <form name="zipcode" ng-class="{'submitted': submitted}" novalidate>
+        <div class="zipblock">
+            <span class="ziplbl mr10"> ZIP CODE </span>
+            <input name="zip" type="number" ng-model="zip" class="zipinp mr10" autofocus ng-minlength="5" ng-maxlength="5" ng-pattern="/^(\d{5}-\d{4}|\d{5})$/" ng-required="true" />
+            <button ng-click="clickAvail()" class="lookup_btns av_btn mr10">Game Availability</button>
+            <button ng-click="clickRsn()" class="lookup_btns rs_btn mr10">Lookup RSN</button>
+            <button ng-click="zip = null; lookup = null; zipClick = null; submitted = false;" class="lookup_btns">Reset</button>
+        </div>
+        <div ng-if="lookup == 'availability'" ng-include="'views/availability.htm'"></div>
+        <div ng-if="lookup == 'rsn'" ng-include="'views/rsn.htm'"></div>
+    </form>
+    <div ng-if="submitted && zipcode.$invalid">Please enter a valid zipcode</div>
+</div>
