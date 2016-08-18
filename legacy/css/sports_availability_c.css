@@ -754,13 +754,6 @@ table.dataTable span.highlight {
     font-size: 1.2em;
 }
 
-.sticky_footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 30px;
-}
-
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
