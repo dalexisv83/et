@@ -3,7 +3,7 @@
     <div class="grid__item one-quarter" ng-repeat="calendar in data.calendars |
 filter:{premium: premium.id} |
 progType:prem.params.subName">
-        <a ng-href="#/calendar?program={{calendar.program | encode}}"><img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{calendar.image || calendar.program | lowercase | spcToHyphen}}.jpg" /></a>
+        <a ng-href="#/entertainment/calendar?program={{calendar.program | encode}}"><img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{calendar.image || calendar.program | lowercase | spcToHyphen}}.jpg" /></a>
         <h3><a ng-href="#/entertainment/calendar?program={{calendar.program | encode}}" title="{{calendar.program}}">{{calendar.program}}</a></h3>
         <span>{{calendar.premDate | date:'MMM d'}}</span> &ndash; <span>{{calendar.premTime}}</span>
         | {{calendar.chanNum}}
