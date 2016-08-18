@@ -345,90 +345,38 @@ tbody th {
     padding: 10px;
 }
 
-.info-box {
+#aside img {
     margin-top: 24px;
-    position: relative;
 }
 
 .info {
+    display: table;
+    margin-top: 24px;
     background-color: #e6e7e8;
     border: solid 1px #a7a9ab;
     font-weight: bold;
-    padding: 5px;
-    border-right-color: #E97400;
-    border-right-width: 2px;
 }
 
-.info .price {
-    position: relative;
-    margin: 50% 0 0 15px;
-    transform: translateY(-100%);
+.info .grid {
+    display: table-row;
+}
+
+.info .grid__item {
+    display: table-cell;
     text-align: center;
-}
-
-.info p {
-    margin: 0;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-@media only screen and (min-width: 769px) {
-    .info-box {
-        margin-top: 0;
-        position: static;
-    }
-
-    .info {
-        border-right-color: #a7a9ab;
-        border-right-width: 1px;
-        border-bottom-color: #E97400;
-        border-bottom-width: 2px;
-    }
-
-    .info .price {
-        position: static;
-        margin: 0;
-        transform: translateY(0);
-    }
-
-    .info p {
-        margin: 0;
-        position: static;
-        top: 0;
-        transform: translateY(0);
-    }
+    vertical-align: middle;
+    height: 100%;
+    padding: 10px;
 }
 
 .info ul {
+    text-align: left;
     font-size: .9em;
     padding-left: 10px;
 }
 
-.ondemand-box {
-    position: absolute;
-    height: 100%;
-}
-
-.ondemand {
-    font-size: .9em;
-    padding-left: 10px;
-    border-left: none;
-    border-right-color: #a7a9ab;
-    border-right-width: 1px;
-    height: 100%;
-}
-
-@media only screen and (min-width: 769px) {
-    .ondemand-box {
-        position: static;
-        height: 100%;
-    }
-    .ondemand {
-        border-top: none;
-        border-left: solid 1px #a7a9ab;;
-        border-bottom-color: #a7a9ab;
-    }
+.info p {
+    text-align: left;
 }
 
 .price {
@@ -437,6 +385,29 @@ tbody th {
     font-weight: bold;
     border-radius: 4px;
     padding: 7px 10px 5px;
+}
+
+.info--middle {
+    border-right: #E97400 2px solid;
+}
+
+@media only screen and (min-width: 769px) {
+    .info {
+        display: block;
+    }
+
+    .info .grid {
+        display: block;
+    }
+
+    .info .grid__item {
+        display: inline-block;
+    }
+
+    .info--middle {
+        border: none;
+        border-bottom: #E97400 2px solid;
+    }
 }
 
 .accordion label {
