@@ -6,9 +6,9 @@
             <button ng-click="clickAvail()" class="lookup_btns av_btn mr10">Game Availability</button>
             <button ng-click="clickRsn()" class="lookup_btns rs_btn mr10">Lookup RSN</button>
             <button ng-click="zip = null; lookup = null; zipClick = null; submitted = false;" class="lookup_btns">Reset</button>
+            <span ng-if="submitted && zipcode.$invalid">Please enter a valid zipcode</span>
         </div>
         <div ng-if="lookup == 'availability'" ng-include="'views/availability.htm'"></div>
         <div ng-if="lookup == 'rsn'" ng-include="'views/rsn.htm'"></div>
     </form>
-    <div ng-if="submitted && zipcode.$invalid">Please enter a valid zipcode</div>
 </div>
