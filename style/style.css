@@ -150,7 +150,7 @@ tbody th {
 
 .header {
     position: relative;
-    padding: 24px 60px;
+    padding: 24px 60px 10px;
     z-index: 0;
 }
 
@@ -159,8 +159,8 @@ tbody th {
 }
 
 .dtvLogo {
-    max-width: 235px \9;
-    max-height: 66px \9;
+    max-width: 218px;
+    max-height: 61px;
 }
 
 .tool-img {
