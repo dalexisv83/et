@@ -822,3 +822,7 @@ input.ng-valid {
     width: 100%;
     height: 30px;
 }
+
+.datatable td, .dataTable td {
+    border: 1px solid gray;
+}
