@@ -38,6 +38,7 @@ var checkSubs = function(obj, premium, sub) {
     },
 
     checkRange = function(items, model) {
+        'use strict';
         if (items) {
             var matches = [];
             angular.forEach(items, function(value) {
@@ -47,7 +48,7 @@ var checkSubs = function(obj, premium, sub) {
                     zips[1] = Number(zips[1]);
                 }
                 model = Number(model);
-                if (model == zips[0]) {
+                if (model === zips[0]) {
                     matches.push(value);
                 }
                 if ((model >= zips[0]) && (model <= zips[1])) {
@@ -208,9 +209,9 @@ var checkSubs = function(obj, premium, sub) {
                         $scope.lookup = 'rsn';
                         $scope.zipClick = $scope.zip;
                     }
-                }
+                };
                 $scope.clickAvail = function() {
-                    if (($scope.zip != $scope.zipClick) || ($scope.lookup != 'availability')) {
+                    if (($scope.zip !== $scope.zipClick) || ($scope.lookup !== 'availability')) {
                         $scope.submitted = true;
                         if ($scope.zipcode.$valid) {
                             $scope.lookup = null;
@@ -220,7 +221,7 @@ var checkSubs = function(obj, premium, sub) {
                             }, 0);
                         }
                     }
-                }
+                };
             }
         ]);
 }(window.angular));
@@ -231,7 +232,7 @@ var checkSubs = function(obj, premium, sub) {
         .controller('AvailCtrl', ['$scope', '$timeout',
             function($scope, $timeout) {
                 $scope.init = function() {
-                    $timeout(function(){start($scope.$parent.zipClick)}, 100);
+                    $timeout(function(){start($scope.$parent.zipClick);}, 100);
                 };
                 $scope.init();
             }
@@ -241,8 +242,8 @@ var checkSubs = function(obj, premium, sub) {
 (function(angular) {
     'use strict';
     angular.module('entertainment')
-        .controller('RsnCtrl', ['$scope', '$filter', '$http',
-            function($scope, $filter, $http) {
+        .controller('RsnCtrl', ['$scope',
+            function($scope) {
                 $scope.rsndata = rsnzip; // $http.get("http://agentanswercenter.directv.com/en-us/res/rover_tools/rsn/rsnzip.js");
             }
         ]);
@@ -253,5 +254,5 @@ var checkSubs = function(obj, premium, sub) {
     angular.module('entertainment')
         .filter('checkRange', function() {
             return checkRange;
-        })
+        });
 }(window.angular));
