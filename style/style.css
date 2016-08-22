@@ -529,6 +529,7 @@ label.helpful {
     font-weight: bold;
     font-size: 1.05em;
     color: #2baae1;
+    cursor:pointer;
 }
 
 label.helpful:after {
@@ -805,3 +806,4 @@ footer {
     background-image: url('http://agentanswercenter.directv.com/en-us/res/system/img/carousel_arrow_right_alpha50.png');
     right: 0;
 }
+
