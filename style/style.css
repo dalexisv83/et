@@ -251,6 +251,27 @@ tbody th {
     border-left: 1px solid white;
 }
 
+#top li ul li:nth-child(2) {
+    border-left:0;
+    background-color: #eaeaea;
+}
+
+#top li ul li:nth-child(2) a{
+    color: #808284;
+}
+
+/* repeat of above two css directive for for IE */
+#top li ul li:first-child + li {
+    border-left:0;
+    background-color: #eaeaea;
+}
+
+#top li ul li:first-child + li a{
+    color: #808284;
+}
+/* IE 8 - END */
+
+
 #top a:hover {
     color: white;
 }
