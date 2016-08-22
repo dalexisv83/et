@@ -89,10 +89,10 @@
 	
 	<target name="jslint">
 		<jslint options="white,nomen,regexp" haltOnFailure="true">
-			<predef>window, angular, jQuery, moment, document, setTimeout, $, Modernizr, data, versus</predef>
+			<predef>window, angular, jQuery, moment, document, setTimeout, $, Modernizr, data, versus, start, rsnzip</predef>
 			<formatter type="plain" />
 			<formatter type="xml" destfile="${build.dir}/test-reports/jslint.xml" />
-			<fileset dir="." includes="**/*.js" excludes="**/unit_test/tests.js, **/vendor/*.*, **/data/*.*" />
+			<fileset dir="." includes="**/*.js" excludes="**/unit_test/tests.js, **/vendor/*.*, **/data/*.*, **/legacy/js/*.*" />
 		</jslint>
 	</target>
 	<target name="compress">
