@@ -11,14 +11,14 @@
             <td class="teamBox" style="padding:0;" cellspacing="0" cellpadding="0" ng-repeat="division in premium.divisions | orderBy:'name' | filter:{conference: conference.id}">
                 <table style="width:100%; margin:0;" cellspacing="0" cellpadding="0">
                     <tr ng-repeat="team in premium.teams | orderBy:'name' | filter:{division: division.id}">
-                        <td class="team"><img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{team.name | lowercase | spcToHyphen}}-sm.png" ng-click="aParam('trivia', team.name)" /><span ng-bind="team.name" ng-click="aParam('trivia', team.name)"></span></td>
+                        <td class="team"><img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{team.name | lowercase | spcToHyphen}}-sm.png" ng-click="aParam('trivia', team.name)" /><span ng-bind="team.name" ng-click="aParam('trivia', team.name);scrollTo('trivia');"></span></td>
                     </tr>
                 </table>
             </td>
         </tr>
     </tbody>
 </table>
-<div class="trivia" ng-if="trivia" ng-repeat="team in premium.teams | orderBy:'name' | filter:{name: trivia}">
+<div id="trivia" class="trivia" ng-if="trivia" ng-repeat="team in premium.teams | orderBy:'name' | filter:{name: trivia}">
     <a class="close" href ng-click="aParam('trivia', null)">&#x2716;</a>
     <p><img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{team.name | lowercase | spcToHyphen}}.gif" /><b ng-bind="team.name"></b> - <span ng-repeat="point in team.point" ng-bind="point"></span></p>
 </div>

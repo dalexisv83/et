@@ -723,6 +723,7 @@ a.ui-datepicker-next {
     float: left;
     width: 80px;
     height: auto;
+    min-height: 64px;
     margin-right: 10px;
     vertical-align: top;
 }
