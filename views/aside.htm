@@ -29,7 +29,7 @@
                     </a>
                 </div>
                 <div class="grid__item one-third portable--one-whole desk--one-whole">
-                    <div ng-repeat="trial in premium.trials | inRange:'trialStart':'trialEnd':30"" class="price">Free Trial: {{trial.trialStart}}<span ng-if="trial.trialStart != trial.trialEnd">-{{trial.trialEnd}}</span></div>
+                    <div ng-repeat="trial in premium.trials | inRange:'trialStart':'trialEnd':7"" class="price">Free Trial: {{trial.trialStart}}<span ng-if="trial.trialStart != trial.trialEnd">-{{trial.trialEnd}}</span></div>
                     <div ng-if="premium.ODchan">
                         <p>{{premium.name}} DIRECTV On&nbsp;Demand Ch:&nbsp;{{premium.ODchan}}</p>
                     </div>
