@@ -1,5 +1,5 @@
 <h2>{{premium.league}} {{prem.params.subName | getItByThat:data.subtabs:'name':'url'}}</h2>
-<table class="by-team" ng-if="prem.params.subName == '101-by-team'" ng-repeat="conference in premium.conferences | orderBy:'name'">
+<table class="by-team" ng-if="prem.params.subName == '101-by-team'" ng-repeat-start="conference in premium.conferences | orderBy:'name'">
     <tbody>
         <tr>
             <td class="conference" colspan="{{(premium.divisions).length}}">{{conference.name}}</td>
@@ -18,7 +18,7 @@
         </tr>
     </tbody>
 </table>
-<div class="trivia" ng-if="trivia" ng-repeat="team in premium.teams | orderBy:'name' | filter:{name: trivia}">
+<div ng-repeat-end class="trivia" ng-if="trivia && $parent.$first" ng-repeat="team in premium.teams | orderBy:'name' | filter:{name: trivia}">
     <a class="close" href ng-click="aParam('trivia', null)">&#x2716;</a>
     <p><img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{team.name | lowercase | spcToHyphen}}.gif" /><b ng-bind="team.name"></b> - <span ng-repeat="point in team.point" ng-bind="point"></span></p>
 </div>
