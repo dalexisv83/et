@@ -250,7 +250,7 @@ tbody th {
     text-transform: uppercase;
 }
 
-#top li + li {
+#top > li + li {
     border-left: 1px solid white;
 }
 
