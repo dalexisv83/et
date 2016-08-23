@@ -294,6 +294,10 @@ tbody th {
     text-decoration: underline;
 }
 
+div#sub {
+    padding:20px;
+}
+
 .photo {
     vertical-align: bottom;
     margin: 20px 0;
@@ -807,4 +811,8 @@ input.ng-valid {
 
 .datatable td, .dataTable td {
     border: 1px solid gray;
+}
+
+.mup20 {
+    margin-top: 20px;
 }
