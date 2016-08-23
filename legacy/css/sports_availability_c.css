@@ -8,7 +8,7 @@ table.dataTable {
 
 table.dataTable thead th,
 table.dataTable tfoot th {
-    font-weight: bold
+    font-weight: normal;
 }
 
 table.dataTable thead th,
@@ -48,6 +48,16 @@ table.dataTable thead .sorting {
     background-image: url("http://agentanswercenterstg.directv.com/en-us/res//system/img/sort_both.png")
 }
 
+table.dataTable thead th.sorting:last-child{
+    width:auto !important;
+}
+
+/* IE8 compatibility for above rule */
+table.dataTable thead tr th:first-child + th + th + th {
+    width:auto !important;
+}
+
+
 table.dataTable thead .sorting_asc {
     background-image: url("http://agentanswercenterstg.directv.com/en-us/res//system/img/sort_asc_orange.png")
 }
@@ -65,36 +75,38 @@ table.dataTable thead .sorting_desc_disabled {
 }
 
 table.dataTable tbody tr {
-    background-color: #fff
+    background-color: #fff;
 }
 
 table.dataTable tbody tr.selected {
-    background-color: #B0BED9
+    background-color: #B0BED9;
 }
 
 table.dataTable tbody th,
 table.dataTable tbody td {
-    padding: 8px 10px
+    padding: 8px 10px;
 }
 
 table.dataTable.row-border tbody th,
 table.dataTable.row-border tbody td,
 table.dataTable.display tbody th,
 table.dataTable.display tbody td {
-    border-top: 1px solid #ddd
+    border-top: 1px solid #ddd;
 }
 
 table.dataTable.row-border tbody tr:first-child th,
 table.dataTable.row-border tbody tr:first-child td,
 table.dataTable.display tbody tr:first-child th,
 table.dataTable.display tbody tr:first-child td {
-    border-top: none
+    border-top: none;
 }
 
 table.dataTable.cell-border tbody th,
 table.dataTable.cell-border tbody td {
     border-top: 1px solid #ddd;
-    border-right: 1px solid #ddd
+    border-right: 1px solid #ddd;
+    border-bottom: none;
+    border-left: none;
 }
 
 table.dataTable.cell-border tbody tr th:first-child,
@@ -104,8 +116,9 @@ table.dataTable.cell-border tbody tr td:first-child {
 
 table.dataTable.cell-border tbody tr:first-child th,
 table.dataTable.cell-border tbody tr:first-child td {
-    border-top: none
+    border-top: none;
 }
+
 
 table.dataTable.stripe tbody tr.odd,
 table.dataTable.display tbody tr.odd {
@@ -246,7 +259,8 @@ table.dataTable.nowrap td {
 
 table.dataTable.compact thead th,
 table.dataTable.compact thead td {
-    padding: 4px 17px 4px 4px
+    padding: 4px 17px 4px 4px;
+    text-align: left;
 }
 
 table.dataTable.compact tfoot th,
@@ -553,8 +567,10 @@ thead tr,
 thead tr th {
     border-right: 1px solid #ffffff;
     background: #58585b url('http://agentanswercenterstg.directv.com/en-us/res//system/img/table-heading-bg.jpg') repeat-x !important;
-    border-color: #aaa;
+    border-color: #fff;
     color: #ffffff;
+    border-left: none;
+    border-top: none;
 }
 
 .row {
