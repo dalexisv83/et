@@ -286,6 +286,10 @@ tbody th {
     text-decoration: underline;
 }
 
+div#sub {
+    padding:20px;
+}
+
 .photo {
     vertical-align: bottom;
     margin: 20px 0;
@@ -805,5 +809,7 @@ footer {
     background-image: url('http://agentanswercenter.directv.com/en-us/res/system/img/carousel_arrow_right_alpha50.png');
     right: 0;
 }
-.mup20{margin-top:20px;}
-div#sub{padding:20px;}
+
+.mup20 {
+    margin-top: 20px;
+}
