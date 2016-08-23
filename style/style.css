@@ -512,6 +512,7 @@ label.helpful {
     font-weight: bold;
     font-size: 1.05em;
     color: #2baae1;
+    cursor:pointer;
 }
 
 label.helpful:after {
