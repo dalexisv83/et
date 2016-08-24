@@ -110,7 +110,7 @@ var checkSubs = function(obj, premium, sub) {
             function($scope, $route, $routeParams, $location, $filter, contentData, $timeout) {
                 if (window.location.hash.search('trivia') > -1) {
                     $timeout(function() {
-                        document.getElementById('trivia').scrollIntoView()
+                        document.getElementById('trivia').scrollIntoView();
                     }, 200);
                 }
                 if (!contentData) {
@@ -173,8 +173,8 @@ var checkSubs = function(obj, premium, sub) {
                     }
                 };
                 $scope.scrollTo = function(hash) {
-                    document.getElementById(hash).scrollIntoView()
-                }
+                    document.getElementById(hash).scrollIntoView();
+                };
             }
         ]);
 }(window.angular));
