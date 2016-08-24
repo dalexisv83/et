@@ -561,7 +561,7 @@ thead tr,
 
 thead tr th {
     border-right: 1px solid #ffffff;
-    background: #58585b url('http://agentanswercenterstg.directv.com/en-us/res//system/img/table-heading-bg.jpg') repeat-x !important;
+/*    background: #58585b url('http://agentanswercenterstg.directv.com/en-us/res//system/img/table-heading-bg.jpg') repeat-x !important;*/
     border-color: #fff;
     color: #ffffff;
     border-left: none;
