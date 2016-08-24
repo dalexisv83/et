@@ -10,10 +10,10 @@
                 </li>
             </ul>
         </li><!-- 
-         --><li ng-if="data.calendars">
+     --><li ng-if="data.calendars">
             <a href="#/entertainment/calendar" ng-class="{active: main.$route.current.loadedTemplateUrl == 'views/calendar.htm'}">Calendar</a>
-        </li>
-        <li ng-if="!data.calendars">
+        </li><!-- 
+     --><li ng-if="!data.calendars">
             <a href="#/sports/lookup" ng-class="{active: main.$route.current.loadedTemplateUrl == 'views/lookup.htm'}">Lookup</a>
         </li>
     </ul>
