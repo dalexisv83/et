@@ -85,6 +85,9 @@
 		<copy todir="${build.dir}/style">
 			<fileset dir="style" />
 		</copy>
+		<copy todir="${build.dir}/legacy/css">
+			<fileset dir="legacy/css" />
+		</copy>
 	</target>
 	
 	<target name="jslint">
