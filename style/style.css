@@ -393,8 +393,9 @@ div#sub {
     padding: 7px 10px 5px;
 }
 
-.info--middle {
-    border-right: #E97400 2px solid;
+.info--bottom {
+    border-left: #E97400 2px solid;
+    border-top:0;  
 }
 
 @media only screen and (min-width: 769px) {
@@ -412,7 +413,11 @@ div#sub {
 
     .info--middle {
         border: none;
-        border-bottom: #E97400 2px solid;
+    }
+
+    .info--bottom{
+        border-top: #E97400 2px solid;
+        border-left:0; 
     }
 
     .info p {

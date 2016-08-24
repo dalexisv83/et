@@ -3,7 +3,7 @@
         <img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{premium.name | lowercase | spcToHyphen}}-logo.png" />
     </div>
     <div class="grid__item three-quarters portable--one-whole desk--one-whole">
-        <div class="info">
+        <div class="info" ng-if="premium.price || premium.offers || premium.channels || premium.ODchan || premium.channelRange || premium.trials">
             <div class="grid grid--full">
                 <div class="grid__item one-third portable--one-whole desk--one-whole">
                     <div ng-if="premium.price" class="price"><span ng-if="isStringNumber(premium.price)">&#36;</span>{{premium.price}}</div>
@@ -28,7 +28,7 @@
                         </ul>
                     </a>
                 </div>
-                <div class="grid__item one-third portable--one-whole desk--one-whole">
+                <div class="grid__item one-third portable--one-whole desk--one-whole info--bottom" ng-if="premium.ODchan || premium.channelRange || premium.trials">
                     <div ng-repeat="trial in premium.trials | inRange:'trialStart':'trialEnd':7"" class="price">Free Trial: {{trial.trialStart}}<span ng-if="trial.trialStart != trial.trialEnd">-{{trial.trialEnd}}</span></div>
                     <div ng-if="premium.ODchan">
                         <p>{{premium.name}} DIRECTV On&nbsp;Demand Ch:&nbsp;{{premium.ODchan}}</p>
