@@ -1,3 +1,8 @@
+.local_national img {
+    width: 16px;
+    height: 16px;
+}
+
 table.dataTable {
     width: 100%;
     margin: 0 auto;
