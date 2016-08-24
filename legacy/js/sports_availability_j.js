@@ -909,7 +909,7 @@ var start = function(user_zipcode){
 
                 dsse_lookup(user.rsn);
                 $(".daterange").append("Schedule shown for: "+user.start_date+" - "+user.end_date);
-                $('.games_table').html('<table cellpadding="0" cellspacing="0" border="0" class="stripe compact row-border cell-border hover" id="games_list"><thead><th>Date and Time (ET)</th><th>Sport</th><th>Away Team @ Home Team</th><th>Availability</th></thead></table>');
+                $('.games_table').html('<table cellpadding="0" cellspacing="0" border="0" class="stripe compact row-border cell-border hover" id="games_list"><thead><th>Date/Time (ET)</th><th>Sport</th><th>Away Team @ Home Team</th><th>Availability</th></thead></table>');
                 $("#games_list").append(process_output(user.user_events, "rsn"));
                 $("#games_list").append(process_output(user.league_network, "rsn"));
                 $("#games_list").append(process_output(user.out_of_market, "Sport_Packages"));
