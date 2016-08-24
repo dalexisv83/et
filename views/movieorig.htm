@@ -1,2 +1,2 @@
-<h2><span ng-if="(prem.params.subName !== 'ordering') && (prem.params.subName !== 'pricing')">{{prem.params.subName | getItByThat:data.subtabs:'name':'url'}}</span><span ng-if="prem.params.subName === 'ordering'">Ways To Order</span><span ng-if="prem.params.subName === 'pricing'">PPV Life Cycle</span></h2>
+<h2><span ng-if="prem.params.subName === 'ordering'">Ways To Order</span><span ng-if="prem.params.subName === 'pricing'">PPV Life Cycle</span>&nbsp;</h2>
 <div class="movieorig inner accordion" ng-include="'views/accordion.htm'"></div>
