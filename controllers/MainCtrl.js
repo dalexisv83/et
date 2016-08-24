@@ -106,8 +106,13 @@ var checkSubs = function(obj, premium, sub) {
 (function(angular) {
     'use strict';
     angular.module('entertainment')
-        .controller('MainCtrl', ['$scope', '$route', '$routeParams', '$location', '$filter', 'contentData',
-            function($scope, $route, $routeParams, $location, $filter, contentData) {
+        .controller('MainCtrl', ['$scope', '$route', '$routeParams', '$location', '$filter', 'contentData', '$timeout',
+            function($scope, $route, $routeParams, $location, $filter, contentData, $timeout) {
+                if (window.location.hash.search('trivia') > -1) {
+                    $timeout(function() {
+                        document.getElementById('trivia').scrollIntoView()
+                    }, 200);
+                }
                 if (!contentData) {
                     $location.path('choose').replace();
                 }
@@ -167,6 +172,9 @@ var checkSubs = function(obj, premium, sub) {
                         "Amazon Prime Video": true
                     }
                 };
+                $scope.scrollTo = function(hash) {
+                    document.getElementById(hash).scrollIntoView()
+                }
             }
         ]);
 }(window.angular));
