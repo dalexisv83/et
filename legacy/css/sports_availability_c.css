@@ -710,9 +710,13 @@ table.dataTable span.highlight {
 }
 
 .zipblock {
-    height: 30px;
     background-color: #eaeaea;
-    padding: 15px 20px;
+    padding: 0 20px 15px;
+}
+
+.zipblock span, .zipblock input {
+    display: inline-block;
+    margin-top: 15px;
 }
 
 .gameav_block {
