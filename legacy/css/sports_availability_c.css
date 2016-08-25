@@ -499,7 +499,7 @@ table.dataTable td {
 .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody th>div.dataTables_sizing,
 .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody td>div.dataTables_sizing {
     height: 0;
-    overflow: hidden;
+    overflow: visible;
     margin: 0 !important;
     padding: 0 !important
 }
@@ -550,7 +550,7 @@ thead {
 
 thead tr,
 .dataTables_scrollHeadInner {
-    width: 100% !important;
+    /*width: 100% !important;*/
     background: #58585b url('http://agentanswercenterstg.directv.com/en-us/res//system/img/table-heading-bg.jpg') repeat-x !important;
     color: #ffffff;
 }

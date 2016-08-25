@@ -962,6 +962,8 @@ var start = function(user_zipcode){
                         { "width": "280px" }
                     ]
                 });
+                $(".dataTables_scrollHeadInner").css({"overflow":"visible !important","width":"auto"});
+                $(".table ").css({"width":"100%"});
                 $('.filter').append(sport_filter);
                 $('.filter').append(global_search);
                 //$('.daterange').append(datepicker_filter);
@@ -1010,8 +1012,6 @@ var start = function(user_zipcode){
             };
         },50);
     };
-
-
 
 
 //date sorting plugin
