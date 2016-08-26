@@ -14,7 +14,7 @@
                 </div>
                 <div class="grid__item one-third portable--one-whole desk--one-whole info--middle">
                     <div ng-repeat="offer in premium.offers | inRange:'offerStart':'offerEnd':0:true" class="price">
-                        <span ng-if="offer.multiPrice != 'n/a'"><span ng-if="isStringNumber(offer.multiPrice)">&#36;</span>{{offer.multiPrice}}<small>/month
+                        <span ng-if="offer.multiPrice != 'n/a'"><span ng-if="isStringNumber(offer.multiPrice)">&#36;</span>{{offer.multiPrice}}<small>&#x200b;/month
                         <br />{{offer.onePrice / offer.multiPrice | number:0}}&nbsp;Pay</small>
                         <br /></span><span ng-if="isStringNumber(offer.onePrice)">&#36;</span>{{offer.onePrice}}
                         <br /><small>One&nbsp;Pay</small>
