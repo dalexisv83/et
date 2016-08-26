@@ -822,3 +822,7 @@ input.ng-valid.zipinp {
 .mup20 {
     margin-top: 20px;
 }
+
+.minReq {
+    color: #ff9c38;
+}
