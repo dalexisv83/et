@@ -250,8 +250,10 @@ var checkSubs = function(obj, premium, sub) {
 (function(angular) {
     'use strict';
     angular.module('entertainment')
-        .controller('RsnCtrl', ['$scope',
-            function($scope) {
+        .controller('RsnCtrl', ['$scope', 'DTOptionsBuilder',
+            function($scope, DTOptionsBuilder) {
+                $scope.dtOptions = DTOptionsBuilder.newOptions()
+                            .withDOM('rt');
                 $scope.rsndata = rsnzip; // $http.get("http://agentanswercenter.directv.com/en-us/res/rover_tools/rsn/rsnzip.js");
             }
         ]);
