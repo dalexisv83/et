@@ -1,6 +1,6 @@
 <div class="outer">
-<slick class="grid" infinite="true" slides-to-show="4" slides-to-scroll="4" on-init="ieFix">
-    <div class="grid__item one-quarter" ng-repeat="calendar in data.calendars |
+<slick class="grid" infinite="true" slides-to-show="5" slides-to-scroll="5" on-init="ieFix">
+    <div class="grid__item one-fifth" ng-repeat="calendar in data.calendars |
 filter:{premium: premium.id} |
 progType:prem.params.subName">
         <a ng-href="#/entertainment/calendar?program={{calendar.program | encode}}"><img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{calendar.image || calendar.program | lowercase | spcToHyphen}}.jpg" /></a>
