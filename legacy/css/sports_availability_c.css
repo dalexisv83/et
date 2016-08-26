@@ -781,10 +781,6 @@ table.dataTable span.highlight {
     margin-top: 8px;
 }
 
-.av_text {
-    font-size: 1.2em;
-}
-
 /* fix for number field showing arrows inside */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
