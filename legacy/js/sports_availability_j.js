@@ -914,11 +914,7 @@ var start = function(user_zipcode){
                 $("#games_list").append(process_output(user.league_network, "rsn"));
                 $("#games_list").append(process_output(user.out_of_market, "Sport_Packages"));
                 $("#games_list").append(process_output(user.college_football_rsn, "CFB_SportsPack"));
-
-                // safa added start
                 $("#games_list").append(process_output(user.college_basketball, "Sport_Packages"));                
-                // safa added end
-
                 $("#games_list").append(process_output(user.college_football_gp, "Sport_Packages"));
 
                 var seen = {};
@@ -952,6 +948,7 @@ var start = function(user_zipcode){
                     lengthMenu: [[-1], ["All"]],
                     paging: false,
                     searchHighlight: true,
+                    scrollCollapse: true,
                     search: { "smart": false, "regex": true },
                     scrollY: 400,
                     order: [[0, "asc"]],
@@ -960,10 +957,16 @@ var start = function(user_zipcode){
                         { "width": "130px" },
                         null,
                         { "width": "280px" }
-                    ]
+                    ],
+                    "sScrollY":  ( 0.6 * $(window).height() ),
+                    "bPaginate": false,
+                    "bJQueryUI": true,
+                    "bScrollCollapse": true,
+                    "bAutoWidth": true,
+                    "sScrollX": "100%",
+                    "sScrollXInner": "100%"
                 });
-                $(".dataTables_scrollHeadInner").css({"overflow":"visible !important","width":"auto"});
-                $(".table ").css({"width":"100%"});
+
                 $('.filter').append(sport_filter);
                 $('.filter').append(global_search);
                 //$('.daterange').append(datepicker_filter);

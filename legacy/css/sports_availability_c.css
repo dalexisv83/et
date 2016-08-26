@@ -550,13 +550,26 @@ thead {
 
 thead tr,
 .dataTables_scrollHeadInner {
-    /*width: 100% !important;*/
     background: #58585b url('http://agentanswercenterstg.directv.com/en-us/res//system/img/table-heading-bg.jpg') repeat-x !important;
     color: #ffffff;
 }
 
 .dataTables_scrollHeadInner table {
     margin-bottom: 0 !important;
+}
+
+div.dataTables_scrollHeadInner {
+    overflow: visible !important;
+    width : auto !important;
+}
+
+.dataTables_scrollBody table {
+    width : auto !important;
+}
+
+.scrollStyle
+{
+    overflow-x:auto;
 }
 
 thead tr th {
