@@ -3,6 +3,7 @@
         <div class="zipblock">
             <span class="ziplbl mr10"> ZIP CODE </span>
             <input name="zip" type="number" ng-model="zip" class="zipinp mr10" autofocus ng-minlength="5" ng-maxlength="5" ng-pattern="/^(\d{5}-\d{4}|\d{5})$/" ng-required="true" />
+            <!--[if IE]><input name="zip" type="number" ng-model="zip" class="zipinp mr10" autofocus ng-minlength="5" ng-maxlength="5" ng-pattern="/^(\d{5}-\d{4}|\d{5})$/" ng-required="true" style="display: none;" disabled="disabled" size="1" /><![endif]-->
             <span class="buttons">
                 <button ng-click="clickAvail()" class="lookup_btns av_btn mr10">Game Availability</button>
                 <button ng-click="clickRsn()" class="lookup_btns rs_btn mr10">Lookup RSN</button>
