@@ -674,6 +674,10 @@ a.ui-datepicker-next {
     float: right;
 }
 
+.by-team {
+    width: 100%;
+}
+
 .by-team + .by-team {
     margin-top: 20px;
 }
