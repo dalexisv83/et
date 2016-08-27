@@ -11,7 +11,7 @@
             <td class="teamBox" style="padding:0;" cellspacing="0" cellpadding="0" ng-repeat="division in premium.divisions | orderBy:'name' | filter:{conference: conference.id}">
                 <table style="width:100%; margin:0;" cellspacing="0" cellpadding="0">
                     <tr ng-repeat="team in premium.teams | orderBy:'name' | filter:{division: division.id}">
-                        <td class="team"><img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{team.name | lowercase | spcToHyphen}}-sm.png" ng-click="aParam('trivia', team.name)" /><span ng-bind="team.name" ng-click="aParam('trivia', team.name);scrollTo('trivia');"></span></td>
+                        <td class="team"><!-- <img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{team.name | lowercase | spcToHyphen}}-sm.png" ng-click="aParam('trivia', team.name)" /> --><span ng-bind="team.name" ng-click="return null;aParam('trivia', team.name);scrollTo('trivia');"></span></td>
                     </tr>
                 </table>
             </td>

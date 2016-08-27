@@ -700,7 +700,7 @@ a.ui-datepicker-next {
     vertical-align: top;
 }
 
-.team {
+/*.team {
     color: #0077dd;
     text-decoration: underline;
     cursor: pointer;
@@ -708,7 +708,7 @@ a.ui-datepicker-next {
 
 .team:hover {
     color: #0099ff;
-}
+}*/
 
 .team img {
     width: 25px;
