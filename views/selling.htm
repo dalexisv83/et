@@ -1,5 +1,8 @@
-<h2>Selling Points</h2>
-<ul>
-<li ng-repeat-start="point in premium.sellingPoints | filter:{evergreen: true} | filter:{subtab: (prem.params.subName | getItByThat:data.subtabs:'id':'url')}">{{point.point}}</li>
-<hr ng-if="!$last" ng-repeat-end />
+<h2>{{prem.params.subName | getItByThat:data.subtabs:'name':'url'}}</h2>
+<ul ng-repeat="sellingPoint in filteredPoints = (premium.sellingPoints | filter:{title: null} | filter:{subtab: (prem.params.subName | getItByThat:data.subtabs:'id':'url')})">
+    <li ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasSeasonDates"><b>Season Dates:</b> {{premium.startSeason | excelDate | date}} - {{premium.endSeason | excelDate | date}}</li>
+    <hr ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasSeasonDates" />
+    <li ng-repeat-start="text in sellingPoint.point">{{text}}</li>
+    <hr ng-if="!$last" ng-repeat-end />
 </ul>
+<div class="movieorig inner accordion" ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasBlueL" ng-include="'views/accordion.htm'"></div>

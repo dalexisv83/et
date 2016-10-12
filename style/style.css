@@ -1,3 +1,5 @@
+// console.log('<>');
+
 html {
   box-sizing: border-box;
   overflow: hidden;
@@ -15,6 +17,8 @@ body {
     line-height: 1.55;
     overflow: auto;
     height: 100%;
+    padding-bottom: 30px;
+    padding-bottom: 40px \9;
 }
 
 img {
@@ -32,13 +36,18 @@ a:hover {
     text-decoration: underline;
 }
 
-label:hover {
+label:hover span {
     text-decoration: underline;
     cursor: pointer;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    text-rendering: optimizeLegibility;
+}
+
 h2 {
     margin: 10px 0;
+    color: #E97400;
 }
 
 h3 {
@@ -70,9 +79,9 @@ td {
 }
 
 thead th {
-    background-color: #faa519;
+/*    background-color: #E97400; */
     color: white;
-    border: 1px solid #faa519;
+    border: 1px solid #E97400;
     border-bottom: none;
 }
 
@@ -84,7 +93,7 @@ tbody th {
 }
 
 .outer {
-    padding: 0 24px;
+    padding: 0 24px 24px;
 }
 
 .bg__col:after {
@@ -126,24 +135,25 @@ tbody th {
     background-color: #808284;
 }
 
+.bg--blue {
+    background-color: #009EDB;
+}
+
 .corner {
     background-color: white;
     border: none;
     border-bottom: 1px solid #0072ae;
-    border-right: 1px solid #faa519;
+    border-right: 1px solid #E97400;
 }
 
 .serviceChk + .serviceChk {
     margin-left: 20px;
 }
 
-.nav, .header {
-    position: relative;
-    z-index: 2;
-}
-
 .header {
-    background: url(http://agentanswercenter.directv.com/en-us/res/system/img/rcc_bg.jpg) right -20px no-repeat #071F31;
+    position: relative;
+    padding: 24px 60px 10px;
+    z-index: 0;
 }
 
 .header .grid__item {
@@ -151,13 +161,17 @@ tbody th {
 }
 
 .dtvLogo {
-    max-width: 235px\9;
-    max-height: 26px\9;
+    max-width: 218px;
+    max-height: 61px;
+}
+
+.tool-img {
+    max-width: 326px \9;
+    max-height: 21px \9;
 }
 
 .tool-title {
     text-transform: uppercase;
-    font-size: 22px;
     font-weight: bold;
     text-align: right;
     margin: 10px 0;
@@ -173,36 +187,103 @@ tbody th {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2baae1', endColorstr='#0072ae',GradientType=0 ); /* IE6-8 */
 }
 
+.nav {
+    margin: 0;
+}
+
+.nav > li {
+    display: inline-block;
+}
+
+.nav a, .nav span {
+    display: inline-block;
+    text-align: center;
+    padding: 7px 10px;
+    font-weight: bold;
+    font-size: .95em;
+}
+
+@media only screen and (min-width: 790px) {
+    .nav a, .nav span {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (min-width: 999px) {
+    .nav a, .nav span {
+        padding: 7px 24px;
+    }
+}
+
+.nav > li:first-child a {
+    padding-left: 24px;
+}
+
+.nav li ul {
+    display: none;
+    position: absolute;
+    background-color: grey;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav li ul a {
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    padding: 10px 24px;
+}
+
+.nav li:hover ul {
+    display: block;
+}
+
 #top {
+    position: relative;
+    z-index: 1;
     background-color: #404041;
 }
 
-#top a {
-    min-width: 75px;
+#top a, #top span {
     color: #ddd;
     text-transform: uppercase;
 }
 
-#top a + a {
+#top > li + li {
     border-left: 1px solid white;
 }
 
-#top a:hover {
+#top a:hover, #top span:hover {
     color: white;
 }
 
-#top a.active {
+#top a.active, #top span.active {
     background-color: #eaeaea;
     color: #333;
 }
 
+#top ul a.active {
+    background-color: #404041;
+    color: white;
+}
+
 #sub {
+    position: relative;
+    z-index: 0;
     background-color: #eaeaea;
-    box-shadow: 3px 3px 3px #838383;
 }
 
 #sub a {
     color: #808284;
+    border-left: 2px solid #808284;
+    padding: 0px 24px;
+    margin: 10px 0;
+    line-height: 18px;
+}
+
+#sub li:first-child a {
+    border-left: none;
 }
 
 #sub a:hover, #sub a.active {
@@ -213,11 +294,8 @@ tbody th {
     text-decoration: underline;
 }
 
-.nav a {
-    display: inline-block;
-    text-align: center;
-    padding: 7px 24px;
-    font-weight: bold;
+div#sub {
+    padding:20px;
 }
 
 .photo {
@@ -227,16 +305,14 @@ tbody th {
 
 #playing {
     line-height: 1.2;
-    font-size: .95em;
-}
-
-#playing h2 {
-    font-size: .9em;
-    color: #838383;
 }
 
 #playing h3 {
-    font-size: 1em;
+    max-width: 100%;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-top: 10px;
 }
 
 #playing div {
@@ -255,7 +331,7 @@ tbody th {
     width: 100%;
 }
 
-#selling ul {
+#selling > ul {
     margin: 0;
 }
 
@@ -275,52 +351,113 @@ tbody th {
     padding: 10px;
 }
 
+#aside img {
+    margin-top: 24px;
+}
+
 .info {
+    display: table;
+    margin-top: 24px;
     background-color: #e6e7e8;
     border: solid 1px #a7a9ab;
     font-weight: bold;
-    padding: 5px;
-    border-bottom-color: #faa519;
-    border-bottom-width: 2px;
+}
+
+.info .grid {
+    display: table-row;
+}
+
+.info .grid__item {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    height: 100%;
+    padding: 10px;
 }
 
 .info ul {
+    text-align: left;
     font-size: .9em;
     padding-left: 10px;
 }
 
-.ondemand {
-    font-size: .9em;
-    padding-left: 10px;
-    border-top: none;
-    border-bottom-color: #a7a9ab;
+.info p {
+    text-align: left;
 }
 
 .price {
-    background-color: #faa519;
+    background-color: #E97400;
     color: white;
     font-weight: bold;
     border-radius: 4px;
     padding: 7px 10px 5px;
 }
 
+.info--bottom {
+    border-left: #E97400 2px solid;
+    border-top:0;  
+}
+
+@media only screen and (min-width: 769px) {
+    .info {
+        display: block;
+    }
+
+    .info .grid {
+        display: block;
+    }
+
+    .info .grid__item {
+        display: inline-block;
+    }
+
+    .info--middle {
+        border: none;
+    }
+
+    .info--bottom{
+        border-top: #E97400 2px solid;
+        border-left:0; 
+    }
+
+    .info p {
+        margin: 0;
+    }
+}
+
 .accordion label {
+    position: relative;
     display: inline-block;
     width: 100%;
     border-radius: 5px;
     background-color: #e6e7e8;
-    padding: 7px 10px 5px;
+    padding: 7px 10px 5px 30px;
     box-shadow: 1px 1px 5px #838383;
+}
+
+.accordion label:before {
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+    content: '\2b';
+}
+
+.accordion label.open:before {
+    content: '\2212';
 }
 
 label[for=disclosures] {
     margin-top: 10px;
-    background-color: #faa519;
+    background-color: #E97400;
     color: white;
 }
 
-#movieorig.accordion label {
-    padding: 7px 10px 5px;
+.movieorig.inner {
+    margin: 10px 0;
+}
+
+.movieorig.accordion label {
     color: white;
     box-shadow: 1px 1px 5px #838383;
 }
@@ -384,13 +521,14 @@ label.helpful {
     font-weight: bold;
     font-size: 1.05em;
     color: #2baae1;
+    cursor:pointer;
 }
 
 label.helpful:after {
     content: ' \25B8';
 }
 
-label.checked.helpful:after {
+label.helpful.open:after {
     content: ' \25BE'
 }
 /*
@@ -464,7 +602,7 @@ label.checked.helpful:after {
     bottom: 0;
     left: 0;
     height: 30px;
-    background-color: #faa519;
+    background-color: #E97400;
     padding: 4px 20px;
 }
 
@@ -489,7 +627,7 @@ label.checked.helpful:after {
 }
 
 .program:hover {
-    border: 2px solid #faa519;
+    border: 2px solid #E97400;
 }
 
 .overlay {
@@ -511,6 +649,7 @@ label.checked.helpful:after {
     top: 50px;
     left: 50%;
     margin-left: -25%;
+    padding: 10px;
     border-radius: 5px;
     z-index: 100;
 }
@@ -533,4 +672,161 @@ a.ui-datepicker-prev {
 
 a.ui-datepicker-next {
     float: right;
+}
+
+.by-team {
+    width: 100%;
+}
+
+.by-team + .by-team {
+    margin-top: 20px;
+}
+
+.by-team td {
+    border: none;
+}
+
+.conference {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: #454545;
+    border: none;
+}
+
+.division {
+    background-color: #e6e6e6;
+    font-size: 1.125em;
+    font-weight: bold;
+    color: black;
+}
+
+.teamBox {
+    vertical-align: top;
+}
+
+/*.team {
+    color: #0077dd;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.team:hover {
+    color: #0099ff;
+}*/
+
+.team img {
+    width: 25px;
+    height: auto;
+    vertical-align: bottom;
+    margin-right: 10px;
+}
+
+.trivia {
+    margin-top: 20px;
+    overflow: auto;
+    border: 2px solid #0077dd;
+    padding: 10px;
+}
+
+.trivia img {
+    float: left;
+    width: 80px;
+    height: auto;
+    min-height: 64px;
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+.trivia p {
+    margin: 0;
+    padding-right: 30px;
+}
+
+.close {
+    position: relative;
+    top: -.4em;
+    float: right;
+}
+
+.button {
+    display: block;
+    max-width: 300px;
+    margin: 0 auto 20px;
+    padding: 20px 40px;
+    text-align: center;
+}
+
+.button.bg--blue {
+    color: white;
+}
+
+.button.bg--blue:hover {
+    background-color: #0099dd;
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+    color: white;
+}
+
+.slick-arrow {
+    background: center center transparent no-repeat;
+    border: none;
+    box-shadow: none;
+    position: absolute;
+    height: 100%;
+    min-width: 84px;
+    width: 10%;
+    top: 0;
+    text-indent: -451983px;
+    z-index: 100;
+    opacity: .5;
+}
+
+.slick-arrow:hover {
+    opacity: 1;
+}
+
+.slick-arrow:focus {
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.slick-prev {
+    background-image: url('http://agentanswercenter.directv.com/en-us/res/system/img/carousel_arrow_left_alpha50.png');
+    left: 0;
+}
+
+.slick-next {
+    background-image: url('http://agentanswercenter.directv.com/en-us/res/system/img/carousel_arrow_right_alpha50.png');
+    right: 0;
+}
+
+.submitted input.ng-invalid {
+    border: red 2px solid;
+}
+
+input.ng-valid.zipinp {
+    border: green 2px solid;
+}
+
+.sticky_footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+}
+
+.datatable td, .dataTable td {
+    border: 1px solid gray;
+}
+
+.mup20 {
+    margin-top: 20px;
+}
+
+.minReq {
+    color: #ff9c38;
 }

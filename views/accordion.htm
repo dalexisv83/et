@@ -1,0 +1,8 @@
+<label ng-repeat-start="sellingPoint in bluePoints = (premium.sellingPoints | filter:{title: ''} | filter:{subtab: (prem.params.subName | getItByThat:data.subtabs:'id':'url')}) track by $index" for="{{sellingPoint.title}}" class="grad-blue" dropdown><span ng-bind="sellingPoint.title"></span></label>
+<input type="checkbox" name="accordion" id="{{sellingPoint.title}}">
+<div ng-repeat-end>
+    <ul>
+        <li ng-repeat-start="text in sellingPoint.point">{{text}}</li>
+        <hr ng-if="!$last" ng-repeat-end />
+    </ul>
+</div>

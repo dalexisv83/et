@@ -1,5 +1,5 @@
-<div id="calendar">
-    <div class="nav" id="sub">
+<div id="calendar" ng-controller="CalCtrl">
+    <div id="sub">
         <select ng-model="premSel" ng-options="calendar.premium as (calendar.premium | getItByThat:data.premiums:'name':'id') for calendar in data.calendars | unique: 'premium' | orderBy: 'premium'">
             <option value="">All Premiums</option>
         </select>
@@ -16,15 +16,15 @@
         </select>
         <br />
         <label>Search Programming: </label>
-        <input ng-model="search.$" placeholder="Search" /><a href ng-show="search.$" ng-click="search = null">(x)</a>
+        <input ng-model="search.$" placeholder="Search" /><a href ng-show="search.$" ng-click="search = null">&#x2716;</a>
         <label>Filter By Premiere Date: </label>
-        <input type="date" ng-model="rangeStart" datepicker="dateFormat:'yy-mm-dd'" />
+        <input type="date" ng-model="rangeStart" datepicker="'dateFormat':'yy-mm-dd'" />
         <label>Date Range End: </label>
-        <input type="date" ng-model="rangeEnd" min="{{rangeStart | date:'yyyy-MM-dd'}}" datepicker="dateFormat:'yy-mm-dd'" />
-        <span ng-if="premSel">{{premSel | getItByThat:data.premiums:'name':'id'}} <a href ng-click="aParam('premium', null)">(x)</a></span>
-        <span ng-if="genSel">{{genSel}} <a href ng-click="aParam('genre', null)">(x)</a></span>
-        <span ng-if="typeSel">{{typeSel}} <a href ng-click="aParam('type', null)">(x)</a></span>
-        <span ng-if="chanSel">{{chanSel}} <a href ng-click="aParam('channel', null)">(x)</a></span>
+        <input type="date" ng-model="rangeEnd" min="{{rangeStart | date:'yyyy-MM-dd'}}" datepicker="'dateFormat':'yy-mm-dd'" />
+        <span ng-if="premSel">{{premSel | getItByThat:data.premiums:'name':'id'}} <a href ng-click="aParam('premium', null)">&#x2716;</a></span>
+        <span ng-if="genSel">{{genSel}} <a href ng-click="aParam('genre', null)">&#x2716;</a></span>
+        <span ng-if="typeSel">{{typeSel}} <a href ng-click="aParam('type', null)">&#x2716;</a></span>
+        <span ng-if="chanSel">{{chanSel}} <a href ng-click="aParam('channel', null)">&#x2716;</a></span>
     </div>
     <div class="program" ng-repeat="calendar in data.calendars |
     filter:search |
@@ -41,25 +41,27 @@
         <br />{{calendar.premDate | date:'MMM d'}} &ndash; {{calendar.premTime}}
         <br /><a href ng-repeat-start="genre in calendar.genres" ng-click="aParam('genre', genre)" ng-bind="genre"></a><span ng-if="!$last" ng-repeat-end>, </span>
     </div>
-</div>
-<div class="overlay" ng-if="progSel" ng-click="aParam('program', null)">
-</div>
-<div class="modal" ng-if="progSel" ng-repeat="calendar in data.calendars |
-    filter:{program: progSel}: true">
-        <a href ng-click="aParam('program', null)">(x)</a><br />
-        <div class="grid__item four-eighths">
-            <img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{calendar.image || calendar.program | lowercase | spcToHyphen}}.jpg" />
-            <br />{{calendar.program}}
-            <br><a href ng-click="aParam('premium', calendar.premium, 'getItByThat', data.premiums,'name','id')" ng-bind="calendar.premium | getItByThat:data.premiums:'name':'id'"></a>
-            <br>{{calendar.premDate | date:'MMM d'}} &ndash; {{calendar.premTime}}
-            <br><a href ng-click="aParam('channel', calendar.chanNum); aParam('program', null)">{{calendar.chanName}} &ndash; {{calendar.chanNum}}</a>
-            <br><a href ng-repeat-start="genre in calendar.genres" ng-click="aParam('genre', genre)" ng-bind="genre"></a><span ng-if="!$last" ng-repeat-end>, </span>
-        </div><!-- 
-         --><div class="grid__item four-eighths">
-            {{calendar.description}}
-            <span ng-if="calendar.starActrs"><br />Star Actors: <span ng-repeat-start="actor in calendar.starActrs">{{actor}}</span><span ng-repeat-end ng-if="!$last">, </span></span>
-            <span ng-if="calendar.starDrctrs"><br />Star Directors: <span ng-repeat-start="director in calendar.starDrctrs">{{director}}</span><span ng-repeat-end ng-if="!$last">, </span></span>
+    <div class="overlay" ng-if="progSel" ng-click="aParam('program', null)">
+    </div>
+    <div class="modal" ng-if="progSel" ng-repeat="calendar in data.calendars |
+        filter:{program: progSel}: true">
+        <div class="grid">
+            <div class="grid__item four-eighths">
+                <img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{calendar.image || calendar.program | lowercase | spcToHyphen}}.jpg" />
+                <br />{{calendar.program}}
+                <br><a href ng-click="aParam('premium', calendar.premium, 'getItByThat', data.premiums,'name','id')" ng-bind="calendar.premium | getItByThat:data.premiums:'name':'id'"></a>
+                <br>{{calendar.premDate | date:'MMM d'}} &ndash; {{calendar.premTime}}
+                <br><a href ng-click="aParam('channel', calendar.chanNum); aParam('program', null)">{{calendar.chanName}} &ndash; {{calendar.chanNum}}</a>
+                <br><a href ng-repeat-start="genre in calendar.genres" ng-click="aParam('genre', genre)" ng-bind="genre"></a><span ng-if="!$last" ng-repeat-end>, </span>
+            </div><!--
+             --><div class="grid__item four-eighths">
+                <p style="margin-top:0;text-align:right;"><a href ng-click="aParam('program', null)">&#x2716;</a></p>
+                {{calendar.description}}
+                <span ng-if="calendar.starActrs"><br />Star Actors: <span ng-repeat-start="actor in calendar.starActrs">{{actor}}</span><span ng-repeat-end ng-if="!$last">, </span></span>
+                <span ng-if="calendar.starDrctrs"><br />Star Directors: <span ng-repeat-start="director in calendar.starDrctrs">{{director}}</span><span ng-repeat-end ng-if="!$last">, </span></span>
+            </div>
         </div>
+    </div>
 </div>
 <div class="pdf">
     <p><a href="http://agentanswercenter.directv.com/en-us/res/system/img/calendar_premiums_yearly.pdf" target="_blank">Premiums Original Series Calendar 2016 - PDF</a></p>

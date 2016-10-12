@@ -1,7 +1,2 @@
-<h2><span ng-if="(prem.params.subName !== 'ordering') && (prem.params.subName !== 'pricing')">{{prem.params.subName | getItByThat:data.subtabs:'name':'url'}}</span><span ng-if="prem.params.subName === 'ordering'">Ways To Order</span><span ng-if="prem.params.subName === 'pricing'">PPV Life Cycle</span></h2>
-<label ng-repeat-start="point in premium.sellingPoints | filter:{evergreen: false} | filter:{subtab: (prem.params.subName | getItByThat:data.subtabs:'id':'url')}" for="{{point.title}}" class="grad-blue" checker>{{point.title}}</label><input type="radio" name="accordion" id="{{point.title}}">
-<div ng-repeat-end>
-  <ul>
-    <li>{{point.point}}</li>
-  </ul>
-</div>
+<h2><span ng-if="prem.params.subName === 'ordering'">Ways To Order</span><span ng-if="prem.params.subName === 'pricing'">PPV Life Cycle</span>&nbsp;</h2>
+<div class="movieorig inner accordion" ng-include="'views/accordion.htm'"></div>

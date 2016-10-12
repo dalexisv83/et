@@ -1,0 +1,56 @@
+<div class="grid">
+    <div class="grid__item one-quarter portable--one-whole desk--one-whole">
+        <img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{premium.name | lowercase | spcToHyphen}}-logo.png" />
+    </div>
+    <div class="grid__item three-quarters portable--one-whole desk--one-whole">
+        <div class="info" ng-if="premium.price || premium.offers || premium.channels || premium.ODchan || premium.channelRange || premium.trials">
+            <div class="grid grid--full">
+                <div class="grid__item one-third portable--one-whole desk--one-whole">
+                    <div ng-if="premium.price" class="price"><span ng-if="isStringNumber(premium.price)">&#36;</span>{{premium.price}}</div>
+                    <p ng-repeat="offer in premium.offers | inRange:'offerStart':'offerEnd':0:true">
+                        Current Offer:
+                        <br />{{offer.offerStart | excelDate | date:'MMM d'}} - {{offer.offerEnd | excelDate | date:'MMM d'}}
+                    </p>
+                </div>
+                <div class="grid__item one-third portable--one-whole desk--one-whole info--middle">
+                    <div ng-repeat="offer in premium.offers | inRange:'offerStart':'offerEnd':0:true" class="price">
+                        <span ng-if="offer.multiPrice != 'n/a'"><span ng-if="isStringNumber(offer.multiPrice)">&#36;</span>{{offer.multiPrice}}<small><wbr /><span style="visibility:hidden;">&shy;</span>&#8203;/mo. {{offer.onePrice / offer.multiPrice | number:0}}&nbsp;Pay</small>
+                        <br /></span><span ng-if="isStringNumber(offer.onePrice)">&#36;</span>{{offer.onePrice}} <small>One&nbsp;Pay</small>
+                    </div>
+                    <a ng-if="premium.channels" ng-href="#/{{prem.params.tool}}/{{prem.params.premName}}/channels">
+                        <ul>
+                            <li>{{premium.channels.length}} Channels</li>
+                            <li>{{HD = (premium.channels | filter:{HD: true, SD: false}).length}} HD Only</li>
+                            <li>{{SD = (premium.channels | filter:{HD: false, SD: true}).length}} SD Only</li>
+                            <li>{{SDHD = (premium.channels | filter:{HD: true, SD: true}).length}} SD/HD</li>
+                        </ul>
+                    </a>
+                </div>
+                <div class="grid__item one-third portable--one-whole desk--one-whole info--bottom" ng-if="premium.ODchan || premium.channelRange || premium.trials">
+                    <div ng-repeat="trial in premium.trials | inRange:'trialStart':'trialEnd':7"" class="price">Free Trial: {{trial.trialStart | excelDate | date:'MMM d'}}<span ng-if="trial.trialStart != trial.trialEnd"> - {{trial.trialEnd | excelDate | date:'MMM d'}}</span></div>
+                    <div ng-if="premium.ODchan">
+                        <p>{{premium.name}} DIRECTV On&nbsp;Demand Ch:&nbsp;{{premium.ODchan}}</p>
+                    </div>
+                    <div ng-if="premium.channelRange">
+                        <p>Channels {{premium.channelRange}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid__item">
+        <div class="dropdown">
+            <label for="helpful" class="helpful" dropdown>Useful Links</label>
+            <input type="checkbox" name="dropdown" id="helpful" />
+            <div>
+                <ul>
+                    <li ng-if="premium.premURL"><a ng-href="{{premium.premURL}}" target="_blank">{{premium.name}} Website</a></li>
+                    <li ng-if="premium.dotcomURL"><a ng-href="http://www.directv.com/{{premium.dotcomURL}}" target="_blank">{{premium.name}} on DIRECTV.com</a></li>
+                    <li ng-if="premium.aacURL"><a ng-href="http://agentanswercenter.directv.com/en-us/res/programming/{{premium.aacURL}}" target="_blank">{{premium.name}} on AAC</a></li>
+                    <li ng-if="premium.streamFrag"><a ng-href="http://agentanswercenter.directv.com/en-us/res/programming/{{premium.aacURL}}#fragment={{premium.streamFrag}}" target="_blank">{{premium.streamName}} on AAC</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

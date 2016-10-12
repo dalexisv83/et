@@ -1,0 +1,11 @@
+<div ng-include="'views/header.htm'"></div>
+<div id="choose" class="outer" ng-controller="ChooseCtrl">
+    <div class="grid">
+        <div class="grid__item">
+            <h1>Please choose a tool below</h1>
+        </div>
+        <div class="grid__item one-half palm--one-whole" ng-repeat="choice in choose.choices">
+            <a class="button bg--blue" ng-href="#/{{choice.url}}" ng-bind="choice.name"></a>
+        </div>
+    </div>
+</div>

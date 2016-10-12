@@ -16,6 +16,22 @@ var strTimeOrder = function(obj) {
             }
             return mins[0];
         }
+    },
+
+    // source: $scope.data.calendars
+    getGenres = function(source) {
+        'use strict';
+        var genres = [],
+            i,
+            n;
+        for (i=0; i<source.length; i+=1) {
+            for (n=0; n<source[i].genres.length; n+=1) {
+                if (typeof source[i].genres[n] === 'string') { // cause IE
+                    genres.push(source[i].genres[n]);
+                }
+            }
+        }
+        return genres;
     };
 
 (function(angular) {
@@ -23,15 +39,10 @@ var strTimeOrder = function(obj) {
     angular.module('entertainment')
         .controller('CalCtrl', ['$scope', '$routeParams', '$location', '$filter',
             function($scope, $routeParams, $location, $filter) {
-                this.name = "CalCtrl";
+                this.name = 'CalCtrl';
                 this.params = $routeParams;
                 $scope.orderStrTime = strTimeOrder;
-                $scope.aParam = function(param, value, filter, filterparam1, filterparam2, filterparam3) {
-                    if (filter) {
-                        value = $filter(filter)(value, filterparam1, filterparam2, filterparam3);
-                    }
-                    $location.search(param, value);
-                };
+                $scope.genres = getGenres($scope.data.calendars);
                 $scope.$watch(function() {
                     return $location.search();
                 }, function(params) {

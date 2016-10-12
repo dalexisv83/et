@@ -16,39 +16,151 @@ var checkSubs = function(obj, premium, sub) {
         }
     },
 
-    getGenres = function(source) {
-        'use strict';
-        var genres = [],
-            i,
-            n;
-        for (i=0; i<source.length; i+=1) {
-            for (n=0; n<source[i].genres.length; n+=1) {
-                if (typeof source[i].genres[n] === 'string') { // cause IE
-                    genres.push(source[i].genres[n]);
-                }
-            }
-        }
-        return genres;
-    },
-
     stringIsNumber = function(s) {
         "use strict";
         var x = +s; // made cast obvious for demonstration
         return x.toString() === s;
+    },
+
+    getChildren = function (input) {
+        'use strict';
+        var i,
+            parent,
+            children = [];
+        for (i = input.length - 1; i >= 0; i -= 1) {
+            if (input[i].category === parent) {
+                children.push(input[i].name);
+                children.push(input[i+1].name);
+            }
+            parent = input[i].category;
+        }
+        return children;
+    },
+
+    checkRange = function(items, model) {
+        'use strict';
+        if (items) {
+            var matches = [];
+            angular.forEach(items, function(value) {
+                var zips = value.ZIP_CODE.split('-');
+                zips[0]= Number(zips[0]);
+                if (zips[1]) {
+                    zips[1] = Number(zips[1]);
+                }
+                model = Number(model);
+                if (model === zips[0]) {
+                    matches.push(value);
+                }
+                if ((model >= zips[0]) && (model <= zips[1])) {
+                    matches.push(value);
+                }
+            });
+            return matches;
+        }
     };
 
 
 (function(angular) {
     'use strict';
     angular.module('entertainment')
-        .controller('MainCtrl', ['$scope', '$route', '$routeParams', '$location', '$filter',
-            function($scope, $route, $routeParams, $location, $filter) {
+        .factory('Content', [
+            '$resource',
+            function ($resource){
+                return function(toolName){
+                    return $resource('data/' + toolName + '.htm',{},{'get': { method:'GET', cache: true}});
+                };
+            }]);
+}(window.angular));
+
+(function(angular) {
+    'use strict';
+    angular.module('entertainment')
+        .factory('ContentFactory', [
+            'Content',
+            function (Content){
+                return function(toolName){
+                    var contentFactory = new Content(toolName);
+                    return contentFactory;
+                };
+            }]);
+}(window.angular));
+
+(function(angular) {
+    'use strict';
+    angular.module('entertainment')
+        .factory('ContentPromise', [
+            'ContentFactory',
+            function (ContentFactory){
+                return function(toolName) {
+                    return new ContentFactory(toolName).get().$promise.then(
+                        function(data) {
+                            return data;
+                        }, function () {
+                            return null;
+                        }
+                    );
+                };
+            }]);
+}(window.angular));
+
+(function(angular) {
+    'use strict';
+    angular.module('entertainment')
+        .controller('MainCtrl', ['$scope', '$route', '$routeParams', '$location', '$filter', 'contentData', '$timeout',
+            function($scope, $route, $routeParams, $location, $filter, contentData, $timeout) {
+                if (window.location.hash.search('trivia') > -1) {
+                    $timeout(function() {
+                        document.getElementById('trivia').scrollIntoView();
+                    }, 200);
+                }
+                if (!contentData) {
+                    $location.path('choose').replace();
+                }
+                this.name = 'MainCtrl';
                 this.$route = $route;
                 this.$location = $location;
                 this.$routeParams = $routeParams;
                 this.params = $routeParams; // redundant?
-                $scope.data = data;
-                $scope.premium = $filter('filter')(data.premiums, { url: this.$routeParams.premName })[0];
+                $scope.data = contentData;
+                $scope.tool = function(test) {
+                    if (test) {
+                        switch (test) {
+                            case 'entertainment':
+                                return 'hdr_entertainment.png';
+                            case 'sports':
+                                return 'hdr_sports.png';
+                        }
+                    }
+                    return false;
+                };
+                $scope.aParam = function(param, value, filter, filterparam1, filterparam2, filterparam3) {
+                    if (filter) {
+                        value = $filter(filter)(value, filterparam1, filterparam2, filterparam3);
+                    }
+                    $location.search(param, value);
+                };
+                $scope.$watch(function() {
+                    return $location.search();
+                }, function(params) {
+                    $scope.trivia = params.trivia;
+                });
+                $scope.$watch('trivia', function() {
+                    $location.search('trivia', $scope.trivia);
+                });
+                if ($scope.data) {
+                    $scope.children = getChildren($scope.data.premiums);
+                    $scope.premium = $filter('filter')($scope.data.premiums, { url: $routeParams.premName })[0];
+                    var premNameFiltered = $filter('getItByThat')($routeParams.premName, $scope.data.premiums, 'id', 'url'),
+                        subNameFiltered = $filter('getItByThat')($routeParams.subName, $scope.data.subtabs, 'id', 'url');
+                    if (($routeParams.tool !== undefined) && ($routeParams.premName !== undefined) && ($routeParams.premName !== 'calendar') && ($routeParams.premName !== 'lookup') && ($routeParams.subName === undefined)) {
+                        $location.path($routeParams.tool + '/' + $routeParams.premName + '/overview').replace();
+                    }
+                    if (($routeParams.premName !== undefined) && ($routeParams.subName !== undefined)) {
+                        if (!checkSubs($scope.data, premNameFiltered, subNameFiltered)) {
+                            $location.path($routeParams.tool + '/' + $routeParams.premName + '/overview').replace();
+                        }
+                    }
+                }
                 $scope.versus = versus;
                 $scope.isStringNumber = stringIsNumber;
                 $scope.selChecks = {
@@ -60,20 +172,97 @@ var checkSubs = function(obj, premium, sub) {
                         "Amazon Prime Video": true
                     }
                 };
-                $scope.genres = getGenres($scope.data.calendars);
-                this.init = function() {
-                    var premNameFiltered = $filter('getItByThat')(this.$routeParams.premName, $scope.data.premiums, 'id', 'url'),
-                        subNameFiltered = $filter('getItByThat')(this.$routeParams.subName, $scope.data.subtabs, 'id', 'url');
-                    if ((this.$routeParams.premName !== undefined) && (this.$routeParams.subName === undefined)) {
-                        $location.path(this.$routeParams.premName + '/overview');
+                $scope.scrollTo = function(hash) {
+                    document.getElementById(hash).scrollIntoView();
+                };
+            }
+        ]);
+}(window.angular));
+
+(function(angular) {
+    'use strict';
+    angular.module('entertainment')
+        .directive('subView', ['$routeParams', function($routeParams) {
+            return {
+                templateUrl: function() {
+                    if ($routeParams.tool === 'choose') {
+                        return 'views/choose.htm';
                     }
-                    if ((this.$routeParams.premName !== undefined) && (this.$routeParams.subName !== undefined)) {
-                        if (!checkSubs($scope.data, premNameFiltered, subNameFiltered)) {
-                            $location.path(this.$routeParams.premName + '/overview');
+                    switch($routeParams.premName) {
+                        case 'calendar':
+                            return 'views/calendar.htm';
+                        case 'lookup':
+                            return 'views/lookup.htm';
+                        default:
+                            return 'views/premium.htm';
+                    }
+                }
+            };
+        }]);
+}(window.angular));
+
+(function(angular) {
+    'use strict';
+    angular.module('entertainment')
+        .controller('LookupCtrl', ['$scope', '$timeout',
+            function($scope, $timeout) {
+                $scope.submitted = false;
+                $scope.zip = null;
+                $scope.lookup = null;
+                $scope.zipClick = null;
+                $scope.clickRsn = function() {
+                    $scope.submitted = true;
+                    if ($scope.zipcode.$valid) {
+                        $scope.lookup = null;
+                        $scope.lookup = 'rsn';
+                        $scope.zipClick = $scope.zip;
+                    }
+                };
+                $scope.clickAvail = function() {
+                    if (($scope.zip !== $scope.zipClick) || ($scope.lookup !== 'availability')) {
+                        $scope.submitted = true;
+                        if ($scope.zipcode.$valid) {
+                            $scope.lookup = null;
+                            $timeout(function(){
+                                $scope.lookup = 'availability';
+                                $scope.zipClick = $scope.zip;
+                            }, 0);
                         }
                     }
                 };
-                this.init();
             }
         ]);
+}(window.angular));
+
+(function(angular) {
+    'use strict';
+    angular.module('entertainment')
+        .controller('AvailCtrl', ['$scope', '$timeout',
+            function($scope, $timeout) {
+                $scope.init = function() {
+                    $timeout(function(){start($scope.$parent.zipClick);}, 100);
+                };
+                $scope.init();
+            }
+        ]);
+}(window.angular));
+
+(function(angular) {
+    'use strict';
+    angular.module('entertainment')
+        .controller('RsnCtrl', ['$scope', 'DTOptionsBuilder',
+            function($scope, DTOptionsBuilder) {
+                $scope.dtOptions = DTOptionsBuilder.newOptions()
+                            .withDOM('rt');
+                $scope.rsndata = rsnzip; // $http.get("http://agentanswercenter.directv.com/en-us/res/rover_tools/rsn/rsnzip.js");
+            }
+        ]);
+}(window.angular));
+
+(function(angular) {
+    'use strict';
+    angular.module('entertainment')
+        .filter('checkRange', function() {
+            return checkRange;
+        });
 }(window.angular));
