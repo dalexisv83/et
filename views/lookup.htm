@@ -9,7 +9,7 @@
                 <button ng-click="clickRsn()" class="lookup_btns rs_btn mr10">Lookup RSN</button>
                 <button ng-click="zip = null; lookup = null; zipClick = null; submitted = false;" class="lookup_btns rst_btn mr10">Reset</button>
             </span>
-            <span ng-if="submitted && zipcode.$invalid">Please enter a valid zipcode</span>
+            <!-- <span ng-if="submitted && zipcode.$invalid || isNaN(zipcode.zip.$modelValue)">Please enter a valid zipcode</span> -->
         </div>
         <div ng-if="lookup == 'availability'" ng-include="'views/availability.htm'"></div>
         <div ng-if="lookup == 'rsn'" ng-include="'views/rsn.htm'"></div>

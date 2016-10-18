@@ -51,10 +51,11 @@ var checkSubs = function(obj, premium, sub) {
                 if (model === zips[0]) {
                     matches.push(value);
                 }
-                if ((model >= zips[0]) && (model <= zips[1])) {
+                if ((model > zips[0]) && (model <= zips[1])) {
                     matches.push(value);
                 }
             });
+            console.log(matches);
             return matches;
         }
     };
@@ -212,7 +213,7 @@ var checkSubs = function(obj, premium, sub) {
                 $scope.zipClick = null;
                 $scope.clickRsn = function() {
                     $scope.submitted = true;
-                    if ($scope.zipcode.$valid) {
+                    if ($scope.zipcode.$valid || !isNaN(JSON.stringify($scope.zipcode.zip.$modelValue))) {
                         $scope.lookup = null;
                         $scope.lookup = 'rsn';
                         $scope.zipClick = $scope.zip;

@@ -12,7 +12,7 @@
   <ul>
     <hr ng-repeat-start="disclosure in premium.disclosures" ng-if="!$first" />
     <li ng-repeat-end>
-        {{(data.disclosures | filter : {id: disclosure})[0].lvl1}}
+        <span ng-bind-html="(data.disclosures | filter : {id: disclosure})[0].lvl1"></span>
         <ul ng-if="(data.disclosures | filter : {id: disclosure})[0].lvl2">
             <li ng-repeat="lvl2 in (data.disclosures | filter : {id: disclosure})[0].lvl2">{{lvl2}}</li>
         </ul>
