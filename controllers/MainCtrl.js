@@ -55,8 +55,10 @@ var checkSubs = function(obj, premium, sub) {
                     matches.push(value);
                 }
             });
-            console.log(matches);
-            return matches;
+            if(matches.length)
+                return matches;
+            else
+                return false;
         }
     };
 
