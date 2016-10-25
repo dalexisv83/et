@@ -51,7 +51,7 @@ var checkSubs = function(obj, premium, sub) {
                 if (model === zips[0]) {
                     matches.push(value);
                 }
-                if ((model >= zips[0]) && (model <= zips[1])) {
+                if ((model > zips[0]) && (model <= zips[1])) {
                     matches.push(value);
                 }
             });
@@ -212,7 +212,8 @@ var checkSubs = function(obj, premium, sub) {
                 $scope.zipClick = null;
                 $scope.clickRsn = function() {
                     $scope.submitted = true;
-                    if ($scope.zipcode.$valid) {
+                    // isNaN condition adds compatibility with IE8
+                    if ($scope.zipcode.$valid || !isNaN(JSON.stringify($scope.zipcode.zip.$modelValue))) {
                         $scope.lookup = null;
                         $scope.lookup = 'rsn';
                         $scope.zipClick = $scope.zip;
@@ -221,7 +222,8 @@ var checkSubs = function(obj, premium, sub) {
                 $scope.clickAvail = function() {
                     if (($scope.zip !== $scope.zipClick) || ($scope.lookup !== 'availability')) {
                         $scope.submitted = true;
-                        if ($scope.zipcode.$valid) {
+                        // isNan condition adds compatibility with IE8
+                        if ($scope.zipcode.$valid || !isNaN(JSON.stringify($scope.zipcode.zip.$modelValue))) {
                             $scope.lookup = null;
                             $timeout(function(){
                                 $scope.lookup = 'availability';
