@@ -55,10 +55,10 @@ var checkSubs = function(obj, premium, sub) {
                     matches.push(value);
                 }
             });
-            if(matches.length)
-                return matches;
-            else
-                return false;
+            if (!matches.length) {
+                matches = false;
+            }
+            return matches;
         }
     };
 
