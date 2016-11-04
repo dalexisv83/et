@@ -48,6 +48,7 @@
                     <li ng-if="premium.dotcomURL"><a ng-href="http://www.directv.com/{{premium.dotcomURL}}" target="_blank">{{premium.name}} on DIRECTV.com</a></li>
                     <li ng-if="premium.aacURL"><a ng-href="http://agentanswercenter.directv.com/en-us/res/programming/{{premium.aacURL}}" target="_blank">{{premium.name}} on AAC</a></li>
                     <li ng-if="premium.streamFrag"><a ng-href="http://agentanswercenter.directv.com/en-us/res/programming/{{premium.aacURL}}#fragment={{premium.streamFrag}}" target="_blank">{{premium.streamName}} on AAC</a></li>
+                    <li ng-if="premium.blkoutURL"><a ng-href="http://agentanswercenter.directv.com/en-us/res/programming/{{premium.blkoutURL}}" target="_blank">{{premium.name}} Blackout Info</a></li>
                     <li ng-if="premium.premURL || premium.dotcomURL == 'sports/sports_pack'"><a href="http://agentanswercenter.directv.com/en-us/res/billing/explain_partial_charges.html" target="_blank">Partial Monthly Charges</a></li>
                 </ul>
             </div>
