@@ -215,6 +215,8 @@ var checkSubs = function(obj, premium, sub) {
                 $scope.zipClick = null;
                 $scope.clickRsn = function() {
                     $scope.submitted = true;
+                    
+                    // isNaN condition adds compatibility with IE8
                     if ($scope.zipcode.$valid || !isNaN(JSON.stringify($scope.zipcode.zip.$modelValue))) {
                         $scope.lookup = null;
                         $scope.lookup = 'rsn';
@@ -224,7 +226,8 @@ var checkSubs = function(obj, premium, sub) {
                 $scope.clickAvail = function() {
                     if (($scope.zip !== $scope.zipClick) || ($scope.lookup !== 'availability')) {
                         $scope.submitted = true;
-                        if ($scope.zipcode.$valid) {
+                        // isNan condition adds compatibility with IE8
+                        if ($scope.zipcode.$valid || !isNaN(JSON.stringify($scope.zipcode.zip.$modelValue))) {
                             $scope.lookup = null;
                             $timeout(function(){
                                 $scope.lookup = 'availability';
