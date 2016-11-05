@@ -20,7 +20,7 @@
                         redirectTo: '/sports/nfl-sunday-ticket-max/overview'
                     })
                     .when('/:tool/:premName', {
-                        templateUrl: 'views/main.htm',
+                        templateUrl: 'views/main.htm?@@BUSTER@@',
                         controller: 'MainCtrl',
                         controllerAs: 'prem',
                         resolve: {
@@ -30,7 +30,7 @@
                         ]}
                     })
                     .when('/:tool/:premName/:subName', {
-                        templateUrl: 'views/main.htm',
+                        templateUrl: 'views/main.htm?@@BUSTER@@',
                         controller: 'MainCtrl',
                         controllerAs: 'prem',
                         resolve: {

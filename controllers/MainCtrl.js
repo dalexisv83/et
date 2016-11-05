@@ -70,7 +70,7 @@ var checkSubs = function(obj, premium, sub) {
             '$resource',
             function ($resource){
                 return function(toolName){
-                    return $resource('data/' + toolName + '.htm',{},{'get': { method:'GET', cache: true}});
+                    return $resource('data/' + toolName + '.htm?@@BUSTER@@',{},{'get': { method:'GET', cache: true}});
                 };
             }]);
 }(window.angular));
@@ -197,7 +197,7 @@ var checkSubs = function(obj, premium, sub) {
                         case 'lookup':
                             return 'views/lookup.htm';
                         default:
-                            return 'views/premium.htm';
+                            return 'views/premium.htm?@@BUSTER@@';
                     }
                 }
             };
