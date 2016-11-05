@@ -98,15 +98,16 @@
 			<fileset dir="." includes="**/*.js" excludes="**/unit_test/tests.js, **/vendor/*.*, **/data/*.*, **/legacy/js/*.*" />
 		</jslint>
 	</target>
-	<target name="compress">
+	<target name="compress">		
 		<yui-compressor
 			warn="false"
 			munge="true"
 			preserveallsemicolons="false"
-			fromdir="."
-			todir="${build.dir}"
-		>
-			<exclude name="script/unit_test/tests.js" />                       
+			fromdir="${basedir}"
+			todir="${build.dir}"			
+		>   
+			<exclude name="script/unit_test/tests.js" />
+			<exclude name="data/**" />
 		</yui-compressor>		
 	</target>
 	
@@ -124,7 +125,11 @@
 			<fileset dir="${build.dir}" includes="**/version_two/style/*.css" />
 		</concat>
 	</target>
-	
+
+	<tstamp>
+		<format property="AACDATE" pattern="dMy"/>
+	</tstamp>
+
 	<target name="replace">
 		<replace dir="${build.dir}">
 			<include name="**/*.*"/>
@@ -141,10 +146,13 @@
 			<replacetoken>&lt;!-- &lt;base href=&quot;%%pub%%rover_tools/sell_premium/sell_premium_overhaul.htm&quot; /&gt; --&gt;</replacetoken>
 			<replacevalue>&lt;base href=&quot;%%pub%%rover_tools/sell_premium/sell_premium_overhaul.htm&quot; /&gt;</replacevalue>
 		</replace>
+		<replace dir="${build.dir}" token="@@BUSTER@@" value="${AACDATE}">
+			<include name="**/*.*"/>
+		</replace>
 	</target>
 	<!-- cleaning tasks -->
 	<target name="clean">
 	</target>
 	
-	<target name="main" depends="start,jslint,replace,clean" />	
+	<target name="main" depends="start,jslint,compress,replace,clean" />	
 </project>
