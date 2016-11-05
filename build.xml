@@ -127,7 +127,7 @@
 	</target>
 
 	<tstamp>
-		<format property="AACDATE" pattern="dMy"/>
+		<format property="AACDATE" pattern="dyyM"/>
 	</tstamp>
 
 	<target name="replace">
