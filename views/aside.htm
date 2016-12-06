@@ -5,16 +5,16 @@
     <div class="grid__item three-quarters portable--one-whole desk--one-whole">
         <div class="info" ng-if="premium.price || premium.offers || premium.channels || premium.ODchan || premium.channelRange || premium.trials">
             <div class="grid grid--full">
-                <div class="grid__item one-third portable--one-whole desk--one-whole">
+                <div ng-if="premium.price || premium.offers" class="grid__item one-third portable--one-whole desk--one-whole">
                     <div ng-if="premium.price" class="price"><span ng-if="isStringNumber(premium.price)">&#36;</span>{{premium.price}}</div>
-                    <p ng-repeat="offer in premium.offers | inRange:'offerStart':'offerEnd':0:true">
+                    <p ng-repeat="offer in premium.offers | inRange:'offerStart':'offerEnd':0:false">
                         <span ng-if="!offer.text">Current Offer:</span>
                         <span ng-if="offer.text" ng-bind="offer.text"></span>
                         <br /><span ng-if="offer.multiPrice != 'n/a' && offer.onePrice != 'n/a'">{{offer.offerStart | excelDate | date:'MMM d'}} - {{offer.offerEnd | excelDate | date:'MMM d'}}</span>
                     </p>
                 </div>
-                <div class="grid__item one-third portable--one-whole desk--one-whole info--middle">
-                    <div ng-if="offer.multiPrice != 'n/a' && offer.onePrice != 'n/a'" ng-repeat="offer in premium.offers | inRange:'offerStart':'offerEnd':0:true" class="price">
+                <div ng-if="premium.channels || premium.offers" class="grid__item one-third portable--one-whole desk--one-whole info--middle">
+                    <div ng-if="offer.multiPrice != 'n/a' && offer.onePrice != 'n/a'" ng-repeat="offer in premium.offers | inRange:'offerStart':'offerEnd':0:false" class="price">
                         <span ng-if="offer.multiPrice != 'n/a'"><span ng-if="isStringNumber(offer.multiPrice)">&#36;</span>{{offer.multiPrice}}<small><wbr /><span style="visibility:hidden;">&shy;</span>&#8203;/mo. {{offer.onePrice / offer.multiPrice | number:0}}&nbsp;Pay</small>
                         <br /></span><span ng-if="isStringNumber(offer.onePrice)">&#36;{{offer.onePrice}} <small>One&nbsp;Pay</small></span>
                     </div>
