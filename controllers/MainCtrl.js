@@ -155,7 +155,7 @@ var checkSubs = function(obj, premium, sub) {
                     $scope.premium = $filter('filter')($scope.data.premiums, { url: $routeParams.premName })[0];
                     var premNameFiltered = $filter('getItByThat')($routeParams.premName, $scope.data.premiums, 'id', 'url'),
                         subNameFiltered = $filter('getItByThat')($routeParams.subName, $scope.data.subtabs, 'id', 'url');
-                    if (($routeParams.tool !== undefined) && ($routeParams.premName !== undefined) && ($routeParams.premName !== 'calendar') && ($routeParams.premName !== 'lookup') && ($routeParams.premName !== 'game-locator') && ($routeParams.subName === undefined)) {
+                    if (($routeParams.tool !== undefined) && ($routeParams.premName !== undefined) && ($routeParams.premName !== 'calendar') && ($routeParams.premName !== 'lookup') && ($routeParams.premName !== 'troubleshoot') && ($routeParams.subName === undefined)) {
                         $location.path($routeParams.tool + '/' + $routeParams.premName + '/overview').replace();
                     }
                     if (($routeParams.premName !== undefined) && ($routeParams.subName !== undefined)) {
@@ -192,8 +192,8 @@ var checkSubs = function(obj, premium, sub) {
                         return 'views/choose.htm';
                     }
                     switch($routeParams.premName) {
-                        case 'game-locator':
-                            return 'views/game-locator.htm';
+                        case 'troubleshoot':
+                            return 'views/game-locator.htm?' + Date.now();
                         case 'calendar':
                             return 'views/calendar.htm';
                         case 'lookup':
