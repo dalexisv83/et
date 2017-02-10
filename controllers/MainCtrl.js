@@ -70,7 +70,7 @@ var checkSubs = function(obj, premium, sub) {
             '$resource',
             function ($resource){
                 return function(toolName){
-                    return $resource('data/' + toolName + '.htm?@@BUSTER@@',{},{'get': { method:'GET', cache: true}});
+                    return $resource('assets/data/' + toolName + '.htm?@@BUSTER@@',{},{'get': { method:'GET', cache: true}});
                 };
             }]);
 }(window.angular));

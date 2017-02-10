@@ -1,89 +1,86 @@
 <!doctype html>
 <html lang="en" xmlns:ng="http://angularjs.org" ng-app="entertainment">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
-    <title>Sell Premium Tool</title>
-    <!-- <base href="http://agentanswercenter.directv.com/en-us/res/rover_tools/sell_premium/sell_premium_overhaul.htm" /> -->
-    <!--[if lt IE 9]>
-    <script src="http://agentanswercenter.directv.com/en-us/res/system/js/es5-shim.min.js"></script>
-    <script src="http://agentanswercenter.directv.com/en-us/res/system/js/es5-sham.min.js"></script>
-      <script src="http://agentanswercenterstg.directv.com/en-us/res/system/js/html5shiv.js"></script>
-      <script type="text/javascript" src="http://agentanswercenter.directv.com/en-us/res/system/js/matchmedia.polyfill.js"></script>
-    <script>
-    (function () {
-        window.html5.addElements('slick');
-    }());
-    if (!Array.prototype.indexOf) {
-        Array.prototype.indexOf = function(obj, start) {
-             for (var i = (start || 0), j = this.length; i < j; i++) {
-                 if (this[i] === obj) { return i; }
-             }
-             return -1;
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+        <title>Sell Premium Tool</title>
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="../common_assets/js/es5-shim.min.js"></script>
+        <script type="text/javascript" src="../common_assets/js/es5-sham.min.js"></script>
+        <script type="text/javascript" src="../common_assets/js/html5shiv.js"></script>
+        <script type="text/javascript" src="../common_assets/js/matchmedia.polyfill.js"></script>
+        <script>
+        (function () {
+            window.html5.addElements('slick');
+        }());
+        if (!Array.prototype.indexOf) {
+            Array.prototype.indexOf = function(obj, start) {
+                 for (var i = (start || 0), j = this.length; i < j; i++) {
+                     if (this[i] === obj) { return i; }
+                 }
+                 return -1;
+            }
         }
-    }
-    </script>
-    <![endif]-->
-    <script type="text/javascript" src="http://agentanswercenterstg.directv.com/en-us/res/rover_tools/dsse/dsset.js"></script>
-    <script src="http://agentanswercenter.directv.com/en-us/res/rover_tools/rsn/rsnzip.js"></script>
-    <script src="http://agentanswercenter.directv.com/en-us/res/system/js/modernizr-inputtypes.js"></script>
-    <script src="http://agentanswercenter.directv.com/en-us/res/system/js/jquery-1.11.3.min.js" type="text/javascript"></script>
-    <script src="http://agentanswercenter.directv.com/en-us/res/system/js/jquery.datatables.1.10.7.min.js"></script>
-    <script src="http://agentanswercenter.directv.com/en-us/res/system/js/angular.min.1.2.11.js"></script>
-    <script src="http://agentanswercenter.directv.com/en-us/res/system/js/angular-route.1.2.11.js"></script>
-    <script src="http://agentanswercenter.directv.com/en-us/res/system/js/angular-sanitize.js"></script>
-    <script src="http://agentanswercenter.directv.com/en-us/res/system/js/angular-resource.js"></script>
-    <script src="http://agentanswercenter.directv.com/en-us/res/system/js/jquery-ui.1.11.1.min.js"></script>
-    <script src="http://agentanswercenter.directv.com/en-us/res/system/js/jquery-ui-timepicker-addon.js"></script>
-    <script src="http://agentanswercenter.directv.com/en-us/res/system/js/slick.min.js"></script>
-    <script src="http://agentanswercenter.directv.com/en-us/res/system/js/moment.min.js"></script>
-    <script type="text/javascript" src="http://agentanswercenterstg.directv.com/en-us/res/system/js/underscore.js"></script>
-    <script src="app/app.js"></script>
-    <script src="config/config.js"></script>
-    <script src="controllers/MainCtrl.js?@@BUSTER@@"></script>
-    <script src="controllers/CalCtrl.js"></script>
-    <script src="controllers/ChooseCtrl.js"></script>
-    <script src="data/versus.js"></script>
-    <script src="filters/filters.js"></script>
-    <script src="../angular_filters/getItByThat/getItByThat.js"></script>
-    <script src="../angular_filters/spcToHyphen/spcToHyphen.js"></script>
-    <script src="../angular_filters/encode/encode.js"></script>
-    <script src="../angular_filters/unique/unique.js"></script>
-    <script src="../angular_filters/dateRange/dateRange.js"></script>
-    <script src="directives/directives.js"></script>
-    <script src="../angular_directives/datepicker/datepicker.js"></script>
-    <script src="../angular_directives/slick/slick.min.js"></script>
-    <script src="../angular_directives/dropCheck/dropCheck.js"></script>
-    <script src="http://agentanswercenter.directv.com/en-us/res/system/js/angular-datatables.js"></script>
-    <script src="http://agentanswercenter.directv.com/en-us/res/system/js/angular-datatables.directive.js"></script>
-    <script src="http://agentanswercenter.directv.com/en-us/res/system/js/angular-datatables.factory.js"></script>
-    <script src="http://agentanswercenter.directv.com/en-us/res/system/js/angular-datatables.instances.js"></script>
-    <script src="http://agentanswercenter.directv.com/en-us/res/system/js/angular-datatables.util.js"></script>
-    <script src="http://agentanswercenter.directv.com/en-us/res/system/js/angular-datatables.renderer.js"></script>
-    <script src="http://agentanswercenter.directv.com/en-us/res/system/js/angular-datatables.options.js"></script>
-    <script type="text/javascript" src="legacy/js/sports_availability_j.js"></script>
+        </script>
+        <![endif]-->
+        <script type="text/javascript" src="assets/data/dsset.js"></script>
+        <script type="text/javascript" src="assets/data/rsnzip.js"></script>
+        <script type="text/javascript" src="../common_assets/js/modernizr-inputtypes.js"></script>
+        <script type="text/javascript" src="../common_assets/js/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="../common_assets/js/jquery.datatables.1.10.7.min.js"></script>
+        <script type="text/javascript" src="../common_assets/js/angular.min.1.2.11.js"></script>
+        <script type="text/javascript" src="../common_assets/js/angular-route.1.2.11.js"></script>
+        <script type="text/javascript" src="../common_assets/js/angular-sanitize.js"></script>
+        <script type="text/javascript" src="../common_assets/js/angular-resource.js"></script>
+        <script type="text/javascript" src="../common_assets/js/jquery-ui.1.11.1.min.js"></script>
+        <script type="text/javascript" src="../common_assets/js/jquery-ui-timepicker-addon.js"></script>
+        <script type="text/javascript" src="../common_assets/js/slick.min.js"></script>
+        <script type="text/javascript" src="../common_assets/js/moment.min.js"></script>
+        <script type="text/javascript" src="../common_assets/js/underscore.js"></script>
+        <script src="app/app.js"></script>
+        <script src="config/config.js"></script>
+        <script src="controllers/MainCtrl.js?@@BUSTER@@"></script>
+        <script src="controllers/CalCtrl.js"></script>
+        <script src="controllers/ChooseCtrl.js"></script>
+        <script src="assets/data/versus.js"></script>
+        <script src="filters/filters.js"></script>
+        <script type="text/javascript" src="../common_assets/js/angular_filters/getItByThat/getItByThat.js"></script>
+        <script type="text/javascript" src="../common_assets/js/angular_filters/spcToHyphen/spcToHyphen.js"></script>
+        <script type="text/javascript" src="../common_assets/js/angular_filters/encode/encode.js"></script>
+        <script type="text/javascript" src="../common_assets/js/angular_filters/unique/unique.js"></script>
+        <script type="text/javascript" src="../common_assets/js/angular_filters/dateRange/dateRange.js"></script>
+        <script src="directives/directives.js"></script>
+        <script type="text/javascript" src="../common_assets/js/angular_directives/datepicker/datepicker.js"></script>
+        <script type="text/javascript" src="../common_assets/js/angular_directives/slick/slick.min.js"></script>
+        <script type="text/javascript" src="../common_assets/js/angular_directives/dropCheck/dropCheck.js"></script>
+        <script type="text/javascript" src="../common_assets/js/angular-datatables.js"></script>
+        <script type="text/javascript" src="../common_assets/js/angular-datatables.directive.js"></script>
+        <script type="text/javascript" src="../common_assets/js/angular-datatables.factory.js"></script>
+        <script type="text/javascript" src="../common_assets/js/angular-datatables.instances.js"></script>
+        <script type="text/javascript" src="../common_assets/js/angular-datatables.util.js"></script>
+        <script type="text/javascript" src="../common_assets/js/angular-datatables.renderer.js"></script>
+        <script type="text/javascript" src="../common_assets/js/angular-datatables.options.js"></script>
+        <script type="text/javascript" src="assets/js/sports_availability_j.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="http://agentanswercenter.directv.com/en-us/res/system/css/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="http://agentanswercenter.directv.com/en-us/res/system/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="style/csswizardry-grids.css">
-    <link rel="stylesheet" type="text/css" href="style/style.css">
-    <link rel="stylesheet" href="http://agentanswercenter.directv.com/en-us/res/system/css/angular-datatables.css">
-    <link rel="stylesheet" href="legacy/css/sports_availability_c.css">
-    <!--[if lt IE 9]>
-    <script type="text/javascript" src="http://agentanswercenter.directv.com/en-us/res/system/js/respond.min.js"></script>
-    <![endif]-->
-</head>
-<body>
+        <link rel="stylesheet" type="text/css" href="../common_assets/css/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="../common_assets/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/csswizardry-grids.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="stylesheet" href="../common_assets/css/angular-datatables.css">
+        <link rel="stylesheet" href="assets/css/sports_availability_c.css">
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="http://agentanswercenter.directv.com/en-us/res/system/js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
 
-<div class="view" ng-view>Loading&hellip;</div>
+        <div class="view" ng-view>Loading&hellip;</div>
 
-<footer class="bg--dark-grey sticky_footer">
-    <small>&copy;2016 AT&amp;T Intellectual Property. All rights reserved.</small>
-</footer>
-    <input type="hidden" id="tool-author-id" value="David Velasquez">
-    <!-- START OF SmartSource Data Collector TAG -->
-    <script src="http://agentanswercenter.directv.com/en-us/res/system/js/webtrends.js" type="text/javascript"></script>
-</body>
+        <footer class="bg--dark-grey sticky_footer">
+            <small>&copy;2016 AT&amp;T Intellectual Property. All rights reserved.</small>
+        </footer>
+        <input type="hidden" id="tool-author-id" value="David Velasquez">
 
+    </body>
 </html>
