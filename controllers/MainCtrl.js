@@ -262,7 +262,7 @@ var checkSubs = function(obj, premium, sub) {
             function($scope, DTOptionsBuilder) {
                 $scope.dtOptions = DTOptionsBuilder.newOptions()
                             .withDOM('rt');
-                $scope.rsndata = rsnzip; // $http.get("http://agentanswercenter.directv.com/en-us/res/rover_tools/rsn/rsnzip.js");
+                $scope.rsndata = rsnzip;
             }
         ]);
 }(window.angular));

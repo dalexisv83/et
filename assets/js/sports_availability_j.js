@@ -11,7 +11,6 @@ var rsn_lookup = function(user_zipcode) {
     var nba = [];
     var nhl = [];
     var zip_range, zip_start, zip_end;
-    //$.getJSON( "http://agentanswercenter.directv.com/en-us/res/rover_tools/rsn/rsnzip.js" )
     _.each(rsnzip, function(val, key) {
         if (val.ZIP_CODE === user_zipcode) {
             state = rsnzip[key].STATE;
@@ -520,7 +519,7 @@ function process_output(gameData, type) {
             } else {
                 // safa added for MSG and Pro hockey alert
                 if(sport(val.League) === "Pro Hockey" && val.Broadcaster === "MSG" || val.Broadcaster === "MSG Plus" || val.Broadcaster === "MSG Alternate" || val.Broadcaster === "MSG Alternate 2"){
-                    output += "<tr" + replayClassCheck(val.Replay) + "><td>" + moment(val.Event_Date, "MM-DD-YYY").format("MMM Do") + " - " + moment(val.Event_Time, "HH:mm").format("h:mmA") + "</td><td>" + sport(val.League) + "</td><td>" + val.Away + " @ " + val.Home + replayCheck(val.Replay) + "</td><td><strong>Ch " + channelCheck(val.Channel) + "</strong> - " + val.Broadcaster + "<span class='msg_pro_hockey'><img src='http://agentanswercenter.directv.com/en-us/res/system/img/warning-icon.png' /></span><br />" + minimumRequirement(val.Broadcaster) + "</td></tr>";
+                    output += "<tr" + replayClassCheck(val.Replay) + "><td>" + moment(val.Event_Date, "MM-DD-YYY").format("MMM Do") + " - " + moment(val.Event_Time, "HH:mm").format("h:mmA") + "</td><td>" + sport(val.League) + "</td><td>" + val.Away + " @ " + val.Home + replayCheck(val.Replay) + "</td><td><strong>Ch " + channelCheck(val.Channel) + "</strong> - " + val.Broadcaster + "<span class='msg_pro_hockey'><img src='assets/img/warning-icon.png' /></span><br />" + minimumRequirement(val.Broadcaster) + "</td></tr>";
                 }
                 else
                 // end of MSG Pro hockey alert
@@ -543,7 +542,7 @@ function process_output(gameData, type) {
                 output += "<tr" + replayClassCheck(val.Replay) + "><td>" + moment(val.Event_Date, "MM-DD-YYY").format("MMM Do") + " - " + moment(val.Event_Time, "HH:mm").format("h:mmA") + "</td><td>" + sport(val.League) + "</td><td>" + val.Away + " @ " + val.Home + replayCheck(val.Replay) + "</td><td><strong>Ch " + channelCheck(val.Sport_Channel) + "</strong> - " + Sport_packages_convertion(val.League) +"</td></tr>";
         //safa added end
             } else {
-                output += "<tr" + replayClassCheck(val.Replay) + "><td>" + moment(val.Event_Date, "MM-DD-YYY").format("MMM Do") + " - " + moment(val.Event_Time, "HH:mm").format("h:mmA") + "</td><td>" + sport(val.League) + "</td><td>" + val.Away + " @ " + val.Home + replayCheck(val.Replay) + "</td><td><strong>Ch " + channelCheck(val.Sport_Channel) + "</strong> - " + Sport_packages_convertion(val.League) + " <span class='local_national'><img src='http://agentanswercenter.directv.com/en-us/res/system/img/warning-icon.png' /></span><p class='alert alert-success feed' role='alert'><strong>Feed: </strong>" + val.Broadcaster + "</p></td></tr>";
+                output += "<tr" + replayClassCheck(val.Replay) + "><td>" + moment(val.Event_Date, "MM-DD-YYY").format("MMM Do") + " - " + moment(val.Event_Time, "HH:mm").format("h:mmA") + "</td><td>" + sport(val.League) + "</td><td>" + val.Away + " @ " + val.Home + replayCheck(val.Replay) + "</td><td><strong>Ch " + channelCheck(val.Sport_Channel) + "</strong> - " + Sport_packages_convertion(val.League) + " <span class='local_national'><img src='assets/img/warning-icon.png' /></span><p class='alert alert-success feed' role='alert'><strong>Feed: </strong>" + val.Broadcaster + "</p></td></tr>";
             }
         });
     // safa edit starts here

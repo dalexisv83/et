@@ -795,12 +795,12 @@ footer {
 }
 
 .slick-prev {
-    background-image: url('http://agentanswercenter.directv.com/en-us/res/system/img/carousel_arrow_left_alpha50.png');
+    background-image: url('../img/carousel_arrow_left_alpha50.png');
     left: 0;
 }
 
 .slick-next {
-    background-image: url('http://agentanswercenter.directv.com/en-us/res/system/img/carousel_arrow_right_alpha50.png');
+    background-image: url('../img/carousel_arrow_right_alpha50.png');
     right: 0;
 }
 

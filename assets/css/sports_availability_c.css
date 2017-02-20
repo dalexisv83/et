@@ -50,23 +50,23 @@ table.dataTable thead .sorting_desc_disabled {
 }
 
 table.dataTable thead .sorting {
-    background-image: url("http://agentanswercenterstg.directv.com/en-us/res//system/img/sort_both.png")
+    background-image: url("../../../common_assets/img/sort_both.png")
 }
 
 table.dataTable thead .sorting_asc {
-    background-image: url("http://agentanswercenterstg.directv.com/en-us/res//system/img/sort_asc_orange.png")
+    background-image: url("../../../common_assets/img/sort_asc_orange.png")
 }
 
 table.dataTable thead .sorting_desc {
-    background-image: url("http://agentanswercenterstg.directv.com/en-us/res//system/img/sort_desc_orange.png")
+    background-image: url("../../../common_assets/img/sort_desc_orange.png")
 }
 
 table.dataTable thead .sorting_asc_disabled {
-    background-image: url("http://agentanswercenterstg.directv.com/en-us/res//system/img/sort_asc_disabled.png")
+    background-image: url("../../../common_assets/img/sort_asc_disabled.png")
 }
 
 table.dataTable thead .sorting_desc_disabled {
-    background-image: url("http://agentanswercenterstg.directv.com/en-us/res//system/img/sort_desc_disabled.png")
+    background-image: url("../../../common_assets/img/sort_desc_disabled.png")
 }
 
 table.dataTable tbody tr {
@@ -550,7 +550,7 @@ thead {
 
 thead tr,
 .dataTables_scrollHeadInner {
-    background: #58585b url('http://agentanswercenterstg.directv.com/en-us/res//system/img/table-heading-bg.jpg') repeat-x !important;
+    background: #58585b url('../../../common_assets/img/table-heading-bg.jpg') repeat-x !important;
     color: #ffffff;
 }
 
@@ -574,7 +574,7 @@ div.dataTables_scrollHeadInner {
 
 thead tr th {
     border-right: 1px solid #ffffff;
-/*    background: #58585b url('http://agentanswercenterstg.directv.com/en-us/res//system/img/table-heading-bg.jpg') repeat-x !important;*/
+/*    background: #58585b url('../assets/img/table-heading-bg.jpg') repeat-x !important;*/
     border-color: #fff;
     color: #ffffff;
     border-left: none;
@@ -591,7 +591,7 @@ thead tr th {
     padding-top: 15px;
     background-color: #000000;
     color: #ffffff;
-    background: #23272f url('http://agentanswercenterstg.directv.com/en-us/res//system/img/sat-top-banner.jpg') no-repeat;
+    background: #23272f url('../assets/img/sat-top-banner.jpg') no-repeat;
 }
 
 .tool-name {
