@@ -12,7 +12,7 @@ var rsn_lookup = function(user_zipcode) {
     var nhl = [];
     var zip_range, zip_start, zip_end;
     _.each(rsnzip, function(val, key) {
-        if (val.ZIP_CODE === user_zipcode) {
+        if (val.ZIP_CODE == user_zipcode) {
             state = rsnzip[key].STATE;
 
             rsn.push(rsnzip[key].CHOICE_MAS_ULTRA);
