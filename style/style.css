@@ -67,7 +67,7 @@ li ul {
 }
 
 li a, p a {
-    color: #0072ae;
+    color: #2baae1;
 }
 
 th, td {
@@ -829,4 +829,42 @@ input.ng-valid.zipinp {
 
 .minReq {
     color: #ff9c38;
+}
+
+#game_locator > ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#game_locator > ol > li {
+    border: 1px solid #ddd;
+    padding: 14px 24px;
+}
+
+#game_locator > ol > li + li {
+    border-top: none;
+}
+
+#game_locator > ol > li:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+#game_locator h4 {
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #E97400;
+    margin: 0;
+}
+
+#game_locator ul.related {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 16px;
+}
+
+#game_locator table {
+    background-color: white;
 }
