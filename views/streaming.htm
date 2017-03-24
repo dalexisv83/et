@@ -1,10 +1,10 @@
 <div>
-    <img src="http://agentanswercenter.directv.com/en-us/res/system/img/streaming.jpg" alt="">
+    <img src="assets/img/streaming.jpg" alt="">
 </div>
 <div class="grid__item five-eighths">
     <h2 class="grad-blue">DIRECTV Everywhere</h2>
     <ul ng-repeat="sellingPoint in filteredPoints = (premium.sellingPoints | filter:{title: null} | filter:{subtab: (prem.params.subName | getItByThat:data.subtabs:'id':'url')})">
         <li ng-repeat="text in sellingPoint.point">{{text}}</li>
-        <li ng-if="premium.streamName">For more detailed information about <b>{{premium.streamName}}</b>, visit the <a ng-href="http://agentanswercenter.directv.com/en-us/res/programming/{{premium.aacURL}}#fragment={{premium.streamFrag}}" target="_blank">{{premium.name}} page on Agent Answer Center</a></li>
+        <li ng-if="premium.cspUrl">For more detailed information about <b>{{premium.streamName}}</b>, visit the <a ng-href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id={{premium.cspUrl}}" target="_blank">{{premium.name}} page on myCSP</a></li>
     </ul>
 </div>
