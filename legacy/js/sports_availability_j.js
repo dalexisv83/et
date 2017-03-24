@@ -976,7 +976,7 @@ var start = function(user_zipcode){
                 $('input.global_filter').on('keyup click', function() {
                     $('#games_list').DataTable().search($('.global_filter').val()).draw();
                 });
-                var disclaimer = "Before offering out-of-market sports package, check <a href='http://lil-lookup.directv.com:8080/lil/lilIndex.htm?site=res&requestor=DORIS' target='_blank'>local</a> or <a href='http://agentanswercenterstg.directv.com/en-us/res/programming/national_sports_channels.html' target='_blank'>national</a> channels for game availability.";
+                var disclaimer = "Before offering out-of-market sports package, check <a href='http://www.directv.com/DTVAPP/packProg/localChannels.jsp?assetId=cms_local_channels&_requestid=2230690' target='_blank'>local</a> or <a href='http://agentanswercenterstg.directv.com/en-us/res/programming/national_sports_channels.html' target='_blank'>national</a> channels for game availability.";
                 $('.local_national').each(function () {
                     var $elem = $(this);
                     $elem.popover({
