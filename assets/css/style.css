@@ -200,18 +200,18 @@ tbody th {
     text-align: center;
     padding: 7px 10px;
     font-weight: bold;
-    font-size: .95em;
+    font-size: 13.25px;
 }
 
-@media only screen and (min-width: 790px) {
+@media only screen and (min-width: 850px) {
     .nav a, .nav span {
-        font-size: 1em;
+        font-size: 15px;
     }
 }
 
 @media only screen and (min-width: 999px) {
     .nav a, .nav span {
-        padding: 7px 24px;
+        padding: 7px 23px;
     }
 }
 
@@ -237,11 +237,11 @@ tbody th {
 
 .nav li:hover ul {
     display: block;
+    z-index: 1;
 }
 
 #top {
     position: relative;
-    z-index: 1;
     background-color: #404041;
 }
 
@@ -636,9 +636,8 @@ label.helpful.open:after {
     height: 100%;
     top: 0;
     left: 0;
-    opacity: .8;
     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-    background-color: #333;
+    background-color: rgba(0,0,0,.5);
     z-index: 99;
 }
 
@@ -780,7 +779,7 @@ footer {
     width: 10%;
     top: 0;
     text-indent: -451983px;
-    z-index: 100;
+    z-index: 98;
     opacity: .5;
 }
 
@@ -867,4 +866,93 @@ input.ng-valid.zipinp {
 
 #game_locator table {
     background-color: white;
+}
+
+.oContainer {
+    position: relative;
+}
+
+.oTip {
+    position: absolute;
+    z-index: 100;
+}
+
+img.oTip {
+    max-width: none;
+    height: auto;
+}
+
+.oTip-tabs {
+    left: 15px;
+    top: -40px;
+    max-width: 43%!important;
+    min-width: 406px;
+}
+
+.oTip-calendar {
+    top: 15px;
+    right: 0px;
+}
+
+.oTip-pricing {
+    top: -60px;
+    left: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .oTip-pricing {
+        display: none;
+    }
+}
+
+.oTip-objections {
+    right: 0;
+    top: 0;
+}
+
+.oTip-featured {
+    top: -10px;
+}
+
+.oTip-highlights {
+    top: -70px;
+    left: -15px;
+}
+
+.oTip-troubleshoot {
+    right: 20px;
+    top: 19px;
+}
+
+.oTip-lookup {
+    top: -62px;
+    left: -10px;
+}
+
+.oTip-welcome {
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 101;
+}
+
+.oTip-help {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 21px;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.oTip-welcome button {
+    position: absolute;
+    top: 230px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    border: 2px solid white;
+    background-color: #0567ae;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding: 5px 20px 7px;
 }

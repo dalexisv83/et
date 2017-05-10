@@ -109,8 +109,19 @@ var checkSubs = function(obj, premium, sub) {
 (function(angular) {
     'use strict';
     angular.module('entertainment')
-        .controller('MainCtrl', ['$scope', '$route', '$routeParams', '$location', '$filter', 'contentData', '$timeout',
-            function($scope, $route, $routeParams, $location, $filter, contentData, $timeout) {
+        .controller('MainCtrl', ['$scope', '$route', '$routeParams', '$location', '$filter', 'contentData', '$timeout', '$cookies',
+            function($scope, $route, $routeParams, $location, $filter, contentData, $timeout, $cookies) {
+                $scope.$watch(function () {
+                    return $cookies;
+                }, function (value) {
+                    $scope.spOverlay = value;
+                });
+                $scope.$watch('spOverlay', function () {
+                    $cookies.sports = $scope.spOverlay['sports'];
+                });
+                $scope.$watch('etOverlay', function () {
+                    $cookies.entertainment = $scope.spOverlay['entertainment'];
+                });
                 if (window.location.hash.search('trivia') > -1) {
                     $timeout(function() {
                         document.getElementById('trivia').scrollIntoView();

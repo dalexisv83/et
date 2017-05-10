@@ -5,13 +5,14 @@
     <div class="grid__item three-quarters portable--one-whole desk--one-whole">
         <div class="info" ng-if="premium.price || premium.offers || premium.channels || premium.ODchan || premium.channelRange || premium.trials">
             <div class="grid grid--full">
-                <div ng-if="premium.price || premium.offers" ng-show="premium.price || dateInRange.length" class="grid__item one-third portable--one-whole desk--one-whole">
+                <div ng-if="premium.price || premium.offers" ng-show="premium.price || dateInRange.length" class="grid__item one-third portable--one-whole desk--one-whole oContainer">
                     <div ng-if="premium.price" class="price"><span ng-if="isStringNumber(premium.price)">&#36;</span>{{premium.price}}</div>
                     <p ng-repeat="offer in dateInRange = (premium.offers | inRange:'offerStart':'offerEnd':0:false)">
                         <span ng-if="!offer.text">Current Offer:</span>
                         <span ng-if="offer.text" ng-bind="offer.text"></span>
                         <br /><span ng-if="offer.multiPrice != 'n/a' || offer.onePrice != 'n/a'">{{offer.offerStart | excelDate | date:'MMM d'}} - {{offer.offerEnd | excelDate | date:'MMM d'}}</span>
                     </p>
+                    <img ng-hide="spOverlay[prem.params.tool] == 'hide'" class="oTip oTip-pricing" ng-src="assets/img/overlay_pricing.png" />
                 </div>
                 <div ng-if="premium.channels || premium.offers" ng-show="premium.channels || priceInRange.length" class="grid__item one-third portable--one-whole desk--one-whole info--middle">
                     <div ng-if="offer.multiPrice != 'n/a' || offer.onePrice != 'n/a'" ng-repeat="offer in priceInRange = (premium.offers | inRange:'offerStart':'offerEnd':0:false)" class="price">
@@ -28,7 +29,7 @@
                     </a>
                 </div>
                 <div class="grid__item one-third portable--one-whole desk--one-whole info--bottom" ng-if="premium.ODchan || premium.channelRange || premium.trials">
-                    <div ng-repeat="trial in premium.trials | inRange:'trialStart':'trialEnd':7"" class="price">Free Trial: {{trial.trialStart | excelDate | date:'MMM d'}}<span ng-if="trial.trialStart != trial.trialEnd"> - {{trial.trialEnd | excelDate | date:'MMM d'}}</span></div>
+                    <div ng-repeat="trial in premium.trials | inRange:'trialStart':'trialEnd':7" class="price">Free Trial: {{trial.trialStart | excelDate | date:'MMM d'}}<span ng-if="trial.trialStart != trial.trialEnd"> - {{trial.trialEnd | excelDate | date:'MMM d'}}</span></div>
                     <div ng-if="premium.ODchan">
                         <p>{{premium.name}} DIRECTV On&nbsp;Demand Ch:&nbsp;{{premium.ODchan}}</p>
                     </div>

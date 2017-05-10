@@ -2,22 +2,34 @@
 <div>
     <ul class="nav" id="top">
         <li ng-repeat="premium in data.premiums | unique:'category'">
-            <a ng-if="children.indexOf(premium.name) < 0" ng-href="#/{{prem.params.tool}}/{{premium.name | lowercase | spcToHyphen}}/{{prem.params.subName}}" ng-class="{active: prem.params.premName == (premium.name | lowercase | spcToHyphen)}" ng-bind="premium.category || premium.name">Loading Premiums&hellip;</a>
-            <span ng-if="children.indexOf(premium.name) >= 0" ng-class="{active: (prem.params.premName | getItByThat:data.premiums:'category':'url') == premium.category}" ng-bind="premium.category || premium.name">Loading Premiums&hellip;</span>
-            <ul ng-if="children.indexOf(premium.name) >= 0">
-                <li ng-repeat="premium in data.premiums | filter:{category:$parent.premium.category}">
-                    <a ng-href="#/{{prem.params.tool}}/{{premium.name | lowercase | spcToHyphen}}/{{prem.params.subName}}" ng-class="{active: prem.params.premName == (premium.name | lowercase | spcToHyphen)}" ng-bind="premium.name">Loading Premiums&hellip;</a>
-                </li>
-            </ul>
+            <div>
+                <img ng-if="$first" ng-hide="spOverlay[prem.params.tool] == 'hide'" class="oTip oTip-tabs" ng-src="assets/img/overlay_{{prem.params.tool}}_tabs.png" />
+                <a ng-if="children.indexOf(premium.name) < 0" ng-href="#/{{prem.params.tool}}/{{premium.name | lowercase | spcToHyphen}}/{{prem.params.subName}}" ng-class="{active: prem.params.premName == (premium.name | lowercase | spcToHyphen)}" ng-bind="premium.category || premium.name">Loading Premiums&hellip;</a>
+                <span ng-if="children.indexOf(premium.name) >= 0" ng-class="{active: (prem.params.premName | getItByThat:data.premiums:'category':'url') == premium.category}" ng-bind="premium.category || premium.name">Loading Premiums&hellip;</span>
+                <ul ng-if="children.indexOf(premium.name) >= 0">
+                    <li ng-repeat="premium in data.premiums | filter:{category:$parent.premium.category}">
+                        <a ng-href="#/{{prem.params.tool}}/{{premium.name | lowercase | spcToHyphen}}/{{prem.params.subName}}" ng-class="{active: prem.params.premName == (premium.name | lowercase | spcToHyphen)}" ng-bind="premium.name">Loading Premiums&hellip;</a>
+                    </li>
+                </ul>
+            </div>
         </li><!-- 
          --><li ng-if="data.calendars">
-            <a href="#/entertainment/calendar" ng-class="{active: prem.params.premName == 'calendar'}">Calendar</a>
+            <div class="oContainer">
+                <img ng-hide="spOverlay[prem.params.tool] == 'hide'" class="oTip oTip-calendar" ng-src="assets/img/overlay_ent_calendar.png" />
+                <a href="#/entertainment/calendar" ng-class="{active: prem.params.premName == 'calendar'}">Calendar</a>
+            </div>
         </li><!-- 
          --><li ng-if="!data.calendars">
-            <a href="#/sports/lookup" ng-class="{active: prem.params.premName == 'lookup'}">Lookup</a>
+            <div class="oContainer">
+                <img ng-hide="spOverlay[prem.params.tool] == 'hide'" class="oTip oTip-lookup" ng-src="assets/img/overlay_sports_lookup.png" />
+                <a href="#/sports/lookup" ng-class="{active: prem.params.premName == 'lookup'}">Lookup</a>
+            </div>
         </li><!--
          --><li ng-if="!data.calendars">
-            <a href="#/sports/troubleshoot" ng-class="{active: prem.params.premName == 'troubleshoot'}">Troubleshoot</a>
+            <div class="oContainer">
+                <img ng-hide="spOverlay[prem.params.tool] == 'hide'" class="oTip oTip-troubleshoot" ng-src="assets/img/overlay_sports_troubleshoot.png" />
+                <a href="#/sports/troubleshoot" ng-class="{active: prem.params.premName == 'troubleshoot'}">Troubleshoot</a>
+            </div>
         </li>
     </ul>
     <div class="sub-view" sub-view></div>

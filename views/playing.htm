@@ -1,4 +1,5 @@
-<div class="outer">
+<div class="outer oContainer">
+<img ng-hide="spOverlay[prem.params.tool] == 'hide'" class="oTip oTip-featured" ng-src="assets/img/overlay_ent_featured_programs.png" />
 <slick class="grid" infinite="true" slides-to-show="5" slides-to-scroll="5" on-init="ieFix">
     <div class="grid__item one-fifth" ng-repeat="calendar in data.calendars |
 filter:{premium: premium.id} |
