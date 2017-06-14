@@ -319,7 +319,7 @@ div#sub {
     padding-right: 12px
 }
 
-#playing div + div {
+#playing > div {
     margin-top: 10px;
 }
 
