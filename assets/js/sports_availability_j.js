@@ -779,42 +779,42 @@ function Sport_packages_convertion(sport) {
     switch (sport) {
         case "MLBSFHD":
         case "MLB":
-            strPkgName = "<a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537596' target='_blank'>MLB Extra Innings</a>";
+            strPkgName = "<a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537596' target='_blank'>MLB Extra Innings</a>";
             break;
         case "MLS":
         case "MLSHD":
-            strPkgName = "<a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537598' target='_blank'>MLS Direct Kick</a>";
+            strPkgName = "<a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537598' target='_blank'>MLS Direct Kick</a>";
             break;
         case "EPL":
-            strPkgName = "<a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_spo_537490?fragid=7' target='_blank'>DIRECTV Soccer</a>";
+            strPkgName = "<a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_spo_537490?fragid=7' target='_blank'>DIRECTV Soccer</a>";
             break;
         case "CFBGP":
         case "CFBGP -IN WORK":
-            strPkgName = "<a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_spo_538723' target='_blank'>Sports Pack</a>";
+            strPkgName = "<a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_spo_538723' target='_blank'>Sports Pack</a>";
             break;
         //safa added start
         case "CBKHD":
         case "CBKHD -IN WORK":
-            strPkgName = "<a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_spo_538723' target='_blank'>Sports Pack</a>";
+            strPkgName = "<a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_spo_538723' target='_blank'>Sports Pack</a>";
             break;
         // safa added end
         case "NHL":
         case "NHLHD":
-            strPkgName = "<a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_spo_537630' target='_blank'>NHL Center Ice</a>";
+            strPkgName = "<a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_spo_537630' target='_blank'>NHL Center Ice</a>";
             break;
         case "NFL":
         case "NFLSFHD":
-            strPkgName = "<a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_544790' target='_blank'>NFL Sunday Ticket</a>";
+            strPkgName = "<a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_544790' target='_blank'>NFL Sunday Ticket</a>";
             break;
         case "NBA":
         case "NBAHD":
-            strPkgName = "<a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537619' target='_blank'>NBA League Pass</a>";
+            strPkgName = "<a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537619' target='_blank'>NBA League Pass</a>";
             break;
         case "RGBY":
-            strPkgName = "<a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_spo_537777' target='_blank'>DIRECTV Rugby</a>";
+            strPkgName = "<a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_spo_537777' target='_blank'>DIRECTV Rugby</a>";
             break;
         case "CFBPPV":
-            strPkgName = "<a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537656' target='_blank'>PPV College Football</a>";
+            strPkgName = "<a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537656' target='_blank'>PPV College Football</a>";
             break;
         default:
             return sport;
@@ -827,47 +827,47 @@ function minimumRequirement(rsn) {
     var min = "";
     _.each(user.requiredPackage.choice, function(val, key) {
         if (rsn.indexOf(val) > -1) {
-            min = "<p class='alert alert-info feed'><strong>Minimum Required Package: </strong><a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537459' target='_blank'>Choice</a> / <a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537613' target='_blank'>Mas Ultra</a></p>";
+            min = "<p class='alert alert-info feed'><strong>Minimum Required Package: </strong><a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537459' target='_blank'>Choice</a> / <a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537613' target='_blank'>Mas Ultra</a></p>";
         };
     });
 
     _.each(user.requiredPackage.xtra, function(val, key) {
         if (rsn.indexOf(val) > -1) {
-            min = "<p class='alert alert-info feed'><strong>Minimum Required Package: </strong><a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537919' target='_blank'>Xtra</a></p>";
+            min = "<p class='alert alert-info feed'><strong>Minimum Required Package: </strong><a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537919' target='_blank'>Xtra</a></p>";
         };
     });
 
     _.each(user.requiredPackage.sports_pack, function(val, key) {
         if (rsn.indexOf(val) > -1) {
-            min = "<p class='alert alert-info feed'><strong>Minimum Required Package: </strong></strong><a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537459' target='_blank'>Choice</a> / <a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537613' target='_blank'>Mas Ultra</a> with <a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_spo_538723' target='_blank'>Sports Pack</a></p>";
+            min = "<p class='alert alert-info feed'><strong>Minimum Required Package: </strong></strong><a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537459' target='_blank'>Choice</a> / <a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537613' target='_blank'>Mas Ultra</a> with <a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_spo_538723' target='_blank'>Sports Pack</a></p>";
         };
     });
 
     switch (rsn){
         case "MLB Network":
-            min = "<p class='alert alert-info feed'><strong>Minimum Required Package: </strong><a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537459' target='_blank'>Choice</a> / <a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537613' target='_blank'>Mas Ultra</a></p>";
+            min = "<p class='alert alert-info feed'><strong>Minimum Required Package: </strong><a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537459' target='_blank'>Choice</a> / <a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537613' target='_blank'>Mas Ultra</a></p>";
             break;
 
         case "NBA TV":
-            min = "<p class='alert alert-info feed'><strong>Minimum Required Package: </strong><a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537919' target='_blank'>Xtra</a> / <a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537586' target='_blank'>Lo Maximo</a></p>";
+            min = "<p class='alert alert-info feed'><strong>Minimum Required Package: </strong><a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537919' target='_blank'>Xtra</a> / <a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537586' target='_blank'>Lo Maximo</a></p>";
             break;
         case "NHL Network":
-            min = "<p class='alert alert-info feed'><strong>Minimum Required Package: </strong><a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537919' target='_blank'>Xtra</a></p>";
+            min = "<p class='alert alert-info feed'><strong>Minimum Required Package: </strong><a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537919' target='_blank'>Xtra</a></p>";
             break;
         case "NFL Network":
-            min = "<p class='alert alert-info feed'><strong>Minimum Required Package: </strong><a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537459' target='_blank'>Choice</a> / <a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537613' target='_blank'>Mas Ultra</a></p>";
+            min = "<p class='alert alert-info feed'><strong>Minimum Required Package: </strong><a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537459' target='_blank'>Choice</a> / <a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537613' target='_blank'>Mas Ultra</a></p>";
             break;
         case "NBC Sports":
-            min = "<p class='alert alert-info feed'><strong>Minimum Required Package: </strong><a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537459' target='_blank'>Choice</a> / <a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537586' target='_blank'>Lo Maximo</a></p>";
+            min = "<p class='alert alert-info feed'><strong>Minimum Required Package: </strong><a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537459' target='_blank'>Choice</a> / <a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537586' target='_blank'>Lo Maximo</a></p>";
             break;
         case "CFB":
         case "CFB -IN WORK":
-            min = "<p class='alert alert-info feed'><strong>Required: </strong><a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_spo_538723' target='_blank'>Sports Pack</a></p>";
+            min = "<p class='alert alert-info feed'><strong>Required: </strong><a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_spo_538723' target='_blank'>Sports Pack</a></p>";
             break;
         // safa added start
         case "CBKHD":
         case "CBKHD -IN WORK":
-            min = "<p class='alert alert-info feed'><strong>Required: </strong><a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_spo_538723' target='_blank'>Sports Pack</a></p>";
+            min = "<p class='alert alert-info feed'><strong>Required: </strong><a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_spo_538723' target='_blank'>Sports Pack</a></p>";
             break;
         // safa added end
     };
@@ -975,7 +975,7 @@ var start = function(user_zipcode){
                 $('input.global_filter').on('keyup click', function() {
                     $('#games_list').DataTable().search($('.global_filter').val()).draw();
                 });
-                var disclaimer = "Before offering out-of-market sports package, check <a href='http://www.directv.com/DTVAPP/packProg/localChannels.jsp?assetId=cms_local_channels&_requestid=2230690' target='_blank'>local</a> or <a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_spo_538187' target='_blank'>national</a> channels for game availability.";
+                var disclaimer = "Before offering out-of-market sports package, check <a href='http://www.directv.com/DTVAPP/packProg/localChannels.jsp?assetId=cms_local_channels&_requestid=2230690' target='_blank'>local</a> or <a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_spo_538187' target='_blank'>national</a> channels for game availability.";
                 $('.local_national').each(function () {
                     var $elem = $(this);
                     $elem.popover({
@@ -991,7 +991,7 @@ var start = function(user_zipcode){
                     });
                 });
                 // Safa added MSG MSG plus Pro hockey disclaimer
-                var msg_pro_hockey_disclaimer = "Due to NHL restrictions, MSG and MSG Plus are obligated to limit the availability of some NHL games. See <a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_spo_537604' target='_blank' style='text-decoration:underline'>MSG</a> or <a href='http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_spo_537599' target='_blank' style='text-decoration:underline'>MSG Plus</a> for more details.";
+                var msg_pro_hockey_disclaimer = "Due to NHL restrictions, MSG and MSG Plus are obligated to limit the availability of some NHL games. See <a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_spo_537604' target='_blank' style='text-decoration:underline'>MSG</a> or <a href='https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_spo_537599' target='_blank' style='text-decoration:underline'>MSG Plus</a> for more details.";
                 $('.msg_pro_hockey').each(function () {
                     var $elem = $(this);
                     $elem.popover({
