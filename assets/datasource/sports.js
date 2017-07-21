@@ -1252,8 +1252,8 @@
         "blkoutURL": "nba_league_pass.html?fragid=5",
         "cspBlkoutUrl": "myc_ser_tv_pac_537619",
         "dotcomURL": "sports/nba",
-        "startSeason": "42668",
-        "endSeason": "42837",
+        "startSeason": "43025",
+        "endSeason": "43201",
         "channelRange": "750-768",
         "sellingPoints": [{
             "id": 1,
@@ -1512,29 +1512,50 @@
             "point": ["Laker great Kareem Abdul-Jabar began his career on the Bucks"]
         }],
         "offers": [{
+            "id": 1,
+            "offerStart": "43025",
+            "offerEnd": "43422",
+            "multiPrice": "39.99",
+            "onePrice": "199.95",
+            "text": "Regular Season Offer"            
+        },{            
             "id": 2,
-            "offerStart": "42713",
-            "offerEnd": "42750",
+            "offerStart": "43083",
+            "offerEnd": "43114",
             "multiPrice": "33.99",
             "onePrice": "169.95",
             "text": "Holiday Offer"
+        },{
+            "id": 3,
+            "offerStart": "43115",
+            "offerEnd": "43172",
+            "multiPrice": "24.99",
+            "onePrice": "99.96",
+            "text": "Half Season Offer"            
+        },{
+            "id": 4,
+            "offerStart": "43173",
+            "offerEnd": "43201",
+            "multiPrice": null,
+            "onePrice": "28.99",
+            "text": "Race to the Playoffs"                        
         }],
         "trials": [{
             "id": 1,
-            "trialStart": "42668",
-            "trialEnd": "42675"
+            "trialStart": "43025",
+            "trialEnd": "43032"
         }, {
             "id": 2,
-            "trialStart": "42713",
-            "trialEnd": "42715"
+            "trialStart": "43084",
+            "trialEnd": "43086"
         }, {
             "id": 3,
-            "trialStart": "42751",
-            "trialEnd": "42757"
+            "trialStart": "43115",
+            "trialEnd": "43121"
         }, {
             "id": 4,
-            "trialStart": "42784",
-            "trialEnd": "42785"
+            "trialStart": "43173",
+            "trialEnd": "43175"
         }],
         "objections": [{
             "category": "Price/Value",
@@ -1597,8 +1618,8 @@
         "blkoutURL": "nhl_center_ice.html?fragid=5",
         "cspBlkoutUrl": "myc_ser_tv_cha_spo_537630",
         "dotcomURL": "sports/nhl",
-        "startSeason": "42655",
-        "endSeason": "42834",
+        "startSeason": "43012",
+        "endSeason": "43197",
         "channelRange": "769-787",
         "sellingPoints": [{
             "id": 1,
@@ -1847,17 +1868,42 @@
             "point": ["n\/a"]
         }],
         "offers": [{
+            "id": 1,
+            "offerStart": "42948",
+            "offerEnd": "43039",
+            "multiPrice": "38.49",
+            "onePrice": "153.96",
+            "text": "Early Bird Offer"
+        },{            
             "id": 2,
-            "offerStart": "42734",
-            "offerEnd": "42776",
-            "multiPrice": "24.99",
-            "onePrice": "99.96",
-            "text": "Half Season Offer"
+            "offerStart": "43040",
+            "offerEnd": "43100",
+            "multiPrice": "38.49",
+            "onePrice": "153.96",
+            "text": "Regular Season Offer"
+        },{            
+            "id": 3,
+            "offerStart": "43101",
+            "offerEnd": "43147",
+            "multiPrice": "27.49",
+            "onePrice": "109.96",
+            "text": "Half Season Offer"            
+        },{            
+            "id": 4,
+            "offerStart": "43148",
+            "offerEnd": "43197",
+            "multiPrice": null,
+            "onePrice": "54.98",
+            "text": "Race to the Cup"
         }],
         "trials": [{
             "id": 1,
-            "trialStart": "42648",
-            "trialEnd": "42668"
+            "trialStart": "43012",
+            "trialEnd": "43018"
+        },{
+            "id": 4,
+            "trialStart": "43149",
+            "trialEnd": "43154"            
         }],
         "objections": [{
             "category": "Price/Value",
