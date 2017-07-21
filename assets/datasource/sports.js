@@ -4,11 +4,11 @@
         "url": "altitude_sports",
         "cspUrl": "myc_ser_tv_cha_spo_537426"
     }, {
-        "name": "CSN Bay Area",
+        "name": "NBC Sports Bay Area",
         "url": "comcast_sportsnet_bay_area",
         "cspUrl": "myc_ser_tv_cha_spo_537474"
     }, {
-        "name": "CSN California",
+        "name": "NBC Sports California",
         "url": "comcast_sportsnet_ca",
         "cspUrl": "myc_ser_tv_cha_spo_537475"
     }, {
@@ -26,11 +26,11 @@
     }, {
         "name": "FS Arizona",
         "url": "fs_arizona",
-        "cspUrl": null
+        "cspUrl": "myc_ser_tv_cha_spo_558232"
     }, {
         "name": "FS Cincinnati",
         "url": "fs_cincinnati",
-        "cspUrl": null
+        "cspUrl": "myc_ser_tv_cha_spo_558233"
     }, {
         "name": "FS Detroit",
         "url": "fs_detroit",
@@ -218,7 +218,7 @@
             "point": [
                 "Track up to 20 players throughout the day with real-time alerts and stats.",
                 "Get on-screen scores and stats by pressing the red button on your remote from any NFL Sunday Ticket game channel.",
-                "Get live updates from the game you’re watching without missing any of the live action. (Requires an interactive HD receiver.)"
+                "Get live updates from the game you¿re watching without missing any of the live action. (Requires an interactive HD receiver.)"
             ]
         }, {
             "id": 7,
@@ -600,7 +600,7 @@
             "point": [
                 "Track up to 20 players throughout the day with real-time alerts and stats.",
                 "Get on-screen scores and stats by pressing the red button on your remote from any NFL Sunday Ticket game channel.",
-                "Get live updates from the game you’re watching without missing any of the live action. (Requires an interactive HD receiver.)"
+                "Get live updates from the game you¿re watching without missing any of the live action. (Requires an interactive HD receiver.)"
             ]
         }, {
             "id": 9,
@@ -903,8 +903,8 @@
         "blkoutURL": "mlb_extra_innings.html?fragid=6",
         "cspBlkoutUrl": "myc_ser_tv_pac_537596",
         "dotcomURL": "sports/mlb",
-        "startSeason": "42463",
-        "endSeason": "42645",
+        "startSeason": "42827",
+        "endSeason": "43009",
         "channelRange": "719-749",
         "sellingPoints": [{
             "id": 1,
@@ -913,7 +913,7 @@
             "point": [
                 "Out-of-market sports package for Major League Baseball (MLB).",
                 "Follow your favorite team all season long no matter where you live.",
-                "Get almost 100 MLB games per week from outside your local market."
+                "Get up to 90 MLB games per week from outside your local market."
             ]
         }, {
             "id": 2,
@@ -1159,11 +1159,32 @@
             "name": "Washington Nationals",
             "point": ["n\/a"]
         }],
-        "offers": null,
+        "offers": [{
+            "id": 1,
+            "offerStart": "42799",
+            "offerEnd": "42925",
+            "multiPrice": "28.79",
+            "onePrice": "172.74",
+            "text": "Regular Season Offer"
+        },{
+            "id": 2,
+            "offerStart": "42926",
+            "offerEnd": "42981",
+            "multiPrice": "29.99",
+            "onePrice": "119.96",
+            "text": "Half Season Offer"        
+        },{
+            "id": 3,
+            "offerStart": "42982",
+            "offerEnd": "43009",
+            "multiPrice": null,
+            "onePrice": "37.49",
+            "text": "Race for Pennant"          
+        }],
         "trials": [{
             "id": 1,
-            "trialStart": "42463",
-            "trialEnd": "42470"
+            "trialStart": "42930",
+            "trialEnd": "42936"
         }, {
             "id": 2,
             "trialStart": "42566",
@@ -1173,7 +1194,7 @@
             "category": "Price/Value",
             "responses": [
                 "If you are an out-of-market fan, the price breaks down to about $1.35 per game to watch your favorite team play for the entire season.",
-                "You will be able to see almost 100 games a week for the entire season. MLB Extra Innings is a bargain when you look at the hassle, gas, and money you would spend at the ballpark.",
+                "You will be able to see up to 90 games a week for the entire season. MLB Extra Innings is a bargain when you look at the hassle, gas, and money you would spend at the ballpark.",
                 "Great way for entire family to enjoy America's favorite pastime, generate interest with kids."
             ]
         }, {
@@ -1642,7 +1663,7 @@
             "title": "Trivia / Did you know?",
             "point": [
                 "The Stanley Cup, awarded to the league champion, is the oldest trophy in North America.",
-                "The NHL is considered one of the “Big 4” sports in the U.S. along with the NFL, NBA, and MLB.",
+                "The NHL is considered one of the ¿Big 4¿ sports in the U.S. along with the NFL, NBA, and MLB.",
                 "The Montreal Canadiens have won the most Stanley Cups, taking home the cup 24 times!",
                 "NHL great, Wayne Gretzky, currently holds 61 NHL records.",
                 "The NHL Championship trophy, the Stanley Cup, is actually older than the NHL.",
