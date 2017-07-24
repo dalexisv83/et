@@ -1666,7 +1666,7 @@
             "subtab": 4,
             "title": null,
             "point": [
-                "The 2016-2017 season starts on Oct 12, 2016 and runs through Apr 9, 2017. Playoffs begin in April and run through June.",
+                "The 2017-2018 season starts on Oct 4, 2017 and runs through Apr 8, 2018. Playoffs begin in April and run through June.",
                 "The National Hockey League (NHL) has 2 conferences (Eastern and Western), and each conference is divided into 2 divisions for a total of 30 teams (7 teams are located in Canada, 23 teams are located in the United States).",
                 "The top 8 teams from each conference qualify for the playoffs.",
                 "In the 2015-2016 season, the Pittsburgh Penguins defeated the San Jose Sharks to win the Stanley Cup, which is the trophy awarded to the NHL champion."
