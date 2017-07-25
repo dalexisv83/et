@@ -120,15 +120,15 @@
         "url": "fsn_northwest",
         "cspUrl": "myc_ser_tv_cha_spo_537522"
     }, {
-        "name": "ROOT Sports Pittsburgh",
+        "name": "AT&T SportsNet Pittsburgh",
         "url": "fsn_pittsburg",
         "cspUrl": "myc_ser_tv_cha_spo_537523"
     }, {
-        "name": "ROOT Sports Rocky Mountain",
+        "name": "AT&T SportsNet Rocky Mountain",
         "url": "fsn_rocky_mountain",
         "cspUrl": "myc_ser_tv_cha_spo_537524"
     }, {
-        "name": "ROOT Sports Southwest",
+        "name": "AT&T SportsNet Southwest",
         "url": "root_sports_southwest",
         "cspUrl": "myc_ser_tv_cha_spo_538072"
     }, {
