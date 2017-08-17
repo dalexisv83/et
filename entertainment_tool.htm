@@ -1,7 +1,15 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en" xmlns:ng="http://angularjs.org" ng-app="entertainment">
 
 <head>
+    <script>
+        (function () {
+            var testStr = window.location.pathname;
+            if (testStr.toLowerCase().indexOf('telco') == -1) {
+                window.location.href = 'https://www.e-access.att.com/mycsp/mycspportal/tools/sell_premium/sell_premium.htm' + window.location.hash;
+            }
+        })()
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
     <title>Sell Premium Tool</title>
