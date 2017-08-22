@@ -155,6 +155,7 @@
     "premiums": [{
         "id": 1,
         "category": "Football",
+        "league": "NFL",
         "name": "NFL Sunday Ticket",
         "url": "nfl-sunday-ticket",
         "aacURL": "nfl_st_to_go_offers.html",
@@ -165,6 +166,8 @@
         "startSeason": "42988",
         "endSeason": "43100",
         "channelRange": "701-718",
+        "leaguePdf": "nfl_101",
+        "teamPdf": "nfl_team_information",
         "sellingPoints": [{
             "id": 1,
             "subtab": 1,
@@ -218,7 +221,7 @@
             "point": [
                 "Track up to 20 players throughout the day with real-time alerts and stats.",
                 "Get on-screen scores and stats by pressing the red button on your remote from any NFL Sunday Ticket game channel.",
-                "Get live updates from the game you¿re watching without missing any of the live action. (Requires an interactive HD receiver.)"
+                "Get live updates from the game you\u2019re watching without missing any of the live action. (Requires an interactive HD receiver.)"
             ]
         }, {
             "id": 7,
@@ -519,6 +522,7 @@
     }, {
         "id": 2,
         "category": "Football",
+        "league": "NFL",
         "name": "NFL Sunday Ticket MAX",
         "url": "nfl-sunday-ticket-max",
         "aacURL": "nfl_st_to_go_offers.html",
@@ -529,6 +533,8 @@
         "startSeason": "42988",
         "endSeason": "43100",
         "channelRange": "701-718",
+        "leaguePdf": "nfl_101",
+        "teamPdf": "nfl_team_information",
         "sellingPoints": [{
             "id": 1,
             "subtab": 1,
@@ -600,7 +606,7 @@
             "point": [
                 "Track up to 20 players throughout the day with real-time alerts and stats.",
                 "Get on-screen scores and stats by pressing the red button on your remote from any NFL Sunday Ticket game channel.",
-                "Get live updates from the game you¿re watching without missing any of the live action. (Requires an interactive HD receiver.)"
+                "Get live updates from the game you\u2019re watching without missing any of the live action. (Requires an interactive HD receiver.)"
             ]
         }, {
             "id": 9,
@@ -1684,7 +1690,7 @@
             "title": "Trivia / Did you know?",
             "point": [
                 "The Stanley Cup, awarded to the league champion, is the oldest trophy in North America.",
-                "The NHL is considered one of the ¿Big 4¿ sports in the U.S. along with the NFL, NBA, and MLB.",
+                "The NHL is considered one of the \u201CBig 4\u201D sports in the U.S. along with the NFL, NBA, and MLB.",
                 "The Montreal Canadiens have won the most Stanley Cups, taking home the cup 24 times!",
                 "NHL great, Wayne Gretzky, currently holds 61 NHL records.",
                 "The NHL Championship trophy, the Stanley Cup, is actually older than the NHL.",
