@@ -109,8 +109,11 @@ var checkSubs = function(obj, premium, sub) {
 (function(angular) {
     'use strict';
     angular.module('entertainment')
-        .controller('MainCtrl', ['$scope', '$route', '$routeParams', '$location', '$filter', 'contentData', '$timeout', '$cookies',
-            function($scope, $route, $routeParams, $location, $filter, contentData, $timeout, $cookies) {
+        .controller('MainCtrl', ['$scope', '$route', '$routeParams', '$location', '$filter', 'contentData', '$timeout', '$cookies', 'pathFinder',
+            function ($scope, $route, $routeParams, $location, $filter, contentData, $timeout, $cookies, pathFinder) {
+                pathFinder.getApiNet().then(function successTest(response) {
+                    $scope.basePath = response;
+                });
                 $scope.$watch(function () {
                     return $cookies;
                 }, function (value) {
@@ -220,30 +223,43 @@ var checkSubs = function(obj, premium, sub) {
 (function(angular) {
     'use strict';
     angular.module('entertainment')
-        .controller('LookupCtrl', ['$scope', '$timeout',
-            function($scope, $timeout) {
+        .controller('LookupCtrl', ['$scope', '$timeout', '$http',
+            function ($scope, $timeout, $http) {
                 $scope.submitted = false;
                 $scope.zip = null;
                 $scope.lookup = null;
                 $scope.zipClick = null;
-                $scope.clickRsn = function() {
+                $scope.clickRsn = function () {
+                    var init = function() {
+                            $scope.lookup = null;
+                            $scope.lookup = 'rsn';
+                            $scope.zipClick = $scope.zip;
+                            $scope.$broadcast('zipChanged', $scope.zipClick);
+                        };
                     $scope.submitted = true;
                     
                     // isNaN condition adds compatibility with IE8
                     if ($scope.zipcode.$valid || !isNaN(JSON.stringify($scope.zipcode.zip.$modelValue))) {
-                        $scope.lookup = null;
-                        $scope.lookup = 'rsn';
-                        $scope.zipClick = $scope.zip;
+                        if (!$scope.rsnurls) {
+                            $http.jsonp($scope.basePath + 'web/api/rsnlinks', { params: { 'callback': 'JSON_CALLBACK' }, cache: true }).then(function successTest(response) {
+                                $scope.rsnurls = response.data;
+                                init();
+                            }, function errorTest(response) {
+                                throw new Error(JSON.stringify(response));
+                            });
+                        } else {
+                            init();
+                        }
                     }
                 };
                 $scope.clickAvail = function() {
                     if (($scope.zip !== $scope.zipClick) || ($scope.lookup !== 'availability')) {
                         $scope.submitted = true;
-                        // isNan condition adds compatibility with IE8
-                        if ($scope.zipcode.$valid || !isNaN(JSON.stringify($scope.zipcode.zip.$modelValue))) {
-                            $scope.lookup = null;
-                            $timeout(function(){
-                                $scope.lookup = 'availability';
+                            // isNan condition adds compatibility with IE8
+                            if ($scope.zipcode.$valid || !isNaN(JSON.stringify($scope.zipcode.zip.$modelValue))) {
+                                $scope.lookup = null;
+                                $timeout(function() {
+                                    $scope.lookup = 'availability';
                                 $scope.zipClick = $scope.zip;
                             }, 0);
                         }
@@ -269,11 +285,50 @@ var checkSubs = function(obj, premium, sub) {
 (function(angular) {
     'use strict';
     angular.module('entertainment')
-        .controller('RsnCtrl', ['$scope', 'DTOptionsBuilder',
-            function($scope, DTOptionsBuilder) {
+        .controller('RsnCtrl', ['$scope', 'DTOptionsBuilder', 'DTColumnBuilder', '$filter',
+            function ($scope, DTOptionsBuilder, DTColumnBuilder, $filter) {
+                var ajaxObj = function() {
+                        return {
+                            url: $scope.basePath + 'web/api/rsn/' + $scope.zipClick,
+                            dataType: 'jsonp',
+                            jsonpCallback: 'jsonCallback',
+                            cache: true
+                        }
+                    },
+                    headerTxt = '<small class="minReq">Minimum Required Packages:</small><br>',
+                    urlRender = function() {
+                        return function (data, type, full) {
+                            var str = '';
+                            if (data) {
+                                str = '<a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=' +$filter('getItByThat') (data, $scope.rsnurls, 'cspUrl', 'name') + '" target="_blank">' +data + '</a>';
+                            }
+                            return str;
+                        }
+                    };
                 $scope.dtOptions = DTOptionsBuilder.newOptions()
-                            .withDOM('rt');
-                $scope.rsndata = rsnzip;
+                    .withDOM('rt')
+                    .withOption('ajax', ajaxObj());
+
+                $scope.dtColumns =[
+                    DTColumnBuilder.newColumn('zipcode').withTitle('Zip Code'),
+                    DTColumnBuilder.newColumn('state').withTitle('ST'),
+                    DTColumnBuilder.newColumn('inMarketChoiceMasUltra').withTitle(headerTxt + 'Choice / Mas Ultra').renderWith(urlRender()),
+                    DTColumnBuilder.newColumn('inMarketExtra').withTitle(headerTxt + 'Xtra').renderWith(urlRender()),
+                    DTColumnBuilder.newColumn('ultraSportsPack').withTitle(headerTxt + 'Choice / Mas Ultra with Sports Pack').renderWith(urlRender()),
+                    DTColumnBuilder.newColumn('mlb').withTitle('Baseball'),
+                    DTColumnBuilder.newColumn('nba').withTitle('Basketball'),
+                    DTColumnBuilder.newColumn('nhl').withTitle('Hockey')
+                ];
+
+                $scope.rsnInstance = {
+                }
+
+                $scope.$on('zipChanged', function (event, args) {
+                    if (args != $scope.lastZip) {
+                        $scope.lastZip = args;
+                        $scope.rsnInstance.changeData(ajaxObj());
+                }
+                });
             }
         ]);
 }(window.angular));
