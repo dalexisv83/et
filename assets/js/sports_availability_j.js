@@ -10,6 +10,7 @@ var rsn_lookup = function(user_zipcode) {
     var mlb = [];
     var nba = [];
     var nhl = [];
+    var all = [];
     var zip_range, zip_start, zip_end;
     _.each(rsnzip, function(val, key) {
         if (val.ZIP_CODE == user_zipcode) {
@@ -27,6 +28,10 @@ var rsn_lookup = function(user_zipcode) {
             mlb.push(rsnzip[key].MLB);
             nba.push(rsnzip[key].NBA);
             nhl.push(rsnzip[key].NHL);
+
+            all.push(rsnzip[key].MLB);
+            all.push(rsnzip[key].NBA);
+            all.push(rsnzip[key].NHL);
         };
 
         if (rsnzip[key].ZIP_CODE.length > 5) {
@@ -49,6 +54,10 @@ var rsn_lookup = function(user_zipcode) {
                 mlb.push(rsnzip[key].MLB);
                 nba.push(rsnzip[key].NBA);
                 nhl.push(rsnzip[key].NHL);
+
+                all.push(rsnzip[key].MLB);
+                all.push(rsnzip[key].NBA);
+                all.push(rsnzip[key].NHL);
             };
         };
     });
@@ -70,6 +79,8 @@ var rsn_lookup = function(user_zipcode) {
         sports_pack[key] = rsnAdjustment(val);
     });
 
+    console.log(rsn);
+
     //add alternative channels
     var altCh = [];
     _.each(rsn, function(val,key){
@@ -78,6 +89,8 @@ var rsn_lookup = function(user_zipcode) {
         altCh = altCh.concat(altChTemp);
     });
     rsn = rsn.concat(altCh);
+
+    console.log(rsn);
 
     user.state = state;
     user.rsn = rsn;
@@ -89,7 +102,8 @@ var rsn_lookup = function(user_zipcode) {
     user.sports = {
         "mlb": _.chain(mlb).compact().uniq().value(),
         "nba": _.chain(nba).compact().uniq().value(),
-        "nhl": _.chain(nhl).compact().uniq().value()
+        "nhl": _.chain(nhl).compact().uniq().value(),
+        "all": _.chain(all).compact().uniq().value()
     };
     return user;
 };
@@ -247,9 +261,10 @@ var alternateRSN = function(mainRSN) {
 };
 
 // DSSE
-var dsse_lookup = function(userRSN) {
+var dsse_lookup = function(user) {
 
     var user_events = [];
+    var in_market = [];
     var out_of_market = [];
     var league_network = [];
     var college_football_rsn = [];
@@ -261,7 +276,7 @@ var dsse_lookup = function(userRSN) {
     // safa added end
 
     var college_football_gp = [];
-    var differece = [];
+    var difference = [];
     var remove_index = [];
     var remove_index_college_football = [];
 
@@ -274,6 +289,7 @@ var dsse_lookup = function(userRSN) {
     var dateEnd = {}
     var away_team = "";
     var home_team = "";
+    var rsnCover;
     // get game that is available to user's rsn
 
     dateBegin = _.first(dsse);
@@ -282,218 +298,59 @@ var dsse_lookup = function(userRSN) {
     _.each(dsse, function(val, key){
         away_team = val.Away.split(" of");
         home_team = val.Home.split(" of");
+        home_team = home_team[0].split(" (");
         dsse[key].Away = away_team[0];
         dsse[key].Home = home_team[0];
     });
 
-    _.each(dsse, function(val, key) {
-        if ((_.indexOf(userRSN, val.Broadcaster) > -1) &&
-            (val.League.indexOf("IN WORK") === -1) && //ignore IN WORK channel
-            (val.League.indexOf("HD") === -1) && //ignore HD channel
+    _.each(dsse, function (val, key) {
+        if ((val.League.indexOf("HD") === -1) && //ignore HD channel
             (val.League.indexOf("QMJHL") === -1) &&
             (val.League.indexOf("HSFB") === -1) &&
             (val.Broadcaster.indexOf(" CONUS HD") === -1) &&
-            (val.League.indexOf("-DELETED") === -1) ||
-            (
-                ((val.Broadcaster === "NBA TV") && (val.League === "NBA")) ||
-                (val.Broadcaster === "NBC Sports") ||
+            (val.Broadcaster.indexOf("IN WORK") === -1) &&
+            (val.League.indexOf("-DELETED") === -1) &&
+            (val.Broadcaster.indexOf("SEC") === -1) &&
+            (val.Broadcaster.indexOf("Big 10") === -1) &&
+            (val.Broadcaster.indexOf("NBC Sports") === -1)) {
+
+            if (((val.Broadcaster === "NBA TV") && (val.League === "NBA")) ||
+                ((val.Broadcaster === "NBA TV") && (val.League === "WNBA")) ||
                 ((val.Broadcaster === "NFL Network") && (val.League === "NFL")) ||
                 ((val.Broadcaster === "NHL Network") && (val.League === "NHL")) ||
-                ((val.Broadcaster === "MLB Network") && (val.League === "MLB"))
+                ((val.Broadcaster === "MLB Network") && (val.League === "MLB"))) {
+                league_network.push(dsse[key]);
+            };
 
-            )
-        ) {
-            user_events.push(dsse[key]);
-        };
+
+            if (val.League === "CFB") {
+                college_football_rsn.push(dsse[key]);
+            };
+
+            if (val.League === "CBKHD") {
+                college_basketball.push(dsse[key]);
+            };
+
+            if (val.League === "CFBGP") {
+                college_football_gp.push(dsse[key]);
+            };
+
+            _.each(user.sports.all, function (v, k) {
+
+                if ((_.indexOf(user.rsn, val.Broadcaster) > -1) &&
+                    ((val.Home.indexOf(v) > -1 || val.Away.indexOf(v) > -1))) {
+                        in_market.push(dsse[key]);
+                } else if ((val.Home.indexOf(v) == -1) && (val.Away.indexOf(v) == -1) &&
+                    (val.Channel.substring(0, 3) > 500) &&
+                    (val.Replay === "") &&
+                    (val.Sport_Channel === "")) {
+                        out_of_market.push(dsse[key]);
+                }
+            });
+        }
     });
 
-    _.each(dsse, function(val, key) {
-        if(
-            (_.indexOf(userRSN, val.Broadcaster) > -1) &&
-
-            (val.League === "CFB" || val.League === "CFB -IN WORK")
-            ){
-            user_events.push(dsse[key]);
-        };
-    });
-
-    // safa added start
-    _.each(dsse, function(val, key) {
-        if(
-            (_.indexOf(userRSN, val.Broadcaster) > -1) &&
-            (val.League === "CBKHD" || val.League === "CBKHD -IN WORK")
-            ){
-            user_events.push(dsse[key]);
-        };
-    });
-    // safa added end
-
-   
-    _.each(dsse, function(val, key) {
-        if (
-            ((val.Broadcaster === "NBA TV") && (val.League === "NBA")) ||
-            ((val.Broadcaster === "NBA TV") && (val.League === "WNBA")) ||
-            ((val.Broadcaster === "NFL Network") && (val.League === "NFL")) ||
-            ((val.Broadcaster === "NHL Network") && (val.League === "NHL")) ||
-            ((val.Broadcaster === "MLB Network") && (val.League === "MLB"))
-           ) {
-           league_network.push(dsse[key]);
-        };
-    });
-
-    // College Football RSN listing only
-    _.each(dsse, function(val, key) {
-        if (
-            (val.Broadcaster.indexOf(" CONUS HD") === -1) &&
-            (val.Broadcaster.indexOf("HD") === -1) &&
-            (val.Broadcaster.indexOf("SEC") === -1) &&
-            (val.Broadcaster.indexOf("Big 10") === -1) &&
-            (val.Broadcaster.indexOf("NBC Sports") === -1) &&
-            ((val.League === "CFB") || (val.League === "CFB -IN WORK"))
-            ) {
-            college_football_rsn.push(dsse[key]);
-        };
-    });
-
-    // safa added start
-    // College Basketball listing only
-    _.each(dsse, function(val, key) {
-        if (
-            (val.Broadcaster.indexOf(" CONUS HD") === -1) &&
-            (val.Broadcaster.indexOf("HD") === -1) &&
-            (val.Broadcaster.indexOf("SEC") === -1) &&
-            (val.Broadcaster.indexOf("Big 10") === -1) &&
-            (val.Broadcaster.indexOf("NBC Sports") === -1) &&
-            (val.League === "CBKHD" || val.League === "CBKHD -IN WORK")
-            ) {
-            college_basketball.push(dsse[key]);
-        };
-    });
-    // safa added end
-
-    // Get all college football game with spotbeam to create an exclusion list
-    _.each(college_football_rsn, function(val, key){
-        if(val.Spotbeam.indexOf(" SPOT") > -1){
-            college_football_rsn_spotbeam.push(college_football_rsn[key]);
-        };
-    });
-
-    // safa added start
-    // Get all college basketball game with spotbeam to create an exclusion list
-    _.each(college_basketball, function(val, key){
-        if(val.Spotbeam.indexOf(" SPOT") > -1){
-            college_basketball_spotbeam.push(college_basketball[key]);
-        };
-    });
-    // safa added end
-
-    _.each(college_football_rsn_spotbeam, function(val, key){
-        var cfb_date_time_teams1 = val.Event_Date + val.Event_Time + val.Away +val.Home;
-        _.each(college_football_rsn, function(val, key){
-            var cfb_date_time_teams2 = val.Event_Date + val.Event_Time + val.Away +val.Home;
-            if(cfb_date_time_teams1 === cfb_date_time_teams2){
-                remove_index_college_spotbeam.push(college_football_rsn[key]);
-            }
-        });
-    });
-    college_football_rsn = _.difference(college_football_rsn, remove_index_college_spotbeam);
-
-    // safa added start
-    _.each(college_basketball_spotbeam, function(val, key){
-        var cbk_date_time_teams1 = val.Event_Date + val.Event_Time + val.Away +val.Home;
-        _.each(college_basketball, function(val, key){
-            var cbk_date_time_teams2 = val.Event_Date + val.Event_Time + val.Away +val.Home;
-            if(cbk_date_time_teams1 === cbk_date_time_teams2){
-                remove_index_college_spotbeam.push(college_basketball[key]);
-            }
-        });
-    });
-    college_basketball = _.difference(college_basketball, remove_index_college_spotbeam);
-    // safa added end
-
-    // College Football GP listing only
-    _.each(dsse, function(val, key) {
-        if (val.League === "CFBGP" || val.League === "CFBGP -IN WORK") {
-            college_football_gp.push(dsse[key]);
-        };
-    });
-
-    // safa added start
-    // College Basketball listing only
-    _.each(dsse, function(val, key) {
-        if (val.League === "CBKHD" || val.League === "CBKHD -IN WORK") {
-            college_basketball.push(dsse[key]);
-        };
-    });
-    // safa added end
-
-    difference = _.difference(dsse, user_events);
-    difference = _.difference(dsse, league_network);
-
-    _.each(difference, function(val, key) {
-        if ((val.League.indexOf("-IN WORK") === -1) && //ignore IN WORK channel
-            (val.League.indexOf("HD") === -1) &&
-            (val.League.indexOf("QMJHL") === -1) &&
-            (val.Broadcaster.indexOf("HD") === -1) && //ignore HD channel
-            (val.League.indexOf("-DELETED") === -1) &&
-            (val.Broadcaster.indexOf("CONUS HD") === -1) &&
-            (val.Replay === "")
-        ) {
-            out_of_market.push(difference[key]);
-        };
-    });
-
-    // prioritize event from rsn and remove it from out of market list
-    _.each(user_events, function(val,key){
-        var date_time_teams1 = val.Event_Date + val.Event_Time + val.Away +val.Home;
-        _.each(out_of_market, function(val, key){
-            var date_time_teams2 = val.Event_Date + val.Event_Time + val.Away +val.Home;
-            if(date_time_teams1 === date_time_teams2){
-                remove_index.push(out_of_market[key]);
-            }
-        });
-
-        _.each(league_network, function(val, key){
-            var date_time_teams2 = val.Event_Date + val.Event_Time + val.Away +val.Home;
-            if(date_time_teams1 === date_time_teams2){
-                remove_index.push(league_network[key]);
-            }
-        });
-
-        _.each(college_football_rsn, function(val, key){
-            var date_time_teams2 = val.Event_Date + val.Event_Time + val.Away +val.Home;
-            if(date_time_teams1 === date_time_teams2){
-                remove_index_college_football.push(college_football_rsn[key]);
-            }
-        });
-
-    // safa added start
-        _.each(college_basketball, function(val, key){
-            var date_time_teams2 = val.Event_Date + val.Event_Time + val.Away +val.Home;
-            if(date_time_teams1 === date_time_teams2){
-                remove_index_college_basketball.push(college_basketball[key]);
-            }
-        });
-    // safa added end
-    });
-
-    _.each(out_of_market, function(val, key) {
-        if ((val.Channel.substring(0, 3) > 500) && (val.Replay === "") && (val.Sport_Channel === "")) {
-            remove_index.push(out_of_market[key]);
-        };
-    });
-    out_of_market = _.difference(out_of_market, remove_index);
-
-    //college_football_rsn = _.difference(college_football_rsn, remove_index_college_spotbeam);
-    college_football_rsn = _.difference(college_football_rsn, remove_index_college_football);
-
-    // safa added start
-    college_basketball = _.difference(college_basketball, remove_index_college_basketball);
-    // safa added end
-
-    //available_date = _.uniq(available_date);
-
-    user.user_events = user_events;
+    user.user_events = in_market;
     user.out_of_market = out_of_market;
     user.league_network = league_network;
     user.college_football_rsn = college_football_rsn;
@@ -906,7 +763,7 @@ var start = function(user_zipcode){
             {
                 user = rsn_lookup(user.zipcode);
 
-                dsse_lookup(user.rsn);
+                dsse_lookup(user);
                 $(".daterange").append("Schedule shown for: "+user.start_date+" - "+user.end_date);
                 $('.games_table').html('<table cellpadding="0" cellspacing="0" border="0" class="stripe compact row-border cell-border hover" id="games_list"><thead><th>Date/Time (ET)</th><th>Sport</th><th>Away Team @ Home Team</th><th>Availability</th></thead></table>');
                 $("#games_list").append(process_output(user.user_events, "rsn"));
