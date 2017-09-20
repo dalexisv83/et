@@ -109,6 +109,21 @@ var checkSubs = function(obj, premium, sub) {
 (function(angular) {
     'use strict';
     angular.module('entertainment')
+        .controller('HtmlCtrl', ['$scope', '$routeParams',
+            function ($scope, $routeParams) {
+                $scope.params = $routeParams;
+                $scope.toolHdr = function (test) {
+                    if (test) {
+                        switch (test) {
+                            case 'entertainment':
+                                return 'Entertainment Tool';
+                            case 'sports':
+                                return 'Sports Sales Tool';
+                        }
+                    }
+                };
+            }
+        ])
         .controller('MainCtrl', ['$scope', '$route', '$routeParams', '$location', '$filter', 'contentData', '$timeout', '$cookies',
             function($scope, $route, $routeParams, $location, $filter, contentData, $timeout, $cookies) {
                 $scope.$watch(function () {

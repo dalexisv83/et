@@ -1,11 +1,11 @@
 ﻿<!doctype html>
 <html lang="en" xmlns:ng="http://angularjs.org" ng-app="entertainment">
 
-    <head>
+    <head ng-controller="HtmlCtrl">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Sell Premium Tool</title>
+        <title ng-bind="toolHdr(params.tool)">Loading&hellip;</title>
         <!--[if lt IE 9]>
         <script type="text/javascript" src="../common_assets/js/es5-shim.min.js"></script>
         <script type="text/javascript" src="../common_assets/js/es5-sham.min.js"></script>
