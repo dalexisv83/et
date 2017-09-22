@@ -274,10 +274,17 @@ tbody th {
     background-color: #eaeaea;
 }
 
+div#sub {
+    padding: 10px 20px;
+}
+
+div#sub div + div {
+    margin-top: 5px;
+}
+
 #sub a {
     color: #808284;
-    border-left: 2px solid #808284;
-    padding: 0px 24px;
+    padding-right: 20px;
     margin: 10px 0;
     line-height: 18px;
 }
@@ -292,10 +299,6 @@ tbody th {
 
 #sub a.active {
     text-decoration: underline;
-}
-
-div#sub {
-    padding:20px;
 }
 
 .photo {

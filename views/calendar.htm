@@ -1,30 +1,38 @@
 <div id="calendar" ng-controller="CalCtrl">
     <div id="sub">
-        <select ng-model="premSel" ng-options="calendar.premium as (calendar.premium | getItByThat:data.premiums:'name':'id') for calendar in data.calendars | unique: 'premium' | orderBy: 'premium'">
-            <option value="">All Premiums</option>
-        </select>
-        <select ng-model="genSel" ng-options="genre for genre in genres | unique: 'genre' | orderBy: 'toString()'">
-            <option value="">All Genres</option>
-        </select>
-        <select ng-model="typeSel">
-            <option value="">All Programming</option>
-            <option value="Movies">Movies</option>
-            <option value="Series">Series</option>
-        </select>
-        <select ng-model="chanSel" ng-options="calendar.chanNum as (calendar.chanName + ' &ndash; ' + calendar.chanNum) group by (calendar.premium | getItByThat:data.premiums:'name':'id') for calendar in data.calendars | unique: 'chanNum' | orderBy: 'chanNum'">
-            <option value="">All Channels</option>
-        </select>
-        <br />
-        <label>Search Programming: </label>
-        <input ng-model="search.$" placeholder="Search" /><a href ng-show="search.$" ng-click="search = null">&#x2716;</a>
-        <label>Filter By Premiere Date: </label>
-        <input type="date" ng-model="rangeStart" datepicker="'dateFormat':'yy-mm-dd'" />
-        <label>Date Range End: </label>
-        <input type="date" ng-model="rangeEnd" min="{{rangeStart | date:'yyyy-MM-dd'}}" datepicker="'dateFormat':'yy-mm-dd'" />
-        <span ng-if="premSel">{{premSel | getItByThat:data.premiums:'name':'id'}} <a href ng-click="aParam('premium', null)">&#x2716;</a></span>
-        <span ng-if="genSel">{{genSel}} <a href ng-click="aParam('genre', null)">&#x2716;</a></span>
-        <span ng-if="typeSel">{{typeSel}} <a href ng-click="aParam('type', null)">&#x2716;</a></span>
-        <span ng-if="chanSel">{{chanSel}} <a href ng-click="aParam('channel', null)">&#x2716;</a></span>
+        <div>
+            <label>Filter By: </label>
+            <select ng-model="premSel" ng-options="calendar.premium as (calendar.premium | getItByThat:data.premiums:'name':'id') for calendar in data.calendars | unique: 'premium' | orderBy: 'premium'">
+                <option value="">All Premiums</option>
+            </select>
+            <select ng-model="genSel" ng-options="genre for genre in genres | unique: 'genre' | orderBy: 'toString()'">
+                <option value="">All Genres</option>
+            </select>
+            <select ng-model="typeSel">
+                <option value="">All Programming</option>
+                <option value="Movies">Movies</option>
+                <option value="Series">Series</option>
+            </select>
+            <select ng-model="chanSel" ng-options="calendar.chanNum as (calendar.chanName + ' &ndash; ' + calendar.chanNum) group by (calendar.premium | getItByThat:data.premiums:'name':'id') for calendar in data.calendars | unique: 'chanNum' | orderBy: 'chanNum'">
+                <option value="">All Channels</option>
+            </select>
+        </div>
+        <div>
+            <label>Filter By Premiere Date: </label>
+            <input type="date" ng-model="rangeStart" datepicker="'dateFormat':'yy-mm-dd'" />
+            <label>Date Range End: </label>
+            <input type="date" ng-model="rangeEnd" min="{{rangeStart | date:'yyyy-MM-dd'}}" datepicker="'dateFormat':'yy-mm-dd'" />
+        </div>
+        <div>
+            <label>Search Programming: </label>
+            <input ng-model="search.$" placeholder="Search" /><a href ng-show="search.$" ng-click="search = null">&#x2716;</a>
+        </div>
+        <div>
+            <span ng-if="premSel">{{premSel | getItByThat:data.premiums:'name':'id'}} <a href ng-click="aParam('premium', null)">&#x2716;</a></span>
+            <span ng-if="genSel">{{genSel}} <a href ng-click="aParam('genre', null)">&#x2716;</a></span>
+            <span ng-if="typeSel">{{typeSel}} <a href ng-click="aParam('type', null)">&#x2716;</a></span>
+            <span ng-if="chanSel">{{chanSel}} <a href ng-click="aParam('channel', null)">&#x2716;</a></span>
+        </div>
     </div>
     <div class="program" ng-repeat="calendar in data.calendars |
     filter:search |
