@@ -18,10 +18,10 @@
             </select>
         </div>
         <div>
-            <label>Filter By Premiere Date: </label>
-            <input type="date" ng-model="rangeStart" datepicker="'dateFormat':'yy-mm-dd'" />
-            <label>Date Range End: </label>
-            <input type="date" ng-model="rangeEnd" min="{{rangeStart | date:'yyyy-MM-dd'}}" datepicker="'dateFormat':'yy-mm-dd'" />
+            <label for="premDate">Filter By Premiere Date: </label>
+            <input id="premDate" type="date" ng-model="rangeStart" datepicker="'dateFormat':'yy-mm-dd'" /> <label for="premDate"><img src="../common_assets/img/icn_calendar.png" style="vertical-align: middle;" /> </label>
+            <label for="rangeEnd">Date Range End: </label>
+            <input id="rangeEnd" type="date" ng-model="rangeEnd" min="{{rangeStart | date:'yyyy-MM-dd'}}" datepicker="'dateFormat':'yy-mm-dd'" /> <label for="rangeEnd"><img src="../common_assets/img/icn_calendar.png" style="vertical-align: middle;" /> </label>
         </div>
         <div>
             <label>Search Programming: </label>
