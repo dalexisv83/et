@@ -34,14 +34,14 @@
             <span ng-if="chanSel">{{chanSel}} <a href ng-click="aParam('channel', null)">&#x2716;</a></span>
         </div>
     </div>
-    <div class="program" ng-repeat="calendar in data.calendars |
+    <div class="program" ng-repeat="calendar in filCals = (data.calendars |
     filter:search |
     filter:{premium: premSel || undefined} |
     filter:{genres: genSel || undefined} |
     filter:{chanNum: chanSel || undefined} |
     progType:typeSel |
     dateRange:rangeStart:rangeEnd |
-    orderBy: ['premDate', orderStrTime]">
+    orderBy: ['premDate', orderStrTime])">
         <a href ng-click="aParam('program', calendar.program)"><img ng-src="assets/cal_img/{{calendar.image || calendar.program | lowercase | spcToHyphen}}.jpg" /></a>
         <br /><a class="pTitle" href ng-click="aParam('program', calendar.program)" ng-bind="calendar.program"></a>
         <br /><span class="pDate">{{calendar.premDate | date:'MMM d'}} at {{calendar.premTime}}</span>
@@ -49,6 +49,7 @@
         <br /><a href ng-click="aParam('channel', calendar.chanNum)">{{calendar.chanName}} &ndash; {{calendar.chanNum}}</a>
         <br /><a href ng-repeat-start="genre in calendar.genres" ng-click="aParam('genre', genre)" ng-bind="genre"></a><span ng-if="!$last" ng-repeat-end>, </span>
     </div>
+    <h3 style="margin-left: 20px;" ng-if="filCals.length == 0">No results for the current filter(s) and/or search term(s)</h3>
     <div class="overlay" ng-if="progSel" ng-click="aParam('program', null)">
     </div>
     <div class="modal" ng-if="progSel" ng-repeat="calendar in data.calendars |
