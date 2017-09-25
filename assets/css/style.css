@@ -598,7 +598,7 @@ label.helpful.open:after {
 }
 */
 #calendar {
-    background-color: #fbfbfb;
+    background-color: #eaeaea;
     padding-bottom: 40px;
 }
 
@@ -629,11 +629,18 @@ label.helpful.open:after {
     box-shadow: 2px 2px 4px #838383;
     width: 200px;
     vertical-align: top;
-    border: 2px solid #0072ae;
 }
 
-.program:hover {
-    border: 2px solid #E97400;
+.program a, .modal a {
+    color: #009EDA;
+}
+
+.pTitle, .pDate {
+    font-weight: bold;
+}
+
+.pTitle {
+    font-size: 16px;
 }
 
 .overlay {
@@ -653,10 +660,16 @@ label.helpful.open:after {
     background-color: white;
     top: 50px;
     left: 50%;
-    margin-left: -25%;
-    padding: 10px;
+    transform: translateX(-50%);
+    padding: 20px;
     border-radius: 5px;
     z-index: 100;
+}
+
+@media only screen and (max-width: 768px) {
+    .modal {
+        width: 80%
+    }
 }
 
 div.ui-datepicker {

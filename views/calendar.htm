@@ -43,10 +43,10 @@
     dateRange:rangeStart:rangeEnd |
     orderBy: ['premDate', orderStrTime]">
         <a href ng-click="aParam('program', calendar.program)"><img ng-src="assets/cal_img/{{calendar.image || calendar.program | lowercase | spcToHyphen}}.jpg" /></a>
-        <br /><a href ng-click="aParam('program', calendar.program)" ng-bind="calendar.program"></a>
+        <br /><a class="pTitle" href ng-click="aParam('program', calendar.program)" ng-bind="calendar.program"></a>
+        <br /><span class="pDate">{{calendar.premDate | date:'MMM d'}} at {{calendar.premTime}}</span>
         <br /><a href ng-click="aParam('premium', calendar.premium, 'getItByThat', data.premiums,'name','id')" ng-bind="calendar.premium | getItByThat:data.premiums:'name':'id'"></a>
         <br /><a href ng-click="aParam('channel', calendar.chanNum)">{{calendar.chanName}} &ndash; {{calendar.chanNum}}</a>
-        <br />{{calendar.premDate | date:'MMM d'}} &ndash; {{calendar.premTime}}
         <br /><a href ng-repeat-start="genre in calendar.genres" ng-click="aParam('genre', genre)" ng-bind="genre"></a><span ng-if="!$last" ng-repeat-end>, </span>
     </div>
     <div class="overlay" ng-if="progSel" ng-click="aParam('program', null)">
@@ -56,21 +56,18 @@
         <div class="grid">
             <div class="grid__item four-eighths">
                 <img ng-src="assets/cal_img/{{calendar.image || calendar.program | lowercase | spcToHyphen}}.jpg" />
-                <br />{{calendar.program}}
-                <br><a href ng-click="aParam('premium', calendar.premium, 'getItByThat', data.premiums,'name','id')" ng-bind="calendar.premium | getItByThat:data.premiums:'name':'id'"></a>
-                <br>{{calendar.premDate | date:'MMM d'}} &ndash; {{calendar.premTime}}
-                <br><a href ng-click="aParam('channel', calendar.chanNum); aParam('program', null)">{{calendar.chanName}} &ndash; {{calendar.chanNum}}</a>
-                <br><a href ng-repeat-start="genre in calendar.genres" ng-click="aParam('genre', genre)" ng-bind="genre"></a><span ng-if="!$last" ng-repeat-end>, </span>
-            </div><!--
-             --><div class="grid__item four-eighths">
-                <p style="margin-top:0;text-align:right;"><a href ng-click="aParam('program', null)">&#x2716;</a></p>
-                {{calendar.description}}
+            </div>
+            <div class="grid__item four-eighths">
+                <a style="float:right;padding-left:20px" href ng-click="aParam('program', null)">&#x2716;</a>
+                <span class="pTitle">{{calendar.program}}</span>
+                <br>{{calendar.description}}
                 <span ng-if="calendar.starActrs"><br />Star Actors: <span ng-repeat-start="actor in calendar.starActrs">{{actor}}</span><span ng-repeat-end ng-if="!$last">, </span></span>
                 <span ng-if="calendar.starDrctrs"><br />Star Directors: <span ng-repeat-start="director in calendar.starDrctrs">{{director}}</span><span ng-repeat-end ng-if="!$last">, </span></span>
+                <br><br><span class="pDate">{{calendar.premDate | date:'MMM d'}} at {{calendar.premTime}}</span>
+                <br><a href ng-click="aParam('premium', calendar.premium, 'getItByThat', data.premiums,'name','id')" ng-bind="calendar.premium | getItByThat:data.premiums:'name':'id'"></a>
+                <br><a href ng-click="aParam('channel', calendar.chanNum); aParam('program', null)">{{calendar.chanName}} &ndash; {{calendar.chanNum}}</a>
+                <br><a href ng-repeat-start="genre in calendar.genres" ng-click="aParam('genre', genre)" ng-bind="genre"></a><span ng-if="!$last" ng-repeat-end>, </span>
             </div>
         </div>
     </div>
-</div>
-<div class="pdf">
-    <p><a href="assets/img/calendar_premiums_yearly.pdf" target="_blank">Premiums Original Series Calendar 2016 - PDF</a></p>
 </div>
