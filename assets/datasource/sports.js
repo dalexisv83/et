@@ -12,15 +12,15 @@
         "url": "comcast_sportsnet_ca",
         "cspUrl": "myc_ser_tv_cha_spo_537475"
     }, {
-        "name": "CSN Chicago",
+        "name": "NBC Sports Chicago",
         "url": "comcast_sportsnet_chicago",
         "cspUrl": "myc_ser_tv_cha_spo_537476"
     }, {
-        "name": "CSN Mid-Atlantic",
+        "name": "NBC Sports Washington",
         "url": "comcast_sportsnet_mid_atlantic",
         "cspUrl": "myc_ser_tv_cha_spo_537477"
     }, {
-        "name": "CSN New England",
+        "name": "NBC Sports Boston",
         "url": "comcast_sportsnet_ne",
         "cspUrl": "myc_ser_tv_cha_spo_537478"
     }, {
@@ -86,7 +86,7 @@
     }, {
         "name": "FS Wisconsin",
         "url": "fs_wisconsin",
-        "cspUrl": "myc_ser_tv_cha_spo_552409"
+        "cspUrl": "myc_ser_tv_cha_spo_592421"
     }, {
         "name": "MASN",
         "url": "mid_atlantic_sports_network",
@@ -125,6 +125,10 @@
         "cspUrl": "myc_ser_tv_cha_spo_537523"
     }, {
         "name": "AT&T SportsNet Rocky Mountain",
+        "url": "fsn_rocky_mountain",
+        "cspUrl": "myc_ser_tv_cha_spo_537524"
+    }, {
+        "name": "AT&T SportsNet Rocky Mountain West",
         "url": "fsn_rocky_mountain",
         "cspUrl": "myc_ser_tv_cha_spo_537524"
     }, {
@@ -422,7 +426,7 @@
         }, {
             "id": 27,
             "division": 6,
-            "name": "San Diego Chargers",
+            "name": "Los Angeles Chargers",
             "point": ["n\/a"]
         }, {
             "id": 28,
@@ -448,15 +452,17 @@
         "offers": [{
             "id": 2,
             "offerStart": "42745",
-            "offerEnd": "43037",
+            "offerEnd": "43029",
             "multiPrice": "46.99",
             "onePrice": "281.94"
+        }, {
+            "id": 3,
+            "offerStart": "43030",
+            "offerEnd": "43079",
+            "multiPrice": "39.99",
+            "onePrice": "159.96"
         }],
-        "trials": [{
-            "id": 1,
-            "trialStart": "42624",
-            "trialEnd": "42624"
-        }],
+        "trials": null,
         "objections": [{
             "category": "Price/Value",
             "responses": [
@@ -540,6 +546,7 @@
             "subtab": 1,
             "title": null,
             "point": [
+                "NFL Sunday Ticket MAX includes Red Zone Channel and DIRECTV Fantasy Zone Channel, which are not part of  NFL Sunday Ticket.",
                 "NFL Sunday Ticket MAX provides the Maximum, premium football experience.",
                 "DIRECTV is the exclusive home to NFL Sunday Ticket",
                 "Get every minute of every live out-of-market game every Sunday",
@@ -807,7 +814,7 @@
         }, {
             "id": 27,
             "division": 6,
-            "name": "San Diego Chargers",
+            "name": "Los Angeles Chargers",
             "point": ["n\/a"]
         }, {
             "id": 28,
@@ -833,11 +840,21 @@
         "offers": [{
             "id": 2,
             "offerStart": "42745",
-            "offerEnd": "43037",
+            "offerEnd": "43029",
             "multiPrice": "62.99",
             "onePrice": "377.94"
+        }, {
+            "id": 3,
+            "offerStart": "43030",
+            "offerEnd": "43079",
+            "multiPrice": "49.99",
+            "onePrice": "199.96"
         }],
-        "trials": null,
+        "trials": [{
+            "id": 1,
+            "trialStart": "43030",
+            "trialEnd": "43030"
+        }],
         "objections": [{
             "category": "Price/Value",
             "responses": [
@@ -1092,7 +1109,7 @@
         }, {
             "id": 15,
             "division": 3,
-            "name": "Arizon Diamondbacks",
+            "name": "Arizona Diamondbacks",
             "point": ["n\/a"]
         }, {
             "id": 16,

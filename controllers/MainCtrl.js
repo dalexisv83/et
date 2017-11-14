@@ -109,6 +109,21 @@ var checkSubs = function(obj, premium, sub) {
 (function(angular) {
     'use strict';
     angular.module('entertainment')
+        .controller('HtmlCtrl', ['$scope', '$routeParams',
+            function ($scope, $routeParams) {
+                $scope.params = $routeParams;
+                $scope.toolHdr = function (test) {
+                    if (test) {
+                        switch (test) {
+                            case 'entertainment':
+                                return 'Entertainment Tool';
+                            case 'sports':
+                                return 'Sports Sales Tool';
+                        }
+                    }
+                };
+            }
+        ])
         .controller('MainCtrl', ['$scope', '$route', '$routeParams', '$location', '$filter', 'contentData', '$timeout', '$cookies', 'pathFinder',
             function ($scope, $route, $routeParams, $location, $filter, contentData, $timeout, $cookies, pathFinder) {
                 pathFinder.getApiNet().then(function successTest(response) {
@@ -310,14 +325,14 @@ var checkSubs = function(obj, premium, sub) {
                     .withOption('ajax', ajaxObj());
 
                 $scope.dtColumns =[
-                    DTColumnBuilder.newColumn('zipcode').withTitle('Zip Code'),
-                    DTColumnBuilder.newColumn('state').withTitle('ST'),
-                    DTColumnBuilder.newColumn('inMarketChoiceMasUltra').withTitle(headerTxt + 'Choice / Mas Ultra').renderWith(urlRender()),
-                    DTColumnBuilder.newColumn('inMarketExtra').withTitle(headerTxt + 'Xtra').renderWith(urlRender()),
-                    DTColumnBuilder.newColumn('ultraSportsPack').withTitle(headerTxt + 'Choice / Mas Ultra with Sports Pack').renderWith(urlRender()),
-                    DTColumnBuilder.newColumn('mlb').withTitle('Baseball'),
-                    DTColumnBuilder.newColumn('nba').withTitle('Basketball'),
-                    DTColumnBuilder.newColumn('nhl').withTitle('Hockey')
+                    DTColumnBuilder.newColumn('ZIP_CODE').withTitle('Zip Code'),
+                    DTColumnBuilder.newColumn('STATE').withTitle('ST'),
+                    DTColumnBuilder.newColumn('CHOICE_MAS_ULTRA').withTitle(headerTxt + 'Choice / Mas Ultra').renderWith(urlRender()),
+                    DTColumnBuilder.newColumn('XTRA').withTitle(headerTxt + 'Xtra').renderWith(urlRender()),
+                    DTColumnBuilder.newColumn('SPORTS_PACK').withTitle(headerTxt + 'Choice / Mas Ultra with Sports Pack').renderWith(urlRender()),
+                    DTColumnBuilder.newColumn('MLB').withTitle('Baseball'),
+                    DTColumnBuilder.newColumn('NBA').withTitle('Basketball'),
+                    DTColumnBuilder.newColumn('NHL').withTitle('Hockey')
                 ];
 
                 $scope.rsnInstance = {

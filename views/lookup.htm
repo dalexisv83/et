@@ -14,5 +14,8 @@
         </div>
         <div ng-if="lookup == 'availability'" ng-include="'views/availability.htm'"></div>
         <div ng-if="lookup == 'rsn'" ng-include="'views/rsn.htm'"></div>
+        <div ng-if="!lookup" class="outer">
+            <h3 style="margin:15px 0">Enter the customer&rsquo;s ZIP code and click GAME AVAILABILITY to view, filter, and sort sports programming in their area. Additionally, you can click LOOKUP RSN to find their Regional Sports Networks.</h3>
+        </div>
     </form>
 </div>
