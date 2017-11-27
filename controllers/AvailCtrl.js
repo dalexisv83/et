@@ -12,10 +12,23 @@
                         return response;
                     }, function errorTest(response) {
                         throw new Error(JSON.stringify(response));
-                    });
-                $q.all([getRsn, getDsse]).then(function (values) {
-                    console.log(values);
-                });
+                    }),
+                    getData = $q.all([getRsn, getDsse]).then(
+                        function (values) {
+                            return values[1].data;
+                        },
+                        function(values) {
+                            throw new Error(JSON.stringify(values));
+                        }
+                    );
+
+                $scope.dsseOptions = DTOptionsBuilder.fromFnPromise(getData);
+                $scope.dsseColumns = [
+                    DTColumnBuilder.newColumn('Event_Date').withTitle('Date'),
+                    DTColumnBuilder.newColumn('Home').withTitle('Home'),
+                    DTColumnBuilder.newColumn('Away').withTitle('Away')
+                ];
+                $scope.dsseInstance = {};
             }
         ]);
 }(window.angular));
