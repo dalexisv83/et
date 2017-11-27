@@ -288,7 +288,6 @@ var dsse_lookup = function(userRSN) {
         home_team = val.Home.split(" of");
         dsse[key].Away = away_team[0];
         dsse[key].Home = home_team[0];
-        console.log(moment(val.Event_Date, "MM-DD-YYYY").isBefore());
     });
 
     _.each(dsse, function(val, key) {
