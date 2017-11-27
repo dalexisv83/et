@@ -279,11 +279,16 @@ var dsse_lookup = function(userRSN) {
     dateBegin = _.first(dsse);
     dateEnd = _.last(dsse);
 
+    dsse = _.filter(dsse, function (data) {
+        return moment(data.Event_Date, "MM-DD-YYYY").isBefore(moment().startOf('day')) != true;
+    });
+
     _.each(dsse, function(val, key){
         away_team = val.Away.split(" of");
         home_team = val.Home.split(" of");
         dsse[key].Away = away_team[0];
         dsse[key].Home = home_team[0];
+        console.log(moment(val.Event_Date, "MM-DD-YYYY").isBefore());
     });
 
     _.each(dsse, function(val, key) {
