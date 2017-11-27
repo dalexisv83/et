@@ -273,26 +273,11 @@ var checkSubs = function(obj, premium, sub) {
                             // isNan condition adds compatibility with IE8
                             if ($scope.zipcode.$valid || !isNaN(JSON.stringify($scope.zipcode.zip.$modelValue))) {
                                 $scope.lookup = null;
-                                $timeout(function() {
-                                    $scope.lookup = 'availability';
+                                $scope.lookup = 'availability';
                                 $scope.zipClick = $scope.zip;
-                            }, 0);
                         }
                     }
                 };
-            }
-        ]);
-}(window.angular));
-
-(function(angular) {
-    'use strict';
-    angular.module('entertainment')
-        .controller('AvailCtrl', ['$scope', '$timeout',
-            function($scope, $timeout) {
-                $scope.init = function() {
-                    $timeout(function(){start($scope.$parent.zipClick);}, 100);
-                };
-                $scope.init();
             }
         ]);
 }(window.angular));
