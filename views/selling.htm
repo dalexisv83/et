@@ -1,4 +1,6 @@
-<h2>{{prem.params.subName | getItByThat:data.subtabs:'name':'url'}}</h2>
+<div class="oContainer">
+    <h2>{{prem.params.subName | getItByThat:data.subtabs:'name':'url'}}</h2>
+<img ng-hide="spOverlay[prem.params.tool] == 'hide'" class="oTip oTip-highlights" ng-src="assets/img/overlay_channel_highlights.png" />
 <ul ng-repeat="sellingPoint in filteredPoints = (premium.sellingPoints | filter:{title: null} | filter:{subtab: (prem.params.subName | getItByThat:data.subtabs:'id':'url')})">
     <li ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasSeasonDates"><b>Season Dates:</b> {{premium.startSeason | excelDate | date}} - {{premium.endSeason | excelDate | date}}</li>
     <hr ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasSeasonDates" />
@@ -6,3 +8,4 @@
     <hr ng-if="!$last" ng-repeat-end />
 </ul>
 <div class="movieorig inner accordion" ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasBlueL" ng-include="'views/accordion.htm'"></div>
+</div>
