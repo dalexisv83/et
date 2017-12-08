@@ -15,7 +15,40 @@
                     }),
                     getData = $q.all([getRsn, getDsse]).then(
                         function (values) {
-                            return values[1].data;
+                            var games = [];
+                            _.each(values[1].data, function (game, gInd) {
+                                game.inMarket = null;
+                                games.push(game);
+                                _.each(values[0].data, function (rsn, rInd) {
+                                    if (rsn.chanNum == game["Channel"]) {
+                                        if (game["Home"].indexOf(rsn.MLB) > -1) {
+                                            console.log("Home");
+                                            game.inMarket = true;
+                                        }
+                                        if (game["Home"].indexOf(rsn.NBA) > -1) {
+                                            console.log("Home");
+                                            game.inMarket = true;
+                                        }
+                                        if (game["Home"].indexOf(rsn.NHL) > -1) {
+                                            console.log("Home");
+                                            game.inMarket = true;
+                                        }
+                                        if (game["Away"].indexOf(rsn.MLB) > -1) {
+                                            console.log("Away");
+                                            game.inMarket = true;
+                                        }
+                                        if (game["Away"].indexOf(rsn.NBA) > -1) {
+                                            console.log("Away");
+                                            game.inMarket = true;
+                                        }
+                                        if (game["Away"].indexOf(rsn.NHL) > -1) {
+                                            console.log("Away");
+                                            game.inMarket = true;
+                                        }
+                                    }
+                                });
+                            });
+                            return games;
                         },
                         function(values) {
                             throw new Error(JSON.stringify(values));
@@ -26,7 +59,12 @@
                 $scope.dsseColumns = [
                     DTColumnBuilder.newColumn('Event_Date').withTitle('Date'),
                     DTColumnBuilder.newColumn('Home').withTitle('Home'),
-                    DTColumnBuilder.newColumn('Away').withTitle('Away')
+                    DTColumnBuilder.newColumn('Away').withTitle('Away'),
+                    DTColumnBuilder.newColumn('inMarket').withTitle('In Market'),
+                    DTColumnBuilder.newColumn(null).withTitle('Channel').renderWith(function (data, type, full, meta) {
+                        console.log(data);
+                        return data.inMarket ? data["Channel"] : data["Sport_Channel"];
+                    })
                 ];
                 $scope.dsseInstance = {};
             }
