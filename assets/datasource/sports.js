@@ -849,6 +849,13 @@
             "offerEnd": "43079",
             "multiPrice": "49.99",
             "onePrice": "199.96"
+        }, {
+            "id": 4,
+            "offerStart": "43080",
+            "offerEnd": "43100",
+            "multiPrice": "n/a",
+            "onePrice": "99",
+            "text": "Race to the Playoffs"
         }],
         "trials": [{
             "id": 1,
