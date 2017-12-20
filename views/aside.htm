@@ -1,17 +1,18 @@
 <div class="grid">
     <div class="grid__item one-quarter portable--one-whole desk--one-whole">
-        <img ng-src="http://agentanswercenter.directv.com/en-us/res/system/img/{{premium.name | lowercase | spcToHyphen}}-logo.png" />
+        <img ng-src="assets/img/{{premium.name | lowercase | spcToHyphen}}-logo.png" />
     </div>
     <div class="grid__item three-quarters portable--one-whole desk--one-whole">
         <div class="info" ng-if="premium.price || premium.offers || premium.channels || premium.ODchan || premium.channelRange || premium.trials">
             <div class="grid grid--full">
-                <div ng-if="premium.price || premium.offers" ng-show="premium.price || dateInRange.length" class="grid__item one-third portable--one-whole desk--one-whole">
+                <div ng-if="premium.price || premium.offers" ng-show="premium.price || dateInRange.length" class="grid__item one-third portable--one-whole desk--one-whole oContainer">
                     <div ng-if="premium.price" class="price"><span ng-if="isStringNumber(premium.price)">&#36;</span>{{premium.price}}</div>
                     <p ng-repeat="offer in dateInRange = (premium.offers | inRange:'offerStart':'offerEnd':0:false)">
                         <span ng-if="!offer.text">Current Offer:</span>
                         <span ng-if="offer.text" ng-bind="offer.text"></span>
                         <br /><span ng-if="offer.multiPrice != 'n/a' || offer.onePrice != 'n/a'">{{offer.offerStart | excelDate | date:'MMM d'}} - {{offer.offerEnd | excelDate | date:'MMM d'}}</span>
                     </p>
+                    <img ng-hide="spOverlay[prem.params.tool] == 'hide'" class="oTip oTip-pricing" ng-src="assets/img/overlay_pricing.png" />
                 </div>
                 <div ng-if="premium.channels || premium.offers" ng-show="premium.channels || priceInRange.length" class="grid__item one-third portable--one-whole desk--one-whole info--middle">
                     <div ng-if="offer.multiPrice != 'n/a' || offer.onePrice != 'n/a'" ng-repeat="offer in priceInRange = (premium.offers | inRange:'offerStart':'offerEnd':0:false)" class="price">
@@ -25,10 +26,11 @@
                             <li>{{SD = (premium.channels | filter:{HD: false, SD: true}).length}} SD Only</li>
                             <li>{{SDHD = (premium.channels | filter:{HD: true, SD: true}).length}} SD/HD</li>
                         </ul>
+                        <span style="text-decoration:underline">More Info</span>
                     </a>
                 </div>
                 <div class="grid__item one-third portable--one-whole desk--one-whole info--bottom" ng-if="premium.ODchan || premium.channelRange || premium.trials">
-                    <div ng-repeat="trial in premium.trials | inRange:'trialStart':'trialEnd':7"" class="price">Free Trial: {{trial.trialStart | excelDate | date:'MMM d'}}<span ng-if="trial.trialStart != trial.trialEnd"> - {{trial.trialEnd | excelDate | date:'MMM d'}}</span></div>
+                    <div ng-repeat="trial in premium.trials | inRange:'trialStart':'trialEnd':7" class="price">Free Trial: {{trial.trialStart | excelDate | date:'MMM d'}}<span ng-if="trial.trialStart != trial.trialEnd"> - {{trial.trialEnd | excelDate | date:'MMM d'}}</span></div>
                     <div ng-if="premium.ODchan">
                         <p>{{premium.name}} DIRECTV On&nbsp;Demand Ch:&nbsp;{{premium.ODchan}}</p>
                     </div>
@@ -47,10 +49,12 @@
                 <ul>
                     <li ng-if="premium.premURL"><a ng-href="{{premium.premURL}}" target="_blank">{{premium.name}} Website</a></li>
                     <li ng-if="premium.dotcomURL"><a ng-href="http://www.directv.com/{{premium.dotcomURL}}" target="_blank">{{premium.name}} on DIRECTV.com</a></li>
-                    <li ng-if="premium.aacURL"><a ng-href="http://agentanswercenter.directv.com/en-us/res/programming/{{premium.aacURL}}" target="_blank">{{premium.name}} on AAC</a></li>
-                    <li ng-if="premium.streamFrag"><a ng-href="http://agentanswercenter.directv.com/en-us/res/programming/{{premium.aacURL}}#fragment={{premium.streamFrag}}" target="_blank">{{premium.streamName}} on AAC</a></li>
-                    <li ng-if="premium.blkoutURL"><a ng-href="http://agentanswercenter.directv.com/en-us/res/programming/{{premium.blkoutURL}}" target="_blank">{{premium.name}} Blackout Info</a></li>
-                    <li ng-if="premium.premURL || premium.dotcomURL == 'sports/sports_pack'"><a href="http://agentanswercenter.directv.com/en-us/res/billing/explain_partial_charges.html" target="_blank">Partial Monthly Charges</a></li>
+                    <li ng-if="premium.cspUrl"><a ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{premium.cspUrl}}" target="_blank">{{premium.name}} on myCSP</a></li>
+                    <!--<li ng-if="premium.streamFrag"><a ng-href="http://agentanswercenter.directv.com/en-us/res/programming/{{premium.aacURL}}#fragment={{premium.streamFrag}}" target="_blank">{{premium.streamName}} on myCSP</a></li>-->
+                    <li ng-if="premium.cspBlkoutUrl"><a ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{premium.cspBlkoutUrl}}" target="_blank">{{premium.name}} Blackout Info</a></li>
+                    <li ng-if="premium.leaguePdf"><a ng-href="assets/datasource/{{premium.leaguePdf}}.pdf" target="_blank">{{premium.league}} 101 Study Guide</a></li>
+                    <li ng-if="premium.teamPdf"><a ng-href="assets/datasource/{{premium.teamPdf}}.pdf" target="_blank">{{premium.league}} Team Information Study Guide</a></li>
+                    <li ng-if="premium.premURL || premium.dotcomURL == 'sports/sports_pack'"><a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ope_cen_cal_bil_538568" target="_blank">Partial Monthly Charges</a></li>
                 </ul>
             </div>
         </div>

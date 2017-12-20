@@ -1,10 +1,11 @@
 <div class="view-inner">
-    <div>
+    <div class="oContainer">
         <ul class="nav" id="sub">
             <li ng-repeat="sub in premium.subs">
                 <a ng-href="#/{{prem.params.tool}}/{{premium.name | lowercase | spcToHyphen}}/{{sub | getItByThat:data.subtabs:'name':'id' | lowercase | spcToHyphen}}" ng-class="{active: prem.params.subName == (sub | getItByThat:data.subtabs:'name':'id' | lowercase | spcToHyphen)}" ng-bind="sub | getItByThat:data.subtabs:'name':'id'">Loading&hellip;</a>
             </li>
         </ul>
+        <img class="oTip oTip-help" ng-click="spOverlay[prem.params.tool] = 'show'" src="assets/img/icn_help_81x27.png" />
     </div>
     <div class="grid">
         <div class="grid__item one-whole bg--dark-grey" ng-if="(data.calendars | filter:{premium: (prem.params.premName | getItByThat:data.premiums:'id':'url')}).length && data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasCarousel" ng-include="'views/playing.htm'" id="playing"></div>
@@ -16,7 +17,7 @@
                 <div ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasByTeam" ng-include="'views/by-team.htm'" class="grid__item four-sevenths portable--three-sevenths desk--three-sevenths" id="by-team"></div>
                 <div ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasPricing" ng-include="'views/pricing.htm'" id="pricing" class="grid__item four-sevenths portable--three-sevenths desk--three-sevenths"></div>
                 <div ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasBreakdown" ng-include="'views/breakdown.htm'" id="breakdown" class="grid__item portable--six-sevenths desk--six-sevenths"></div>
-                <div ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasObjection" ng-include="'views/objections.htm'" id="objections" class="grid__item accordion three-sevenths"></div>
+                <div ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasObjection" ng-include="'views/objections.htm'" id="objections" class="grid__item accordion three-sevenths oContainer"></div>
                 <div ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasBlue" ng-include="'views/movieorig.htm'" id="movieorig" class="grid__item three-sevenths"></div>
                 <div ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasChannels" ng-include="'views/channels.htm'" class="grid__item six-sevenths" id="channels"></div>
                 <div ng-if="data.subtabs[(prem.params.subName | getItByThat:data.subtabs:'id':'url') - 1].logic.hasStreaming" ng-include="'views/streaming.htm'" class="grid__item six-sevenths" id="streaming"></div>
@@ -25,3 +26,9 @@
     </div>
     </div>
 <div>
+    <div class="overlay" ng-hide="spOverlay[prem.params.tool] == 'hide'">
+    </div>
+    <div class="oTip oTip-welcome" ng-hide="spOverlay[prem.params.tool] == 'hide'">
+        <img ng-src="assets/img/overlay_{{prem.params.tool}}_welcome.png" />
+        <button ng-click="spOverlay[prem.params.tool] = 'hide'">Got it</button>
+    </div>

@@ -70,7 +70,7 @@ var checkSubs = function(obj, premium, sub) {
             '$resource',
             function ($resource){
                 return function(toolName){
-                    return $resource('data/' + toolName + '.htm?@@BUSTER@@',{},{'get': { method:'GET', cache: true}});
+                    return $resource('assets/datasource/' + toolName + '.js?@@BUSTER@@',{},{'get': { method:'GET', cache: true}});
                 };
             }]);
 }(window.angular));
@@ -109,8 +109,37 @@ var checkSubs = function(obj, premium, sub) {
 (function(angular) {
     'use strict';
     angular.module('entertainment')
-        .controller('MainCtrl', ['$scope', '$route', '$routeParams', '$location', '$filter', 'contentData', '$timeout',
-            function($scope, $route, $routeParams, $location, $filter, contentData, $timeout) {
+        .controller('HtmlCtrl', ['$scope', '$routeParams',
+            function ($scope, $routeParams) {
+                $scope.params = $routeParams;
+                $scope.toolHdr = function (test) {
+                    if (test) {
+                        switch (test) {
+                            case 'entertainment':
+                                return 'Entertainment Tool';
+                            case 'sports':
+                                return 'Sports Sales Tool';
+                        }
+                    }
+                };
+            }
+        ])
+        .controller('MainCtrl', ['$scope', '$route', '$routeParams', '$location', '$filter', 'contentData', '$timeout', '$cookies', 'pathFinder',
+            function ($scope, $route, $routeParams, $location, $filter, contentData, $timeout, $cookies, pathFinder) {
+                pathFinder.getApiNet().then(function successTest(response) {
+                    $scope.basePath = response;
+                });
+                $scope.$watch(function () {
+                    return $cookies;
+                }, function (value) {
+                    $scope.spOverlay = value;
+                });
+                $scope.$watch('spOverlay', function () {
+                    $cookies.sports = $scope.spOverlay['sports'];
+                });
+                $scope.$watch('etOverlay', function () {
+                    $cookies.entertainment = $scope.spOverlay['entertainment'];
+                });
                 if (window.location.hash.search('trivia') > -1) {
                     $timeout(function() {
                         document.getElementById('trivia').scrollIntoView();
@@ -209,30 +238,43 @@ var checkSubs = function(obj, premium, sub) {
 (function(angular) {
     'use strict';
     angular.module('entertainment')
-        .controller('LookupCtrl', ['$scope', '$timeout',
-            function($scope, $timeout) {
+        .controller('LookupCtrl', ['$scope', '$timeout', '$http',
+            function ($scope, $timeout, $http) {
                 $scope.submitted = false;
                 $scope.zip = null;
                 $scope.lookup = null;
                 $scope.zipClick = null;
-                $scope.clickRsn = function() {
+                $scope.clickRsn = function () {
+                    var init = function() {
+                            $scope.lookup = null;
+                            $scope.lookup = 'rsn';
+                            $scope.zipClick = $scope.zip;
+                            $scope.$broadcast('zipChanged', $scope.zipClick);
+                        };
                     $scope.submitted = true;
                     
                     // isNaN condition adds compatibility with IE8
                     if ($scope.zipcode.$valid || !isNaN(JSON.stringify($scope.zipcode.zip.$modelValue))) {
-                        $scope.lookup = null;
-                        $scope.lookup = 'rsn';
-                        $scope.zipClick = $scope.zip;
+                        if (!$scope.rsnurls) {
+                            $http.jsonp($scope.basePath + 'web/api/rsnlinks', { params: { 'callback': 'JSON_CALLBACK' }, cache: true }).then(function successTest(response) {
+                                $scope.rsnurls = response.data;
+                                init();
+                            }, function errorTest(response) {
+                                throw new Error(JSON.stringify(response));
+                            });
+                        } else {
+                            init();
+                        }
                     }
                 };
                 $scope.clickAvail = function() {
                     if (($scope.zip !== $scope.zipClick) || ($scope.lookup !== 'availability')) {
                         $scope.submitted = true;
-                        // isNan condition adds compatibility with IE8
-                        if ($scope.zipcode.$valid || !isNaN(JSON.stringify($scope.zipcode.zip.$modelValue))) {
-                            $scope.lookup = null;
-                            $timeout(function(){
-                                $scope.lookup = 'availability';
+                            // isNan condition adds compatibility with IE8
+                            if ($scope.zipcode.$valid || !isNaN(JSON.stringify($scope.zipcode.zip.$modelValue))) {
+                                $scope.lookup = null;
+                                $timeout(function() {
+                                    $scope.lookup = 'availability';
                                 $scope.zipClick = $scope.zip;
                             }, 0);
                         }
@@ -258,11 +300,93 @@ var checkSubs = function(obj, premium, sub) {
 (function(angular) {
     'use strict';
     angular.module('entertainment')
-        .controller('RsnCtrl', ['$scope', 'DTOptionsBuilder',
-            function($scope, DTOptionsBuilder) {
+        .service('pathFinder', ['URLS', '$location', '$http',
+            function (URLS, $location, $http) {
+                this.getApiNet = function() {
+                    var location = $location.host(),
+                        network = function(network) {
+                            var basePath;
+                            switch (network) {
+                                case 'intra':
+                                    basePath = URLS.API_INTRA;
+                                    break;
+
+                                case 'stage':
+                                    basePath = URLS.API_STAGE;
+                                    break;
+
+                                case 'extra':
+                                    basePath = URLS.API_EXTRA;
+                                    break;
+
+                                case 'test':
+                                    basePath = URLS.API_DEV;
+                                    break;
+                            }
+                            return basePath;
+                        };
+                    if (location == 'vwecda05.testla.testfrd.directv.com' || location == 'localhost') {
+                        return $http.jsonp('https://intra3.web.att.com/toolupdater/Web/api/values/1?callback=JSON_CALLBACK').then(function successTest(response){
+                            return network('test');
+                        });
+                    } else if (location == 'zlp09097.vci.att.com') {
+                        return $http.jsonp('https://intra3.web.att.com/toolupdater/Web/api/values/1?callback=JSON_CALLBACK').then(function successTest(response){
+                            return network('stage');
+                        });
+                    } else {
+                        return $http.jsonp('https://intra3.web.att.com/toolupdater/Web/api/values/1?callback=JSON_CALLBACK').then(function successTest(response) {
+                            return network('intra');
+                        }, function errorTest(response) {
+                            return network('extra');
+                        });
+                    }
+                }
+            }
+        ])
+        .controller('RsnCtrl', ['$scope', 'DTOptionsBuilder', 'DTColumnBuilder', '$filter',
+            function ($scope, DTOptionsBuilder, DTColumnBuilder, $filter) {
+                var ajaxObj = function() {
+                        return {
+                            url: $scope.basePath + 'web/api/rsn/' + $scope.zipClick,
+                            dataType: 'jsonp',
+                            jsonpCallback: 'jsonCallback',
+                            cache: true
+                        }
+                    },
+                    headerTxt = '<small class="minReq">Minimum Required Packages:</small><br>',
+                    urlRender = function() {
+                        return function (data, type, full) {
+                            var str = '';
+                            if (data) {
+                                str = '<a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=' +$filter('getItByThat') (data, $scope.rsnurls, 'cspUrl', 'name') + '" target="_blank">' +data + '</a>';
+                            }
+                            return str;
+                        }
+                    };
                 $scope.dtOptions = DTOptionsBuilder.newOptions()
-                            .withDOM('rt');
-                $scope.rsndata = rsnzip; // $http.get("http://agentanswercenter.directv.com/en-us/res/rover_tools/rsn/rsnzip.js");
+                    .withDOM('rt')
+                    .withOption('ajax', ajaxObj());
+
+                $scope.dtColumns =[
+                    DTColumnBuilder.newColumn('ZIP_CODE').withTitle('Zip Code'),
+                    DTColumnBuilder.newColumn('STATE').withTitle('ST'),
+                    DTColumnBuilder.newColumn('CHOICE_MAS_ULTRA').withTitle(headerTxt + 'Choice / Mas Ultra').renderWith(urlRender()),
+                    DTColumnBuilder.newColumn('XTRA').withTitle(headerTxt + 'Xtra').renderWith(urlRender()),
+                    DTColumnBuilder.newColumn('SPORTS_PACK').withTitle(headerTxt + 'Choice / Mas Ultra with Sports Pack').renderWith(urlRender()),
+                    DTColumnBuilder.newColumn('MLB').withTitle('Baseball'),
+                    DTColumnBuilder.newColumn('NBA').withTitle('Basketball'),
+                    DTColumnBuilder.newColumn('NHL').withTitle('Hockey')
+                ];
+
+                $scope.rsnInstance = {
+                }
+
+                $scope.$on('zipChanged', function (event, args) {
+                    if (args != $scope.lastZip) {
+                        $scope.lastZip = args;
+                        $scope.rsnInstance.changeData(ajaxObj());
+                }
+                });
             }
         ]);
 }(window.angular));

@@ -1,4 +1,5 @@
 <h2>Objections</h2>
+<img ng-hide="spOverlay[prem.params.tool] == 'hide'" class="oTip oTip-objections" ng-src="assets/img/overlay_objections.png" />
 <label ng-repeat-start="objection in premium.objections" for="{{objection.category}}" dropdown><span ng-bind="objection.category"></span></label><input type="checkbox" name="accordion" id="{{objection.category}}">
 <div ng-repeat-end>
   <ul>
