@@ -978,3 +978,32 @@ img.oTip {
     text-transform: uppercase;
     padding: 5px 20px 7px;
 }
+
+.qtip {
+  line-height: 1.25;
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.qtip-content .wwrapper .code{
+  width:50px;
+  font-weight:bold;
+}
+.qtip-content .wwrapper{
+  margin-bottom: 7px;
+}
+
+.qtip-content .wwrapper.last{
+  margin-bottom: 0;
+}
+
+.qtip-default {
+    background-color:#ffffff !important;
+    color:#000000 !important;
+    border-color:#333333 !important;
+}
+
+.qtip-content a {
+    color:#2baae1;
+}

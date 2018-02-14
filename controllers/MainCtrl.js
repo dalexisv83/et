@@ -273,7 +273,9 @@ var checkSubs = function(obj, premium, sub) {
                             // isNan condition adds compatibility with IE8
                             if ($scope.zipcode.$valid || !isNaN(JSON.stringify($scope.zipcode.zip.$modelValue))) {
                                 $scope.lookup = null;
-                                $scope.lookup = 'availability';
+                                $timeout(function () {
+                                    $scope.lookup = 'availability';
+                                }, 0);
                                 $scope.zipClick = $scope.zip;
                         }
                     }

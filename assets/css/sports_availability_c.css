@@ -374,8 +374,22 @@ table.dataTable td {
 }
 
 .dataTables_wrapper .dataTables_filter {
+    text-align: right;
+    box-sizing: border-box;
+    position: relative;
+    right: 15px;
+    top: -40px;
+    width: 50%;
     float: right;
-    text-align: right
+    padding: 15px;
+    padding-left: 27px;
+    padding-right: 0;
+    margin-right: -15px;
+}
+
+.dataTables_wrapper .dataTables_filter p {
+    width: 150px;
+    display: inline-block;
 }
 
 .dataTables_wrapper .dataTables_filter input {
@@ -488,7 +502,8 @@ table.dataTable td {
 }
 
 .dataTables_wrapper .dataTables_scroll {
-    clear: both
+    position: relative;
+    top: -40px;
 }
 
 .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody {
@@ -533,11 +548,10 @@ table.dataTable td {
     }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 565px) {
     .dataTables_wrapper .dataTables_length,
     .dataTables_wrapper .dataTables_filter {
-        float: none;
-        text-align: center
+        width: 100%;
     }
     .dataTables_wrapper .dataTables_filter {
         margin-top: 0.5em
@@ -563,9 +577,9 @@ div.dataTables_scrollHeadInner {
     width : auto !important;
 }
 
-.dataTables_scrollBody table {
+/*.dataTables_scrollBody table {
     width : auto !important;
-}
+}*/
 
 .scrollStyle
 {
@@ -623,12 +637,11 @@ thead tr th {
 .filter {
     text-align: right;
     padding: 15px;
+    padding-right: 0;
 }
 
 .filter p {
     width: 150px;
-    font-weight: normal;
-    font-size: 15px;
     display: inline-block;
 }
 
@@ -786,9 +799,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 input[type=number] {-moz-appearance: textfield;}
 
-.dataTables_scroll {
+/*.dataTables_scroll {
     padding: 0 20px;
-}
+}*/
 
 /* copied from bootstrap - controls tooltip behavior */
 .popover.top {

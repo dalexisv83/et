@@ -5,8 +5,12 @@
             <p class="av_text">Schedule and game availability subject to change. If game is not listed below, check <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_spo_538187" target="blank">national</a> channels.</p>
         </div>
         <div class="grid__item portable--one-half lap--one-half desk--one-half">
-            <div class="filter"></div>
+             <div class="filter">
+                 <label>
+                     <p class="pull-left">Filter by sport</p><select class="sport_filter form-control pull-left" ng-model="category" ng-change="changeCat()" ng-options="category.category as category.label for category in categories | unique"></select>
+                 </label>
+             </div>
         </div>
     </div>
-    <table datatable="" dt-options="dsseOptions" dt-columns="dsseColumns" dt-instance="dsseInstance"></table>
+    <table class="stripe compact row-border cell-border hover" datatable="" dt-options="dsseOptions" dt-columns="dsseColumns" dt-instance="dsseInstance"></table>
 </div>
