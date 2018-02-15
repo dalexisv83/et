@@ -385,6 +385,7 @@ table.dataTable td {
     padding-left: 27px;
     padding-right: 0;
     margin-right: -15px;
+    z-index: 1000;
 }
 
 .dataTables_wrapper .dataTables_filter p {
